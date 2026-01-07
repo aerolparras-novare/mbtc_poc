@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin">
+  <deletedFolders>Structures/Customer_API_0.1</deletedFolders>
+  <deletedFolders>Structures/Customer_API_0.1/paths</deletedFolders>
+  <deletedFolders>Structures/Customer_API_0.1/paths/customers</deletedFolders>
+  <deletedFolders>Structures/Customer_API_0.1/paths/customers/_id_</deletedFolders>
+  <deletedFolders>Structures/Customer_API_0.1/paths/customers/_id_/parameters</deletedFolders>
+  <deletedFolders>Structures/Customer_API_0.1/paths/customers/parameters</deletedFolders>
+  <deletedFolders>Structures/Customer_API_0.1/paths/customers/responses</deletedFolders>
+  <deletedFolders>Structures/Customer_API_0.1/schemas</deletedFolders>
+  <deletedItems id="_Z8UEkOuIEfCo6J9Ef-vlPw" path="Customer_API_0.1/paths/customers/_id_/parameters" type="STRUCTURES"/>
+  <deletedItems id="_Z8fqwOuIEfCo6J9Ef-vlPw" path="Customer_API_0.1/paths/customers/parameters" type="STRUCTURES"/>
+  <deletedItems id="_Z81B8OuIEfCo6J9Ef-vlPw" path="Customer_API_0.1/paths/customers/responses" type="STRUCTURES"/>
+  <deletedItems id="_Z89k0OuIEfCo6J9Ef-vlPw" path="Customer_API_0.1/paths/customers/responses" type="STRUCTURES"/>
+  <deletedItems id="_Z8r4AOuIEfCo6J9Ef-vlPw" path="Customer_API_0.1/paths/customers/responses" type="STRUCTURES"/>
+  <deletedItems id="_Z9ESgOuIEfCo6J9Ef-vlPw" path="Customer_API_0.1/schemas" type="STRUCTURES"/>
+</recyclebin:RecycleBin>
