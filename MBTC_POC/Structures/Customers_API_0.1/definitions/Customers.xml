@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root t='150' id='1' V150='13' creationTimestamp='0x16860e1f948' V1='4' name='Customers' incarnation='9'>
+  <rootElem t='167' id='2' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Customers'>
+    <structNode t='150' idref='1'/>
+    <child t='167' id='3' V167='21' inheritsFromIncarnation='8' inheritsFromTimestamp='0x16860e1f947' inheritsInThisStruct='true' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' inheritsFromCopyRule='20' groupType='1' repHandlerStruct='' inheritsFrom='Structures/Customers_API_0.1/definitions/Customer.xml' V281='13' V1='4' name='Customer' checksumValid='true' checksum='GIJt0UeLT1OjJsww1QifnZJRL2o='>
+      <structNode t='150' idref='1'/>
+      <savedDerivedCopy t='167' id='4' V167='21' needInheritInit='true' inheritsInThisStruct='true' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' inheritsFromCopyRule='20' dataType='2' repHandlerStruct='' inheritsFrom='Structures/Customers_API_0.1/definitions/Customer.xml' V281='13' V1='4' name='Customer'>
+      </savedDerivedCopy>
+      <savedOrigCopyAtInheritsFrom t='167' id='5' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Customer'>
+      </savedOrigCopyAtInheritsFrom>
+    </child>
+  </rootElem>
+  <defaultRep t='177' id='6' V177='1' V170='10' V697='1' V690='1' padOutput='true' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='JSON'>
+  </defaultRep>
+  <child t='162' id='7' V1='4' name='Representations'>
+    <child t='177' idref='6'/>
+  </child>
+  <child t='165' id='8' V1='4' name='Document Bindings'>
+    <child t='166' id='9' V166='5' docType='1' V1='4' name='/Customers'>
+      <elemNode t='167' idref='2'/>
+    </child>
+  </child>
+</root>
