@@ -1,0 +1,285 @@
+ ---=== Start Migration of project MBTC_POC ===---
+ * Task [ResetMavenTemplateMigrationTask] : Applied successfully
+ * Task [DeleteDocFolderMigrationTask] : Applied successfully
+ * Task [Fix a problem of project resources linked to items] : Nothing to do
+ * Task [MigrationS3ComponentToS3] : Nothing to do
+ * Task [MigrationS3ComponentToS3] : Nothing to do
+ * Task [ChangeContextModeForTcompv0MigrationTask] : Nothing to do
+ * Task [ChangeDBVersion4tSAPConnectionV2] : Nothing to do
+ * Task [RenameJavajetDynamoDBComponents] : Nothing to do
+ * Task [NewTckSnowflakeMigrationTask] : Nothing to do
+ * Task [S3SQSAddComponentIdMigrationTask] : Nothing to do
+ * Task [AutoUpdateRelationsMigrationTask] : Nothing to do
+ ---=== End of migration ===---
+ ---=== Start Migration of project MBTC_POC ===---
+ * Task [MoveHDFSAndHCatalogToHadoopFolderMigrationTask] : Applied successfully
+ * Task [ResetMavenTemplateMigrationTask] : Applied successfully
+ * Task [UpdateJobPomPropertiesMigrationTask] : Applied successfully
+ * Task [UpdateBeansDefaultLibrariesMigrationTask 8.0.1-R2025-11] : Nothing to do
+ * Task [UpdateBeansLibrariesMigrationTask 8.0.1-R2025-11] : Nothing to do
+ * Task [UpdateDistributionsForTalend8] : Nothing to do
+ * Task [UpdateRemovedSparkLocalVersion] : Nothing to do
+ * Task [UpdateRoutinesLibrariesMigrationTask 8.0.1-R2025-11] : Nothing to do
+ * Task [UpdateJDBCOutputAction] : Nothing to do
+ * Task [UpdateDatabricks73Version] : Nothing to do
+ * Task [UpdateSpark24And23Version] : Nothing to do
+ * Task [UpdateDataprocCredentialType] : Nothing to do
+ * Task [UpdateDatabricksTransientCheckbox] : Nothing to do
+ * Task [UpdateMongoDBVersion] : Nothing to do
+ * Task [UpdateOracleDBVersion] : Nothing to do
+ * Task [KafkaComponents] : Nothing to do
+ * Task [UpdateElasticSearchVersion] : Nothing to do
+ * Task [HiveComponentUpdateConnectionMode] : Nothing to do
+ * Task [MoveToDockerfileTemplateMigrationtask] : Nothing to do
+ * Task [HiveRefactoUpdateConnectionMode] : Nothing to do
+ * Task [RenameHBaseDeleteRowMigrationTask] : Nothing to do
+ * Task [UpdateRemovedSparkKubernetes] : Nothing to do
+ * Task [IcebergInputUseSQLQuery] : Nothing to do
+ * Task [UpdateRemovedUniversalSparkLocal24Version] : Nothing to do
+ * Task [UpdateS3Endpoint] : Nothing to do
+ * Task [UpdateRemovedDatabricksVersions] : Nothing to do
+ * Task [HDFSDIComponents] : Nothing to do
+ * Task [UpdateIcebergOutputSetFormat] : Nothing to do
+ * Task [UpdateRemovedLivyKnox] : Nothing to do
+ * Task [UpdateDatabricksAuthentication] : Nothing to do
+ * Task [Fix a problem of project resources linked to items] : Nothing to do
+ * Task [NewJMSComponentMigrationTask] : Nothing to do
+ * Task [AggregateStrategyMigrationTask] : Nothing to do
+ * Task [RestRequestWrongCallMigrationTask] : Nothing to do
+ * Task [ConsumerFaultResponseMigrationTask] : Applied successfully
+ * Task [UpdateCJMSProjectTask] : Nothing to do
+ * Task [UpdatecJMSMigrationTask] : Nothing to do
+ * Task [cSetHeaderSupportMultiHeadersTask] : Nothing to do
+ * Task [cBeanCTalendJobMigrationTask] : Nothing to do
+ * Task [AddPropagateHeaderTocTalendJobMigrationTask] : Nothing to do
+ * Task [DisconnectErroHandlerMigrationTask] : Nothing to do
+ * Task [UpdateCXFDataFormatMigrationTask] : Nothing to do
+ * Task [FinalVersionUpgradeMigrationTask] : Nothing to do
+ * Task [AddSpringConfigurationMigrationTask] : Nothing to do
+ * Task [PushHCatalogIntoHadoopClusterMigrationTask] : Nothing to do
+ * Task [PushHDFSIntoHadoopClusterMigrationTask] : Nothing to do
+ * Task [ConsumesTypeMigrationTask] : Nothing to do
+ * Task [FormContentTypeMigrationTask] : Nothing to do
+ * Task [cLogLoggingCategoryMigrationTask] : Nothing to do
+ * Task [Rename_cJMSConnectionFactory_To_cMQConnectionFactory_MigrationTask] : Nothing to do
+ * Task [UpdateTMultiPatternCheckTask] : Nothing to do
+ * Task [UnifyPasswordEncryption4ParametersInRouteMigrationTask] : Nothing to do
+ * Task [UnifyPasswordEncryption4ParametersInMRJobMigrationTask] : Nothing to do
+ * Task [UnifyPasswordEncryption4NoSQLConnectionMigrationTask] : Nothing to do
+ * Task [UnifyPasswordEncryption4SapConnectionMigrationTask] : Nothing to do
+ * Task [SAPItemMigrationTask] : Nothing to do
+ * Task [SAPComponentSchemaIdMigrationTask] : Nothing to do
+ * Task [AddSpringConfigurationPropertyMigrationTask] : Nothing to do
+ * Task [UpdatecSOAPServiceNamePortNameDefault] : Nothing to do
+ * Task [CheckAndAddFrameworkForMapReduceJobMigrationTask] : Nothing to do
+ * Task [SAPDatePatternItemMigrationTask] : Nothing to do
+ * Task [SAPDatePatternComponentMigrationTask] : Nothing to do
+ * Task [ChangeMongoDBConnectionMinimalVersionMigrationTask] : Nothing to do
+ * Task [RemoveRouteComponentId] : Nothing to do
+ * Task [UpdateRouteResourceTypeMigrationTask] : Nothing to do
+ * Task [FixCassandraDataStaxDbtypesProblemMigrationTask] : Nothing to do
+ * Task [RouteletProcessTypeMigrationTask] : Nothing to do
+ * Task [ChangeHadoopConfJarNameMigrationTask] : Nothing to do
+ * Task [AdaptDeprecatedHadoopVersionsMigrationTask] : Nothing to do
+ * Task [Update parameter "Matching Algorithm" value for MR tMatchgroup] : Nothing to do
+ * Task [ReviseInvalidContextNamesOfHadoopPropertiesMigrationTask] : Nothing to do
+ * Task [Update tMelissaDataAddress to add a GeoCodeResult column and an advanced parameter] : Nothing to do
+ * Task [TestCaseParentVersionMigration] : Nothing to do
+ * Task [UpdatetNaivebayseModelSparkVersionTask] : Nothing to do
+ * Task [UpdatetPredictSparkVersionTask] : Nothing to do
+ * Task [UpdateTMatchGroupOutPutSchemaTask] : Nothing to do
+ * Task [RenameToCSoapAndCRestMigrationTask] : Nothing to do
+ * Task [cCXFWsdlFileRepoMigrationTask] : Nothing to do
+ * Task [UpdateHadoopConfsForContextualHadoopClusterMigrationTask] : Nothing to do
+ * Task [AddBeansDefaultLibrariesMigrationTask 7.4.1] : Nothing to do
+ * Task [org.talend.designer.mapreduce.repository.migration.AddSupportedSparkVersionMigrationTask] : Nothing to do
+ * Task [update tPatternCheck and tPatternExtract] : Nothing to do
+ * Task [UpdateTMultiPatternTableParamTask] : Nothing to do
+ * Task [Update TmatchGroup "ComputeGrpQuality" Param] : Nothing to do
+ * Task [ChangeRouteResourceItemToResourceItemTask] : Nothing to do
+ * Task [AddOptionSplitableToImportHdfsFileMigrationTask] : Nothing to do
+ * Task [UpdateBeansPackageReplaceMigrationTask 8.0.1-R2025-07] : Nothing to do
+ * Task [TestCaseRoutinesMigrationTask] : Nothing to do
+ * Task [UpdateOracle18VersionSupportMigrationTask] : Nothing to do
+ * Task [DBR540ToDBR550MigrationTask] : Nothing to do
+ * Task [AddStandardDeviationToAggregateRowComponentMigrationTask] : Nothing to do
+ * Task [AddEMRFSMetadataTableNameToS3ConfigurationMigrationTask] : Nothing to do
+ * Task [AddKMSKeyIdToS3ConfigurationMigrationTask] : Nothing to do
+ * Task [AddInTransitEncryptionCheckboxToS3ConfigurationMigrationTask] : Nothing to do
+ * Task [UpdateTStandadizePhoneNumberTask] : Nothing to do
+ * Task [AddSnowflakeAuthenticationTypeMigrationTask] : Nothing to do
+ * Task [ReplaceDefaultProxyIPMigrationTask] : Nothing to do
+ * Task [UpdateMQTTMigrationTask] : Nothing to do
+ * Task [UpdateJavaDSLProcessorMigrationTask] : Nothing to do
+ * Task [CSetHeaderExchangePropertyMigrationTask] : Nothing to do
+ * Task [CSetPropertyExchangePropertyMigrationTask] : Nothing to do
+ * Task [DeprecatedSimpleLanguageSyntaxMigrationTask] : Nothing to do
+ * Task [RenameCamel2ToCamel3ClassesMigrationTask] : Nothing to do
+ * Task [UpdatecKafkaMigrationTask] : Nothing to do
+ * Task [UpdateCHTTPUriMigrationTask] : Nothing to do
+ * Task [DeprecatedBodyExpressionsMigrationTask] : Nothing to do
+ * Task [RemoveUnsupportedCompMigrationTask] : Nothing to do
+ * Task [RemoveBeansDuplicateLibrariesMigrationTask 7.4.1] : Nothing to do
+ * Task [RemoveAWSConnectionDefaultRegionMigrationTask 7.4.1] : Nothing to do
+ * Task [SAPADSOConnectionTypeItemMigrationTask] : Nothing to do
+ * Task [UpdateAWSConnectionRemovedRegionMigrationTask] : Nothing to do
+ * Task [SAPADSOCategoryMigrationTask] : Nothing to do
+ * Task [UpdateTDataMaskAddParamTask] : Nothing to do
+ * Task [RenameHawtdbToLeveldbMigrationTask] : Nothing to do
+ * Task [UpdateActionOnFileForHDFSComponentsMigrationTask] : Nothing to do
+ * Task [ChangeConnectionModeHiveEMRMigrationTask] : Nothing to do
+ * Task [UpdateTmatchGroupGIDLengthTask] : Nothing to do
+ * Task [UpdateTDataEncryptAndDecryptParamTask] : Nothing to do
+ * Task [RemoveOptionsOfcMulticastMigrationTask] : Nothing to do
+ * Task [RenameEleParaForcSQLConnectionMigrationTask] : Nothing to do
+ * Task [AddDistributionForSparkMigrationTask] : Nothing to do
+ * Task [RevertSAPContextModeAdditionalPropMigrationTask] : Nothing to do
+ * Task [UpdateTDataQualityRulesWebAppTask] : Nothing to do
+ * Task [UpdateBuildTypeForSpringBootMSMigrationTask] : Nothing to do
+ * Task [ExcludeTechnicalColumnsMigrationTask] : Nothing to do
+ * Task [UpdatecKafkaParametersMigrationTask_29.01.2025] : Nothing to do
+ * Task [GooglePubSubSubscriptionNameMigrationTask_20.05.2025] : Nothing to do
+ * Task [GenericSnowflakeConnectionToTacokitMigrationTask] : Nothing to do
+ * Task [AddSupportedSparkVersionForSpark3xPluginMetadata] : Nothing to do
+ * Task [AutoUpdateRelationsMigrationTask] : Nothing to do
+ ---=== End of migration ===---
+ ---=== Start Migration of project MBTC_POC ===---
+ * Task [MoveHDFSAndHCatalogToHadoopFolderMigrationTask] : Applied successfully
+ * Task [ResetMavenTemplateMigrationTask] : Applied successfully
+ * Task [UpdateJobPomPropertiesMigrationTask] : Applied successfully
+ * Task [UpdateBeansDefaultLibrariesMigrationTask 8.0.1-R2025-11] : Nothing to do
+ * Task [UpdateBeansLibrariesMigrationTask 8.0.1-R2025-11] : Nothing to do
+ * Task [UpdateDistributionsForTalend8] : Nothing to do
+ * Task [UpdateRemovedSparkLocalVersion] : Nothing to do
+ * Task [UpdateRoutinesLibrariesMigrationTask 8.0.1-R2025-11] : Nothing to do
+ * Task [UpdateJDBCOutputAction] : Nothing to do
+ * Task [UpdateDatabricks73Version] : Nothing to do
+ * Task [UpdateSpark24And23Version] : Nothing to do
+ * Task [UpdateDataprocCredentialType] : Nothing to do
+ * Task [UpdateDatabricksTransientCheckbox] : Nothing to do
+ * Task [UpdateMongoDBVersion] : Nothing to do
+ * Task [UpdateOracleDBVersion] : Nothing to do
+ * Task [KafkaComponents] : Nothing to do
+ * Task [UpdateElasticSearchVersion] : Nothing to do
+ * Task [HiveComponentUpdateConnectionMode] : Nothing to do
+ * Task [MoveToDockerfileTemplateMigrationtask] : Nothing to do
+ * Task [HiveRefactoUpdateConnectionMode] : Nothing to do
+ * Task [RenameHBaseDeleteRowMigrationTask] : Applied successfully
+ * Task [UpdateRemovedSparkKubernetes] : Nothing to do
+ * Task [IcebergInputUseSQLQuery] : Nothing to do
+ * Task [UpdateRemovedUniversalSparkLocal24Version] : Nothing to do
+ * Task [DeleteDocFolderMigrationTask] : Applied successfully
+ * Task [UpdateS3Endpoint] : Nothing to do
+ * Task [UpdateRemovedDatabricksVersions] : Nothing to do
+ * Task [HDFSDIComponents] : Nothing to do
+ * Task [UpdateIcebergOutputSetFormat] : Nothing to do
+ * Task [UpdateRemovedLivyKnox] : Nothing to do
+ * Task [UpdateDatabricksAuthentication] : Nothing to do
+ * Task [Fix a problem of project resources linked to items] : Applied successfully
+ * Task [NewJMSComponentMigrationTask] : Nothing to do
+ * Task [AggregateStrategyMigrationTask] : Nothing to do
+ * Task [RestRequestWrongCallMigrationTask] : Applied successfully
+ * Task [ConsumerFaultResponseMigrationTask] : Applied successfully
+ * Task [UpdateCJMSProjectTask] : Nothing to do
+ * Task [UpdatecJMSMigrationTask] : Nothing to do
+ * Task [cSetHeaderSupportMultiHeadersTask] : Nothing to do
+ * Task [cBeanCTalendJobMigrationTask] : Nothing to do
+ * Task [AddPropagateHeaderTocTalendJobMigrationTask] : Nothing to do
+ * Task [DisconnectErroHandlerMigrationTask] : Nothing to do
+ * Task [UpdateCXFDataFormatMigrationTask] : Nothing to do
+ * Task [FinalVersionUpgradeMigrationTask] : Nothing to do
+ * Task [AddSpringConfigurationMigrationTask] : Nothing to do
+ * Task [PushHCatalogIntoHadoopClusterMigrationTask] : Nothing to do
+ * Task [PushHDFSIntoHadoopClusterMigrationTask] : Nothing to do
+ * Task [ConsumesTypeMigrationTask] : Nothing to do
+ * Task [FormContentTypeMigrationTask] : Applied successfully
+ * Task [cLogLoggingCategoryMigrationTask] : Nothing to do
+ * Task [Rename_cJMSConnectionFactory_To_cMQConnectionFactory_MigrationTask] : Nothing to do
+ * Task [UpdateTMultiPatternCheckTask] : Applied successfully
+ * Task [UnifyPasswordEncryption4ParametersInRouteMigrationTask] : Nothing to do
+ * Task [UnifyPasswordEncryption4ParametersInMRJobMigrationTask] : Nothing to do
+ * Task [UnifyPasswordEncryption4NoSQLConnectionMigrationTask] : Nothing to do
+ * Task [UnifyPasswordEncryption4SapConnectionMigrationTask] : Nothing to do
+ * Task [SAPItemMigrationTask] : Nothing to do
+ * Task [SAPComponentSchemaIdMigrationTask] : Applied successfully
+ * Task [AddSpringConfigurationPropertyMigrationTask] : Nothing to do
+ * Task [UpdatecSOAPServiceNamePortNameDefault] : Nothing to do
+ * Task [CheckAndAddFrameworkForMapReduceJobMigrationTask] : Nothing to do
+ * Task [SAPDatePatternItemMigrationTask] : Nothing to do
+ * Task [SAPDatePatternComponentMigrationTask] : Nothing to do
+ * Task [ChangeMongoDBConnectionMinimalVersionMigrationTask] : Nothing to do
+ * Task [RemoveRouteComponentId] : Nothing to do
+ * Task [UpdateRouteResourceTypeMigrationTask] : Nothing to do
+ * Task [FixCassandraDataStaxDbtypesProblemMigrationTask] : Nothing to do
+ * Task [RouteletProcessTypeMigrationTask] : Nothing to do
+ * Task [ChangeHadoopConfJarNameMigrationTask] : Nothing to do
+ * Task [AdaptDeprecatedHadoopVersionsMigrationTask] : Nothing to do
+ * Task [Update parameter "Matching Algorithm" value for MR tMatchgroup] : Nothing to do
+ * Task [ReviseInvalidContextNamesOfHadoopPropertiesMigrationTask] : Nothing to do
+ * Task [Update tMelissaDataAddress to add a GeoCodeResult column and an advanced parameter] : Nothing to do
+ * Task [TestCaseParentVersionMigration] : Nothing to do
+ * Task [UpdatetNaivebayseModelSparkVersionTask] : Nothing to do
+ * Task [UpdatetPredictSparkVersionTask] : Nothing to do
+ * Task [UpdateTMatchGroupOutPutSchemaTask] : Nothing to do
+ * Task [RenameToCSoapAndCRestMigrationTask] : Nothing to do
+ * Task [cCXFWsdlFileRepoMigrationTask] : Nothing to do
+ * Task [UpdateHadoopConfsForContextualHadoopClusterMigrationTask] : Nothing to do
+ * Task [AddBeansDefaultLibrariesMigrationTask 7.4.1] : Nothing to do
+ * Task [org.talend.designer.mapreduce.repository.migration.AddSupportedSparkVersionMigrationTask] : Nothing to do
+ * Task [update tPatternCheck and tPatternExtract] : Nothing to do
+ * Task [UpdateTMultiPatternTableParamTask] : Nothing to do
+ * Task [Update TmatchGroup "ComputeGrpQuality" Param] : Nothing to do
+ * Task [ChangeRouteResourceItemToResourceItemTask] : Nothing to do
+ * Task [AddOptionSplitableToImportHdfsFileMigrationTask] : Nothing to do
+ * Task [UpdateBeansPackageReplaceMigrationTask 8.0.1-R2025-07] : Nothing to do
+ * Task [TestCaseRoutinesMigrationTask] : Nothing to do
+ * Task [UpdateOracle18VersionSupportMigrationTask] : Nothing to do
+ * Task [DBR540ToDBR550MigrationTask] : Nothing to do
+ * Task [AddStandardDeviationToAggregateRowComponentMigrationTask] : Nothing to do
+ * Task [AddEMRFSMetadataTableNameToS3ConfigurationMigrationTask] : Nothing to do
+ * Task [AddKMSKeyIdToS3ConfigurationMigrationTask] : Nothing to do
+ * Task [AddInTransitEncryptionCheckboxToS3ConfigurationMigrationTask] : Nothing to do
+ * Task [UpdateTStandadizePhoneNumberTask] : Nothing to do
+ * Task [AddSnowflakeAuthenticationTypeMigrationTask] : Nothing to do
+ * Task [ReplaceDefaultProxyIPMigrationTask] : Nothing to do
+ * Task [UpdateMQTTMigrationTask] : Nothing to do
+ * Task [UpdateJavaDSLProcessorMigrationTask] : Nothing to do
+ * Task [CSetHeaderExchangePropertyMigrationTask] : Nothing to do
+ * Task [CSetPropertyExchangePropertyMigrationTask] : Nothing to do
+ * Task [DeprecatedSimpleLanguageSyntaxMigrationTask] : Nothing to do
+ * Task [RenameCamel2ToCamel3ClassesMigrationTask] : Nothing to do
+ * Task [UpdatecKafkaMigrationTask] : Nothing to do
+ * Task [UpdateCHTTPUriMigrationTask] : Nothing to do
+ * Task [DeprecatedBodyExpressionsMigrationTask] : Nothing to do
+ * Task [RemoveUnsupportedCompMigrationTask] : Nothing to do
+ * Task [RemoveBeansDuplicateLibrariesMigrationTask 7.4.1] : Nothing to do
+ * Task [RemoveAWSConnectionDefaultRegionMigrationTask 7.4.1] : Nothing to do
+ * Task [SAPADSOConnectionTypeItemMigrationTask] : Nothing to do
+ * Task [UpdateAWSConnectionRemovedRegionMigrationTask] : Nothing to do
+ * Task [SAPADSOCategoryMigrationTask] : Nothing to do
+ * Task [UpdateTDataMaskAddParamTask] : Nothing to do
+ * Task [RenameHawtdbToLeveldbMigrationTask] : Nothing to do
+ * Task [UpdateActionOnFileForHDFSComponentsMigrationTask] : Nothing to do
+ * Task [ChangeConnectionModeHiveEMRMigrationTask] : Nothing to do
+ * Task [UpdateTmatchGroupGIDLengthTask] : Nothing to do
+ * Task [UpdateTDataEncryptAndDecryptParamTask] : Nothing to do
+ * Task [RemoveOptionsOfcMulticastMigrationTask] : Nothing to do
+ * Task [RenameEleParaForcSQLConnectionMigrationTask] : Nothing to do
+ * Task [AddDistributionForSparkMigrationTask] : Nothing to do
+ * Task [RevertSAPContextModeAdditionalPropMigrationTask] : Nothing to do
+ * Task [UpdateTDataQualityRulesWebAppTask] : Nothing to do
+ * Task [UpdateBuildTypeForSpringBootMSMigrationTask] : Nothing to do
+ * Task [ExcludeTechnicalColumnsMigrationTask] : Nothing to do
+ * Task [UpdatecKafkaParametersMigrationTask_29.01.2025] : Nothing to do
+ * Task [MigrationS3ComponentToS3] : Nothing to do
+ * Task [MigrationS3ComponentToS3] : Nothing to do
+ * Task [ChangeContextModeForTcompv0MigrationTask] : Nothing to do
+ * Task [ChangeDBVersion4tSAPConnectionV2] : Nothing to do
+ * Task [GooglePubSubSubscriptionNameMigrationTask_20.05.2025] : Nothing to do
+ * Task [RenameJavajetDynamoDBComponents] : Nothing to do
+ * Task [GenericSnowflakeConnectionToTacokitMigrationTask] : Nothing to do
+ * Task [AddSupportedSparkVersionForSpark3xPluginMetadata] : Nothing to do
+ * Task [NewTckSnowflakeMigrationTask] : Nothing to do
+ * Task [S3SQSAddComponentIdMigrationTask] : Nothing to do
+ * Task [AutoUpdateRelationsMigrationTask] : Applied successfully
+ ---=== End of migration ===---
