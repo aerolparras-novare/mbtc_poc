@@ -62,5 +62,17 @@
         <sqlDataType xmi:id="_rwUdhPIyEfCZcI9EdJvCQg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
       </feature>
     </ownedElement>
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_W11BIPKhEfC0Pd25tdHHYA" name="products" id="_W1zL8PKhEfC0Pd25tdHHYA" label="products" tableType="TABLE">
+      <feature xsi:type="relational:TdColumn" xmi:id="_W11BIfKhEfC0Pd25tdHHYA" name="id" label="id" length="10" sourceType="INT" talendType="id_Integer" key="true" nullable="false">
+        <taggedValue xmi:id="_W11BIvKhEfC0Pd25tdHHYA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_W11BI_KhEfC0Pd25tdHHYA" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_W11BJPKhEfC0Pd25tdHHYA" name="INT" numericPrecisionRadix="10" javaDataType="4"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_W11BJfKhEfC0Pd25tdHHYA" name="Product" label="Product" length="10" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_W11BJvKhEfC0Pd25tdHHYA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_W11BJ_KhEfC0Pd25tdHHYA" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_W11BKPKhEfC0Pd25tdHHYA" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+    </ownedElement>
   </orgomg.cwm.resource.relational:Catalog>
 </xmi:XMI>

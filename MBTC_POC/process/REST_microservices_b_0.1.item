@@ -267,7 +267,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHMap_1" show="false"/>
     <elementParameter field="LABEL" name="MAPPATH_HELP" value=""/>
     <elementParameter field="EXTERNAL" name="MAP_EDITOR" value=""/>
-    <elementParameter field="CHECK" name="RECREATE_MAP_SYNC_CONNECTIONS" value="true"/>
+    <elementParameter field="CHECK" name="RECREATE_MAP_SYNC_CONNECTIONS" value="false"/>
     <elementParameter field="HMAP_PATH" name="HMAP_PATH" value="&quot;Jobs/REST_services_b/tHMap_1&quot;"/>
     <elementParameter field="RADIO" name="SOURCE_AS_MAP" value="true"/>
     <elementParameter field="RADIO" name="SOURCE_AS_STRING" value="false" show="false"/>
@@ -277,9 +277,7 @@
     <elementParameter field="RADIO" name="AS_INPUTSTREAM" value="false"/>
     <elementParameter field="RADIO" name="AS_OBJECT" value="false" show="false"/>
     <elementParameter field="RADIO" name="AS_DOCUMENT" value="false" show="false"/>
-    <elementParameter field="TEXT" name="SOURCE_TDM_STRUCT_INCARNATION" value="" show="false"/>
     <elementParameter field="TEXT" name="TARGET_TDM_STRUCT_INCARNATION" value="" show="false"/>
-    <elementParameter field="TEXT" name="SOURCE_GENERATED_TDM_STRUCT_PATH" value="" show="false"/>
     <elementParameter field="TEXT" name="TARGET_GENERATED_TDM_STRUCT_PATH" value="" show="false"/>
     <elementParameter field="TEXT" name="SINGLE_COLUMN_OBJECTTYPE" value="true" show="false"/>
     <elementParameter field="TEXT" name="SINGLE_COLUMN_STRING" value="false" show="false"/>
@@ -298,7 +296,6 @@
     <elementParameter field="RADIO" name="INCONNECTIONS_SYNCED" value="true" show="false"/>
     <elementParameter field="RADIO" name="OUTCONNECTIONS_SYNCED" value="true" show="false"/>
     <elementParameter field="TEXT" name="INCONNECTIONS_ORDER" value="row1" show="false"/>
-    <elementParameter field="TEXT" name="INCONNECTIONS_REMOVED" value="" show="false"/>
     <elementParameter field="TEXT" name="OUTCONNECTIONS_REMOVED" value="" show="false"/>
     <elementParameter field="TEXT" name="HMAP_VAR_PATH" value="&quot;&quot;"/>
     <elementParameter field="HMAP_VAR_USED_MAPS" name="HMAP_VAR_USED_MAPS" value="&quot;&quot;"/>

@@ -1,0 +1,179 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "Products API",
+    "description" : "No description",
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "/"
+  } ],
+  "paths" : {
+    "/products" : {
+      "get" : {
+        "summary" : "Get list of products",
+        "responses" : {
+          "200" : {
+            "description" : "status 200",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Products"
+                },
+                "example" : "{\n    \"Product\":[\n        {\n            \"id\": \"1\",\n            \"Product\": \"Product 1\"\n        },\n        {\n            \"id\": \"2\",\n            \"Product\": \"Product 2\"\n        },\n        {\n            \"id\": \"3\",\n            \"Product\": \"Product 3\"\n        },\n        {\n            \"id\": \"4\",\n            \"Product\": \"Product 4\"\n        }\n    ]\n}"
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "summary" : "Create product",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Product"
+              },
+              "example" : "{\n    \"id\": \"50\",\n    \"Product\": \"Product 50\"\n}"
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "status 200",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"23000\",\n\t\"errorMessage\": \"Duplicate entry '461145' for key 'PRIMARY' - Line: 0\"\n}"
+              }
+            }
+          },
+          "409" : {
+            "description" : "status 409",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"50\",\n\t\"errorCode\": \"23000\",\n\t\"errorMessage\": \"Duplicate entry '461145' for key 'PRIMARY' - Line: 0\"\n}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/products/{id}" : {
+      "put" : {
+        "summary" : "Update product",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Product"
+              },
+              "example" : "{\n    \"id\": \"50\",\n    \"Product\": \"Product 50\"\n}"
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "status 200"
+          },
+          "409" : {
+            "description" : "status 409",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"50\",\n\t\"errorCode\": \"23000\",\n\t\"errorMessage\": \"Duplicate entry '461145' for key 'PRIMARY' - Line: 0\"\n}"
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "summary" : "Delete product",
+        "responses" : {
+          "200" : {
+            "description" : "status 200"
+          },
+          "409" : {
+            "description" : "status 409",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"23000\",\n\t\"errorMessage\": \"Duplicate entry '461145' for key 'PRIMARY' - Line: 0\"\n}"
+              }
+            }
+          }
+        }
+      },
+      "parameters" : [ {
+        "name" : "id",
+        "in" : "path",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        },
+        "style" : "simple",
+        "explode" : false
+      } ]
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Product" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string"
+          },
+          "Product" : {
+            "type" : "string"
+          }
+        },
+        "example" : "{\r\n    \"id\": \"50\",\r\n    \"Product\": \"Product 50\"\r\n}"
+      },
+      "Products" : {
+        "type" : "object",
+        "properties" : {
+          "Product" : {
+            "type" : "array",
+            "items" : {
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "string"
+                },
+                "Product" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        },
+        "example" : "{\r\n    \"Product\":[\r\n        {\r\n            \"id\": \"1\",\r\n            \"Product\": \"Product 1\"\r\n        },\r\n        {\r\n            \"id\": \"2\",\r\n            \"Product\": \"Product 2\"\r\n        },\r\n        {\r\n            \"id\": \"3\",\r\n            \"Product\": \"Product 3\"\r\n        },\r\n        {\r\n            \"id\": \"4\",\r\n            \"Product\": \"Product 4\"\r\n        },\r\n        {\r\n            \"id\": \"5\",\r\n            \"Product\": \"Product 5\"\r\n        },\r\n        {\r\n            \"id\": \"6\",\r\n            \"Product\": \"Product 6\"\r\n        },\r\n        {\r\n            \"id\": \"7\",\r\n            \"Product\": \"Product 7\"\r\n        },\r\n        {\r\n            \"id\": \"8\",\r\n            \"Product\": \"Product 8\"\r\n        },\r\n        {\r\n            \"id\": \"9\",\r\n            \"Product\": \"Product 9\"\r\n        },\r\n        {\r\n            \"id\": \"10\",\r\n            \"Product\": \"Product 10\"\r\n        },\r\n        {\r\n            \"id\": \"11\",\r\n            \"Product\": \"Product 11\"\r\n        },\r\n        {\r\n            \"id\": \"12\",\r\n            \"Product\": \"Product 12\"\r\n        },\r\n        {\r\n            \"id\": \"13\",\r\n            \"Product\": \"Product 13\"\r\n        },\r\n        {\r\n            \"id\": \"14\",\r\n            \"Product\": \"Product 14\"\r\n        },\r\n        {\r\n            \"id\": \"15\",\r\n            \"Product\": \"Product 15\"\r\n        },\r\n        {\r\n            \"id\": \"16\",\r\n            \"Product\": \"Product 16\"\r\n        },\r\n        {\r\n            \"id\": \"17\",\r\n            \"Product\": \"Product 17\"\r\n        },\r\n        {\r\n            \"id\": \"18\",\r\n            \"Product\": \"Product 18\"\r\n        },\r\n        {\r\n            \"id\": \"19\",\r\n            \"Product\": \"Product 19\"\r\n        },\r\n        {\r\n            \"id\": \"20\",\r\n            \"Product\": \"Product 20\"\r\n        },\r\n        {\r\n            \"id\": \"21\",\r\n            \"Product\": \"Product 21\"\r\n        },\r\n        {\r\n            \"id\": \"22\",\r\n            \"Product\": \"Product 22\"\r\n        },\r\n        {\r\n            \"id\": \"23\",\r\n            \"Product\": \"Product 23\"\r\n        },\r\n        {\r\n            \"id\": \"24\",\r\n            \"Product\": \"Product 24\"\r\n        },\r\n        {\r\n            \"id\": \"25\",\r\n            \"Product\": \"Product 25\"\r\n        },\r\n        {\r\n            \"id\": \"26\",\r\n            \"Product\": \"Product 26\"\r\n        },\r\n        {\r\n            \"id\": \"27\",\r\n            \"Product\": \"Product 27\"\r\n        },\r\n        {\r\n            \"id\": \"28\",\r\n            \"Product\": \"Product 28\"\r\n        },\r\n        {\r\n            \"id\": \"29\",\r\n            \"Product\": \"Product 29\"\r\n        },\r\n        {\r\n            \"id\": \"30\",\r\n            \"Product\": \"Product 30\"\r\n        },\r\n        {\r\n            \"id\": \"31\",\r\n            \"Product\": \"Product 31\"\r\n        },\r\n        {\r\n            \"id\": \"32\",\r\n            \"Product\": \"Product 32\"\r\n        },\r\n        {\r\n            \"id\": \"33\",\r\n            \"Product\": \"Product 33\"\r\n        },\r\n        {\r\n            \"id\": \"34\",\r\n            \"Product\": \"Product 34\"\r\n        },\r\n        {\r\n            \"id\": \"35\",\r\n            \"Product\": \"Product 35\"\r\n        },\r\n        {\r\n            \"id\": \"36\",\r\n            \"Product\": \"Product 36\"\r\n        },\r\n        {\r\n            \"id\": \"37\",\r\n            \"Product\": \"Product 37\"\r\n        },\r\n        {\r\n            \"id\": \"38\",\r\n            \"Product\": \"Product 38\"\r\n        },\r\n        {\r\n            \"id\": \"39\",\r\n            \"Product\": \"Product 39\"\r\n        },\r\n        {\r\n            \"id\": \"40\",\r\n            \"Product\": \"Product 40\"\r\n        },\r\n        {\r\n            \"id\": \"41\",\r\n            \"Product\": \"Product 41\"\r\n        },\r\n        {\r\n            \"id\": \"42\",\r\n            \"Product\": \"Product 42\"\r\n        },\r\n        {\r\n            \"id\": \"43\",\r\n            \"Product\": \"Product 43\"\r\n        },\r\n        {\r\n            \"id\": \"44\",\r\n            \"Product\": \"Product 44\"\r\n        },\r\n        {\r\n            \"id\": \"45\",\r\n            \"Product\": \"Product 45\"\r\n        },\r\n        {\r\n            \"id\": \"46\",\r\n            \"Product\": \"Product 46\"\r\n        },\r\n        {\r\n            \"id\": \"47\",\r\n            \"Product\": \"Product 47\"\r\n        },\r\n        {\r\n            \"id\": \"48\",\r\n            \"Product\": \"Product 48\"\r\n        },\r\n        {\r\n            \"id\": \"49\",\r\n            \"Product\": \"Product 49\"\r\n        },\r\n        {\r\n            \"id\": \"50\",\r\n            \"Product\": \"Product 50\"\r\n        }\r\n    ]\r\n}"
+      },
+      "Error" : {
+        "type" : "object",
+        "properties" : {
+          "ID" : {
+            "type" : "string"
+          },
+          "errorCode" : {
+            "type" : "string"
+          },
+          "errorMessage" : {
+            "type" : "string"
+          }
+        },
+        "example" : "{\r\n\t\"ID\": \"461145\",\r\n\t\"errorCode\": \"23000\",\r\n\t\"errorMessage\": \"Duplicate entry '461145' for key 'PRIMARY' - Line: 0\"\r\n}"
+      }
+    }
+  }
+}
