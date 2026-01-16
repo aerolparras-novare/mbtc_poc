@@ -114,7 +114,7 @@
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_v9MYgPIwEfCZcI9EdJvCQg" show="false"/>
     <elementParameter field="TEXT" name="API_ID" value="b98e7546-dbc3-4dd6-aac4-98a5ee817629" show="false"/>
-    <elementParameter field="TEXT" name="REST_ENDPOINT" value="&quot;/services&quot;"/>
+    <elementParameter field="TEXT" name="REST_ENDPOINT" value="&quot;API&quot;"/>
     <elementParameter field="TABLE" name="SCHEMAS">
       <elementValue elementRef="SCHEMA" value="Get_the_list_of_customers" id="0"/>
       <elementValue elementRef="HTTP_VERB" value="GET" id="1"/>
