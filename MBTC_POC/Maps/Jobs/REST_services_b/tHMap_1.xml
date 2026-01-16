@@ -1,85 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/Jobs/REST_services_b/tHMap_1/row1.xml' outStruct='Structures/Customers_API_b_0.1/schemas/Customers.xml' inputRep='178' outputRep='177' nextMap='' inputStructUserName='row1' outputStructUserName='Customers' V1='4' name='tHMap_1' incarnation='209'>
-  <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='35' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='root'>
+<root t='190' id='1' V190='11' inStruct='Structures/Jobs/REST_services_b/tHMap_1/row1.xml' outStruct='Structures/Customers_API_b_0.1/schemas/Customers.xml' inputRep='178' outputRep='177' nextMap='' inputStructUserName='row1' outputStructUserName='Customers' V1='4' name='tHMap_1' incarnation='285'>
+  <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='48' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='root'>
     <mapNode t='190' idref='1'/>
-    <child t='200' id='20' V200='8' input='true' structElemExists='true' usedCount='30' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='row'>
+    <child t='200' id='20' V200='8' input='true' structElemExists='true' usedCount='41' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='row'>
       <mapNode t='190' idref='1'/>
-      <child t='200' id='21' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='ID'>
+      <child t='200' id='21' V200='8' input='true' usedCount='4' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='ID'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='22' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='NAME'>
+      <child t='200' id='22' V200='8' input='true' usedCount='4' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='NAME'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='23' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='LAST_NAME'>
+      <child t='200' id='23' V200='8' input='true' usedCount='4' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='LAST_NAME'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='24' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='EMAIL'>
+      <child t='200' id='24' V200='8' input='true' usedCount='4' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='EMAIL'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='25' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='JOB_TITLE'>
+      <child t='200' id='25' V200='8' input='true' usedCount='4' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='JOB_TITLE'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='26' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CREDITCARDNUMBER'>
+      <child t='200' id='26' V200='8' input='true' usedCount='4' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CREDITCARDNUMBER'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='27' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='COMPANY'>
+      <child t='200' id='27' V200='8' input='true' usedCount='4' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='COMPANY'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='28' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CITY'>
+      <child t='200' id='28' V200='8' input='true' usedCount='4' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CITY'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='29' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STATE'>
+      <child t='200' id='29' V200='8' input='true' usedCount='4' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STATE'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='32' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='id'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='33' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='name'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='34' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='last_name'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='35' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='email'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='36' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='job_title'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='37' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='creditcardnumber'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='38' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='company'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='39' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='city'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='40' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='state'>
         <mapNode t='190' idref='1'/>
       </child>
     </child>
   </inputMapElem>
-  <outputMapElem t='200' id='3' V200='8' structElemExists='true' usedCount='46' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='Customers'>
+  <outputMapElem t='200' id='3' V200='8' structElemExists='true' usedCount='68' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='Customers'>
     <mapNode t='190' idref='1'/>
     <loop>SimpleLoop([autoAdded="true"],in$/root,{Filter},{Sort Keys},{Contexts})</loop>
-    <child t='200' id='4' V200='8' structElemExists='true' usedCount='41' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' inheritsFromCopyRule='20' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Customers_API_b_0.1/schemas/Customer.xml' V281='13' modifiedFromParent_loop='true' V1='4' name='Customer'>
+    <child t='200' id='4' V200='8' structElemExists='true' usedCount='61' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' inheritsFromCopyRule='20' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/Customers_API_b_0.1/schemas/Customer.xml' V281='13' modifiedFromParent_loop='true' V1='4' name='Customer'>
       <mapNode t='190' idref='1'/>
       <loop>SimpleLoop(in$/root/row,{Filter},{Sort Keys},{Contexts})</loop>
-      <child t='200' id='5' V200='8' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='ID'>
+      <child t='200' id='5' V200='8' structElemExists='true' usedCount='7' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='ID'>
         <mapNode t='190' idref='1'/>
         <value>in$/root/row/ID</value>
       </child>
-      <child t='200' id='6' V200='8' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='NAME'>
+      <child t='200' id='6' V200='8' structElemExists='true' usedCount='7' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='NAME'>
         <mapNode t='190' idref='1'/>
         <value>in$/root/row/NAME</value>
       </child>
-      <child t='200' id='7' V200='8' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='LAST_NAME'>
+      <child t='200' id='7' V200='8' structElemExists='true' usedCount='7' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='LAST_NAME'>
         <mapNode t='190' idref='1'/>
         <value>in$/root/row/LAST_NAME</value>
       </child>
-      <child t='200' id='8' V200='8' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='EMAIL'>
+      <child t='200' id='8' V200='8' structElemExists='true' usedCount='7' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='EMAIL'>
         <mapNode t='190' idref='1'/>
         <value>in$/root/row/EMAIL</value>
       </child>
-      <child t='200' id='9' V200='8' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='JOB_TITLE'>
+      <child t='200' id='9' V200='8' structElemExists='true' usedCount='7' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='JOB_TITLE'>
         <mapNode t='190' idref='1'/>
         <value>in$/root/row/JOB_TITLE</value>
       </child>
-      <child t='200' id='10' V200='8' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='CREDITCARDNUMBER'>
+      <child t='200' id='10' V200='8' structElemExists='true' usedCount='7' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='CREDITCARDNUMBER'>
         <mapNode t='190' idref='1'/>
         <value>in$/root/row/CREDITCARDNUMBER</value>
       </child>
-      <child t='200' id='11' V200='8' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='COMPANY'>
+      <child t='200' id='11' V200='8' structElemExists='true' usedCount='7' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='COMPANY'>
         <mapNode t='190' idref='1'/>
         <value>in$/root/row/COMPANY</value>
       </child>
-      <child t='200' id='12' V200='8' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='CITY'>
+      <child t='200' id='12' V200='8' structElemExists='true' usedCount='7' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='CITY'>
         <mapNode t='190' idref='1'/>
         <value>in$/root/row/CITY</value>
       </child>
-      <child t='200' id='13' V200='8' structElemExists='true' usedCount='5' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='STATE'>
+      <child t='200' id='13' V200='8' structElemExists='true' usedCount='7' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='STATE'>
         <mapNode t='190' idref='1'/>
         <value>in$/root/row/STATE</value>
       </child>
     </child>
   </outputMapElem>
-  <inputRepRuntime t='698' id='30' V698='1' V690='1' padOutput='true'>
+  <inputRepRuntime t='698' id='41' V698='1' V690='1' padOutput='true'>
   </inputRepRuntime>
-  <outputRepRuntime t='697' id='31' V697='1' V690='1' padOutput='true' encoding='UTF-8' rowElemPath='/Customers/Customer'>
+  <outputRepRuntime t='697' id='42' V697='1' V690='1' padOutput='true' encoding='UTF-8' rowElemPath='/Customers/Customer'>
   </outputRepRuntime>
   <valueSets></valueSets>
   <child t='165' id='16' V1='4' name='Document Bindings'>
