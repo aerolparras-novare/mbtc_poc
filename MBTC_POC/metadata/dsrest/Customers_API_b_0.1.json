@@ -4,7 +4,7 @@
     "title" : "Customers API",
     "description" : "An API for keeping track of your customers",
     "contact" : { },
-    "version" : "1.1.0"
+    "version" : "1.0.0"
   },
   "servers" : [ {
     "url" : "/"
@@ -70,7 +70,6 @@
     "/customers/{id}" : {
       "put" : {
         "summary" : "Update a customer",
-        "description" : "Updates a customer",
         "requestBody" : {
           "content" : {
             "application/json" : {
@@ -83,13 +82,16 @@
         },
         "responses" : {
           "200" : {
-            "description" : "Status 200",
+            "description" : "status 200"
+          },
+          "409" : {
+            "description" : "status 409",
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/Customer"
+                  "$ref" : "#/components/schemas/Error"
                 },
-                "example" : "{\n\t\"ID\": \"461145\",\n\t\"NAME\": \"John\",\n\t\"LAST_NAME\": \"Smith\",\n\t\"EMAIL\": \"jsmith@vistaprint.com\",\n\t\"JOB_TITLE\": \"Electrical Engineer\",\n\t\"CREDITCARDNUMBER\": \"4343354898-76-9480\",\n\t\"COMPANY\": \"Zoonder\",\n\t\"CITY\": \"San Francisco\",\n\t\"STATE\": \"CA\"\n}"
+                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"23000\",\n\t\"errorMessage\": \"Error updating '461145' for key 'PRIMARY' - Line: 0\"\n}"
               }
             }
           }
