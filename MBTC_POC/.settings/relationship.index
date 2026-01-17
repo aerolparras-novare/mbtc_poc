@@ -94,6 +94,10 @@
     "version" : "0.1",
     "type" : "mapper"
   }, {
+    "id" : "_7kg8wPI3EfCZcI9EdJvCQg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_PAmKcPLGEfC0Pd25tdHHYA",
     "version" : "Latest",
     "type" : "property"
@@ -101,6 +105,10 @@
     "id" : "_v9MYgPIwEfCZcI9EdJvCQg",
     "version" : "Latest",
     "type" : "property"
+  }, {
+    "id" : "_7kg8wPI3EfCZcI9EdJvCQg - metadata",
+    "version" : "Latest",
+    "type" : "schema"
   }, {
     "id" : "_PAmKcPLGEfC0Pd25tdHHYA - customers",
     "version" : "Latest",
