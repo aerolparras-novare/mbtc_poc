@@ -62,6 +62,44 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_ngJBIPT4EfCHKuiiShkmqA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_CkNdQOuqEfCfTcL_YuhooQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_XNbtUPE3EfCjY7lABTh3EA - CUSTOMERS",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_vzfg8PUEEfCHKuiiShkmqA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_CkNdQOuqEfCfTcL_YuhooQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_CkNdQOuqEfCfTcL_YuhooQ - ACCOUNTS",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_CkNdQOuqEfCfTcL_YuhooQ - CUSTOMERS",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_CkNdQOuqEfCfTcL_YuhooQ - TRANSACTIONS",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_QPkSwP1WEeiai7rk0Np2CQ",
     "version" : "0.1",
     "type" : "mapper"
