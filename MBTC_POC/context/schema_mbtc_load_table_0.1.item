@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_m9On8O9_EfCcepb0inUXkA" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_m9On8e9_EfCcepb0inUXkA" comment="" name="load_id" prompt="load_id?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
+  <contextParameter xmi:id="_m9On8u9_EfCcepb0inUXkA" comment="" name="batch_id" prompt="batch_id?" promptNeeded="true" repositoryContextId="built-in" type="id_Integer" value=""/>
+  <contextParameter xmi:id="_m9On8-9_EfCcepb0inUXkA" comment="" name="source_system" prompt="source_system?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_m9On9O9_EfCcepb0inUXkA" comment="" name="tablename" prompt="tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_m9On9e9_EfCcepb0inUXkA" comment="" name="file_path" prompt="file_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_m9On9u9_EfCcepb0inUXkA" comment="" name="file_name" prompt="file_name?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_m9On9-9_EfCcepb0inUXkA" comment="" name="file_type" prompt="file_type?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_m9On-O9_EfCcepb0inUXkA" comment="" name="sheet_index" prompt="sheet_index?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
+  <contextParameter xmi:id="_m9On-e9_EfCcepb0inUXkA" comment="" name="field_separator" prompt="field_separator?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_m9On-u9_EfCcepb0inUXkA" comment="" name="run_flag" prompt="run_flag?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
+  <contextParameter xmi:id="_m9On--9_EfCcepb0inUXkA" comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_m9On_u9_EfCcepb0inUXkA" comment="" name="update_ts" prompt="update_ts?" promptNeeded="false" repositoryContextId="built-in" type="id_Date" value=""/>
+  <contextParameter xmi:id="_ijry0O-VEfCcepb0inUXkA" comment="" name="column_list" prompt="column_list?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_8lfi4PKKEfCNScNTrRRCvQ" comment="" name="source_schema" prompt="source_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_8lfi4fKKEfCNScNTrRRCvQ" comment="" name="field_escape_char" prompt="field_escape_char?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_8lfi4vKKEfCNScNTrRRCvQ" comment="" name="field_text_enclosure" prompt="field_text_enclosure?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_8lfi4_KKEfCNScNTrRRCvQ" comment="" name="header" prompt="header?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
+</talendfile:ContextType>

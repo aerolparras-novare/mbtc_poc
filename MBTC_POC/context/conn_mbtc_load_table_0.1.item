@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_vyFAMO9oEfCcepb0inUXkA" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_HyE1gO9pEfCcepb0inUXkA" comment="" name="conn_mbtc_load_table_Password" prompt="conn_mbtc_load_table_Password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:HGjtpAJx70/2h6l1cbdIJflhnv7/OGeAxSl9qrTH4nnGznumRnzpCfM="/>
+  <contextParameter xmi:id="_HyE1ge9pEfCcepb0inUXkA" comment="" name="conn_mbtc_load_table_Schema" prompt="conn_mbtc_load_table_Schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="MBTC"/>
+  <contextParameter xmi:id="_HyE1gu9pEfCcepb0inUXkA" comment="" name="conn_mbtc_load_table_Server" prompt="conn_mbtc_load_table_Server?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="18.136.114.179"/>
+  <contextParameter xmi:id="_HyE1g-9pEfCcepb0inUXkA" comment="" name="conn_mbtc_load_table_Port" prompt="conn_mbtc_load_table_Port?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="1521"/>
+  <contextParameter xmi:id="_HyE1hO9pEfCcepb0inUXkA" comment="" name="conn_mbtc_load_table_ServiceName" prompt="conn_mbtc_load_table_ServiceName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="mbtcDb"/>
+  <contextParameter xmi:id="_HyE1he9pEfCcepb0inUXkA" comment="" name="conn_mbtc_load_table_Login" prompt="conn_mbtc_load_table_Login?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="nvre_dev2"/>
+  <contextParameter xmi:id="_HyE1hu9pEfCcepb0inUXkA" comment="" name="conn_mbtc_load_table_AdditionalParams" prompt="conn_mbtc_load_table_AdditionalParams?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+</talendfile:ContextType>
