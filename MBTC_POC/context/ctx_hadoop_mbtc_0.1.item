@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_AWSD4PZwEfCMJs7iWvIt_w" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_AWSD4fZwEfCMJs7iWvIt_w" comment="" name="ctx_hadoop_mbtc_customClasspath" prompt="ctx_hadoop_mbtc_customClasspath?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_AWSD4vZwEfCMJs7iWvIt_w" comment="" name="ctx_hadoop_mbtc_ResourceManagerScheduler" prompt="ctx_hadoop_mbtc_ResourceManagerScheduler?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="dao-cdp-poc-master1.novare.com.ph:8030"/>
+  <contextParameter xmi:id="_AWSD4_ZwEfCMJs7iWvIt_w" comment="" name="ctx_hadoop_mbtc_ResourceManager" prompt="ctx_hadoop_mbtc_ResourceManager?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="dao-cdp-poc-master1.novare.com.ph:8032"/>
+  <contextParameter xmi:id="_AWSD5PZwEfCMJs7iWvIt_w" comment="" name="ctx_hadoop_mbtc_User" prompt="ctx_hadoop_mbtc_User?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="admin"/>
+  <contextParameter xmi:id="_AWSD5fZwEfCMJs7iWvIt_w" comment="" name="ctx_hadoop_mbtc_StagingDirectory" prompt="ctx_hadoop_mbtc_StagingDirectory?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/user"/>
+  <contextParameter xmi:id="_AWSD5vZwEfCMJs7iWvIt_w" comment="" name="ctx_hadoop_mbtc_hadoopConfSpecificJar" prompt="ctx_hadoop_mbtc_hadoopConfSpecificJar?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  <contextParameter xmi:id="_AWSD5_ZwEfCMJs7iWvIt_w" comment="" name="ctx_hadoop_mbtc_useCustomClasspath" prompt="ctx_hadoop_mbtc_useCustomClasspath?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value=""/>
+  <contextParameter xmi:id="_AWSD6PZwEfCMJs7iWvIt_w" comment="" name="ctx_hadoop_mbtc_NameNodeUri" prompt="ctx_hadoop_mbtc_NameNodeUri?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="hdfs://dao-cdp-poc-master1.novare.com.ph:8020"/>
+  <contextParameter xmi:id="_AWSD6fZwEfCMJs7iWvIt_w" comment="" name="ctx_hadoop_mbtc_JobHistory" prompt="ctx_hadoop_mbtc_JobHistory?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="dao-cdp-poc-edge1.novare.com.ph:10020"/>
+  <contextParameter xmi:id="_AWSD6vZwEfCMJs7iWvIt_w" comment="" name="ctx_hadoop_mbtc_setHadoopConf" prompt="ctx_hadoop_mbtc_setHadoopConf?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="false"/>
+</talendfile:ContextType>

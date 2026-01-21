@@ -2,37 +2,37 @@
   "itemId" : "_yplEUPZkEfCMJs7iWvIt_w",
   "contextList" : [ {
     "contextName" : "Default",
-    "repoId" : "_mErAAPZpEfCMJs7iWvIt_w",
+    "repoId" : "_AV4bQPZwEfCMJs7iWvIt_w",
     "parameterList" : [ {
-      "id" : "_mFCMYfZpEfCMJs7iWvIt_w",
-      "name" : "conn_hadoop_mbtc_customClasspath"
+      "id" : "_AWSD4fZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_customClasspath"
     }, {
-      "id" : "_mFCMYvZpEfCMJs7iWvIt_w",
-      "name" : "conn_hadoop_mbtc_ResourceManagerScheduler"
+      "id" : "_AWSD4vZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_ResourceManagerScheduler"
     }, {
-      "id" : "_mFCMY_ZpEfCMJs7iWvIt_w",
-      "name" : "conn_hadoop_mbtc_ResourceManager"
+      "id" : "_AWSD4_ZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_ResourceManager"
     }, {
-      "id" : "_mFCMZPZpEfCMJs7iWvIt_w",
-      "name" : "conn_hadoop_mbtc_User"
+      "id" : "_AWSD5PZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_User"
     }, {
-      "id" : "_mFCMZfZpEfCMJs7iWvIt_w",
-      "name" : "conn_hadoop_mbtc_StagingDirectory"
+      "id" : "_AWSD5fZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_StagingDirectory"
     }, {
-      "id" : "_mFCMZvZpEfCMJs7iWvIt_w",
-      "name" : "conn_hadoop_mbtc_hadoopConfSpecificJar"
+      "id" : "_AWSD5vZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_hadoopConfSpecificJar"
     }, {
-      "id" : "_mFCMZ_ZpEfCMJs7iWvIt_w",
-      "name" : "conn_hadoop_mbtc_useCustomClasspath"
+      "id" : "_AWSD5_ZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_useCustomClasspath"
     }, {
-      "id" : "_mFCMaPZpEfCMJs7iWvIt_w",
-      "name" : "conn_hadoop_mbtc_NameNodeUri"
+      "id" : "_AWSD6PZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_NameNodeUri"
     }, {
-      "id" : "_mFCMafZpEfCMJs7iWvIt_w",
-      "name" : "conn_hadoop_mbtc_JobHistory"
+      "id" : "_AWSD6fZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_JobHistory"
     }, {
-      "id" : "_mFCMavZpEfCMJs7iWvIt_w",
-      "name" : "conn_hadoop_mbtc_setHadoopConf"
+      "id" : "_AWSD6vZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_setHadoopConf"
     } ]
   } ]
 }
