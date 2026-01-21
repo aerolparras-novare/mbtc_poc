@@ -11,9 +11,9 @@
     <contextParameter comment="" name="conn_mbtc_load_table_Schema" prompt="conn_mbtc_load_table_Schema?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="MBTC" internalId="_R57X0O-AEfCcepb0inUXkA"/>
     <contextParameter comment="" name="conn_mbtc_load_table_AdditionalParams" prompt="conn_mbtc_load_table_AdditionalParams?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="" internalId="_R57X0e-AEfCcepb0inUXkA"/>
     <contextParameter comment="" name="conn_mbtc_load_table_ServiceName" prompt="conn_mbtc_load_table_ServiceName?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="mbtcDb" internalId="_R57X0u-AEfCcepb0inUXkA"/>
-    <contextParameter comment="" name="conn_mbtc_load_table_Password" prompt="conn_mbtc_load_table_Password?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_Password" value="enc:system.encryption.key.v1:FeDtFVKQavXu7/81sdM43CHN/1hdMRS8miWLHfG81XWtzV1cRC/t67Y=" internalId="_R57X0--AEfCcepb0inUXkA"/>
+    <contextParameter comment="" name="conn_mbtc_load_table_Password" prompt="conn_mbtc_load_table_Password?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_Password" value="enc:system.encryption.key.v1:q4JdA0inHrbRJPGPiOMd4VmPPfAOwAgk12A78KDbX8cDszvLXrMbQw==" internalId="_R57X0--AEfCcepb0inUXkA"/>
     <contextParameter comment="" name="conn_mbtc_load_table_Server" prompt="conn_mbtc_load_table_Server?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="18.136.114.179" internalId="_R57X1O-AEfCcepb0inUXkA"/>
-    <contextParameter comment="" name="conn_mbtc_load_table_Login" prompt="conn_mbtc_load_table_Login?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="nvre_dev2" internalId="_R57X1e-AEfCcepb0inUXkA"/>
+    <contextParameter comment="" name="conn_mbtc_load_table_Login" prompt="conn_mbtc_load_table_Login?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="nvre_dev1" internalId="_R57X1e-AEfCcepb0inUXkA"/>
     <contextParameter comment="" name="conn_mbtc_load_table_Port" prompt="conn_mbtc_load_table_Port?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="1521" internalId="_R57X1u-AEfCcepb0inUXkA"/>
     <contextParameter comment="" name="file_path" prompt="file_path?" promptNeeded="false" repositoryContextId="_m887IO9_EfCcepb0inUXkA" type="id_String" value="" internalId="_dHhp8O-GEfCcepb0inUXkA"/>
     <contextParameter comment="" name="sheet_index" prompt="sheet_index?" promptNeeded="false" repositoryContextId="_m887IO9_EfCcepb0inUXkA" type="id_Integer" value="" internalId="_dHhp8e-GEfCcepb0inUXkA"/>
@@ -27,7 +27,7 @@
     <contextParameter comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="_m887IO9_EfCcepb0inUXkA" type="id_String" value="" internalId="_dHhp-e-GEfCcepb0inUXkA"/>
     <contextParameter comment="" name="file_type" prompt="file_type?" promptNeeded="false" repositoryContextId="_m887IO9_EfCcepb0inUXkA" type="id_String" value="" internalId="_dHhp---GEfCcepb0inUXkA"/>
     <contextParameter comment="" name="run_flag" prompt="run_flag?" promptNeeded="false" repositoryContextId="_m887IO9_EfCcepb0inUXkA" type="id_Integer" value="" internalId="_dHhp_O-GEfCcepb0inUXkA"/>
-    <contextParameter comment="" name="dir_hdfs_bronze" prompt="dir_hdfs_bronze?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/bronze/" internalId="_bnZGYe-mEfCI2rmF6BwqGQ"/>
+    <contextParameter comment="" name="dir_hdfs_bronze" prompt="dir_hdfs_bronze?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/bronze_sftp/" internalId="_bnZGYe-mEfCI2rmF6BwqGQ"/>
     <contextParameter comment="" name="dir_hdfs_silver" prompt="dir_hdfs_silver?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/silver/" internalId="_kwQY0PKaEfCNScNTrRRCvQ"/>
     <contextParameter comment="" name="partition_column" prompt="partition_column?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ingest_date" internalId="_bnZGYu-mEfCI2rmF6BwqGQ"/>
     <contextParameter comment="" name="ingest_date" prompt="ingest_date?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_bnZGY--mEfCI2rmF6BwqGQ"/>
@@ -47,6 +47,12 @@
     <contextParameter comment="" name="target_count" prompt="target_count?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_nKq5EfLXEfCCCuz9yrvv0A"/>
     <contextParameter comment="" name="job_status" prompt="job_status?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_VFce0PWlEfCzdeB6aeN2sw"/>
     <contextParameter comment="" name="manifest_table" prompt="manifest_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="mbtc_manifest_table" internalId="_VFce0fWlEfCzdeB6aeN2sw"/>
+    <contextParameter comment="" name="conn_sftp_mbtc_username" prompt="conn_sftp_mbtc_username?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_String" value="sftpuser" internalId="_UVik4PXyEfCzdeB6aeN2sw"/>
+    <contextParameter comment="" name="conn_sftp_mbtc_host" prompt="conn_sftp_mbtc_host?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_String" value="47.131.5.132" internalId="_UVik4fXyEfCzdeB6aeN2sw"/>
+    <contextParameter comment="" name="conn_sftp_mbtc_port" prompt="conn_sftp_mbtc_port?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_String" value="22" internalId="_UVik4vXyEfCzdeB6aeN2sw"/>
+    <contextParameter comment="" name="conn_sftp_mbtc_password" prompt="conn_sftp_mbtc_password?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_Password" value="enc:system.encryption.key.v1:b68Xey/eR0dpZgpFg35VcL6tQ/bv1iYV5fsneLFaUF+N7E7mpNVrHrccRF4=" internalId="_UVik4_XyEfCzdeB6aeN2sw"/>
+    <contextParameter comment="" name="dir_hdfs_raw" prompt="dir_hdfs_raw?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/raw/" internalId="_0Mo5EPaREfCAt6AmyhhERg"/>
+    <contextParameter comment="" name="dir_edge_file_path" prompt="dir_edge_file_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/opt/talend/talend-runtime/data/tmp/development-files/" internalId="_mImPMPaUEfCAt6AmyhhERg"/>
   </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>
@@ -322,7 +328,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaFlex_1" show="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_EDITOR_JAVA" name="CODE_START" value="// start part of your Java code&#xA;      "/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE_MAIN" value="// here is the main part of the component,&#xA;// a piece of code executed in the row&#xA;// loop&#xA;context.load_id = ((Integer)globalMap.get(&quot;row1.load_id&quot;));&#xA;context.batch_id = ((Integer)globalMap.get(&quot;row1.batch_id&quot;));&#xA;context.source_system = ((String)globalMap.get(&quot;row1.source_system&quot;));&#xD;&#xA;context.source_schema = ((String)globalMap.get(&quot;row1.source_schema&quot;));&#xA;context.tablename = ((String)globalMap.get(&quot;row1.dataset_name&quot;));&#xD;&#xA;context.target_schema = ((String)globalMap.get(&quot;row1.target_schema&quot;));&#xA;context.file_path = ((String)globalMap.get(&quot;row1.file_path&quot;));&#xA;context.file_name = ((String)globalMap.get(&quot;row1.file_name&quot;));&#xA;context.file_type = ((String)globalMap.get(&quot;row1.file_type&quot;));&#xD;&#xA;context.field_separator = ((String)globalMap.get(&quot;row1.field_separator&quot;));&#xD;&#xA;context.field_escape_char = ((String)globalMap.get(&quot;row1.field_escape_char&quot;));&#xD;&#xA;context.field_text_enclosure = ((String)globalMap.get(&quot;row1.field_text_enclosure&quot;));&#xD;&#xA;context.header = ((Integer)globalMap.get(&quot;row1.header&quot;));&#xA;context.sheet_index = ((Integer)globalMap.get(&quot;row1.sheet_index&quot;));&#xA;context.column_list = ((String)globalMap.get(&quot;row1.column_list&quot;));&#xA;context.update_ts = ((java.util.Date)globalMap.get(&quot;row1.update_ts&quot;));"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE_MAIN" value="// here is the main part of the component,&#xA;// a piece of code executed in the row&#xA;// loop&#xA;context.load_id = ((Integer)globalMap.get(&quot;row1.load_id&quot;));&#xA;context.batch_id = ((Integer)globalMap.get(&quot;row1.batch_id&quot;));&#xA;context.source_system = ((String)globalMap.get(&quot;row1.source_system&quot;));&#xD;&#xA;context.source_schema = ((String)globalMap.get(&quot;row1.source_schema&quot;));&#xA;context.tablename = ((String)globalMap.get(&quot;row1.tablename&quot;));&#xD;&#xA;context.target_schema = ((String)globalMap.get(&quot;row1.target_schema&quot;));&#xA;context.file_path = ((String)globalMap.get(&quot;row1.file_path&quot;));&#xA;context.file_name = ((String)globalMap.get(&quot;row1.file_name&quot;));&#xA;context.file_type = ((String)globalMap.get(&quot;row1.file_type&quot;));&#xD;&#xA;context.field_separator = ((String)globalMap.get(&quot;row1.field_separator&quot;));&#xD;&#xA;context.field_escape_char = ((String)globalMap.get(&quot;row1.field_escape_char&quot;));&#xD;&#xA;context.field_text_enclosure = ((String)globalMap.get(&quot;row1.field_text_enclosure&quot;));&#xD;&#xA;context.header = ((Integer)globalMap.get(&quot;row1.header&quot;));&#xA;context.sheet_index = ((Integer)globalMap.get(&quot;row1.sheet_index&quot;));&#xA;context.column_list = ((String)globalMap.get(&quot;row1.column_list&quot;));&#xA;context.update_ts = ((java.util.Date)globalMap.get(&quot;row1.update_ts&quot;));"/>
     <elementParameter field="MEMO_EDITOR_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#xA;      "/>
     <elementParameter field="CHECK" name="Version_V2_0" value="false" show="false"/>
     <elementParameter field="CHECK" name="Version_V3_2" value="false" show="false"/>
@@ -465,13 +471,13 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="560" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="context.source_count = input_row.source_count;&#xD;&#xA;context.target_count = input_row.target_count;"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="context.source_count = input_row.source_count;&#xD;&#xA;context.target_count = input_row.target_count;&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Source Count captured in Context: &quot; + context.source_count);&#xD;&#xA;System.out.println(&quot;Target Count captured in Context: &quot; + context.target_count);"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="getBronzeCount"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_1">
       <column comment="" key="false" length="-1" name="source_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="760" posY="560" sizeX="120" sizeY="40">
@@ -691,32 +697,32 @@
     <elementParameter field="TEXT" name="LABEL" value="outManifestCount"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
-      <column comment="" key="false" length="-1" name="ingest_date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="batch_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="source_system" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="source_schema" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="tablename" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="target_schema" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="processing_start_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="processing_end_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="duration" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="source_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="status" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ingest_date" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="batch_id" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_system" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_schema" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tablename" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="target_schema" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="processing_start_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="processing_end_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="duration" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="NUMBER" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="status" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="ingest_date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="batch_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="source_system" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="source_schema" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="tablename" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="target_schema" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="processing_start_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="processing_end_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="duration" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="source_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="status" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ingest_date" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="batch_id" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_system" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_schema" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tablename" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="target_schema" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="processing_start_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="processing_end_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="duration" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="NUMBER" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="status" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -803,12 +809,13 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="input_row" show="false"/>
   </connection>
-  <connection connectorName="RUN_IF" label="success" lineStyle="6" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tJava_3">
+  <connection connectorName="RUN_IF" label="success" lineStyle="6" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRunJob_1" target="tJava_3">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tRunJob_1_CHILD_RETURN_CODE&quot;)) == 0"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="success" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tJava_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentError1" show="false"/>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tRunJob_1" target="tJava_2">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tRunJob_1_CHILD_RETURN_CODE&quot;)) != 0"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" source="tJava_2" target="tWarn_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>

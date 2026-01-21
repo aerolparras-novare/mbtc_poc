@@ -45,6 +45,12 @@
     <contextParameter comment="" name="conn_hive_mbtc_target_Login" prompt="conn_hive_mbtc_target_Login?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="nvre_dev1" internalId="_RI-v5fKdEfCNScNTrRRCvQ"/>
     <contextParameter comment="" name="source_count" prompt="source_count?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="" internalId="_nKq5EPLXEfCCCuz9yrvv0A"/>
     <contextParameter comment="" name="target_count" prompt="target_count?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_nKq5EfLXEfCCCuz9yrvv0A"/>
+    <contextParameter comment="" name="job_status" prompt="job_status?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_m1q4MPXyEfCzdeB6aeN2sw"/>
+    <contextParameter comment="" name="manifest_table" prompt="manifest_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="mbtc_manifest_table" internalId="_m1q4MfXyEfCzdeB6aeN2sw"/>
+    <contextParameter comment="" name="conn_sftp_mbtc_username" prompt="conn_sftp_mbtc_username?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_String" value="sftpuser" internalId="_m1rfQPXyEfCzdeB6aeN2sw"/>
+    <contextParameter comment="" name="conn_sftp_mbtc_host" prompt="conn_sftp_mbtc_host?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_String" value="47.131.5.132" internalId="_m1rfQfXyEfCzdeB6aeN2sw"/>
+    <contextParameter comment="" name="conn_sftp_mbtc_port" prompt="conn_sftp_mbtc_port?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_String" value="22" internalId="_m1rfQvXyEfCzdeB6aeN2sw"/>
+    <contextParameter comment="" name="conn_sftp_mbtc_password" prompt="conn_sftp_mbtc_password?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_Password" value="enc:system.encryption.key.v1:JpjfIVG0lBUrH0Xe7QLzsVA14tZDIJ9XLwzAllZaEDf9ox1uj+L3o5b8JZQ=" internalId="_m1rfQ_XyEfCzdeB6aeN2sw"/>
   </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>
@@ -482,11 +488,29 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="720" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="context.event_end = TalendDate.getCurrentDate();&#xD;&#xA;context.event_end_str = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,context.event_end).toString();&#xD;&#xA;context.event_duration = TalendDate.diffDate(context.event_end,context.event_start,&quot;ss&quot;);&#xD;&#xA;&#xA;System.out.println(&quot; &quot;);&#xA;System.out.println(&quot;------------------------------------------------------------------------&quot;);&#xA;System.out.println(&quot; &quot;);&#xA;&#xA;System.out.println(&quot;Success: &quot;+context.target_schema+&quot;.&quot;+context.tablename);&#xA;System.out.println(&quot;Job Start Time: &quot; + context.event_start_str);&#xA;System.out.println(&quot;Job End Time: &quot; + context.event_end_str);&#xA;System.out.println(&quot;Job Duration in sec: &quot; +context.event_duration);&#xA;System.out.println(&quot; &quot;);&#xA;System.out.println(&quot;End of Bronze Ingestion job&quot;);&#xA;"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="context.event_end = TalendDate.getCurrentDate();&#xD;&#xA;context.event_end_str = TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,context.event_end).toString();&#xD;&#xA;context.event_duration = TalendDate.diffDate(context.event_end,context.event_start,&quot;ss&quot;);&#xD;&#xA;context.job_status = &quot;Success&quot;;&#xD;&#xA;&#xA;System.out.println(&quot; &quot;);&#xA;System.out.println(&quot;------------------------------------------------------------------------&quot;);&#xA;System.out.println(&quot; &quot;);&#xA;&#xA;System.out.println(&quot;Success: &quot;+context.target_schema+&quot;.&quot;+context.tablename);&#xA;System.out.println(&quot;Job Start Time: &quot; + context.event_start_str);&#xA;System.out.println(&quot;Job End Time: &quot; + context.event_end_str);&#xA;System.out.println(&quot;Job Duration in sec: &quot; +context.event_duration);&#xA;System.out.println(&quot; &quot;);&#xA;System.out.println(&quot;End of Bronze Ingestion job&quot;);&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="successBronze"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_3"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="720">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3" show="false"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: HDFS to ARC Ingestion&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="3621"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
+    <elementParameter field="TEXT" name="LABEL" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_3"/>
+  </node>
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="560" posY="560">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Error: HDFS to ARC Ingestion&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="5621"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
+    <elementParameter field="TEXT" name="LABEL" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWarn_1"/>
   </node>
   <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="880" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
@@ -494,124 +518,88 @@
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
     <elementParameter field="TABLE" name="VALUES">
       <elementValue elementRef="SCHEMA_COLUMN" value="ingest_date" id="0"/>
-      <elementValue elementRef="VALUE" value="context.ir_ingest_date" id="1"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="sys_cd" id="2"/>
-      <elementValue elementRef="VALUE" value="context.sys_cd" id="3"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="table_name" id="4"/>
-      <elementValue elementRef="VALUE" value="context.tgt_tbl" id="5"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="destination_database" id="6"/>
-      <elementValue elementRef="VALUE" value="context.tgt_pri" id="7"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="source_database" id="8"/>
-      <elementValue elementRef="VALUE" value="context.src_pri" id="9"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="processing_start_time" id="10"/>
-      <elementValue elementRef="VALUE" value="context.event_start" id="11"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="processing_end_time" id="12"/>
-      <elementValue elementRef="VALUE" value="context.event_end" id="13"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="duration" id="14"/>
-      <elementValue elementRef="VALUE" value="context.ir_duration" id="15"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="status" id="16"/>
-      <elementValue elementRef="VALUE" value="context.ir_main_job_status" id="17"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="load_type" id="18"/>
-      <elementValue elementRef="VALUE" value="context.ld_type.trim();" id="19"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="source" id="20"/>
-      <elementValue elementRef="VALUE" value="context.ir_src_count" id="21"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="safe_count" id="22"/>
-      <elementValue elementRef="VALUE" value="" id="23"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="new_count" id="24"/>
-      <elementValue elementRef="VALUE" value="" id="25"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="otd_count" id="26"/>
-      <elementValue elementRef="VALUE" value="" id="27"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="upd_count" id="28"/>
-      <elementValue elementRef="VALUE" value="" id="29"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ingested" id="30"/>
-      <elementValue elementRef="VALUE" value="context.ir_tgt_count" id="31"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ld_dt_start" id="32"/>
-      <elementValue elementRef="VALUE" value="context.ir_partition_start" id="33"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ld_dt_end" id="34"/>
-      <elementValue elementRef="VALUE" value="context.ir_partition_end" id="35"/>
+      <elementValue elementRef="VALUE" value="context.ingest_date" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="batch_id" id="2"/>
+      <elementValue elementRef="VALUE" value="context.batch_id" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="source_system" id="4"/>
+      <elementValue elementRef="VALUE" value="context.source_system" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="source_schema" id="6"/>
+      <elementValue elementRef="VALUE" value="context.source_schema" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tablename" id="8"/>
+      <elementValue elementRef="VALUE" value="context.tablename" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="target_schema" id="10"/>
+      <elementValue elementRef="VALUE" value="context.target_schema" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="processing_start_time" id="12"/>
+      <elementValue elementRef="VALUE" value="context.event_start" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="processing_end_time" id="14"/>
+      <elementValue elementRef="VALUE" value="context.event_end" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="duration" id="16"/>
+      <elementValue elementRef="VALUE" value="context.event_duration" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="source_count" id="18"/>
+      <elementValue elementRef="VALUE" value="context.source_count" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="target_count" id="20"/>
+      <elementValue elementRef="VALUE" value="context.target_count" id="21"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="status" id="22"/>
+      <elementValue elementRef="VALUE" value="context.job_status" id="23"/>
     </elementParameter>
     <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
     <elementParameter field="TABLE" name="INTABLE" show="false">
       <elementValue elementRef="ingest_date" value="" id="0"/>
-      <elementValue elementRef="sys_cd" value="" id="1"/>
-      <elementValue elementRef="table_name" value="" id="2"/>
-      <elementValue elementRef="destination_database" value="" id="3"/>
-      <elementValue elementRef="source_database" value="" id="4"/>
-      <elementValue elementRef="processing_start_time" value="" id="5"/>
-      <elementValue elementRef="processing_end_time" value="" id="6"/>
-      <elementValue elementRef="duration" value="" id="7"/>
-      <elementValue elementRef="status" value="" id="8"/>
-      <elementValue elementRef="load_type" value="" id="9"/>
-      <elementValue elementRef="source" value="" id="10"/>
-      <elementValue elementRef="safe_count" value="" id="11"/>
-      <elementValue elementRef="new_count" value="" id="12"/>
-      <elementValue elementRef="otd_count" value="" id="13"/>
-      <elementValue elementRef="upd_count" value="" id="14"/>
-      <elementValue elementRef="ingested" value="" id="15"/>
-      <elementValue elementRef="ld_dt_start" value="" id="16"/>
-      <elementValue elementRef="ld_dt_end" value="" id="17"/>
-      <elementValue elementRef="ingest_date" value="" id="18"/>
-      <elementValue elementRef="sys_cd" value="" id="19"/>
-      <elementValue elementRef="table_name" value="" id="20"/>
-      <elementValue elementRef="destination_database" value="" id="21"/>
-      <elementValue elementRef="source_database" value="" id="22"/>
-      <elementValue elementRef="processing_start_time" value="" id="23"/>
-      <elementValue elementRef="processing_end_time" value="" id="24"/>
-      <elementValue elementRef="duration" value="" id="25"/>
-      <elementValue elementRef="status" value="" id="26"/>
-      <elementValue elementRef="load_type" value="" id="27"/>
-      <elementValue elementRef="source" value="" id="28"/>
-      <elementValue elementRef="safe_count" value="" id="29"/>
-      <elementValue elementRef="new_count" value="" id="30"/>
-      <elementValue elementRef="otd_count" value="" id="31"/>
-      <elementValue elementRef="upd_count" value="" id="32"/>
-      <elementValue elementRef="ingested" value="" id="33"/>
-      <elementValue elementRef="ld_dt_start" value="" id="34"/>
-      <elementValue elementRef="ld_dt_end" value="" id="35"/>
-      <elementValue elementRef="ingest_date" value="" id="36"/>
-      <elementValue elementRef="sys_cd" value="" id="37"/>
-      <elementValue elementRef="table_name" value="" id="38"/>
-      <elementValue elementRef="destination_database" value="" id="39"/>
-      <elementValue elementRef="source_database" value="" id="40"/>
-      <elementValue elementRef="processing_start_time" value="" id="41"/>
-      <elementValue elementRef="processing_end_time" value="" id="42"/>
-      <elementValue elementRef="duration" value="" id="43"/>
-      <elementValue elementRef="status" value="" id="44"/>
-      <elementValue elementRef="load_type" value="" id="45"/>
-      <elementValue elementRef="source" value="" id="46"/>
-      <elementValue elementRef="safe_count" value="" id="47"/>
-      <elementValue elementRef="new_count" value="" id="48"/>
-      <elementValue elementRef="otd_count" value="" id="49"/>
-      <elementValue elementRef="upd_count" value="" id="50"/>
-      <elementValue elementRef="ingested" value="" id="51"/>
-      <elementValue elementRef="ld_dt_start" value="" id="52"/>
-      <elementValue elementRef="ld_dt_end" value="" id="53"/>
+      <elementValue elementRef="batch_id" value="" id="1"/>
+      <elementValue elementRef="source_system" value="" id="2"/>
+      <elementValue elementRef="source_schema" value="" id="3"/>
+      <elementValue elementRef="tablename" value="" id="4"/>
+      <elementValue elementRef="target_schema" value="" id="5"/>
+      <elementValue elementRef="processing_start_time" value="" id="6"/>
+      <elementValue elementRef="processing_end_time" value="" id="7"/>
+      <elementValue elementRef="duration" value="" id="8"/>
+      <elementValue elementRef="source_count" value="" id="9"/>
+      <elementValue elementRef="target_count" value="" id="10"/>
+      <elementValue elementRef="status" value="" id="11"/>
+      <elementValue elementRef="ingest_date" value="" id="12"/>
+      <elementValue elementRef="batch_id" value="" id="13"/>
+      <elementValue elementRef="source_system" value="" id="14"/>
+      <elementValue elementRef="source_schema" value="" id="15"/>
+      <elementValue elementRef="tablename" value="" id="16"/>
+      <elementValue elementRef="target_schema" value="" id="17"/>
+      <elementValue elementRef="processing_start_time" value="" id="18"/>
+      <elementValue elementRef="processing_end_time" value="" id="19"/>
+      <elementValue elementRef="duration" value="" id="20"/>
+      <elementValue elementRef="source_count" value="" id="21"/>
+      <elementValue elementRef="target_count" value="" id="22"/>
+      <elementValue elementRef="status" value="" id="23"/>
+      <elementValue elementRef="ingest_date" value="" id="24"/>
+      <elementValue elementRef="batch_id" value="" id="25"/>
+      <elementValue elementRef="source_system" value="" id="26"/>
+      <elementValue elementRef="source_schema" value="" id="27"/>
+      <elementValue elementRef="tablename" value="" id="28"/>
+      <elementValue elementRef="target_schema" value="" id="29"/>
+      <elementValue elementRef="processing_start_time" value="" id="30"/>
+      <elementValue elementRef="processing_end_time" value="" id="31"/>
+      <elementValue elementRef="duration" value="" id="32"/>
+      <elementValue elementRef="source_count" value="" id="33"/>
+      <elementValue elementRef="target_count" value="" id="34"/>
+      <elementValue elementRef="status" value="" id="35"/>
     </elementParameter>
     <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;" show="false"/>
     <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="setManifestCount"/>
+    <elementParameter field="TEXT" name="LABEL" value="setManifest"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFixedFlowInput_1">
       <column comment="" key="false" length="-1" name="ingest_date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="sys_cd" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="table_name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="destination_database" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="source_database" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="batch_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_system" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_schema" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tablename" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="target_schema" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="processing_start_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="processing_end_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="duration" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="status" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="load_type" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="source" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="safe_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="new_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="otd_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="upd_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ingested" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ld_dt_start" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ld_dt_end" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="880" sizeX="120" sizeY="40">
@@ -628,15 +616,15 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="TABLESCHEMA" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:+IOLM1t1rfgAS9ONXv/5UNFWrnyuWVV+JrhwHhyi" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:/qd1L881NnQ83bOg1jma+c+1/qMG0Cps1BGjPQpL" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="context.manifest_table"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="LABEL" name="NOTE" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id" show="false"/>
     <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:oci:/@talend&quot;" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
@@ -654,91 +642,61 @@
       <elementValue elementRef="DELETE_KEY" value="false" id="2"/>
       <elementValue elementRef="UPDATABLE" value="true" id="3"/>
       <elementValue elementRef="INSERTABLE" value="true" id="4"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="sys_cd" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="batch_id" id="5"/>
       <elementValue elementRef="UPDATE_KEY" value="false" id="6"/>
       <elementValue elementRef="DELETE_KEY" value="false" id="7"/>
       <elementValue elementRef="UPDATABLE" value="true" id="8"/>
       <elementValue elementRef="INSERTABLE" value="true" id="9"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="table_name" id="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="source_system" id="10"/>
       <elementValue elementRef="UPDATE_KEY" value="false" id="11"/>
       <elementValue elementRef="DELETE_KEY" value="false" id="12"/>
       <elementValue elementRef="UPDATABLE" value="true" id="13"/>
       <elementValue elementRef="INSERTABLE" value="true" id="14"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="destination_database" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="source_schema" id="15"/>
       <elementValue elementRef="UPDATE_KEY" value="false" id="16"/>
       <elementValue elementRef="DELETE_KEY" value="false" id="17"/>
       <elementValue elementRef="UPDATABLE" value="true" id="18"/>
       <elementValue elementRef="INSERTABLE" value="true" id="19"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="source_database" id="20"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tablename" id="20"/>
       <elementValue elementRef="UPDATE_KEY" value="false" id="21"/>
       <elementValue elementRef="DELETE_KEY" value="false" id="22"/>
       <elementValue elementRef="UPDATABLE" value="true" id="23"/>
       <elementValue elementRef="INSERTABLE" value="true" id="24"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="processing_start_time" id="25"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="target_schema" id="25"/>
       <elementValue elementRef="UPDATE_KEY" value="false" id="26"/>
       <elementValue elementRef="DELETE_KEY" value="false" id="27"/>
       <elementValue elementRef="UPDATABLE" value="true" id="28"/>
       <elementValue elementRef="INSERTABLE" value="true" id="29"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="processing_end_time" id="30"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="processing_start_time" id="30"/>
       <elementValue elementRef="UPDATE_KEY" value="false" id="31"/>
       <elementValue elementRef="DELETE_KEY" value="false" id="32"/>
       <elementValue elementRef="UPDATABLE" value="true" id="33"/>
       <elementValue elementRef="INSERTABLE" value="true" id="34"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="duration" id="35"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="processing_end_time" id="35"/>
       <elementValue elementRef="UPDATE_KEY" value="false" id="36"/>
       <elementValue elementRef="DELETE_KEY" value="false" id="37"/>
       <elementValue elementRef="UPDATABLE" value="true" id="38"/>
       <elementValue elementRef="INSERTABLE" value="true" id="39"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="status" id="40"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="duration" id="40"/>
       <elementValue elementRef="UPDATE_KEY" value="false" id="41"/>
       <elementValue elementRef="DELETE_KEY" value="false" id="42"/>
       <elementValue elementRef="UPDATABLE" value="true" id="43"/>
       <elementValue elementRef="INSERTABLE" value="true" id="44"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="load_type" id="45"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="source_count" id="45"/>
       <elementValue elementRef="UPDATE_KEY" value="false" id="46"/>
       <elementValue elementRef="DELETE_KEY" value="false" id="47"/>
       <elementValue elementRef="UPDATABLE" value="true" id="48"/>
       <elementValue elementRef="INSERTABLE" value="true" id="49"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="source" id="50"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="target_count" id="50"/>
       <elementValue elementRef="UPDATE_KEY" value="false" id="51"/>
       <elementValue elementRef="DELETE_KEY" value="false" id="52"/>
       <elementValue elementRef="UPDATABLE" value="true" id="53"/>
       <elementValue elementRef="INSERTABLE" value="true" id="54"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="safe_count" id="55"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="status" id="55"/>
       <elementValue elementRef="UPDATE_KEY" value="false" id="56"/>
       <elementValue elementRef="DELETE_KEY" value="false" id="57"/>
       <elementValue elementRef="UPDATABLE" value="true" id="58"/>
       <elementValue elementRef="INSERTABLE" value="true" id="59"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="new_count" id="60"/>
-      <elementValue elementRef="UPDATE_KEY" value="false" id="61"/>
-      <elementValue elementRef="DELETE_KEY" value="false" id="62"/>
-      <elementValue elementRef="UPDATABLE" value="true" id="63"/>
-      <elementValue elementRef="INSERTABLE" value="true" id="64"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="otd_count" id="65"/>
-      <elementValue elementRef="UPDATE_KEY" value="false" id="66"/>
-      <elementValue elementRef="DELETE_KEY" value="false" id="67"/>
-      <elementValue elementRef="UPDATABLE" value="true" id="68"/>
-      <elementValue elementRef="INSERTABLE" value="true" id="69"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="upd_count" id="70"/>
-      <elementValue elementRef="UPDATE_KEY" value="false" id="71"/>
-      <elementValue elementRef="DELETE_KEY" value="false" id="72"/>
-      <elementValue elementRef="UPDATABLE" value="true" id="73"/>
-      <elementValue elementRef="INSERTABLE" value="true" id="74"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ingested" id="75"/>
-      <elementValue elementRef="UPDATE_KEY" value="false" id="76"/>
-      <elementValue elementRef="DELETE_KEY" value="false" id="77"/>
-      <elementValue elementRef="UPDATABLE" value="true" id="78"/>
-      <elementValue elementRef="INSERTABLE" value="true" id="79"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ld_dt_start" id="80"/>
-      <elementValue elementRef="UPDATE_KEY" value="false" id="81"/>
-      <elementValue elementRef="DELETE_KEY" value="false" id="82"/>
-      <elementValue elementRef="UPDATABLE" value="true" id="83"/>
-      <elementValue elementRef="INSERTABLE" value="true" id="84"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ld_dt_end" id="85"/>
-      <elementValue elementRef="UPDATE_KEY" value="false" id="86"/>
-      <elementValue elementRef="DELETE_KEY" value="false" id="87"/>
-      <elementValue elementRef="UPDATABLE" value="true" id="88"/>
-      <elementValue elementRef="INSERTABLE" value="true" id="89"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
@@ -755,56 +713,35 @@
     <elementParameter field="TEXT" name="LABEL" value="outManifestCount"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
-      <column comment="" key="false" length="-1" name="ingest_date" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="sys_cd" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="table_name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="destination_database" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="source_database" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="processing_start_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="processing_end_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ingest_date" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="batch_id" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_system" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_schema" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tablename" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="target_schema" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="processing_start_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="processing_end_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="duration" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="NUMBER" type="id_Long" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="status" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="load_type" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="source" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="safe_count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="new_count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="otd_count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="upd_count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ingested" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ld_dt_start" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ld_dt_end" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="status" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="ingest_date" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="sys_cd" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="table_name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="destination_database" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="source_database" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="processing_start_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="processing_end_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ingest_date" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="batch_id" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_system" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_schema" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tablename" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="target_schema" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="processing_start_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="processing_end_time" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="duration" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="NUMBER" type="id_Long" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="status" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="load_type" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="source" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="safe_count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="new_count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="otd_count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="upd_count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ingested" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ld_dt_start" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ld_dt_end" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="status" nullable="true" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
-  </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="720">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3" show="false"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: HDFS to ARC Ingestion&quot;"/>
-    <elementParameter field="TEXT" name="CODE" value="3621"/>
-    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
-    <elementParameter field="TEXT" name="LABEL" value=""/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tWarn_3"/>
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="880">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2" show="false"/>
@@ -814,15 +751,6 @@
     <elementParameter field="TEXT" name="LABEL" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_2"/>
-  </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="560" posY="560">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Error: HDFS to ARC Ingestion&quot;"/>
-    <elementParameter field="TEXT" name="CODE" value="5621"/>
-    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="4"/>
-    <elementParameter field="TEXT" name="LABEL" value=""/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tWarn_1"/>
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1480" posY="880">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_4" show="false"/>
@@ -896,6 +824,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tDBOutput_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="batch_id" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
@@ -975,24 +908,24 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
-  </subjob>
-  <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
     <elementParameter field="CHECK" name="SUBJOB_DISPLAYED" value="false" show="false"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
     <elementParameter field="CHECK" name="SUBJOB_DISPLAYED" value="false" show="false"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
     <elementParameter field="CHECK" name="SUBJOB_DISPLAYED" value="false" show="false"/>

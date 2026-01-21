@@ -102,5 +102,28 @@
       "id" : "_C6ssQfKdEfCNScNTrRRCvQ",
       "name" : "conn_hive_mbtc_target_Login"
     } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_LodxkPWmEfCzdeB6aeN2sw",
+    "parameterList" : [ {
+      "id" : "_Lo52cfWmEfCzdeB6aeN2sw",
+      "name" : "conn_hdfs_mbtc_namenode_uri"
+    } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_6_AJgPXoEfCzdeB6aeN2sw",
+    "parameterList" : [ {
+      "id" : "_6_ZLEfXoEfCzdeB6aeN2sw",
+      "name" : "conn_sftp_mbtc_username"
+    }, {
+      "id" : "_6_ZLFPXoEfCzdeB6aeN2sw",
+      "name" : "conn_sftp_mbtc_host"
+    }, {
+      "id" : "_6_ZLE_XoEfCzdeB6aeN2sw",
+      "name" : "conn_sftp_mbtc_port"
+    }, {
+      "id" : "_6_ZLEvXoEfCzdeB6aeN2sw",
+      "name" : "conn_sftp_mbtc_password"
+    } ]
   } ]
 }

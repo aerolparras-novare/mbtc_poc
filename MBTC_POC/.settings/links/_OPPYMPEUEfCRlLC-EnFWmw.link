@@ -2,31 +2,6 @@
   "itemId" : "_OPPYMPEUEfCRlLC-EnFWmw",
   "contextList" : [ {
     "contextName" : "dev",
-    "repoId" : "_vxyFQO9oEfCcepb0inUXkA",
-    "parameterList" : [ {
-      "id" : "_HyE1ge9pEfCcepb0inUXkA",
-      "name" : "conn_mbtc_load_table_Schema"
-    }, {
-      "id" : "_HyE1hu9pEfCcepb0inUXkA",
-      "name" : "conn_mbtc_load_table_AdditionalParams"
-    }, {
-      "id" : "_HyE1hO9pEfCcepb0inUXkA",
-      "name" : "conn_mbtc_load_table_ServiceName"
-    }, {
-      "id" : "_HyE1gO9pEfCcepb0inUXkA",
-      "name" : "conn_mbtc_load_table_Password"
-    }, {
-      "id" : "_HyE1gu9pEfCcepb0inUXkA",
-      "name" : "conn_mbtc_load_table_Server"
-    }, {
-      "id" : "_HyE1he9pEfCcepb0inUXkA",
-      "name" : "conn_mbtc_load_table_Login"
-    }, {
-      "id" : "_HyE1g-9pEfCcepb0inUXkA",
-      "name" : "conn_mbtc_load_table_Port"
-    } ]
-  }, {
-    "contextName" : "dev",
     "repoId" : "_m887IO9_EfCcepb0inUXkA",
     "parameterList" : [ {
       "id" : "_m9On9e9_EfCcepb0inUXkA",
@@ -108,6 +83,31 @@
     "parameterList" : [ {
       "id" : "_Lo52cfWmEfCzdeB6aeN2sw",
       "name" : "conn_hdfs_mbtc_namenode_uri"
+    } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_vxyFQO9oEfCcepb0inUXkA",
+    "parameterList" : [ {
+      "id" : "_HyE1ge9pEfCcepb0inUXkA",
+      "name" : "conn_mbtc_load_table_Schema"
+    }, {
+      "id" : "_HyE1hu9pEfCcepb0inUXkA",
+      "name" : "conn_mbtc_load_table_AdditionalParams"
+    }, {
+      "id" : "_HyE1hO9pEfCcepb0inUXkA",
+      "name" : "conn_mbtc_load_table_ServiceName"
+    }, {
+      "id" : "_HyE1gO9pEfCcepb0inUXkA",
+      "name" : "conn_mbtc_load_table_Password"
+    }, {
+      "id" : "_HyE1gu9pEfCcepb0inUXkA",
+      "name" : "conn_mbtc_load_table_Server"
+    }, {
+      "id" : "_HyE1he9pEfCcepb0inUXkA",
+      "name" : "conn_mbtc_load_table_Login"
+    }, {
+      "id" : "_HyE1g-9pEfCcepb0inUXkA",
+      "name" : "conn_mbtc_load_table_Port"
     } ]
   } ]
 }

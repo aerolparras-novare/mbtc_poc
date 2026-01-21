@@ -149,7 +149,7 @@
       <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
       <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later." show="false"/>
       <elementParameter field="CHECK" name="USE_PARQUET" value="false" show="false"/>
-      <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;ANALYZE TABLE &quot; + context.tablename + &quot; COMPUTE STATISTICS&quot;"/>
+      <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;ANALYZE TABLE  &quot;+ context.target_schema  + &quot;.&quot; + context.tablename + &quot; COMPUTE STATISTICS&quot;"/>
       <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
       <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
       <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -176,7 +176,7 @@
       <elementParameter field="TEXT" name="MAPR_HOME_DIR" value="&quot;/opt/mapr&quot;" show="false"/>
       <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" value="false" show="false"/>
       <elementParameter field="TEXT" name="HADOOP_LOGIN" value="&quot;kerberos&quot;" show="false"/>
-      <elementParameter field="CHECK" name="SET_APPLICATION_NAME" value="true"/>
+      <elementParameter field="CHECK" name="SET_APPLICATION_NAME" value="false"/>
       <elementParameter field="TEXT" name="LABEL" value="getStatistics"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="tHiveRow_1"/>
@@ -255,7 +255,7 @@
       <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
       <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded&#xA;&#x9;&#x9;&#x9;&#x9;Hive version 0.10 or later.&#xA;&#x9;&#x9;&#x9;" show="false"/>
       <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-      <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DESCRIBE FORMATTED &quot; + context.tablename"/>
+      <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DESCRIBE FORMATTED &quot; + context.target_schema   +  &quot;.&quot; +  context.tablename"/>
       <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
       <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
       <elementParameter field="TEXT" name="GROUP" value="&quot;supergroup&quot;" show="false"/>
@@ -289,7 +289,7 @@
       <elementParameter field="TEXT" name="MAPR_HOME_DIR" value="&quot;/opt/mapr&quot;" show="false"/>
       <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" value="false" show="false"/>
       <elementParameter field="TEXT" name="HADOOP_LOGIN" value="&quot;kerberos&quot;" show="false"/>
-      <elementParameter field="CHECK" name="SET_APPLICATION_NAME" value="true"/>
+      <elementParameter field="CHECK" name="SET_APPLICATION_NAME" value="false"/>
       <elementParameter field="TEXT" name="LABEL" value="getNumRows"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="tHiveInput_1">
@@ -300,7 +300,7 @@
     </node>
     <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="200" sizeX="120" sizeY="40">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-      <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="String key = input_row.data_type; // Column 2&#xD;&#xA;String val = input_row.comment;   // Column 3&#xD;&#xA;&#xD;&#xA;// Initialize output as null by default&#xD;&#xA;output_row.target_count = null;&#xD;&#xA;&#xD;&#xA;// Only map the value if we found the &quot;numRows&quot; key&#xD;&#xA;if (key != null &amp;&amp; key.trim().equalsIgnoreCase(&quot;numRows&quot;)) {&#xD;&#xA;    output_row.target_count = val.trim();&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;context.target_count = output_row.target_count;"/>
+      <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="String key = input_row.data_type; // Column 2&#xD;&#xA;String val = input_row.comment;   // Column 3&#xD;&#xA;&#xD;&#xA;// Initialize output as null by default&#xD;&#xA;output_row.target_count = null;&#xD;&#xA;&#xD;&#xA;// Only map the value if we found the &quot;numRows&quot; key&#xD;&#xA;if (key != null &amp;&amp; key.trim().equalsIgnoreCase(&quot;numRows&quot;)) {&#xD;&#xA;    output_row.target_count = val.trim();&#xD;&#xA;}"/>
       <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
       <elementParameter field="TEXT" name="LABEL" value="parseNumRows"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -318,7 +318,7 @@
         <elementValue elementRef="RVALUE" value="null" id="3"/>
       </elementParameter>
       <elementParameter field="CHECK" name="USE_ADVANCED" value="true"/>
-      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;context.target_count != null"/>
+      <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.target_count != null"/>
       <elementParameter field="TEXT" name="LABEL" value="filterNumRows"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="tFilterRow_4">
@@ -332,12 +332,13 @@
         <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       </metadata>
     </node>
-    <node componentName="tBufferOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1040" posY="200" sizeX="120" sizeY="40">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tBufferOutput_1" show="false"/>
-      <elementParameter field="CHECK" name="USE_BASE64" value="true"/>
-      <elementParameter field="TEXT" name="LABEL" value="bufferNumRows"/>
+    <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1080" posY="200">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2" show="false"/>
+      <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="// Assign the value from the input row to the context variable&#xD;&#xA;//Ensure null safety if needed&#xD;&#xA;if (input_row.target_count != null) {&#xD;&#xA; context.target_count = input_row.target_count;&#xD;&#xA;}&#xD;&#xA;//Optional: Print to console for debugging&#xD;&#xA;//System.out.println(&quot;Target Count captured in Context: &quot; + context.target_count);"/>
+      <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+      <elementParameter field="TEXT" name="LABEL" value="setTargetCount"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" name="tBufferOutput_1">
+      <metadata connector="FLOW" name="tJavaRow_2">
         <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       </metadata>
     </node>
@@ -371,12 +372,13 @@
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
     </connection>
-    <connection connectorName="FILTER" label="row3" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_4" target="tBufferOutput_1">
+    <connection connectorName="FILTER" label="row3" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_4" target="tJavaRow_2">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
     </connection>
-    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tBufferOutput_1" offsetLabelX="0" offsetLabelY="0" source="tBufferOutput_1" target="TRIGGER_OUTPUT_1">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+    <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tJavaRow_2" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_2" target="OUTPUT_1">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
     </connection>
     <subjob>
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="TRIGGER_INPUT_1" show="false"/>
@@ -393,11 +395,6 @@
       <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
     </subjob>
-    <subjob>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="TRIGGER_OUTPUT_1" show="false"/>
-      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
-      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
-    </subjob>
     <jobletNodes componentName="TRIGGER_INPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="200" posY="40" sizeX="120" sizeY="40" input="true" trigger="true">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="TRIGGER_INPUT_1"/>
       <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
@@ -407,14 +404,18 @@
       <elementParameter field="CHECK" name="INFORMATION" value="false"/>
       <elementParameter field="MEMO" name="COMMENT" value=""/>
     </jobletNodes>
-    <jobletNodes componentName="TRIGGER_OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1040" posY="360" sizeX="120" sizeY="40" trigger="true">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="TRIGGER_OUTPUT_1"/>
-      <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
+    <jobletNodes componentName="OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="200">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="OUTPUT_1"/>
+      <elementParameter field="CHECK" name="STARTABLE" value="false" show="false"/>
       <elementParameter field="CHECK" name="START" value="false" show="false"/>
       <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
       <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <elementParameter field="CHECK" name="INFORMATION" value="false"/>
       <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <metadata connector="FLOW" name="OUTPUT_1">
+        <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      </metadata>
     </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>

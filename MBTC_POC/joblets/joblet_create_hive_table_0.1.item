@@ -8,6 +8,7 @@
       <contextParameter comment="" name="conn_hive_mbtc_target_Port" prompt="conn_hive_mbtc_target_Port?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="10000" internalId="_YhzCcfUMEfCyDqbSBvuXgA"/>
       <contextParameter comment="" name="conn_hive_mbtc_target_Database" prompt="conn_hive_mbtc_target_Database?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="" internalId="_YhzCcvUMEfCyDqbSBvuXgA"/>
       <contextParameter comment="" name="conn_hive_mbtc_target_hiveAdditionalJDBCParameters" prompt="conn_hive_mbtc_target_hiveAdditionalJDBCParameters?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="" internalId="_YhzCc_UMEfCyDqbSBvuXgA"/>
+      <contextParameter comment="" name="conn_hdfs_mbtc_namenode_uri" prompt="conn_hdfs_mbtc_namenode_uri?" promptNeeded="false" repositoryContextId="_LodxkPWmEfCzdeB6aeN2sw" type="id_String" value="&quot;hdfs://dao-cdp-poc-master1.novare.com.ph:8020&quot;" internalId="_YH5JEPXaEfCzdeB6aeN2sw"/>
     </context>
     <context confirmationNeeded="false" hide="false" name="dev">
       <contextParameter comment="" name="conn_hive_mbtc_target_Login" prompt="conn_hive_mbtc_target_Login?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="nvre_dev1" internalId="_YhzCdPUMEfCyDqbSBvuXgA"/>
@@ -16,6 +17,7 @@
       <contextParameter comment="" name="conn_hive_mbtc_target_Port" prompt="conn_hive_mbtc_target_Port?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="10000" internalId="_YhzCd_UMEfCyDqbSBvuXgA"/>
       <contextParameter comment="" name="conn_hive_mbtc_target_Database" prompt="conn_hive_mbtc_target_Database?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="" internalId="_YhzCePUMEfCyDqbSBvuXgA"/>
       <contextParameter comment="" name="conn_hive_mbtc_target_hiveAdditionalJDBCParameters" prompt="conn_hive_mbtc_target_hiveAdditionalJDBCParameters?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="" internalId="_YhzCefUMEfCyDqbSBvuXgA"/>
+      <contextParameter comment="" name="conn_hdfs_mbtc_namenode_uri" prompt="conn_hdfs_mbtc_namenode_uri?" promptNeeded="false" repositoryContextId="_LodxkPWmEfCzdeB6aeN2sw" type="id_String" value="&quot;hdfs://dao-cdp-poc-master1.novare.com.ph:8020&quot;" internalId="_YH5JEfXaEfCzdeB6aeN2sw"/>
     </context>
     <parameters>
       <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -85,7 +87,7 @@
     </parameters>
     <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="200" posY="200" sizeX="120" sizeY="40">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-      <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="context.event_start = TalendDate.getCurrentDate();&#xD;&#xA;&#xD;&#xA;String parquetLocation = &quot;&quot;;&#xD;&#xA;parquetLocation = context.dir_hdfs_bronze + context.tablename + &quot;/&quot;;&#xD;&#xA;globalMap.put(&quot;column_list&quot;, context.column_list);"/>
+      <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="context.event_start = TalendDate.getCurrentDate();&#xD;&#xA;&#xD;&#xA;globalMap.put(&quot;column_list&quot;, context.column_list);&#xD;&#xA;&#xD;&#xA;context.columns = context.column_list&#xD;&#xA;.replaceAll(&quot;(?i)\\s+BIGINT&quot;, &quot;&quot;)&#xD;&#xA;.replaceAll(&quot;(?i)\\s+STRING&quot;, &quot;&quot;)&#xD;&#xA;.replaceAll(&quot;(?i)\\s+INT&quot;, &quot;&quot;)&#xD;&#xA;.replaceAll(&quot;(?i)\\s+DATE&quot;, &quot;&quot;)&#xD;&#xA;.replaceAll(&quot;(?i)\\s+TIMESTAMP&quot;, &quot;&quot;)&#xD;&#xA;.replaceAll(&quot;\\s+&quot;, &quot; &quot;)&#xD;&#xA;.trim();&#xD;&#xA;&#xD;&#xA;globalMap.put(&quot;columns&quot;, context.columns);&#xD;&#xA;"/>
       <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
       <elementParameter field="TEXT" name="LABEL" value="setParam"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -93,6 +95,7 @@
     </node>
     <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="120" sizeX="120" sizeY="40">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
       <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
       <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
       <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
@@ -149,6 +152,7 @@
     </node>
     <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="680" posY="120" sizeX="120" sizeY="40">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
       <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//Build CREATE TABLE column list&#xD;&#xA;if (!context.column_list.isEmpty()) {&#xD;&#xA;    context.column_list += &quot;,\n&quot;;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;context.column_list += &#xD;&#xA;    input_row.column_name + &quot; &quot; + input_row.data_type;&#xD;&#xA;&#xA;globalMap.put(&quot;column_list&quot;, context.column_list);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;//Build Sqoop SELECT column list&#xD;&#xA;if (!context.columns.isEmpty()) {&#xD;&#xA; context.columns += &quot;, &quot;;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;context.columns += input_row.column_name;&#xD;&#xA;&#xD;&#xA;globalMap.put(&quot;columns&quot;, context.columns);"/>
       <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
       <elementParameter field="TEXT" name="LABEL" value="setColumnName"/>
@@ -157,18 +161,6 @@
     </node>
     <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="680" posY="280" sizeX="120" sizeY="40">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_1" show="false"/>
-      <elementParameter field="TEXT" name="COMPONENT_NAME" value="tHiveRow" show="false"/>
-      <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
-      <elementParameter field="TEXT" name="FAMILY" value="Databases/DB Specifics/Hive|Big Data/Hive" show="false"/>
-      <elementParameter field="CHECK" name="START" value="false" show="false"/>
-      <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
-      <elementParameter field="CHECK" name="SUBTREE_START" value="true" show="false"/>
-      <elementParameter field="CHECK" name="END_OF_FLOW" value="true" show="false"/>
-      <elementParameter field="TEXT" name="HELP" value="org.talend.help.tHiveRow" show="false"/>
-      <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
-      <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Users\Angela Infortuno\Downloads\Talend-Studio-20250226_1030-V8.0.1\Talend-Studio-20250226_1030-V8.0.1\configuration\lib\java" show="false"/>
-      <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-      <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_Vy3hkPKcEfCNScNTrRRCvQ" show="false"/>
       <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
       <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
       <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE"/>
@@ -199,7 +191,7 @@
       <elementParameter field="CHECK" name="SET_RESOURCE_MANAGER" value="false" show="false"/>
       <elementParameter field="TEXT" name="RESOURCE_MANAGER" value="&quot;localhost:8032&quot;" show="false"/>
       <elementParameter field="CHECK" name="SET_FS_DEFAULT_NAME" value="false"/>
-      <elementParameter field="TEXT" name="FS_DEFAULT_NAME" value="&quot;&quot;" show="false"/>
+      <elementParameter field="TEXT" name="FS_DEFAULT_NAME" value="context.conn_hdfs_mbtc_namenode_uri" show="false"/>
       <elementParameter field="CHECK" name="SET_SCHEDULER_ADDRESS" value="false" show="false"/>
       <elementParameter field="TEXT" name="RESOURCEMANAGER_SCHEDULER_ADDRESS" value="&quot;localhost:8030&quot;" show="false"/>
       <elementParameter field="CHECK" name="SET_JOBHISTORY_ADDRESS" value="false" show="false"/>
@@ -207,7 +199,7 @@
       <elementParameter field="CHECK" name="SET_HADOOP_USER" value="false" show="false"/>
       <elementParameter field="TEXT" name="HADOOP_USER" value="&quot;hadoop&quot;" show="false"/>
       <elementParameter field="CHECK" name="USE_DATANODE_HOSTNAME" value="true" show="false"/>
-      <elementParameter field="CLOSED_LIST" name="EXECUTION_ENGINE" value="tez"/>
+      <elementParameter field="CLOSED_LIST" name="EXECUTION_ENGINE" value="mr"/>
       <elementParameter field="TEXT" name="WEBHCAT_HOST" value="&quot;&quot;" show="false"/>
       <elementParameter field="TEXT" name="WEBHCAT_PORT" value="&quot;&quot;" show="false"/>
       <elementParameter field="TEXT" name="WEBHCAT_USERNAME" value="&quot;&quot;" show="false"/>
@@ -225,7 +217,7 @@
       <elementParameter field="TEXT" name="GOOGLE_JARS_BUCKET" value="&quot;&quot;" show="false"/>
       <elementParameter field="CHECK" name="DEFINE_PATH_TO_GOOGLE_CREDENTIALS" value="false" show="false"/>
       <elementParameter field="FILE" name="PATH_TO_GOOGLE_CREDENTIALS" value="&quot;&quot;" show="false"/>
-      <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+      <elementParameter field="DBTABLE" name="TABLE" value="context.tablename"/>
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -233,8 +225,8 @@
       <elementParameter field="CHECK" name="USE_PARQUET" value="false" show="false"/>
       <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;CREATE EXTERNAL TABLE IF NOT EXISTS &quot; + context.target_schema + &quot;.&quot; + context.tablename + &quot;&#xD;&#xA;(&quot;+ globalMap.get(&quot;column_list&quot;)  + globalMap.get(&quot;controlColumns&quot;) + &quot;)&#xD;&#xA;&#xD;&#xA;PARTITIONED BY (INGEST_DATE varchar(8))&#xD;&#xA;STORED AS PARQUET &#xD;&#xA;LOCATION '&quot;+ globalMap.get(&quot;parquetLocation&quot;) + &quot;'&#xD;&#xA;TBLPROPERTIES('serialization.null.format'='null')&#xD;&#xA;&quot;"/>
       <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-      <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL"/>
-      <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
+      <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
       <elementParameter field="TEXT" name="GROUP" value="&quot;supergroup&quot;" show="false"/>
       <elementParameter field="BOTH_HADOOP" name="TEZ_LIB_PATH" value="&quot;&quot;" show="false"/>
       <elementParameter field="TABLE" name="TEZ_LIB_NAME" show="false"/>
@@ -258,7 +250,7 @@
       <elementParameter field="TEXT" name="MAPR_HOME_DIR" value="&quot;/opt/mapr&quot;" show="false"/>
       <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" value="false" show="false"/>
       <elementParameter field="TEXT" name="HADOOP_LOGIN" value="&quot;kerberos&quot;" show="false"/>
-      <elementParameter field="CHECK" name="SET_APPLICATION_NAME" value="true"/>
+      <elementParameter field="CHECK" name="SET_APPLICATION_NAME" value="false"/>
       <elementParameter field="TEXT" name="LABEL" value="createTable"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="tHiveRow_1"/>
@@ -269,7 +261,7 @@
     </node>
     <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="440" posY="280" sizeX="120" sizeY="40">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
-      <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="String controlColumns = &quot;&quot;;&#xD;&#xA;String parquetLocation = &quot;&quot;;&#xD;&#xA;&#xD;&#xA;String target_schema = context.target_schema.toLowerCase();&#xD;&#xA;&#xD;&#xA;if (target_schema.contains(&quot;bronze&quot;)) {&#xD;&#xA;&#x9;parquetLocation = context.dir_hdfs_bronze + context.tablename + &quot;/&quot;;&#xD;&#xA;&#xD;&#xA;} else if (target_schema.contains(&quot;silver&quot;)) {&#xD;&#xA;    parquetLocation = context.dir_hdfs_silver + context.tablename + &quot;/&quot;;&#xD;&#xA;    controlColumns = &quot;, `_ingest_ts` TIMESTAMP, `_source_system` VARCHAR(150), `_load_timestamp` TIMESTAMP&quot;;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;globalMap.put(&quot;controlColumns&quot;, controlColumns);&#xD;&#xA;globalMap.put(&quot;parquetLocation&quot;, parquetLocation);&#xD;&#xA;"/>
+      <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="String controlColumns = &quot;&quot;;&#xD;&#xA;String parquetLocation = &quot;&quot;;&#xD;&#xA;&#xD;&#xA;String target_schema = context.target_schema.toLowerCase();&#xD;&#xA;&#xD;&#xA;if (target_schema.contains(&quot;bronze&quot;)) {&#xD;&#xA;&#x9;parquetLocation = context.dir_hdfs_bronze + context.tablename + &quot;/&quot;;&#xD;&#xA;&#xD;&#xA;} else if (target_schema.contains(&quot;silver&quot;)) {&#xD;&#xA;    parquetLocation = context.dir_hdfs_silver + context.tablename + &quot;/&quot;;&#xD;&#xA;    controlColumns = &quot;, `_ingest_ts` TIMESTAMP, `_source_system` VARCHAR(150), `_load_timestamp` TIMESTAMP&quot;;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;globalMap.put(&quot;controlColumns&quot;, controlColumns);&#xD;&#xA;globalMap.put(&quot;parquetLocation&quot;, parquetLocation);&#xD;&#xA;&#xD;&#xA;System.setProperty(&quot;mapred.job.name&quot;, &quot;&quot;);&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;Paruqet Location: &quot;+ globalMap.put(&quot;parquetLocation&quot;, parquetLocation));&#xD;&#xA;System.out.println(&quot;DIR_HDFS_BRONZE: &quot; +context.dir_hdfs_bronze);&#xD;&#xA;&#xD;&#xA;"/>
       <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
       <elementParameter field="TEXT" name="LABEL" value="setControlColumns"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -296,20 +288,22 @@
     <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="TRIGGER_INPUT_1" offsetLabelX="0" offsetLabelY="0" source="TRIGGER_INPUT_1" target="tJava_1">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
     </connection>
-    <connection connectorName="RUN_IF" label="database" lineStyle="6" metaname="tJava_1" offsetLabelX="-4" offsetLabelY="-2" outputId="1" source="tJava_1" target="tDBInput_1">
+    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tJava_2">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
+    </connection>
+    <connection connectorName="RUN_IF" label="database" lineStyle="6" metaname="tJava_1" offsetLabelX="-4" offsetLabelY="-2" source="tJava_1" target="tDBInput_1">
       <elementParameter field="MEMO_JAVA" name="CONDITION" value="(context.source_system.equals(&quot;DB&quot;))"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="database" show="false"/>
     </connection>
-    <connection connectorName="RUN_IF" label="flatfile" lineStyle="6" metaname="tJava_1" offsetLabelX="-13" offsetLabelY="9" outputId="2" source="tJava_1" target="tJava_2">
-      <elementParameter field="MEMO_JAVA" name="CONDITION" value="!(context.source_system.equals(&quot;DB&quot;))"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="flatfile" show="false"/>
+    <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tJava_2">
+      <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
     </connection>
     <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tJavaRow_1">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
-    </connection>
-    <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tJava_2">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
     </connection>
     <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tHiveRow_1" offsetLabelX="0" offsetLabelY="0" source="tHiveRow_1" target="TRIGGER_OUTPUT_1">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>

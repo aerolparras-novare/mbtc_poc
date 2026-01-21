@@ -17,4 +17,5 @@
   <contextParameter xmi:id="_8lfi4fKKEfCNScNTrRRCvQ" comment="" name="field_escape_char" prompt="field_escape_char?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
   <contextParameter xmi:id="_8lfi4vKKEfCNScNTrRRCvQ" comment="" name="field_text_enclosure" prompt="field_text_enclosure?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
   <contextParameter xmi:id="_8lfi4_KKEfCNScNTrRRCvQ" comment="" name="header" prompt="header?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
+  <contextParameter xmi:id="_6qp54PXXEfCzdeB6aeN2sw" comment="" name="footer" prompt="footer?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
 </talendfile:ContextType>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TalendMetadata:FTPConnection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmi:id="_hqpwYfXoEfCzdeB6aeN2sw" Host="47.131.5.132" Port="22" logonType="Password" Username="sftpuser" Password="enc:system.encryption.key.v1:IECvLA0qqxFN/QGWvNdv8RXe/6OHsWzg5vDIJxfLnIe6Btadv8iboTiNKxk=" Mode="Passive" Ecoding="UTF-8" SFTP="true" Method="Password" KeystoreFile="" KeystorePassword="" Proxyhost="" Proxyport="" Proxyuser="" Proxypassword="" CustomEncode="UTF-8"/>

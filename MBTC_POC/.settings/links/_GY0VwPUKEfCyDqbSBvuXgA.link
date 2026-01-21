@@ -79,6 +79,9 @@
     }, {
       "id" : "_8lfi4PKKEfCNScNTrRRCvQ",
       "name" : "source_schema"
+    }, {
+      "id" : "_6qp54PXXEfCzdeB6aeN2sw",
+      "name" : "footer"
     } ]
   }, {
     "contextName" : "dev",
