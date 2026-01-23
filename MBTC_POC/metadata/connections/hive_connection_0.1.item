@@ -47,10 +47,11 @@
     <parameters xmi:id="_AHogU_LIEfC0Pd25tdHHYA" key="CONN_PARA_KEY_DISABLE_CBC_PROTECTION" value="false"/>
     <parameters xmi:id="_AHogVPLIEfC0Pd25tdHHYA" key="CONN_PARA_KEY_HADOOP_CLUSTER_ID"/>
     <parameters xmi:id="_tmd1oPLIEfC0Pd25tdHHYA" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
-    <parameters xmi:id="_tqMfEPLIEfC0Pd25tdHHYA" key="CONN_PARA_KEY_SSL_TRUST_STORE_PATH" value=""/>
-    <parameters xmi:id="_tqMfEfLIEfC0Pd25tdHHYA" key="CONN_PARA_KEY_SSL_TRUST_STORE_PASSWORD" value=""/>
-    <parameters xmi:id="_tqMfEvLIEfC0Pd25tdHHYA" key="CONN_PARA_KEY_SSL_KEY_STORE_PATH" value=""/>
-    <parameters xmi:id="_tqMfE_LIEfC0Pd25tdHHYA" key="CONN_PARA_KEY_SSL_KEY_STORE_PASSWORD" value=""/>
+    <parameters xmi:id="_kLhIUPTwEfCCZvv3sP1Qkg" key="CONN_PARA_KEY_SSL_TRUST_STORE_PATH" value=""/>
+    <parameters xmi:id="_kLhIUfTwEfCCZvv3sP1Qkg" key="CONN_PARA_KEY_SSL_TRUST_STORE_PASSWORD" value=""/>
+    <parameters xmi:id="_kLhIUvTwEfCCZvv3sP1Qkg" key="CONN_PARA_KEY_SSL_KEY_STORE_PATH" value=""/>
+    <parameters xmi:id="_kLhIU_TwEfCCZvv3sP1Qkg" key="CONN_PARA_KEY_SSL_KEY_STORE_PASSWORD" value=""/>
+    <parameters xmi:id="_muai4PTwEfCCZvv3sP1Qkg" key="CONN_PARA_KEY_HIVE_PROPERTIES" value="[{&quot;PROPERTY&quot;:&quot;mapred.job.name&quot;,&quot;VALUE&quot;:&quot;\&quot;\&quot;&quot;}]"/>
   </TalendMetadata:DatabaseConnection>
   <orgomg.cwm.resource.relational:Schema xmi:id="_AZ7xJPLIEfC0Pd25tdHHYA" name="test" dataManager="_AHogMPLIEfC0Pd25tdHHYA">
     <ownedElement xsi:type="relational:TdTable" xmi:id="_fn_voPLIEfC0Pd25tdHHYA" name="customers" id="_fn_IkPLIEfC0Pd25tdHHYA" label="customers" tableType="TABLE">

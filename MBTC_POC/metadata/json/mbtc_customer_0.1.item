@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_Qa8vcfZyEfCepMq3Yo2NrA" name="mbtc_customer" id="_Qa8vcPZyEfCepMq3Yo2NrA" dataPackage="_Qa99lvZyEfCepMq3Yo2NrA" JSONFilePath="C:/Users/joshua.lopez/Desktop/All/Project/Internal/MBTC/Documents/MBTC Proper/Sample Files/customers.json" Encoding="UTF-8" readbyMode="JSONPATH">
+    <schema xmi:id="_Qa8vcvZyEfCepMq3Yo2NrA" LimitBoucle="50" AbsoluteXPathQuery="$">
+      <schemaTargets xmi:id="_Qa99kPZyEfCepMq3Yo2NrA" RelativeXPathQuery="CUSTOMERS[*].CUSTOMER_ID" TagName="CUSTOMER_ID"/>
+      <schemaTargets xmi:id="_Qa99kfZyEfCepMq3Yo2NrA" RelativeXPathQuery="CUSTOMERS[*].FIRST_NAME" TagName="FIRST_NAME"/>
+      <schemaTargets xmi:id="_Qa99kvZyEfCepMq3Yo2NrA" RelativeXPathQuery="CUSTOMERS[*].LAST_NAME" TagName="LAST_NAME"/>
+      <schemaTargets xmi:id="_Qa99k_ZyEfCepMq3Yo2NrA" RelativeXPathQuery="CUSTOMERS[*].EMAIL" TagName="EMAIL"/>
+      <schemaTargets xmi:id="_Qa99lPZyEfCepMq3Yo2NrA" RelativeXPathQuery="CUSTOMERS[*].JOIN_DATE" TagName="JOIN_DATE"/>
+      <schemaTargets xmi:id="_Qa99lfZyEfCepMq3Yo2NrA" RelativeXPathQuery="CUSTOMERS[*].KYC_STATUS" TagName="KYC_STATUS"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_Qa99lvZyEfCepMq3Yo2NrA" name="default" dataManager="_Qa8vcfZyEfCepMq3Yo2NrA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_Qa99l_ZyEfCepMq3Yo2NrA" id="_IoF3IPZyEfCepMq3Yo2NrA" label="metadata_mbtc_customer">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Qa99mPZyEfCepMq3Yo2NrA" label="CUSTOMER_ID" length="301" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Qa99mfZyEfCepMq3Yo2NrA" label="FIRST_NAME" length="1321" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Qa99mvZyEfCepMq3Yo2NrA" label="LAST_NAME" length="1225" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Qa99m_ZyEfCepMq3Yo2NrA" label="EMAIL" length="2137" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Qa99nPZyEfCepMq3Yo2NrA" label="JOIN_DATE" length="2755" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Qa99nfZyEfCepMq3Yo2NrA" label="KYC_STATUS" length="1078" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

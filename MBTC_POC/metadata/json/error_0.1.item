@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_lJVZcfd3EfCTO4E-xlLFig" name="error" dataPackage="_lJVZdvd3EfCTO4E-xlLFig" JSONFilePath="C:/Users/joshua.lopez/Desktop/All/Project/Internal/MBTC/Documents/MBTC Proper/Sample Files/error.json" Encoding="UTF-8" readbyMode="JSONPATH">
+    <schema xmi:id="_lJVZcvd3EfCTO4E-xlLFig" LimitBoucle="50" AbsoluteXPathQuery="$">
+      <schemaTargets xmi:id="_lJVZc_d3EfCTO4E-xlLFig" RelativeXPathQuery="ID" TagName="ID"/>
+      <schemaTargets xmi:id="_lJVZdPd3EfCTO4E-xlLFig" RelativeXPathQuery="errorCode" TagName="errorCode"/>
+      <schemaTargets xmi:id="_lJVZdfd3EfCTO4E-xlLFig" RelativeXPathQuery="errorMessage" TagName="errorMessage"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_lJVZdvd3EfCTO4E-xlLFig" name="default" dataManager="_lJVZcfd3EfCTO4E-xlLFig">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_lJVZd_d3EfCTO4E-xlLFig" id="_hKciAPd3EfCTO4E-xlLFig" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lJVZePd3EfCTO4E-xlLFig" label="ID" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lJVZefd3EfCTO4E-xlLFig" label="errorCode" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lJVZevd3EfCTO4E-xlLFig" label="errorMessage" length="52" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
