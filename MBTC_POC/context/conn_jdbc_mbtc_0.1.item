@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_EfsfgPdQEfCxsNZMbP7pnw" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_EfsfgfdQEfCxsNZMbP7pnw" comment="" name="conn_jdbc_mbtc_jdbcUrl" prompt="conn_jdbc_mbtc_jdbcUrl?" promptNeeded="false" repositoryContextId="" type="id_String" value="jdbc:oracle:thin:@//18.136.114.179:1521/mbtcDb"/>
+  <contextParameter xmi:id="_EfsfgvdQEfCxsNZMbP7pnw" comment="" name="conn_jdbc_mbtc_jdbcClass" prompt="conn_jdbc_mbtc_jdbcClass?" promptNeeded="false" repositoryContextId="" type="id_String" value="oracle.jdbc.OracleDriver"/>
+  <contextParameter xmi:id="_Efsfg_dQEfCxsNZMbP7pnw" comment="" name="conn_jdbc_mbtc_password" prompt="conn_jdbc_mbtc_password?" promptNeeded="false" repositoryContextId="" type="id_Password" value="enc:system.encryption.key.v1:5fFS4YDUptIY055coF+XQQTUgE9MXCEs1wXJBFx0lYHI4+Xs3BNfgQ=="/>
+  <contextParameter xmi:id="_EfsfhPdQEfCxsNZMbP7pnw" comment="" name="conn_jdbc_mbtc_userId" prompt="conn_jdbc_mbtc_userId?" promptNeeded="false" repositoryContextId="" type="id_String" value="nvre_dev1"/>
+</talendfile:ContextType>

@@ -1,0 +1,20 @@
+{
+  "itemId" : "_FEw7cPdQEfCxsNZMbP7pnw",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_EfLiIPdQEfCxsNZMbP7pnw",
+    "parameterList" : [ {
+      "id" : "_EfsfgfdQEfCxsNZMbP7pnw",
+      "name" : "conn_jdbc_mbtc_jdbcUrl"
+    }, {
+      "id" : "_EfsfgvdQEfCxsNZMbP7pnw",
+      "name" : "conn_jdbc_mbtc_jdbcClass"
+    }, {
+      "id" : "_Efsfg_dQEfCxsNZMbP7pnw",
+      "name" : "conn_jdbc_mbtc_password"
+    }, {
+      "id" : "_EfsfhPdQEfCxsNZMbP7pnw",
+      "name" : "conn_jdbc_mbtc_userId"
+    } ]
+  } ]
+}
