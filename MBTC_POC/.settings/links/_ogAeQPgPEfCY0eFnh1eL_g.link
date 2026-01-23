@@ -1,0 +1,17 @@
+{
+  "itemId" : "_ogAeQPgPEfCY0eFnh1eL_g",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_ktgdAPgPEfCY0eFnh1eL_g",
+    "parameterList" : [ {
+      "id" : "_kt8h4fgPEfCY0eFnh1eL_g",
+      "name" : "customer360_FilePath"
+    }, {
+      "id" : "_kt8h4vgPEfCY0eFnh1eL_g",
+      "name" : "customer360_Encoding"
+    }, {
+      "id" : "_kt8h4_gPEfCY0eFnh1eL_g",
+      "name" : "customer360_XPathQuery"
+    } ]
+  } ]
+}

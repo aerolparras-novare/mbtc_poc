@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_kt8h4PgPEfCY0eFnh1eL_g" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_kt8h4fgPEfCY0eFnh1eL_g" comment="" name="customer360_FilePath" prompt="customer360_FilePath?" promptNeeded="false" repositoryContextId="" type="id_File" value="C:/Users/josel.dora/Desktop/MBTC/customers.json"/>
+  <contextParameter xmi:id="_kt8h4vgPEfCY0eFnh1eL_g" comment="" name="customer360_Encoding" prompt="customer360_Encoding?" promptNeeded="false" repositoryContextId="" type="id_String" value="UTF-8"/>
+  <contextParameter xmi:id="_kt8h4_gPEfCY0eFnh1eL_g" comment="" name="customer360_XPathQuery" prompt="customer360_XPathQuery?" promptNeeded="false" repositoryContextId="" type="id_String" value="$[*]"/>
+</talendfile:ContextType>
