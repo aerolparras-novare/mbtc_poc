@@ -793,7 +793,7 @@
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded&#xA;&#x9;&#x9;&#x9;&#x9;Hive version 0.10 or later.&#xA;&#x9;&#x9;&#x9;" show="false"/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  customers.customer_id, &#xA;  customers.first_name, &#xA;  customers.last_name, &#xA;  customers.email, &#xA;  customers.join_date, &#xA;  customers.kyc_status&#xA; FROM bronze.customers_api_test customers LIMIT &quot; + &#xD;&#xA;globalMap.get(&quot;Get_All_Customers.limit&quot;) != null ? String.valueOf(globalMap.get(&quot;Get_All_Customers.limit&quot;)) : context.limit + &#xD;&#xA;&quot; OFFSET &quot; +&#xD;&#xA;globalMap.get(&quot;Get_All_Customers.offset&quot;) != null ? String.valueOf(globalMap.get(&quot;Get_All_Customers.offset&quot;)) : context.offset"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  customers.customer_id, &#xD;&#xA;  customers.first_name, &#xD;&#xA;  customers.last_name, &#xD;&#xA;  customers.email, &#xD;&#xA;  customers.join_date, &#xD;&#xA;  customers.kyc_status&#xD;&#xA; FROM bronze.customers_api_test customers LIMIT &quot; &#xD;&#xA;+ (globalMap.get(&quot;Get_All_Customers.limit&quot;) != null &#xD;&#xA;? String.valueOf(globalMap.get(&quot;Get_All_Customers.limit&quot;)) &#xD;&#xA;: String.valueOf(context.limit)) &#xD;&#xA;+ &quot; OFFSET &quot; &#xD;&#xA;+ (globalMap.get(&quot;Get_All_Customers.offset&quot;) != null &#xD;&#xA;? String.valueOf(globalMap.get(&quot;Get_All_Customers.offset&quot;)) &#xD;&#xA;: String.valueOf(context.offset))"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
     <elementParameter field="TEXT" name="GROUP" value="&quot;supergroup&quot;" show="false"/>
@@ -835,7 +835,7 @@
     <elementParameter field="TEXT" name="MAPR_HOME_DIR" value="&quot;/opt/mapr&quot;" show="false"/>
     <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" value="false" show="false"/>
     <elementParameter field="TEXT" name="HADOOP_LOGIN" value="&quot;kerberos&quot;" show="false"/>
-    <elementParameter field="CHECK" name="SET_APPLICATION_NAME" value="true"/>
+    <elementParameter field="CHECK" name="SET_APPLICATION_NAME" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="customers_api_test" name="tHiveInput_1">
@@ -1084,7 +1084,7 @@
     <elementParameter field="TEXT" name="MAPR_HOME_DIR" value="&quot;/opt/mapr&quot;" show="false"/>
     <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" value="false" show="false"/>
     <elementParameter field="TEXT" name="HADOOP_LOGIN" value="&quot;kerberos&quot;" show="false"/>
-    <elementParameter field="CHECK" name="SET_APPLICATION_NAME" value="true"/>
+    <elementParameter field="CHECK" name="SET_APPLICATION_NAME" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="customers_api_test" name="tHiveInput_3">
