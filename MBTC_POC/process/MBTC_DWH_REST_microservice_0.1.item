@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" hide="false" name="Default">
-    <contextParameter comment="" name="limit" prompt="limit?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="100" internalId="_OGOW0Pf-EfCTO4E-xlLFig"/>
-    <contextParameter comment="" name="offset" prompt="offset?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="10" internalId="_OGOW0ff-EfCTO4E-xlLFig"/>
+    <contextParameter comment="" name="Limit" prompt="Limit?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="100" internalId="_OGOW0Pf-EfCTO4E-xlLFig"/>
+    <contextParameter comment="" name="Offset" prompt="Offset?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="10" internalId="_OGOW0ff-EfCTO4E-xlLFig"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -268,7 +268,7 @@
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded&#xA;&#x9;&#x9;&#x9;&#x9;Hive version 0.10 or later.&#xA;&#x9;&#x9;&#x9;" show="false"/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  customers.customer_id, &#xD;&#xA;  customers.first_name, &#xD;&#xA;  customers.last_name, &#xD;&#xA;  customers.email, &#xD;&#xA;  customers.join_date, &#xD;&#xA;  customers.kyc_status&#xD;&#xA; FROM bronze.customers_api_test customers LIMIT &quot; &#xD;&#xA;+ (globalMap.get(&quot;Get_All_Customers.limit&quot;) != null &#xD;&#xA;? String.valueOf(globalMap.get(&quot;Get_All_Customers.limit&quot;)) &#xD;&#xA;: String.valueOf(context.limit)) &#xD;&#xA;+ &quot; OFFSET &quot; &#xD;&#xA;+ (globalMap.get(&quot;Get_All_Customers.offset&quot;) != null &#xD;&#xA;? String.valueOf(globalMap.get(&quot;Get_All_Customers.offset&quot;)) &#xD;&#xA;: String.valueOf(context.offset))"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  customers.customer_id, &#xD;&#xA;  customers.first_name, &#xD;&#xA;  customers.last_name, &#xD;&#xA;  customers.email, &#xD;&#xA;  customers.join_date, &#xD;&#xA;  customers.kyc_status&#xD;&#xA; FROM bronze.customers_api_test customers LIMIT &quot; &#xD;&#xA;+ (globalMap.get(&quot;Get_All_Customers.limit&quot;) != null &#xD;&#xA;? String.valueOf(globalMap.get(&quot;Get_All_Customers.limit&quot;)) &#xD;&#xA;: context.Limit) &#xD;&#xA;+ &quot; OFFSET &quot; &#xD;&#xA;+ (globalMap.get(&quot;Get_All_Customers.offset&quot;) != null &#xD;&#xA;? String.valueOf(globalMap.get(&quot;Get_All_Customers.offset&quot;)) &#xD;&#xA;: context.Offset)"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
     <elementParameter field="TEXT" name="GROUP" value="&quot;supergroup&quot;" show="false"/>
