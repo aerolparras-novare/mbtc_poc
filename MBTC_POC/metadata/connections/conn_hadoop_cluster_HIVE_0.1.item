@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TalendMetadata:DatabaseConnection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmi:id="_lrQ04PdCEfCAt6AmyhhERg" DatabaseType="Hive" URL="jdbc:hive2://dao-cdp-poc-master2.novare.com.ph:10000/&lt;sid>" Port="10000" Username="admin" ServerName="dao-cdp-poc-master2.novare.com.ph" DbmsId="hive_id" ProductId="HIVE" supportNLS="false">
+  <parameters xmi:id="_lrQ04fdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_USE_YARN" value="true"/>
+  <parameters xmi:id="_lrQ04vdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_RESOURCEMANAGER_SCHEDULER_ADDRESS" value="context.conn_hadoop_cluster_ResourceManagerScheduler"/>
+  <parameters xmi:id="_lrQ04_dCEfCAt6AmyhhERg" key="CONN_PARA_KEY_USE_CUSTOM_CONFS" value="false"/>
+  <parameters xmi:id="_lrQ05PdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_NAME_NODE_URL" value="context.conn_hadoop_cluster_NameNodeUri"/>
+  <parameters xmi:id="_lrQ05fdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HIVE_ADDITIONAL_JDBC_SETTINGS" value=""/>
+  <parameters xmi:id="_lrQ05vdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_USERNAME" value="context.conn_hadoop_cluster_User"/>
+  <parameters xmi:id="_lrQ05_dCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HADOOP_CLUSTER_ID" value="_FsrYYPdCEfCAt6AmyhhERg"/>
+  <parameters xmi:id="_lrQ06PdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_JOB_HISTORY_PRINCIPAL" value="mapred/_HOST@EXAMPLE.COM"/>
+  <parameters xmi:id="_lrQ06fdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HBASE_VERSION" value="Cloudera_CDP7_1_1_0_565"/>
+  <parameters xmi:id="_lrQ06vdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_JOB_TRACKER_URL" value="context.conn_hadoop_cluster_ResourceManager"/>
+  <parameters xmi:id="_lrQ06_dCEfCAt6AmyhhERg" key="CONN_PARA_KEY_JOBHISTORY_ADDRESS" value="context.conn_hadoop_cluster_JobHistory"/>
+  <parameters xmi:id="_lrQ07PdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HIVE_VERSION" value="Cloudera_CDP7_1_1_0_565"/>
+  <parameters xmi:id="_lrQ07fdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_USE_DATANODE_HOSTNAME" value="true"/>
+  <parameters xmi:id="_lrQ07vdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_DB_SERVER" value="dao-cdp-poc-master1.novare.com.ph"/>
+  <parameters xmi:id="_lrQ07_dCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HIVE_GOOGLE_PROJECT_ID"/>
+  <parameters xmi:id="_lrQ08PdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HIVE_GOOGLE_CLUSTER_ID"/>
+  <parameters xmi:id="_lrQ08fdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_DB_TYPE" value="Hive"/>
+  <parameters xmi:id="_lrQ08vdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_MAPRDB_AUTHENTICATION_USE_MAPRTICKET" value="false"/>
+  <parameters xmi:id="_lrQ08_dCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HIVE_AUTHENTICATION_PATH_TO_GOOGLE_CREDENTIALS"/>
+  <parameters xmi:id="_lrQ09PdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_JOB_TRACKER_PRINCIPAL" value="yarn/_HOST@EXAMPLE.COM"/>
+  <parameters xmi:id="_lrQ09fdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HIVE_AUTHENTICATION_DEFINE_PATH_TO_GOOGLE_CREDENTIALS"/>
+  <parameters xmi:id="_lrQ09vdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HIVE_DISTRIBUTION" value="CLOUDERA"/>
+  <parameters xmi:id="_lrQ09_dCEfCAt6AmyhhERg" key="CONN_PARA_KEY_MAPRDB_VERSION" value="Cloudera_CDP7_1_1_0_565"/>
+  <parameters xmi:id="_lrQ0-PdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_MAPRDB_DISTRIBUTION" value="CLOUDERA"/>
+  <parameters xmi:id="_lrQ0-fdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HIVE_GOOGLE_REGION"/>
+  <parameters xmi:id="_lrQ0-vdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_USE_KRB" value="false"/>
+  <parameters xmi:id="_lrQ0-_dCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HBASE_DISTRIBUTION" value="CLOUDERA"/>
+  <parameters xmi:id="_lrQ0_PdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_STAGING_DIRECTORY" value="context.conn_hadoop_cluster_StagingDirectory"/>
+  <parameters xmi:id="_lrQ0_fdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_NAME_NODE_PRINCIPAL" value="hdfs/_HOST@EXAMPLE.COM"/>
+  <parameters xmi:id="_lrQ0_vdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_DB_PRODUCT" value="HIVE"/>
+  <parameters xmi:id="_lrQ0__dCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HIVE_AUTHENTICATION_USE_MAPRTICKET" value="false"/>
+  <parameters xmi:id="_lrQ1APdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_SPARK_MODE" value="STANDALONE"/>
+  <parameters xmi:id="_lrQ1AfdCEfCAt6AmyhhERg" key="HIVE_AUTHENTICATION_METASTOREURL" value="thrift://dao-cdp-poc-master2.novare.com.ph:9083"/>
+  <parameters xmi:id="_lrQ1AvdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HIVE_GOOGLE_JARS_BUCKET"/>
+  <parameters xmi:id="_lrQ1A_dCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HBASE_AUTHENTICATION_USE_MAPRTICKET" value="false"/>
+  <parameters xmi:id="_lrQ1BPdCEfCAt6AmyhhERg" key="CONN_PARA_KEY_HIVE_MODE" value="STANDALONE"/>
+  <parameters xmi:id="_lrQ1BfdCEfCAt6AmyhhERg" key="HIVE_SERVER_VERSION" value="HIVE2"/>
+  <parameters xmi:id="_lrQ1BvdCEfCAt6AmyhhERg" key="HIVE_HADOOP_VERSION" value="HADOOP2"/>
+  <parameters xmi:id="_5bGxsPdEEfCAt6AmyhhERg" key="CONN_PARA_KEY_HADOOP_CUSTOM_JARS"/>
+</TalendMetadata:DatabaseConnection>

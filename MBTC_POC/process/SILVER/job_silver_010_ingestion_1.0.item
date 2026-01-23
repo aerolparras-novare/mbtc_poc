@@ -46,6 +46,8 @@
     <contextParameter comment="" name="header" prompt="header?" promptNeeded="false" repositoryContextId="_m887IO9_EfCcepb0inUXkA" type="id_Integer" value="" internalId="_GLN4QvUCEfCyDqbSBvuXgA"/>
     <contextParameter comment="" name="source_schema" prompt="source_schema?" promptNeeded="false" repositoryContextId="_m887IO9_EfCcepb0inUXkA" type="id_String" value="" internalId="_GLN4Q_UCEfCyDqbSBvuXgA"/>
     <contextParameter comment="" name="conn_hdfs_mbtc_namenode_uri" prompt="conn_hdfs_mbtc_namenode_uri?" promptNeeded="false" repositoryContextId="_LodxkPWmEfCzdeB6aeN2sw" type="id_String" value="&quot;hdfs://dao-cdp-poc-master1.novare.com.ph:8020&quot;" internalId="_YH5JEPXaEfCzdeB6aeN2sw"/>
+    <contextParameter comment="" name="dir_hdfs_bronze" prompt="dir_hdfs_bronze?" promptNeeded="false" repositoryContextId="_i411QPEbEfCRlLC-EnFWmw" type="id_String" value="" internalId="_JcHZYfdUEfCAt6AmyhhERg"/>
+    <contextParameter comment="" name="columns" prompt="columns?" promptNeeded="false" repositoryContextId="_i411QPEbEfCRlLC-EnFWmw" type="id_String" value="" internalId="_JcHZZfdUEfCAt6AmyhhERg"/>
   </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>
@@ -741,13 +743,13 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>

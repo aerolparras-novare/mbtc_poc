@@ -102,5 +102,22 @@
       "id" : "_C6ssQfKdEfCNScNTrRRCvQ",
       "name" : "conn_hive_mbtc_target_Login"
     } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_LodxkPWmEfCzdeB6aeN2sw",
+    "parameterList" : [ {
+      "id" : "_Lo52cfWmEfCzdeB6aeN2sw",
+      "name" : "conn_hdfs_mbtc_namenode_uri"
+    } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_i411QPEbEfCRlLC-EnFWmw",
+    "parameterList" : [ {
+      "id" : "_JcIAcfdUEfCAt6AmyhhERg",
+      "name" : "dir_hdfs_bronze"
+    }, {
+      "id" : "_JcIAdfdUEfCAt6AmyhhERg",
+      "name" : "columns"
+    } ]
   } ]
 }
