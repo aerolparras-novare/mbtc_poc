@@ -179,6 +179,53 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_SmX0IPpiEfC6UsEam_Kf8A",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "built-in",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_RZIgwPppEfC6UsEam_Kf8A",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "__tqwkPdzEfCTO4E-xlLFig",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_xgARYPp7EfC6UsEam_Kf8A",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_8PP7MPduEfCTO4E-xlLFig",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_HcbZkPdUEfC1_ttOpu7bSw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_IMCTgPgCEfCTO4E-xlLFig",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_8PP7MPduEfCTO4E-xlLFig - metadata",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_HcbZkPdUEfC1_ttOpu7bSw - customer_360_view",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_lJVZcPd3EfCTO4E-xlLFig - metadata",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_gwZiYOrWEfC0ItbnNTsbtg",
     "version" : "0.1",
     "type" : "job"
@@ -405,6 +452,17 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_HauLUPpzEfC6UsEam_Kf8A",
+    "version" : "0.1",
+    "type" : "mapper"
+  },
+  "relatedItems" : [ {
+    "id" : "_0WbeIPZYEfCepMq3Yo2NrA",
+    "version" : "0.1",
+    "type" : "mapper"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_HksmkPI3EfCZcI9EdJvCQg",
     "version" : "0.1",
     "type" : "mapper"
@@ -468,6 +526,51 @@
     "type" : "mapper"
   }, {
     "id" : "_jqtHQBsaEemai7rk0Np2CQ",
+    "version" : "0.1",
+    "type" : "mapper"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_QnzKcPppEfC6UsEam_Kf8A",
+    "version" : "0.1",
+    "type" : "mapper"
+  },
+  "relatedItems" : [ {
+    "id" : "_0W4xIPZYEfCepMq3Yo2NrA",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_QG2ZgPppEfC6UsEam_Kf8A",
+    "version" : "0.1",
+    "type" : "mapper"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_RZIgwPppEfC6UsEam_Kf8A",
+    "version" : "0.1",
+    "type" : "mapper"
+  },
+  "relatedItems" : [ {
+    "id" : "_0W4xIPZYEfCepMq3Yo2NrA",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_QG2ZgPppEfC6UsEam_Kf8A",
+    "version" : "0.1",
+    "type" : "mapper"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_VjDTwPp6EfC6UsEam_Kf8A",
+    "version" : "0.1",
+    "type" : "mapper"
+  },
+  "relatedItems" : [ {
+    "id" : "_0WbeIPZYEfCepMq3Yo2NrA",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_VGn2cPp6EfC6UsEam_Kf8A",
     "version" : "0.1",
     "type" : "mapper"
   } ]
@@ -548,6 +651,21 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "__zMaQPpnEfC6UsEam_Kf8A",
+    "version" : "0.1",
+    "type" : "mapper"
+  },
+  "relatedItems" : [ {
+    "id" : "_-4klEPpnEfC6UsEam_Kf8A",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_0W4xIPZYEfCepMq3Yo2NrA",
+    "version" : "0.1",
+    "type" : "mapper"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_d4ssIPdxEfCTO4E-xlLFig",
     "version" : "0.1",
     "type" : "mapper"
@@ -558,6 +676,17 @@
     "type" : "mapper"
   }, {
     "id" : "_dSZhIPdxEfCTO4E-xlLFig",
+    "version" : "0.1",
+    "type" : "mapper"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_f6lXAPp0EfC6UsEam_Kf8A",
+    "version" : "0.1",
+    "type" : "mapper"
+  },
+  "relatedItems" : [ {
+    "id" : "_0WbeIPZYEfCepMq3Yo2NrA",
     "version" : "0.1",
     "type" : "mapper"
   } ]
@@ -599,6 +728,32 @@
     "type" : "mapper"
   }, {
     "id" : "_kgii0PdxEfCTO4E-xlLFig",
+    "version" : "0.1",
+    "type" : "mapper"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_laEJYPpyEfC6UsEam_Kf8A",
+    "version" : "0.1",
+    "type" : "mapper"
+  },
+  "relatedItems" : [ {
+    "id" : "_0WbeIPZYEfCepMq3Yo2NrA",
+    "version" : "0.1",
+    "type" : "mapper"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_xgARYPp7EfC6UsEam_Kf8A",
+    "version" : "0.1",
+    "type" : "mapper"
+  },
+  "relatedItems" : [ {
+    "id" : "_0W4xIPZYEfCepMq3Yo2NrA",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_w0ZvoPp7EfC6UsEam_Kf8A",
     "version" : "0.1",
     "type" : "mapper"
   } ]
