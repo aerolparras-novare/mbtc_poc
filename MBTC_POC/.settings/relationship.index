@@ -36,10 +36,6 @@
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "built-in",
-    "version" : "Latest",
-    "type" : "context"
-  }, {
     "id" : "_6BOyMPdzEfCTO4E-xlLFig",
     "version" : "0.1",
     "type" : "mapper"
