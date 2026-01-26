@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
-  <context confirmationNeeded="false" hide="false" name="Default">
-    <contextParameter comment="" name="Limit" prompt="Limit?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="100" internalId="_OGOW0Pf-EfCTO4E-xlLFig"/>
-    <contextParameter comment="" name="Offset" prompt="Offset?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="10" internalId="_OGOW0ff-EfCTO4E-xlLFig"/>
-  </context>
+  <context confirmationNeeded="false" hide="false" name="Default"/>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="600" show="false"/>
@@ -268,7 +265,7 @@
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded&#xA;&#x9;&#x9;&#x9;&#x9;Hive version 0.10 or later.&#xA;&#x9;&#x9;&#x9;" show="false"/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  customers.customer_id, &#xD;&#xA;  customers.first_name, &#xD;&#xA;  customers.last_name, &#xD;&#xA;  customers.email, &#xD;&#xA;  customers.join_date, &#xD;&#xA;  customers.kyc_status&#xD;&#xA; FROM bronze.customers_api_test customers LIMIT &quot; &#xD;&#xA;+ (globalMap.get(&quot;Get_All_Customers.limit&quot;) != null &#xD;&#xA;? String.valueOf(globalMap.get(&quot;Get_All_Customers.limit&quot;)) &#xD;&#xA;: context.Limit) &#xD;&#xA;+ &quot; OFFSET &quot; &#xD;&#xA;+ (globalMap.get(&quot;Get_All_Customers.offset&quot;) != null &#xD;&#xA;? String.valueOf(globalMap.get(&quot;Get_All_Customers.offset&quot;)) &#xD;&#xA;: context.Offset)"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  customers.customer_id, &#xD;&#xA;  customers.first_name, &#xD;&#xA;  customers.last_name, &#xD;&#xA;  customers.email, &#xD;&#xA;  customers.join_date, &#xD;&#xA;  customers.kyc_status&#xD;&#xA; FROM bronze.customers_api_test customers LIMIT &quot; &#xD;&#xA;+ (globalMap.get(&quot;Get_All_Customers.limit&quot;) != null &#xD;&#xA;? String.valueOf(globalMap.get(&quot;Get_All_Customers.limit&quot;)) &#xD;&#xA;: 100) &#xD;&#xA;+ &quot; OFFSET &quot; &#xD;&#xA;+ (globalMap.get(&quot;Get_All_Customers.offset&quot;) != null &#xD;&#xA;? String.valueOf(globalMap.get(&quot;Get_All_Customers.offset&quot;)) &#xD;&#xA;: 10)"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
     <elementParameter field="TEXT" name="GROUP" value="&quot;supergroup&quot;" show="false"/>
@@ -830,8 +827,6 @@
     <elementParameter field="TEXT" name="GOOGLE_JARS_BUCKET" value="&quot;&quot;" show="false"/>
     <elementParameter field="CHECK" name="DEFINE_PATH_TO_GOOGLE_CREDENTIALS" value="false" show="false"/>
     <elementParameter field="FILE" name="PATH_TO_GOOGLE_CREDENTIALS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" value="_HcbZkPdUEfC1_ttOpu7bSw - customers_api_test" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;customers_api_test&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
@@ -849,25 +844,13 @@
     <elementParameter field="CHECK" name="SET_TEMP_PATH" value="false"/>
     <elementParameter field="DIRECTORY" name="TEMP_PATH" value="&quot;&quot;" show="false"/>
     <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="customer_id" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="body" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="customer_id" id="0"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="body" id="0"/>
       <elementValue elementRef="TRIM" value="false" id="1"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="first_name" id="2"/>
-      <elementValue elementRef="TRIM" value="false" id="3"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="last_name" id="4"/>
-      <elementValue elementRef="TRIM" value="false" id="5"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="email" id="6"/>
-      <elementValue elementRef="TRIM" value="false" id="7"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="join_date" id="8"/>
-      <elementValue elementRef="TRIM" value="false" id="9"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="kyc_status" id="10"/>
-      <elementValue elementRef="TRIM" value="false" id="11"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ingest_date" id="12"/>
-      <elementValue elementRef="TRIM" value="false" id="13"/>
     </elementParameter>
     <elementParameter field="TABLE" name="HADOOP_ADVANCED_PROPERTIES"/>
     <elementParameter field="TABLE" name="ADVANCED_PROPERTIES"/>
@@ -883,61 +866,14 @@
     <elementParameter field="CHECK" name="SET_APPLICATION_NAME" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="customers_api_test" name="tHiveRow_4">
-      <column comment="" key="false" length="2147483647" name="customer_id" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="2147483647" name="first_name" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="2147483647" name="last_name" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="2147483647" name="email" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="2147483647" name="join_date" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="2147483647" name="kyc_status" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="8" name="ingest_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
+    <metadata connector="FLOW" name="tHiveRow_4">
+      <column key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
-    <metadata connector="REJECT" label="customers_api_test" name="REJECT">
-      <column comment="" key="false" length="2147483647" name="customer_id" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="2147483647" name="first_name" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="2147483647" name="last_name" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="2147483647" name="email" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="2147483647" name="join_date" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="2147483647" name="kyc_status" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="8" name="ingest_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
-  </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="400" posY="40" sizeX="120" sizeY="40">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_8" show="false"/>
-    <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
-    <elementParameter field="TABLE" name="MAP" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFlowToIterate_8"/>
   </node>
   <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="360" posY="120" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_9" show="false"/>
@@ -945,109 +881,6 @@
     <elementParameter field="TABLE" name="MAP" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowToIterate_9"/>
-  </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="40" sizeX="120" sizeY="40">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_6" show="false"/>
-    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
-    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
-    <elementParameter field="TABLE" name="VALUES">
-      <elementValue elementRef="SCHEMA_COLUMN" value="CUSTOMER_ID" id="0"/>
-      <elementValue elementRef="VALUE" value="" id="1"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FIRST_NAME" id="2"/>
-      <elementValue elementRef="VALUE" value="" id="3"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_NAME" id="4"/>
-      <elementValue elementRef="VALUE" value="" id="5"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="EMAIL" id="6"/>
-      <elementValue elementRef="VALUE" value="" id="7"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="JOIN_DATE" id="8"/>
-      <elementValue elementRef="VALUE" value="" id="9"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="KYC_STATUS" id="10"/>
-      <elementValue elementRef="VALUE" value="" id="11"/>
-    </elementParameter>
-    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
-    <elementParameter field="TABLE" name="INTABLE" show="false"/>
-    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;" show="false"/>
-    <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="mbtc_dwh_customer_metadata" name="tFixedFlowInput_6">
-      <column comment="" key="false" length="1" name="CUSTOMER_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="FIRST_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="LAST_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="17" name="EMAIL" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="24" name="JOIN_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="7" name="KYC_STATUS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tWriteJSONField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="880" posY="40" sizeX="120" sizeY="40">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWriteJSONField_6" show="false"/>
-    <elementParameter field="COLUMN_LIST" name="JSONFIELD" value="body"/>
-    <elementParameter field="TABLE" name="ROOT" show="false">
-      <elementValue elementRef="PATH" value="/body" id="0"/>
-      <elementValue elementRef="COLUMN" value="" id="1"/>
-      <elementValue elementRef="VALUE" value="" id="2"/>
-      <elementValue elementRef="ATTRIBUTE" value="main" id="3"/>
-      <elementValue elementRef="ORDER" value="1" id="4"/>
-      <elementValue elementRef="PATH" value="/body/FIRST_NAME" id="5"/>
-      <elementValue elementRef="COLUMN" value="FIRST_NAME" id="6"/>
-      <elementValue elementRef="VALUE" value="" id="7"/>
-      <elementValue elementRef="ATTRIBUTE" value="branch" id="8"/>
-      <elementValue elementRef="ORDER" value="3" id="9"/>
-      <elementValue elementRef="PATH" value="/body/LAST_NAME" id="10"/>
-      <elementValue elementRef="COLUMN" value="LAST_NAME" id="11"/>
-      <elementValue elementRef="VALUE" value="" id="12"/>
-      <elementValue elementRef="ATTRIBUTE" value="branch" id="13"/>
-      <elementValue elementRef="ORDER" value="4" id="14"/>
-      <elementValue elementRef="PATH" value="/body/EMAIL" id="15"/>
-      <elementValue elementRef="COLUMN" value="EMAIL" id="16"/>
-      <elementValue elementRef="VALUE" value="" id="17"/>
-      <elementValue elementRef="ATTRIBUTE" value="branch" id="18"/>
-      <elementValue elementRef="ORDER" value="5" id="19"/>
-      <elementValue elementRef="PATH" value="/body/JOIN_DATE" id="20"/>
-      <elementValue elementRef="COLUMN" value="JOIN_DATE" id="21"/>
-      <elementValue elementRef="VALUE" value="" id="22"/>
-      <elementValue elementRef="ATTRIBUTE" value="branch" id="23"/>
-      <elementValue elementRef="ORDER" value="6" id="24"/>
-      <elementValue elementRef="PATH" value="/body/KYC_STATUS" id="25"/>
-      <elementValue elementRef="COLUMN" value="KYC_STATUS" id="26"/>
-      <elementValue elementRef="VALUE" value="" id="27"/>
-      <elementValue elementRef="ATTRIBUTE" value="branch" id="28"/>
-      <elementValue elementRef="ORDER" value="7" id="29"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="GROUP" show="false"/>
-    <elementParameter field="TABLE" name="LOOP" show="false">
-      <elementValue elementRef="PATH" value="/body/CUSTOMER_ID" id="0"/>
-      <elementValue elementRef="COLUMN" value="CUSTOMER_ID" id="1"/>
-      <elementValue elementRef="VALUE" value="" id="2"/>
-      <elementValue elementRef="ATTRIBUTE" value="main" id="3"/>
-      <elementValue elementRef="ORDER" value="2" id="4"/>
-    </elementParameter>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="TABLE" name="GROUPBYS"/>
-    <elementParameter field="CHECK" name="REMOVE_ROOT" value="false"/>
-    <elementParameter field="CHECK" name="COMPACT_FORMAT" value="true" show="false"/>
-    <elementParameter field="CHECK" name="QUOTE_ALL_VALUES" value="false"/>
-    <elementParameter field="CHECK" name="QUOTE_NULL_VALUES" value="true" show="false"/>
-    <elementParameter field="CHECK" name="ALLOW_EMPTY_STRINGS" value="false"/>
-    <elementParameter field="CHECK" name="USE_SCIENTIFIC_NOTATION" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tWriteJSONField_6">
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tRESTResponse" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="40" sizeX="120" sizeY="40">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTResponse_8" show="false"/>
-    <elementParameter field="REST_RESPONSE_SCHEMA_TYPE" name="RESPONSE_TYPE" value="id_String"/>
-    <elementParameter field="CLOSED_LIST" name="STATUS_CODE" value="200"/>
-    <elementParameter field="TEXT" name="CUSTOM_STATUS_CODE" value="200" show="false"/>
-    <elementParameter field="TABLE" name="RESPONSE_HEADERS"/>
-    <elementParameter field="CHECK" name="UNWRAP_JSON_RESPONSE" value="false"/>
-    <elementParameter field="TEXT" name="JSON_ARRAY_KEYS" value=""/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tRESTResponse_8">
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
   </node>
   <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="600" posY="120" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_7" show="false"/>
@@ -1348,10 +1181,17 @@
   </node>
   <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-400" posY="280" sizeX="121" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_4" show="false"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tExtractJSONFields" show="false"/>
+    <elementParameter field="TEXT" name="VERSION" value="0.102 (ALPHA)" show="false"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Processing/Fields" show="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false" show="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tExtractJSONFields" show="false"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_8PP7MPduEfCTO4E-xlLFig" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_8PP7MPduEfCTO4E-xlLFig - metadata" show="false"/>
     <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
     <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" value="2_1_0"/>
     <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="body"/>
@@ -1382,6 +1222,10 @@
       <elementValue elementRef="QUERY" value="&quot;KYC_STATUS&quot;" id="21"/>
       <elementValue elementRef="NODECHECK" value="" id="22"/>
       <elementValue elementRef="ISARRAY" value="" id="23"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="id" id="24"/>
+      <elementValue elementRef="QUERY" value="" id="25"/>
+      <elementValue elementRef="NODECHECK" value="false" id="26"/>
+      <elementValue elementRef="ISARRAY" value="false" id="27"/>
     </elementParameter>
     <elementParameter field="TABLE" name="MAPPING_4_JSONPATH">
       <elementValue elementRef="SCHEMA_COLUMN" value="CUSTOMER_ID" id="0"/>
@@ -1396,6 +1240,8 @@
       <elementValue elementRef="QUERY" value="&quot;JOIN_DATE&quot;" id="9"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="KYC_STATUS" id="10"/>
       <elementValue elementRef="QUERY" value="&quot;KYC_STATUS&quot;" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="id" id="12"/>
+      <elementValue elementRef="QUERY" value="" id="13"/>
     </elementParameter>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
@@ -1411,6 +1257,7 @@
       <column comment="" key="false" length="17" name="EMAIL" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="JOIN_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="KYC_STATUS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="metadata" name="REJECT">
       <column comment="" key="false" length="-1" name="CUSTOMER_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -1419,6 +1266,7 @@
       <column comment="" key="false" length="17" name="EMAIL" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="JOIN_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="KYC_STATUS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1460,6 +1308,7 @@
       <column comment="" key="false" length="8" name="ingest_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="-1" name="id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" label="metadata" name="LOGGING_UPDATE">
       <column comment="" key="false" length="-1" name="CUSTOMER_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -1470,7 +1319,7 @@
       <column comment="" key="false" length="7" name="KYC_STATUS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="updateCustomer">
         <mapperTableEntries name="customer_id" expression="row28.CUSTOMER_ID " type="id_String" nullable="true"/>
@@ -1479,7 +1328,8 @@
         <mapperTableEntries name="email" expression="row28.EMAIL " type="id_String" nullable="true"/>
         <mapperTableEntries name="join_date" expression="row28.JOIN_DATE " type="id_String" nullable="true"/>
         <mapperTableEntries name="kyc_status" expression="row28.KYC_STATUS " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ingest_date" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ingest_date" expression="TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate())" type="id_String" nullable="true"/>
+        <mapperTableEntries name="id" expression="row28.id " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="LOGGING_UPDATE">
         <mapperTableEntries name="CUSTOMER_ID" expression="row28.CUSTOMER_ID " type="id_String" nullable="true"/>
@@ -1496,6 +1346,7 @@
         <mapperTableEntries name="EMAIL" type="id_String" nullable="true"/>
         <mapperTableEntries name="JOIN_DATE" type="id_String" nullable="true"/>
         <mapperTableEntries name="KYC_STATUS" type="id_String" nullable="true"/>
+        <mapperTableEntries name="id" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -1567,7 +1418,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later." show="false"/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false" show="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE bronze.customers_api_test&#xD;&#xA;SET &#xD;&#xA;&#x9;first_name = '&quot; + updateCustomer.first_name + &quot;',&#xD;&#xA;&#x9;last_name = '&quot; + updateCustomer.last_name + &quot;',&#xD;&#xA;&#x9;email = '&quot; + updateCustomer.email + &quot;',&#xD;&#xA;&#x9;join_date = '&quot; + updateCustomer.join_date + &quot;',&#xD;&#xA;&#x9;kyc_status = '&quot; + updateCustomer.kyc_status + &quot;'&#xD;&#xA;WHERE customer_id = '&quot; +  updateCustomer.customer_id + &quot;'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE bronze.customers_api_test&#xD;&#xA;SET &#xD;&#xA;&#x9;first_name = '&quot; + updateCustomer.first_name + &quot;',&#xD;&#xA;&#x9;last_name = '&quot; + updateCustomer.last_name + &quot;',&#xD;&#xA;&#x9;email = '&quot; + updateCustomer.email + &quot;',&#xD;&#xA;&#x9;join_date = '&quot; + updateCustomer.join_date + &quot;',&#xD;&#xA;&#x9;kyc_status = '&quot; + updateCustomer.kyc_status + &quot;'&#xD;&#xA;WHERE customer_id = '&quot; +  updateCustomer.id + &quot;'&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -1673,18 +1524,10 @@
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
     <elementParameter field="TABLE" name="VALUES">
-      <elementValue elementRef="SCHEMA_COLUMN" value="CUSTOMER_ID" id="0"/>
-      <elementValue elementRef="VALUE" value="" id="1"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FIRST_NAME" id="2"/>
-      <elementValue elementRef="VALUE" value="" id="3"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_NAME" id="4"/>
-      <elementValue elementRef="VALUE" value="" id="5"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="EMAIL" id="6"/>
-      <elementValue elementRef="VALUE" value="" id="7"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="JOIN_DATE" id="8"/>
-      <elementValue elementRef="VALUE" value="" id="9"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="KYC_STATUS" id="10"/>
-      <elementValue elementRef="VALUE" value="" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="statusCode" id="0"/>
+      <elementValue elementRef="VALUE" value="&quot;2xx&quot;" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="statusMessage" id="2"/>
+      <elementValue elementRef="VALUE" value="&quot;Updated Customer&quot;" id="3"/>
     </elementParameter>
     <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
     <elementParameter field="TABLE" name="INTABLE" show="false"/>
@@ -1694,12 +1537,8 @@
     <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tFixedFlowInput_8">
-      <column comment="" key="false" length="-1" name="CUSTOMER_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="FIRST_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="LAST_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="17" name="EMAIL" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="JOIN_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="7" name="KYC_STATUS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="statusCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="statusMessage" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tWriteJSONField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="280" sizeX="121" sizeY="40">
@@ -1711,36 +1550,16 @@
       <elementValue elementRef="VALUE" value="" id="2"/>
       <elementValue elementRef="ATTRIBUTE" value="main" id="3"/>
       <elementValue elementRef="ORDER" value="1" id="4"/>
-      <elementValue elementRef="PATH" value="/body/FIRST_NAME" id="5"/>
-      <elementValue elementRef="COLUMN" value="FIRST_NAME" id="6"/>
+      <elementValue elementRef="PATH" value="/body/statusMessage" id="5"/>
+      <elementValue elementRef="COLUMN" value="statusMessage" id="6"/>
       <elementValue elementRef="VALUE" value="" id="7"/>
       <elementValue elementRef="ATTRIBUTE" value="branch" id="8"/>
       <elementValue elementRef="ORDER" value="3" id="9"/>
-      <elementValue elementRef="PATH" value="/body/LAST_NAME" id="10"/>
-      <elementValue elementRef="COLUMN" value="LAST_NAME" id="11"/>
-      <elementValue elementRef="VALUE" value="" id="12"/>
-      <elementValue elementRef="ATTRIBUTE" value="branch" id="13"/>
-      <elementValue elementRef="ORDER" value="4" id="14"/>
-      <elementValue elementRef="PATH" value="/body/EMAIL" id="15"/>
-      <elementValue elementRef="COLUMN" value="EMAIL" id="16"/>
-      <elementValue elementRef="VALUE" value="" id="17"/>
-      <elementValue elementRef="ATTRIBUTE" value="branch" id="18"/>
-      <elementValue elementRef="ORDER" value="5" id="19"/>
-      <elementValue elementRef="PATH" value="/body/JOIN_DATE" id="20"/>
-      <elementValue elementRef="COLUMN" value="JOIN_DATE" id="21"/>
-      <elementValue elementRef="VALUE" value="" id="22"/>
-      <elementValue elementRef="ATTRIBUTE" value="branch" id="23"/>
-      <elementValue elementRef="ORDER" value="6" id="24"/>
-      <elementValue elementRef="PATH" value="/body/KYC_STATUS" id="25"/>
-      <elementValue elementRef="COLUMN" value="KYC_STATUS" id="26"/>
-      <elementValue elementRef="VALUE" value="" id="27"/>
-      <elementValue elementRef="ATTRIBUTE" value="branch" id="28"/>
-      <elementValue elementRef="ORDER" value="7" id="29"/>
     </elementParameter>
     <elementParameter field="TABLE" name="GROUP" show="false"/>
     <elementParameter field="TABLE" name="LOOP" show="false">
-      <elementValue elementRef="PATH" value="/body/CUSTOMER_ID" id="0"/>
-      <elementValue elementRef="COLUMN" value="CUSTOMER_ID" id="1"/>
+      <elementValue elementRef="PATH" value="/body/statusCode" id="0"/>
+      <elementValue elementRef="COLUMN" value="statusCode" id="1"/>
       <elementValue elementRef="VALUE" value="" id="2"/>
       <elementValue elementRef="ATTRIBUTE" value="main" id="3"/>
       <elementValue elementRef="ORDER" value="2" id="4"/>
@@ -1768,6 +1587,84 @@
     <elementParameter field="TEXT" name="JSON_ARRAY_KEYS" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRESTResponse_11">
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="360" posY="40" sizeX="120" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_8" show="false"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
+    <elementParameter field="TABLE" name="MAP" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_8"/>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="600" posY="40" sizeX="120" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_6" show="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="statusCode" id="0"/>
+      <elementValue elementRef="VALUE" value="&quot;2xx&quot;" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="statusMessage" id="2"/>
+      <elementValue elementRef="VALUE" value="&quot;Created Customer&quot;" id="3"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;" show="false"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tFixedFlowInput_6">
+      <column comment="" key="false" length="-1" name="statusCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="statusMessage" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tWriteJSONField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="840" posY="40" sizeX="120" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWriteJSONField_6" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="JSONFIELD" value="body"/>
+    <elementParameter field="TABLE" name="ROOT" show="false">
+      <elementValue elementRef="PATH" value="/body" id="0"/>
+      <elementValue elementRef="COLUMN" value="" id="1"/>
+      <elementValue elementRef="VALUE" value="" id="2"/>
+      <elementValue elementRef="ATTRIBUTE" value="main" id="3"/>
+      <elementValue elementRef="ORDER" value="1" id="4"/>
+      <elementValue elementRef="PATH" value="/body/statusMessage" id="5"/>
+      <elementValue elementRef="COLUMN" value="statusMessage" id="6"/>
+      <elementValue elementRef="VALUE" value="" id="7"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch" id="8"/>
+      <elementValue elementRef="ORDER" value="3" id="9"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="GROUP" show="false"/>
+    <elementParameter field="TABLE" name="LOOP" show="false">
+      <elementValue elementRef="PATH" value="/body/statusCode" id="0"/>
+      <elementValue elementRef="COLUMN" value="statusCode" id="1"/>
+      <elementValue elementRef="VALUE" value="" id="2"/>
+      <elementValue elementRef="ATTRIBUTE" value="main" id="3"/>
+      <elementValue elementRef="ORDER" value="2" id="4"/>
+    </elementParameter>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="TABLE" name="GROUPBYS"/>
+    <elementParameter field="CHECK" name="REMOVE_ROOT" value="false"/>
+    <elementParameter field="CHECK" name="COMPACT_FORMAT" value="true" show="false"/>
+    <elementParameter field="CHECK" name="QUOTE_ALL_VALUES" value="false"/>
+    <elementParameter field="CHECK" name="QUOTE_NULL_VALUES" value="true" show="false"/>
+    <elementParameter field="CHECK" name="ALLOW_EMPTY_STRINGS" value="false"/>
+    <elementParameter field="CHECK" name="USE_SCIENTIFIC_NOTATION" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWriteJSONField_6">
+      <column key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tRESTResponse" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="40" sizeX="120" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTResponse_8" show="false"/>
+    <elementParameter field="REST_RESPONSE_SCHEMA_TYPE" name="RESPONSE_TYPE" value="id_String"/>
+    <elementParameter field="CLOSED_LIST" name="STATUS_CODE" value="200"/>
+    <elementParameter field="TEXT" name="CUSTOM_STATUS_CODE" value="200" show="false"/>
+    <elementParameter field="TABLE" name="RESPONSE_HEADERS"/>
+    <elementParameter field="CHECK" name="UNWRAP_JSON_RESPONSE" value="false"/>
+    <elementParameter field="TEXT" name="JSON_ARRAY_KEYS" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRESTResponse_8">
       <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
@@ -1829,31 +1726,18 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="createCustomer" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row21" lineStyle="0" metaname="tHiveRow_4" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tHiveRow_4" target="tFlowToIterate_8">
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tHiveRow_4" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tHiveRow_4" target="tFlowToIterate_8">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row21" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
   <connection connectorName="REJECT" label="row22" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tHiveRow_4" target="tFlowToIterate_9">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row22" show="false"/>
   </connection>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_8" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_8" target="tFixedFlowInput_6">
-    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
-    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate8" show="false"/>
-  </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_9" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_9" target="tFixedFlowInput_7">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate9" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row24" lineStyle="0" metaname="tFixedFlowInput_6" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_6" target="tWriteJSONField_6">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row24" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row23" lineStyle="0" metaname="tWriteJSONField_6" offsetLabelX="0" offsetLabelY="0" source="tWriteJSONField_6" target="tRESTResponse_8">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row23" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row25" lineStyle="0" metaname="tFixedFlowInput_7" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_7" target="tWriteJSONField_7">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1877,10 +1761,20 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row27" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row28" lineStyle="0" metaname="tExtractJSONFields_4" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_4" target="tMap_8">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="id" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row28" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="updateCustomer" lineStyle="0" metaname="updateCustomer" offsetLabelX="0" offsetLabelY="0" source="tMap_8" target="tHiveRow_6">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="id" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="updateCustomer" show="false"/>
   </connection>
@@ -1894,12 +1788,38 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate11" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row30" lineStyle="0" metaname="tFixedFlowInput_8" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_8" target="tWriteJSONField_8">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="statusMessage" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+      <elementValue elementRef="TRACE_COLUMN" value="statusCode" id="3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="4"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="5"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row30" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row31" lineStyle="0" metaname="tWriteJSONField_8" offsetLabelX="0" offsetLabelY="0" source="tWriteJSONField_8" target="tRESTResponse_11">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row31" show="false"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_8" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_8" target="tFixedFlowInput_6">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate8" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFixedFlowInput_6" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_6" target="tWriteJSONField_6">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="statusMessage" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tWriteJSONField_6" offsetLabelX="0" offsetLabelY="0" source="tWriteJSONField_6" target="tRESTResponse_8">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTRequest_2" show="false"/>
