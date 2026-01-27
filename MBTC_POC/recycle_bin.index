@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin"/>
+<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin">
+  <deletedItems id="_6wVJQPqnEfCdYdhp5UdA0A" path="" type="PROCESS"/>
+  <deletedItems id="_SFVrYPqpEfCdYdhp5UdA0A" path="" type="PROCESS"/>
+  <deletedItems id="_qDG-APqnEfCdYdhp5UdA0A" path="" type="PROCESS"/>
+</recyclebin:RecycleBin>
