@@ -1,7 +1,7 @@
 {
   "openapi" : "3.0.1",
   "info" : {
-    "title" : "MBTC_DWH_API",
+    "title" : "MBTC API",
     "description" : "No description",
     "version" : "1.0.0"
   },
@@ -9,10 +9,249 @@
     "url" : "/"
   } ],
   "paths" : {
-    "/customers" : {
-      "summary" : "Path for all customers",
+    "/DWH/customers" : {
       "get" : {
         "summary" : "Get All Customers",
+        "description" : "Request to get the list of customers (returns number of rows based on pagination parameters; returns all rows if pagination parameters are not supplied)",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "description" : "The number of records expected to be returned",
+          "schema" : {
+            "type" : "integer",
+            "format" : "int32",
+            "description" : "The number of records expected to be returned"
+          },
+          "example" : 1,
+          "style" : "form",
+          "explode" : true
+        }, {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "description" : "The number of rows to skip",
+          "schema" : {
+            "type" : "integer",
+            "format" : "int32",
+            "description" : "The number of rows to skip"
+          },
+          "example" : 1,
+          "style" : "form",
+          "explode" : true
+        } ],
+        "responses" : {
+          "2XX" : {
+            "description" : "Status 200",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Customers"
+                },
+                "example" : "{\n\"CUSTOMERS\": [\n\t{\n\t\t\"CUSTOMER_ID\" : 1,\n\t\t\"FIRST_NAME\" : \"Customer1\",\n\t\t\"LAST_NAME\" : \"Dela Cruz\",\n\t\t\"EMAIL\" : \"user1@example.com\",\n\t\t\"JOIN_DATE\" : \"2023-09-06T05:01:36.000Z\",\n\t\t\"KYC_STATUS\" : \"Pending\"\n\t},\n\t{\n\t\t\"CUSTOMER_ID\" : 2,\n\t\t\"FIRST_NAME\" : \"Customer2\",\n\t\t\"LAST_NAME\" : \"Dela Cruz\",\n\t\t\"EMAIL\" : \"user2@example.com\",\n\t\t\"JOIN_DATE\" : \"2025-09-22T20:36:18.000Z\",\n\t\t\"KYC_STATUS\" : \"Verified\"\n\t},\n\t{\n\t\t\"CUSTOMER_ID\" : 3,\n\t\t\"FIRST_NAME\" : \"Customer3\",\n\t\t\"LAST_NAME\" : \"Dela Cruz\",\n\t\t\"EMAIL\" : \"user3@example.com\",\n\t\t\"JOIN_DATE\" : \"2023-09-24T15:31:54.000Z\",\n\t\t\"KYC_STATUS\" : \"Verified\"\n\t}\n]}\n"
+              }
+            }
+          },
+          "4XX" : {
+            "description" : "Status 400",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n    \"ID\": \"\",\n    \"errorCode\": \"400\",\n    \"errorMessage\": \"The parameter 'limit' must be a positive integer. Received: '-5'.\"\n}"
+              }
+            }
+          },
+          "5XX" : {
+            "description" : "Status 500",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"\",\n\t\"errorCode\": \"500\",\n\t\"errorMessage\": \"Internal Server Error\"\n}"
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "summary" : "Create Customer",
+        "description" : "Request to create a customer.",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Customer"
+              },
+              "example" : "{\n    \"CUSTOMER_ID\" : 1,\n    \"FIRST_NAME\" : \"Customer1\",\n    \"LAST_NAME\" : \"Dela Cruz\",\n    \"EMAIL\" : \"user1@example.com\",\n    \"JOIN_DATE\" : \"2023-09-06T05:01:36.000Z\",\n    \"KYC_STATUS\" : \"Pending\"\n}"
+            }
+          }
+        },
+        "responses" : {
+          "2XX" : {
+            "description" : "Status 200",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Customer"
+                },
+                "example" : "{\n    \"CUSTOMER_ID\" : 1,\n    \"FIRST_NAME\" : \"Customer1\",\n    \"LAST_NAME\" : \"Dela Cruz\",\n    \"EMAIL\" : \"user1@example.com\",\n    \"JOIN_DATE\" : \"2023-09-06T05:01:36.000Z\",\n    \"KYC_STATUS\" : \"Pending\"\n}"
+              }
+            }
+          },
+          "4XX" : {
+            "description" : "Status 409",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"23000\",\n\t\"errorMessage\": \"Duplicate entry '461145' for key 'PRIMARY' - Line: 0\"\n}"
+              }
+            }
+          },
+          "5XX" : {
+            "description" : "Status 500",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"23000\",\n\t\"errorMessage\": \"Internal Server Error\"\n}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/DWH/customers/{id}" : {
+      "get" : {
+        "summary" : "Get Specific Customer",
+        "description" : "Request to get the record of a single customer entry.",
+        "responses" : {
+          "2XX" : {
+            "description" : "Status 200",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Customer"
+                },
+                "example" : "{\n    \"CUSTOMER_ID\" : 1,\n    \"FIRST_NAME\" : \"Customer1\",\n    \"LAST_NAME\" : \"Dela Cruz\",\n    \"EMAIL\" : \"user1@example.com\",\n    \"JOIN_DATE\" : \"2023-09-06T05:01:36.000Z\",\n    \"KYC_STATUS\" : \"Pending\"\n}"
+              }
+            }
+          },
+          "4XX" : {
+            "description" : "Status 404",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"404\",\n\t\"errorMessage\": \"Resource Not Found\"\n}"
+              }
+            }
+          },
+          "5XX" : {
+            "description" : "Status 500",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"\",\n\t\"errorCode\": \"500\",\n\t\"errorMessage\": \"Internal Server Error\"\n}"
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "summary" : "Update Customer",
+        "description" : "Request to update the record of a single customer entry",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Customer"
+              },
+              "example" : "{\n    \"CUSTOMER_ID\" : 1,\n    \"FIRST_NAME\" : \"Customer1\",\n    \"LAST_NAME\" : \"Dela Cruz\",\n    \"EMAIL\" : \"user1@example.com\",\n    \"JOIN_DATE\" : \"2023-09-06T05:01:36.000Z\",\n    \"KYC_STATUS\" : \"Pending\"\n}"
+            }
+          }
+        },
+        "responses" : {
+          "2XX" : {
+            "description" : "Status 2xx"
+          },
+          "4XX" : {
+            "description" : "Status 400",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"409\",\n\t\"errorMessage\": \"Data type mismatch for column: ID\"\n}"
+              }
+            }
+          },
+          "5XX" : {
+            "description" : "Status 500",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"\",\n\t\"errorCode\": \"500\",\n\t\"errorMessage\": \"Internal Server Error\"\n}"
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "summary" : "Delete Customer",
+        "description" : "Request to delete the record of a single customer entry",
+        "responses" : {
+          "2XX" : {
+            "description" : "Status 2xx"
+          },
+          "4XX" : {
+            "description" : "Status 4xx",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"4xx\",\n\t\"errorMessage\": \"Resource Not Found\"\n}"
+              }
+            }
+          },
+          "5XX" : {
+            "description" : "Status 5xx",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"\",\n\t\"errorCode\": \"5xx\",\n\t\"errorMessage\": \"Internal Server Error\"\n}"
+              }
+            }
+          }
+        }
+      },
+      "parameters" : [ {
+        "name" : "id",
+        "in" : "path",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        },
+        "style" : "simple",
+        "explode" : false
+      } ]
+    },
+    "/DM/customers360" : {
+      "get" : {
+        "summary" : "Get All Customers 360",
         "description" : "Request to get the list of customers (returns number of rows based on pagination parameters; returns all rows if pagination parameters are not supplied)",
         "parameters" : [ {
           "name" : "limit",
@@ -89,7 +328,7 @@
         }
       },
       "post" : {
-        "summary" : "Create Customer",
+        "summary" : "Create Customer 360",
         "description" : "Request to create a customer.",
         "requestBody" : {
           "content" : {
@@ -138,10 +377,9 @@
         }
       }
     },
-    "/customers/{id}" : {
-      "summary" : "Path for specific customers",
+    "/DM/customer360/{id}" : {
       "get" : {
-        "summary" : "Get Specific Customer",
+        "summary" : "Get Specific Customer 360",
         "description" : "Request to get the record of a single customer entry.",
         "responses" : {
           "200" : {
@@ -149,7 +387,7 @@
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/Customer"
+                  "$ref" : "#/components/schemas/Customer360"
                 },
                 "example" : "{\n    \"CUSTOMER_ID\" : 1,\n    \"FIRST_NAME\" : \"Customer1\",\n    \"LAST_NAME\" : \"Dela Cruz\",\n    \"EMAIL\" : \"user1@example.com\",\n    \"JOIN_DATE\" : \"2023-09-06T05:01:36.000Z\",\n    \"KYC_STATUS\" : \"Pending\"\n}"
               }
@@ -180,14 +418,13 @@
         }
       },
       "put" : {
-        "summary" : "Update Customer",
+        "summary" : "Update Customer 360",
         "description" : "Request to update the record of a single customer entry",
         "requestBody" : {
-          "description" : "Request body uses the corresponding schema of the Customer object type.",
           "content" : {
             "application/json" : {
               "schema" : {
-                "$ref" : "#/components/schemas/Customer"
+                "$ref" : "#/components/schemas/Customer360"
               },
               "example" : "{\n    \"CUSTOMER_ID\" : 1,\n    \"FIRST_NAME\" : \"Customer1\",\n    \"LAST_NAME\" : \"Dela Cruz\",\n    \"EMAIL\" : \"user1@example.com\",\n    \"JOIN_DATE\" : \"2023-09-06T05:01:36.000Z\",\n    \"KYC_STATUS\" : \"Pending\"\n}"
             }
@@ -222,31 +459,31 @@
         }
       },
       "delete" : {
-        "summary" : "Delete Customer",
+        "summary" : "Delete Customer360",
         "description" : "Request to delete the record of a single customer entry",
         "responses" : {
-          "200" : {
-            "description" : "Status 200"
+          "2XX" : {
+            "description" : "Status 2xx"
           },
-          "404" : {
-            "description" : "Status 404",
+          "4XX" : {
+            "description" : "Status 4xx",
             "content" : {
               "application/json" : {
                 "schema" : {
                   "$ref" : "#/components/schemas/Error"
                 },
-                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"404\",\n\t\"errorMessage\": \"Resource Not Found\"\n}"
+                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"4xx\",\n\t\"errorMessage\": \"Resource Not Found\"\n}"
               }
             }
           },
-          "500" : {
-            "description" : "Status 500",
+          "5XX" : {
+            "description" : "Status 5xx",
             "content" : {
               "application/json" : {
                 "schema" : {
                   "$ref" : "#/components/schemas/Error"
                 },
-                "example" : "{\n\t\"ID\": \"\",\n\t\"errorCode\": \"500\",\n\t\"errorMessage\": \"Internal Server Error\"\n}"
+                "example" : "{\n\t\"ID\": \"\",\n\t\"errorCode\": \"5xx\",\n\t\"errorMessage\": \"Internal Server Error\"\n}"
               }
             }
           }
@@ -339,6 +576,118 @@
           }
         },
         "example" : "{\r\n\t\"ID\": \"461145\",\r\n\t\"errorCode\": \"23000\",\r\n\t\"errorMessage\": \"Duplicate entry '461145' for key 'PRIMARY' - Line: 0\"\r\n}"
+      },
+      "Customers360" : {
+        "type" : "object",
+        "description" : "A collection of raw customer records retrieved from the source. This object is intended for bulk data processes. As ‘as-is’ data, it may include unvalidated formats or duplicate entries.",
+        "properties" : {
+          "customer_360_view" : {
+            "type" : "array",
+            "items" : {
+              "type" : "object",
+              "properties" : {
+                "customer_id" : {
+                  "type" : "number"
+                },
+                "full_name" : {
+                  "type" : "string"
+                },
+                "email" : {
+                  "type" : "string"
+                },
+                "kyc_status" : {
+                  "type" : "string"
+                },
+                "tenure_days" : {
+                  "type" : "number"
+                },
+                "total_accounts" : {
+                  "type" : "number"
+                },
+                "savings_balance" : {
+                  "type" : "number"
+                },
+                "checking_balance" : {
+                  "type" : "number"
+                },
+                "credit_card_exposure" : {
+                  "type" : "number"
+                },
+                "total_balance" : {
+                  "type" : "number"
+                },
+                "lifetime_txn_count" : {
+                  "type" : "number"
+                },
+                "total_deposits" : {
+                  "type" : "number"
+                },
+                "total_withdrawals" : {
+                  "type" : "number"
+                },
+                "last_txn_date" : {
+                  "type" : "object"
+                },
+                "customer_lifecycle_status" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        },
+        "example" : "{\n\"customer_360_view\": [\n\t{\n\t\t\"customer_id\" : 1,\n\t\t\"full_name\" : \"Customer1 Dela Cruz\",\n\t\t\"email\" : \"user1@example.com\",\n\t\t\"kyc_status\" : \"Pending\",\n\t\t\"tenure_days\" : 873,\n\t\t\"total_accounts\" : 1,\n\t\t\"savings_balance\" : 0.0,\n\t\t\"checking_balance\" : 0.0,\n\t\t\"credit_card_exposure\" : 142222.765625,\n\t\t\"total_balance\" : 142222.765625,\n\t\t\"lifetime_txn_count\" : 0,\n\t\t\"total_deposits\" : 0.0,\n\t\t\"total_withdrawals\" : 0.0,\n\t\t\"last_txn_date\" : null,\n\t\t\"customer_lifecycle_status\" : \"No Activity\"\n\t},\n\t{\n\t\t\"customer_id\" : 2,\n\t\t\"full_name\" : \"Customer2 Dela Cruz\",\n\t\t\"email\" : \"user2@example.com\",\n\t\t\"kyc_status\" : \"Verified\",\n\t\t\"tenure_days\" : 125,\n\t\t\"total_accounts\" : 2,\n\t\t\"savings_balance\" : 352533.96875,\n\t\t\"checking_balance\" : 351389.625,\n\t\t\"credit_card_exposure\" : 0.0,\n\t\t\"total_balance\" : 703923.59375,\n\t\t\"lifetime_txn_count\" : 2,\n\t\t\"total_deposits\" : 10573.6904296875,\n\t\t\"total_withdrawals\" : 3920.860107421875,\n\t\t\"last_txn_date\" : \"2026-01-05T04:56:58.391Z\",\n\t\t\"customer_lifecycle_status\" : \"Active\"\n\t},\n\t{\n\t\t\"customer_id\" : 3,\n\t\t\"full_name\" : \"Customer3 Dela Cruz\",\n\t\t\"email\" : \"user3@example.com\",\n\t\t\"kyc_status\" : \"Verified\",\n\t\t\"tenure_days\" : 855,\n\t\t\"total_accounts\" : 0,\n\t\t\"savings_balance\" : 0.0,\n\t\t\"checking_balance\" : 0.0,\n\t\t\"credit_card_exposure\" : 0.0,\n\t\t\"total_balance\" : 0.0,\n\t\t\"lifetime_txn_count\" : 0,\n\t\t\"total_deposits\" : 0.0,\n\t\t\"total_withdrawals\" : 0.0,\n\t\t\"last_txn_date\" : null,\n\t\t\"customer_lifecycle_status\" : \"No Activity\"\n\t}\n\t]}"
+      },
+      "Customer360" : {
+        "type" : "object",
+        "description" : "A single instance of a raw customer record. Used for detailed inspection of a specific customer as it exists in the source system.",
+        "properties" : {
+          "customer_id" : {
+            "type" : "number"
+          },
+          "full_name" : {
+            "type" : "string"
+          },
+          "email" : {
+            "type" : "string"
+          },
+          "kyc_status" : {
+            "type" : "string"
+          },
+          "tenure_days" : {
+            "type" : "number"
+          },
+          "total_accounts" : {
+            "type" : "number"
+          },
+          "savings_balance" : {
+            "type" : "number"
+          },
+          "checking_balance" : {
+            "type" : "number"
+          },
+          "credit_card_exposure" : {
+            "type" : "number"
+          },
+          "total_balance" : {
+            "type" : "number"
+          },
+          "lifetime_txn_count" : {
+            "type" : "number"
+          },
+          "total_deposits" : {
+            "type" : "number"
+          },
+          "total_withdrawals" : {
+            "type" : "number"
+          },
+          "last_txn_date" : {
+            "type" : "object"
+          },
+          "customer_lifecycle_status" : {
+            "type" : "string"
+          }
+        },
+        "example" : "{\n\t\t\"customer_id\" : 1,\n\t\t\"full_name\" : \"Customer1 Dela Cruz\",\n\t\t\"email\" : \"user1@example.com\",\n\t\t\"kyc_status\" : \"Pending\",\n\t\t\"tenure_days\" : 873,\n\t\t\"total_accounts\" : 1,\n\t\t\"savings_balance\" : 0.0,\n\t\t\"checking_balance\" : 0.0,\n\t\t\"credit_card_exposure\" : 142222.765625,\n\t\t\"total_balance\" : 142222.765625,\n\t\t\"lifetime_txn_count\" : 0,\n\t\t\"total_deposits\" : 0.0,\n\t\t\"total_withdrawals\" : 0.0,\n\t\t\"last_txn_date\" : null,\n\t\t\"customer_lifecycle_status\" : \"No Activity\"\n\t}"
       }
     }
   }
