@@ -43,7 +43,7 @@
         "show" : true,
         "field" : "CHECK",
         "name" : "ON_LOGCATCHER_FLAG",
-        "value" : "false",
+        "value" : "true",
         "contextMode" : false
       }, {
         "show" : true,

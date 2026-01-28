@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <TalendMetadata:DatabaseConnection xmi:id="_O2QG0PdUEfC1_ttOpu7bSw" name="mbtc_hive_connection" id="_HcbZkPdUEfC1_ttOpu7bSw" label="mbtc_hive_connection" dataPackage="_PL2jYPdUEfC1_ttOpu7bSw _PL2jYfdUEfC1_ttOpu7bSw _PL2jYvdUEfC1_ttOpu7bSw _PL2jY_dUEfC1_ttOpu7bSw _PL2jZPdUEfC1_ttOpu7bSw _PL2jZfdUEfC1_ttOpu7bSw _PL2jZvdUEfC1_ttOpu7bSw" DatabaseType="Hive" DriverClass="org.apache.hadoop.hive.jdbc.HiveDriver" URL="jdbc:hive2://13.215.89.162:10000/" dbVersionString="STANDALONE" Port="10000" Username="nvre_dev1" Password="enc:system.encryption.key.v1:W3s9GkLCbNamTYKANusu5OvjTizihR68qKomVFX9HWgoCVWn/FULTg==" ServerName="13.215.89.162" DatasourceName="" FileFieldName="" SID="" SqlSynthax="" StringQuote="" NullChar="" DbmsId="hive_id" ProductId="HIVE" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="" supportNLS="false">
+  <TalendMetadata:DatabaseConnection xmi:id="_O2QG0PdUEfC1_ttOpu7bSw" name="mbtc_hive_connection" id="_HcbZkPdUEfC1_ttOpu7bSw" label="mbtc_hive_connection" dataPackage="_PL2jY_dUEfC1_ttOpu7bSw" DatabaseType="Hive" DriverClass="org.apache.hadoop.hive.jdbc.HiveDriver" URL="jdbc:hive2://13.215.89.162:10000/gold" dbVersionString="STANDALONE" Port="10000" Username="nvre_dev1" Password="enc:system.encryption.key.v1:W3s9GkLCbNamTYKANusu5OvjTizihR68qKomVFX9HWgoCVWn/FULTg==" ServerName="13.215.89.162" DatasourceName="" FileFieldName="" SID="gold" SqlSynthax="" StringQuote="" NullChar="" DbmsId="hive_id" ProductId="HIVE" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="gold" supportNLS="false">
     <taggedValue xmi:id="_O2QG0fdUEfC1_ttOpu7bSw" tag="Is Conn Need Reload" value="false"/>
     <taggedValue xmi:id="_O3HpgPdUEfC1_ttOpu7bSw" tag="package filter" value=""/>
     <taggedValue xmi:id="_O3IQkPdUEfC1_ttOpu7bSw" tag="Status" value=""/>
@@ -45,52 +45,12 @@
     <parameters xmi:id="_O2QG8fdUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_USE_SSL" value="false"/>
     <parameters xmi:id="_O2QG8vdUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_NEED_CLIENT_AUTH" value="false"/>
     <parameters xmi:id="_O2QG8_dUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_DISABLE_CBC_PROTECTION" value="false"/>
-    <parameters xmi:id="_O2QG9PdUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_SSL_TRUST_STORE_PATH" value=""/>
-    <parameters xmi:id="_O2QG9fdUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_SSL_TRUST_STORE_PASSWORD" value=""/>
-    <parameters xmi:id="_O2QG9vdUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_SSL_KEY_STORE_PATH" value=""/>
-    <parameters xmi:id="_O2QG9_dUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_SSL_KEY_STORE_PASSWORD" value=""/>
+    <parameters xmi:id="_Kcj64PtTEfCNzLTOSLfPgQ" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+    <parameters xmi:id="_KiZdIPtTEfCNzLTOSLfPgQ" key="CONN_PARA_KEY_SSL_TRUST_STORE_PATH" value=""/>
+    <parameters xmi:id="_KiZdIftTEfCNzLTOSLfPgQ" key="CONN_PARA_KEY_SSL_TRUST_STORE_PASSWORD" value=""/>
+    <parameters xmi:id="_KiaEMPtTEfCNzLTOSLfPgQ" key="CONN_PARA_KEY_SSL_KEY_STORE_PATH" value=""/>
+    <parameters xmi:id="_KiaEMftTEfCNzLTOSLfPgQ" key="CONN_PARA_KEY_SSL_KEY_STORE_PASSWORD" value=""/>
   </TalendMetadata:DatabaseConnection>
-  <orgomg.cwm.resource.relational:Schema xmi:id="_PL2jYPdUEfC1_ttOpu7bSw" name="bronze" dataManager="_O2QG0PdUEfC1_ttOpu7bSw">
-    <ownedElement xsi:type="relational:TdTable" xmi:id="_QSkzQPpnEfC6UsEam_Kf8A" name="customers_api_test_j" id="_QShI4PpnEfC6UsEam_Kf8A" label="customers_api_test_j" tableType="TABLE">
-      <feature xsi:type="relational:TdColumn" xmi:id="_QSkzQfpnEfC6UsEam_Kf8A" name="customer_id" label="customer_id" length="2147483647" sourceType="STRING" talendType="id_String">
-        <taggedValue xmi:id="_QSkzQvpnEfC6UsEam_Kf8A" tag="Comment" value=""/>
-        <initialValue xsi:type="relational:TdExpression" xmi:id="_QSkzQ_pnEfC6UsEam_Kf8A" language="COLUMN_DEF"/>
-        <sqlDataType xmi:id="_QSkzRPpnEfC6UsEam_Kf8A" name="STRING" javaDataType="12" nullable="columnNullable"/>
-      </feature>
-      <feature xsi:type="relational:TdColumn" xmi:id="_QSkzRfpnEfC6UsEam_Kf8A" name="first_name" label="first_name" length="2147483647" sourceType="STRING" talendType="id_String">
-        <taggedValue xmi:id="_QSkzRvpnEfC6UsEam_Kf8A" tag="Comment" value=""/>
-        <initialValue xsi:type="relational:TdExpression" xmi:id="_QSkzR_pnEfC6UsEam_Kf8A" language="COLUMN_DEF"/>
-        <sqlDataType xmi:id="_QSkzSPpnEfC6UsEam_Kf8A" name="STRING" javaDataType="12" nullable="columnNullable"/>
-      </feature>
-      <feature xsi:type="relational:TdColumn" xmi:id="_QSkzSfpnEfC6UsEam_Kf8A" name="last_name" label="last_name" length="2147483647" sourceType="STRING" talendType="id_String">
-        <taggedValue xmi:id="_QSkzSvpnEfC6UsEam_Kf8A" tag="Comment" value=""/>
-        <initialValue xsi:type="relational:TdExpression" xmi:id="_QSkzS_pnEfC6UsEam_Kf8A" language="COLUMN_DEF"/>
-        <sqlDataType xmi:id="_QSkzTPpnEfC6UsEam_Kf8A" name="STRING" javaDataType="12" nullable="columnNullable"/>
-      </feature>
-      <feature xsi:type="relational:TdColumn" xmi:id="_QSkzTfpnEfC6UsEam_Kf8A" name="email" label="email" length="2147483647" sourceType="STRING" talendType="id_String">
-        <taggedValue xmi:id="_QSkzTvpnEfC6UsEam_Kf8A" tag="Comment" value=""/>
-        <initialValue xsi:type="relational:TdExpression" xmi:id="_QSkzT_pnEfC6UsEam_Kf8A" language="COLUMN_DEF"/>
-        <sqlDataType xmi:id="_QSkzUPpnEfC6UsEam_Kf8A" name="STRING" javaDataType="12" nullable="columnNullable"/>
-      </feature>
-      <feature xsi:type="relational:TdColumn" xmi:id="_QSkzUfpnEfC6UsEam_Kf8A" name="join_date" label="join_date" length="2147483647" sourceType="STRING" talendType="id_String">
-        <taggedValue xmi:id="_QSkzUvpnEfC6UsEam_Kf8A" tag="Comment" value=""/>
-        <initialValue xsi:type="relational:TdExpression" xmi:id="_QSkzU_pnEfC6UsEam_Kf8A" language="COLUMN_DEF"/>
-        <sqlDataType xmi:id="_QSkzVPpnEfC6UsEam_Kf8A" name="STRING" javaDataType="12" nullable="columnNullable"/>
-      </feature>
-      <feature xsi:type="relational:TdColumn" xmi:id="_QSkzVfpnEfC6UsEam_Kf8A" name="kyc_status" label="kyc_status" length="2147483647" sourceType="STRING" talendType="id_String">
-        <taggedValue xmi:id="_QSkzVvpnEfC6UsEam_Kf8A" tag="Comment" value=""/>
-        <initialValue xsi:type="relational:TdExpression" xmi:id="_QSkzV_pnEfC6UsEam_Kf8A" language="COLUMN_DEF"/>
-        <sqlDataType xmi:id="_QSkzWPpnEfC6UsEam_Kf8A" name="STRING" javaDataType="12" nullable="columnNullable"/>
-      </feature>
-      <feature xsi:type="relational:TdColumn" xmi:id="_QSkzWfpnEfC6UsEam_Kf8A" name="ingest_date" label="ingest_date" length="8" sourceType="VARCHAR" talendType="id_String">
-        <taggedValue xmi:id="_QSkzWvpnEfC6UsEam_Kf8A" tag="Comment" value=""/>
-        <initialValue xsi:type="relational:TdExpression" xmi:id="_QSkzW_pnEfC6UsEam_Kf8A" language="COLUMN_DEF"/>
-        <sqlDataType xmi:id="_QSkzXPpnEfC6UsEam_Kf8A" name="VARCHAR" javaDataType="12" nullable="columnNullable"/>
-      </feature>
-    </ownedElement>
-  </orgomg.cwm.resource.relational:Schema>
-  <orgomg.cwm.resource.relational:Schema xmi:id="_PL2jYfdUEfC1_ttOpu7bSw" name="bronze_sftp" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
-  <orgomg.cwm.resource.relational:Schema xmi:id="_PL2jYvdUEfC1_ttOpu7bSw" name="default" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
   <orgomg.cwm.resource.relational:Schema xmi:id="_PL2jY_dUEfC1_ttOpu7bSw" name="gold" dataManager="_O2QG0PdUEfC1_ttOpu7bSw">
     <ownedElement xsi:type="relational:TdTable" xmi:id="_RMC5gPdUEfC1_ttOpu7bSw" name="customers" id="_RL6WoPdUEfC1_ttOpu7bSw" label="customers" tableType="TABLE">
       <feature xsi:type="relational:TdColumn" xmi:id="_RMC5gfdUEfC1_ttOpu7bSw" name="customer_id" label="customer_id" length="10" sourceType="INT" talendType="id_Integer">
@@ -271,7 +231,4 @@
       </feature>
     </ownedElement>
   </orgomg.cwm.resource.relational:Schema>
-  <orgomg.cwm.resource.relational:Schema xmi:id="_PL2jZPdUEfC1_ttOpu7bSw" name="information_schema" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
-  <orgomg.cwm.resource.relational:Schema xmi:id="_PL2jZfdUEfC1_ttOpu7bSw" name="sys" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
-  <orgomg.cwm.resource.relational:Schema xmi:id="_PL2jZvdUEfC1_ttOpu7bSw" name="test" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
 </xmi:XMI>

@@ -1,2 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin"/>
+<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin">
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360/_id_</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360/_id_/parameters</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360/_id_/responses</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customers360</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customers360/parameters</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customers360/responses</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/_id_</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/_id_/parameters</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/_id_/responses</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/parameters</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/responses</deletedFolders>
+  <deletedFolders>Structures/MBTC_API_0.1/schemas/MBTC_API_0.1/schemas</deletedFolders>
+  <deletedItems id="_cWugwPtbEfCNzLTOSLfPgQ" path="" type="PROCESS"/>
+  <deletedItems id="_yG_q8PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360/_id_/parameters" type="STRUCTURES"/>
+  <deletedItems id="_yH5C0PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360/_id_/parameters" type="STRUCTURES"/>
+  <deletedItems id="_yISEYPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360/_id_/parameters" type="STRUCTURES"/>
+  <deletedItems id="_yIp30PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360/_id_/parameters" type="STRUCTURES"/>
+  <deletedItems id="_yI8LsPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360/_id_/responses" type="STRUCTURES"/>
+  <deletedItems id="_yJ5N8PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360/_id_/responses" type="STRUCTURES"/>
+  <deletedItems id="_yJWbYPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360/_id_/responses" type="STRUCTURES"/>
+  <deletedItems id="_yJmTAPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360/_id_/responses" type="STRUCTURES"/>
+  <deletedItems id="_yKN-EPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360/_id_/responses" type="STRUCTURES"/>
+  <deletedItems id="_yKfq4PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360/_id_/responses" type="STRUCTURES"/>
+  <deletedItems id="_yKx-wPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customer360/_id_/responses" type="STRUCTURES"/>
+  <deletedItems id="_yLB2YPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customers360/parameters" type="STRUCTURES"/>
+  <deletedItems id="_yLS8IPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customers360/parameters" type="STRUCTURES"/>
+  <deletedItems id="_yL3j4PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customers360/responses" type="STRUCTURES"/>
+  <deletedItems id="_yLizwPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customers360/responses" type="STRUCTURES"/>
+  <deletedItems id="_yMLF4PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customers360/responses" type="STRUCTURES"/>
+  <deletedItems id="_yMhEIPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customers360/responses" type="STRUCTURES"/>
+  <deletedItems id="_yMzYAPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customers360/responses" type="STRUCTURES"/>
+  <deletedItems id="_yNTuUPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customers360/responses" type="STRUCTURES"/>
+  <deletedItems id="_yNjl8PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dm/customers360/responses" type="STRUCTURES"/>
+  <deletedItems id="_yN3vAPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/_id_/parameters" type="STRUCTURES"/>
+  <deletedItems id="_yOLRAPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/_id_/parameters" type="STRUCTURES"/>
+  <deletedItems id="_yOc90PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/_id_/parameters" type="STRUCTURES"/>
+  <deletedItems id="_yOvRsPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/_id_/parameters" type="STRUCTURES"/>
+  <deletedItems id="_yPEB0PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/_id_/responses" type="STRUCTURES"/>
+  <deletedItems id="_yPccUPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/_id_/responses" type="STRUCTURES"/>
+  <deletedItems id="_yPxzgPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/_id_/responses" type="STRUCTURES"/>
+  <deletedItems id="_yQ6b8PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/_id_/responses" type="STRUCTURES"/>
+  <deletedItems id="_yQC5QPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/_id_/responses" type="STRUCTURES"/>
+  <deletedItems id="_yQWbQPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/_id_/responses" type="STRUCTURES"/>
+  <deletedItems id="_yQnhAPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/_id_/responses" type="STRUCTURES"/>
+  <deletedItems id="_yRMv0PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/parameters" type="STRUCTURES"/>
+  <deletedItems id="_yRfqwPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/parameters" type="STRUCTURES"/>
+  <deletedItems id="_yR1B8PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/responses" type="STRUCTURES"/>
+  <deletedItems id="_yS9qYPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/responses" type="STRUCTURES"/>
+  <deletedItems id="_ySKZIPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/responses" type="STRUCTURES"/>
+  <deletedItems id="_ySg-cPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/responses" type="STRUCTURES"/>
+  <deletedItems id="_yTRzcPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/responses" type="STRUCTURES"/>
+  <deletedItems id="_yTl8gPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/paths/dwh/customers/responses" type="STRUCTURES"/>
+  <deletedItems id="_yT9v8PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/schemas" type="STRUCTURES"/>
+  <deletedItems id="_yU0rkPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/schemas" type="STRUCTURES"/>
+  <deletedItems id="_yURR8PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/schemas" type="STRUCTURES"/>
+  <deletedItems id="_yUjl0PtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/schemas" type="STRUCTURES"/>
+  <deletedItems id="_yVG_cPtiEfCVeuveFRjYWw" path="MBTC_API_0.1/schemas/MBTC_API_0.1/schemas" type="STRUCTURES"/>
+</recyclebin:RecycleBin>

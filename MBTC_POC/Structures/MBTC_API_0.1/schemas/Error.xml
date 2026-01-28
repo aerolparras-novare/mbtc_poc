@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='150' id='1' V150='13' creationTimestamp='0x19bdda8ac95' V1='4' name='Error' incarnation='8'>
-  <rootElem t='167' id='2' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Error'>
+<root t='150' id='1' V150='13' creationTimestamp='0x19bfeb57208' V1='4' name='Error' incarnation='8'>
+  <rootElem t='167' id='2' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Error' description='A standardized error object utilized across both the Raw and Unified data layers. This object ensures traceability for failures ...'>
     <structNode t='150' idref='1'/>
+    <longDesc>A standardized error object utilized across both the Raw and Unified data layers. This object ensures traceability for failures encountered during data ingestion, integrity validation, or the execution of business logic.</longDesc>
     <child t='167' id='3' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='ID'>
       <structNode t='150' idref='1'/>
     </child>

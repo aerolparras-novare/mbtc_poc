@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root t='150' id='1' V150='13' creationTimestamp='0x19bfe5692b8' V1='4' name='row3' incarnation='105'>
+  <rootElem t='167' id='77' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='root'>
+    <structNode t='150' idref='1'/>
+    <child t='167' id='78' V167='21' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='row' checksumValid='true' checksum='HoUberC22iwQ1qbwAvnxTXmWnng='>
+      <structNode t='150' idref='1'/>
+      <child t='167' id='79' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='12' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='customer_id'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='80' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='full_name'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='81' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='email'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='82' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='kyc_status'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='83' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='12' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='tenure_days'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='84' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='13' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='total_accounts'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='85' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='20' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='savings_balance'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='86' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='20' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='checking_balance'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='87' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='20' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='credit_card_exposure'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='88' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='20' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='total_balance'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='89' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='13' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='lifetime_txn_count'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='90' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='20' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='total_deposits'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='91' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='20' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='total_withdrawals'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='92' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='30' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='last_txn_date'>
+        <structNode t='150' idref='1'/>
+      </child>
+      <child t='167' id='93' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='customer_lifecycle_status'>
+        <structNode t='150' idref='1'/>
+      </child>
+    </child>
+  </rootElem>
+  <defaultRep t='178' id='94' V178='1' V170='10' V698='1' V690='1' padOutput='true' ignoreExcluded='true' fixInvalidCharacters='true' V1='4' name='Map'>
+  </defaultRep>
+  <child t='162' id='20' V1='4' name='Representations'>
+    <child t='178' idref='94'/>
+  </child>
+  <child t='165' id='21' V1='4' name='Document Bindings'>
+    <child t='166' id='40' V166='5' docType='1' V1='4' name='/root'>
+      <elemNode t='167' id='59' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='root'>
+        <structNode t='150' idref='1'/>
+        <child t='167' id='60' idref='78' isChecksumRef='true'/>
+      </elemNode>
+    </child>
+  </child>
+</root>

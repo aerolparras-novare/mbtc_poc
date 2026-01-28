@@ -326,58 +326,9 @@
             }
           }
         }
-      },
-      "post" : {
-        "summary" : "Create Customer 360",
-        "description" : "Request to create a customer.",
-        "requestBody" : {
-          "content" : {
-            "application/json" : {
-              "schema" : {
-                "$ref" : "#/components/schemas/Customer"
-              },
-              "example" : "{\n    \"CUSTOMER_ID\" : 1,\n    \"FIRST_NAME\" : \"Customer1\",\n    \"LAST_NAME\" : \"Dela Cruz\",\n    \"EMAIL\" : \"user1@example.com\",\n    \"JOIN_DATE\" : \"2023-09-06T05:01:36.000Z\",\n    \"KYC_STATUS\" : \"Pending\"\n}"
-            }
-          }
-        },
-        "responses" : {
-          "200" : {
-            "description" : "Status 200",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/Customer"
-                },
-                "example" : "{\n    \"CUSTOMER_ID\" : 1,\n    \"FIRST_NAME\" : \"Customer1\",\n    \"LAST_NAME\" : \"Dela Cruz\",\n    \"EMAIL\" : \"user1@example.com\",\n    \"JOIN_DATE\" : \"2023-09-06T05:01:36.000Z\",\n    \"KYC_STATUS\" : \"Pending\"\n}"
-              }
-            }
-          },
-          "409" : {
-            "description" : "Status 409",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/Error"
-                },
-                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"23000\",\n\t\"errorMessage\": \"Duplicate entry '461145' for key 'PRIMARY' - Line: 0\"\n}"
-              }
-            }
-          },
-          "500" : {
-            "description" : "Status 500",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/Error"
-                },
-                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"23000\",\n\t\"errorMessage\": \"Internal Server Error\"\n}"
-              }
-            }
-          }
-        }
       }
     },
-    "/DM/customer360/{id}" : {
+    "/DM/customers360/{id}" : {
       "get" : {
         "summary" : "Get Specific Customer 360",
         "description" : "Request to get the record of a single customer entry.",
@@ -412,78 +363,6 @@
                   "$ref" : "#/components/schemas/Error"
                 },
                 "example" : "{\n\t\"ID\": \"\",\n\t\"errorCode\": \"500\",\n\t\"errorMessage\": \"Internal Server Error\"\n}"
-              }
-            }
-          }
-        }
-      },
-      "put" : {
-        "summary" : "Update Customer 360",
-        "description" : "Request to update the record of a single customer entry",
-        "requestBody" : {
-          "content" : {
-            "application/json" : {
-              "schema" : {
-                "$ref" : "#/components/schemas/Customer360"
-              },
-              "example" : "{\n    \"CUSTOMER_ID\" : 1,\n    \"FIRST_NAME\" : \"Customer1\",\n    \"LAST_NAME\" : \"Dela Cruz\",\n    \"EMAIL\" : \"user1@example.com\",\n    \"JOIN_DATE\" : \"2023-09-06T05:01:36.000Z\",\n    \"KYC_STATUS\" : \"Pending\"\n}"
-            }
-          }
-        },
-        "responses" : {
-          "200" : {
-            "description" : "Status 200"
-          },
-          "400" : {
-            "description" : "Status 400",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/Error"
-                },
-                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"409\",\n\t\"errorMessage\": \"Data type mismatch for column: ID\"\n}"
-              }
-            }
-          },
-          "500" : {
-            "description" : "Status 500",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/Error"
-                },
-                "example" : "{\n\t\"ID\": \"\",\n\t\"errorCode\": \"500\",\n\t\"errorMessage\": \"Internal Server Error\"\n}"
-              }
-            }
-          }
-        }
-      },
-      "delete" : {
-        "summary" : "Delete Customer360",
-        "description" : "Request to delete the record of a single customer entry",
-        "responses" : {
-          "2XX" : {
-            "description" : "Status 2xx"
-          },
-          "4XX" : {
-            "description" : "Status 4xx",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/Error"
-                },
-                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"4xx\",\n\t\"errorMessage\": \"Resource Not Found\"\n}"
-              }
-            }
-          },
-          "5XX" : {
-            "description" : "Status 5xx",
-            "content" : {
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/Error"
-                },
-                "example" : "{\n\t\"ID\": \"\",\n\t\"errorCode\": \"5xx\",\n\t\"errorMessage\": \"Internal Server Error\"\n}"
               }
             }
           }
@@ -587,7 +466,8 @@
               "type" : "object",
               "properties" : {
                 "customer_id" : {
-                  "type" : "number"
+                  "type" : "integer",
+                  "format" : "int32"
                 },
                 "full_name" : {
                   "type" : "string"
@@ -642,7 +522,8 @@
         "description" : "A single instance of a raw customer record. Used for detailed inspection of a specific customer as it exists in the source system.",
         "properties" : {
           "customer_id" : {
-            "type" : "number"
+            "type" : "integer",
+            "format" : "int32"
           },
           "full_name" : {
             "type" : "string"
