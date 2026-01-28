@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/Jobs/MBTC_DWH_REST_API_service/tHMap_1/row1.xml' outStruct='Structures/MBTC_API_0.1/schemas/Customers.xml' inputRep='178' outputRep='177' nextMap='' inputStructUserName='row1' outputStructUserName='Customers' V1='4' name='tHMap_1' incarnation='161'>
+<root t='190' id='1' V190='11' inStruct='Structures/Jobs/MBTC_DWH_REST_API_microservice/tHMap_2/row5.xml' outStruct='Structures/MBTC_API_0.1/schemas/Customers.xml' inputRep='178' outputRep='177' nextMap='' inputStructUserName='row5' outputStructUserName='Customers' V1='4' name='tHMap_2' incarnation='157'>
   <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='10' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='root'>
     <mapNode t='190' idref='1'/>
     <child t='200' id='17' V200='8' input='true' structElemExists='true' usedCount='7' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='row'>
       <mapNode t='190' idref='1'/>
-      <child t='200' id='18' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='customer_id'>
+      <child t='200' id='18' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUSTOMER_ID'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='19' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='first_name'>
+      <child t='200' id='19' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='FIRST_NAME'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='20' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='last_name'>
+      <child t='200' id='20' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='LAST_NAME'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='21' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='email'>
+      <child t='200' id='21' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='EMAIL'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='22' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='join_date'>
+      <child t='200' id='22' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='JOIN_DATE'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='23' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='kyc_status'>
-        <mapNode t='190' idref='1'/>
-      </child>
-      <child t='200' id='24' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='ingest_date'>
+      <child t='200' id='23' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='KYC_STATUS'>
         <mapNode t='190' idref='1'/>
       </child>
     </child>
@@ -35,27 +32,27 @@
       <loop>SimpleLoop(in$/root/row,{Filter},{Sort Keys},{Contexts})</loop>
       <child t='200' id='5' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='20' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='CUSTOMER_ID'>
         <mapNode t='190' idref='1'/>
-        <value>in$/root/row/customer_id</value>
+        <value>in$/root/row/CUSTOMER_ID</value>
       </child>
       <child t='200' id='6' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='FIRST_NAME'>
         <mapNode t='190' idref='1'/>
-        <value>in$/root/row/first_name</value>
+        <value>in$/root/row/FIRST_NAME</value>
       </child>
       <child t='200' id='7' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='LAST_NAME'>
         <mapNode t='190' idref='1'/>
-        <value>in$/root/row/last_name</value>
+        <value>in$/root/row/LAST_NAME</value>
       </child>
       <child t='200' id='8' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='EMAIL'>
         <mapNode t='190' idref='1'/>
-        <value>in$/root/row/email</value>
+        <value>in$/root/row/EMAIL</value>
       </child>
       <child t='200' id='9' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='JOIN_DATE'>
         <mapNode t='190' idref='1'/>
-        <value>in$/root/row/join_date</value>
+        <value>in$/root/row/JOIN_DATE</value>
       </child>
       <child t='200' id='10' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='KYC_STATUS'>
         <mapNode t='190' idref='1'/>
-        <value>in$/root/row/kyc_status</value>
+        <value>in$/root/row/KYC_STATUS</value>
       </child>
     </child>
   </outputMapElem>
