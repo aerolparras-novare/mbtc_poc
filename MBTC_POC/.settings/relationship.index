@@ -254,7 +254,15 @@
     "version" : "0.1",
     "type" : "mapper"
   }, {
+    "id" : "_mzQCgPzmEfCeVZFO8RnkLw",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
     "id" : "_C_NIgPwDEfCi68eJmHgcpA",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_CkNdQOuqEfCfTcL_YuhooQ",
     "version" : "Latest",
     "type" : "property"
   }, {
@@ -267,6 +275,10 @@
     "type" : "property"
   }, {
     "id" : "_C_NIgPwDEfCi68eJmHgcpA - customers_api_test",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_CkNdQOuqEfCfTcL_YuhooQ - CUSTOMERS",
     "version" : "Latest",
     "type" : "schema"
   }, {
@@ -645,6 +657,25 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_SJB2MPzmEfCeVZFO8RnkLw",
+    "version" : "0.1",
+    "type" : "mapper"
+  },
+  "relatedItems" : [ {
+    "id" : "_0GQi0PI0EfCZcI9EdJvCQg",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_0GXQgPI0EfCZcI9EdJvCQg",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_RTcSAPzmEfCeVZFO8RnkLw",
+    "version" : "0.1",
+    "type" : "mapper"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_WC1ywPZ3EfCepMq3Yo2NrA",
     "version" : "0.1",
     "type" : "mapper"
@@ -786,6 +817,21 @@
     "type" : "mapper"
   }, {
     "id" : "_kgii0PdxEfCTO4E-xlLFig",
+    "version" : "0.1",
+    "type" : "mapper"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_mzQCgPzmEfCeVZFO8RnkLw",
+    "version" : "0.1",
+    "type" : "mapper"
+  },
+  "relatedItems" : [ {
+    "id" : "_0WzRkPZYEfCepMq3Yo2NrA",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_l46hMPzmEfCeVZFO8RnkLw",
     "version" : "0.1",
     "type" : "mapper"
   } ]
