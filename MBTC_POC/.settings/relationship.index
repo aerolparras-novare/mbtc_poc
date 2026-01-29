@@ -276,6 +276,17 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_ds-esPzfEfCeVZFO8RnkLw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_C_NIgPwDEfCi68eJmHgcpA - customers_api_test",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_gwZiYOrWEfC0ItbnNTsbtg",
     "version" : "0.1",
     "type" : "job"
