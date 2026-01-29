@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_7khj0PI3EfCZcI9EdJvCQg" name="customer_b" dataPackage="_7khj2_I3EfCZcI9EdJvCQg" JSONFilePath="C:/Users/joshua.lopez/Desktop/All/Project/Internal/MBTC/Documents/Project/Training/customer.json" Encoding="UTF-8" readbyMode="JSONPATH">
+    <schema xmi:id="_7khj0fI3EfCZcI9EdJvCQg" LimitBoucle="50" AbsoluteXPathQuery="$">
+      <schemaTargets xmi:id="_7khj0vI3EfCZcI9EdJvCQg" RelativeXPathQuery="ID" TagName="ID"/>
+      <schemaTargets xmi:id="_7khj0_I3EfCZcI9EdJvCQg" RelativeXPathQuery="NAME" TagName="NAME"/>
+      <schemaTargets xmi:id="_7khj1PI3EfCZcI9EdJvCQg" RelativeXPathQuery="LAST_NAME" TagName="LAST_NAME"/>
+      <schemaTargets xmi:id="_7khj1fI3EfCZcI9EdJvCQg" RelativeXPathQuery="EMAIL" TagName="EMAIL"/>
+      <schemaTargets xmi:id="_7khj1vI3EfCZcI9EdJvCQg" RelativeXPathQuery="JOB_TITLE" TagName="JOB_TITLE"/>
+      <schemaTargets xmi:id="_7khj1_I3EfCZcI9EdJvCQg" RelativeXPathQuery="CREDITCARDNUMBER" TagName="CREDITCARDNUMBER"/>
+      <schemaTargets xmi:id="_7khj2PI3EfCZcI9EdJvCQg" RelativeXPathQuery="COMPANY" TagName="COMPANY"/>
+      <schemaTargets xmi:id="_7khj2fI3EfCZcI9EdJvCQg" RelativeXPathQuery="CITY" TagName="CITY"/>
+      <schemaTargets xmi:id="_7khj2vI3EfCZcI9EdJvCQg" RelativeXPathQuery="STATE" TagName="STATE"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_7khj2_I3EfCZcI9EdJvCQg" name="default" dataManager="_7khj0PI3EfCZcI9EdJvCQg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_7khj3PI3EfCZcI9EdJvCQg" id="_ndSv0PI3EfCZcI9EdJvCQg" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7khj3fI3EfCZcI9EdJvCQg" label="ID" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7khj3vI3EfCZcI9EdJvCQg" label="NAME" length="4" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7khj3_I3EfCZcI9EdJvCQg" label="LAST_NAME" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7khj4PI3EfCZcI9EdJvCQg" label="EMAIL" length="21" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7khj4fI3EfCZcI9EdJvCQg" label="JOB_TITLE" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7khj4vI3EfCZcI9EdJvCQg" label="CREDITCARDNUMBER" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7khj4_I3EfCZcI9EdJvCQg" label="COMPANY" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7khj5PI3EfCZcI9EdJvCQg" label="CITY" length="13" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7khj5fI3EfCZcI9EdJvCQg" label="STATE" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

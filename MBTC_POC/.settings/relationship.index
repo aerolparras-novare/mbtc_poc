@@ -27,37 +27,6 @@
   } ]
 }, {
   "baseItem" : {
-    "id" : "_6DC74O0GEfCabqfpFxxKMQ",
-    "version" : "0.1",
-    "type" : "job"
-  },
-  "relatedItems" : [ {
-    "id" : "_QPkSwP1WEeiai7rk0Np2CQ",
-    "version" : "0.1",
-    "type" : "mapper"
-  }, {
-    "id" : "_RA7o0P1XEeiai7rk0Np2CQ",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_wK_nMP1OEeiai7rk0Np2CQ",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_xdABoP1OEeiai7rk0Np2CQ",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_RA7o0P1XEeiai7rk0Np2CQ - metadata",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_xdABoP1OEeiai7rk0Np2CQ - customers",
-    "version" : "Latest",
-    "type" : "schema"
-  } ]
-}, {
-  "baseItem" : {
     "id" : "_DnvlAPdqEfCg_5SQhzKgrQ",
     "version" : "0.1",
     "type" : "job"
@@ -101,6 +70,41 @@
     "id" : "_rwMLMO-AEfCcepb0inUXkA",
     "version" : "Latest",
     "type" : "property"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_Jr3fAPg4EfCTO4E-xlLFig",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_6BOyMPdzEfCTO4E-xlLFig",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "__tqwkPdzEfCTO4E-xlLFig",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_8PP7MPduEfCTO4E-xlLFig",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_HcbZkPdUEfC1_ttOpu7bSw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_IMCTgPgCEfCTO4E-xlLFig",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_8PP7MPduEfCTO4E-xlLFig - metadata",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_HcbZkPdUEfC1_ttOpu7bSw - customers_api_test",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
@@ -170,32 +174,24 @@
   } ]
 }, {
   "baseItem" : {
-    "id" : "_gwZiYOrWEfC0ItbnNTsbtg",
+    "id" : "_WuQT0PtEEfCdYdhp5UdA0A",
     "version" : "0.1",
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "_QPkSwP1WEeiai7rk0Np2CQ",
+    "id" : "_qGpE0PtEEfCdYdhp5UdA0A",
     "version" : "0.1",
     "type" : "mapper"
   }, {
-    "id" : "_RA7o0P1XEeiai7rk0Np2CQ",
+    "id" : "_KHoK4PasEfCepMq3Yo2NrA",
     "version" : "Latest",
     "type" : "property"
   }, {
-    "id" : "_wK_nMP1OEeiai7rk0Np2CQ",
+    "id" : "_ujCqgPv7EfCmDfm57_-J7w",
     "version" : "Latest",
     "type" : "property"
   }, {
-    "id" : "_xdABoP1OEeiai7rk0Np2CQ",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_RA7o0P1XEeiai7rk0Np2CQ - metadata",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_xdABoP1OEeiai7rk0Np2CQ - customers",
+    "id" : "_HcbZkPdUEfC1_ttOpu7bSw - customers_api_test",
     "version" : "Latest",
     "type" : "schema"
   } ]
@@ -262,6 +258,17 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_tRI98PwgEfCMrfYhVRM8rA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_v8MnQPwmEfCMrfYhVRM8rA",
+    "version" : "Latest",
+    "type" : "property"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_vzfg8PUEEfCHKuiiShkmqA",
     "version" : "0.1",
     "type" : "job"
@@ -323,5 +330,50 @@
     "id" : "_LodxkPWmEfCzdeB6aeN2sw",
     "version" : "Latest",
     "type" : "context"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_6BOyMPdzEfCTO4E-xlLFig",
+    "version" : "0.1",
+    "type" : "mapper"
+  },
+  "relatedItems" : [ {
+    "id" : "_5fbFoPdzEfCTO4E-xlLFig",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_zuoywPdzEfCTO4E-xlLFig",
+    "version" : "0.1",
+    "type" : "mapper"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "__tqwkPdzEfCTO4E-xlLFig",
+    "version" : "0.1",
+    "type" : "mapper"
+  },
+  "relatedItems" : [ {
+    "id" : "__MRTsPdzEfCTO4E-xlLFig",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_zuoywPdzEfCTO4E-xlLFig",
+    "version" : "0.1",
+    "type" : "mapper"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_qGpE0PtEEfCdYdhp5UdA0A",
+    "version" : "0.1",
+    "type" : "mapper"
+  },
+  "relatedItems" : [ {
+    "id" : "_pY1joPtEEfCdYdhp5UdA0A",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_zuoywPdzEfCTO4E-xlLFig",
+    "version" : "0.1",
+    "type" : "mapper"
   } ]
 } ]
