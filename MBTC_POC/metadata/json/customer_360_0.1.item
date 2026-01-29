@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_UX0wYPzjEfCVeuveFRjYWw" name="customer_360" dataPackage="_UX0wcfzjEfCVeuveFRjYWw" JSONFilePath="C:/Users/josel.dora/Desktop/MBTC/Sample FIles/customer_360.json" Encoding="UTF-8" readbyMode="JSONPATH">
+    <schema xmi:id="_UX0wYfzjEfCVeuveFRjYWw" LimitBoucle="50" AbsoluteXPathQuery="$.customer_360[*]">
+      <schemaTargets xmi:id="_UX0wYvzjEfCVeuveFRjYWw" RelativeXPathQuery="customer_id" TagName="customer_id"/>
+      <schemaTargets xmi:id="_UX0wY_zjEfCVeuveFRjYWw" RelativeXPathQuery="full_name" TagName="full_name"/>
+      <schemaTargets xmi:id="_UX0wZPzjEfCVeuveFRjYWw" RelativeXPathQuery="email" TagName="email"/>
+      <schemaTargets xmi:id="_UX0wZfzjEfCVeuveFRjYWw" RelativeXPathQuery="kyc_status" TagName="kyc_status"/>
+      <schemaTargets xmi:id="_UX0wZvzjEfCVeuveFRjYWw" RelativeXPathQuery="tenure_days" TagName="tenure_days"/>
+      <schemaTargets xmi:id="_UX0wZ_zjEfCVeuveFRjYWw" RelativeXPathQuery="total_accounts" TagName="total_accounts"/>
+      <schemaTargets xmi:id="_UX0waPzjEfCVeuveFRjYWw" RelativeXPathQuery="savings_balance" TagName="savings_balance"/>
+      <schemaTargets xmi:id="_UX0wafzjEfCVeuveFRjYWw" RelativeXPathQuery="checking_balance" TagName="checking_balance"/>
+      <schemaTargets xmi:id="_UX0wavzjEfCVeuveFRjYWw" RelativeXPathQuery="credit_card_exposure" TagName="credit_card_exposure"/>
+      <schemaTargets xmi:id="_UX0wa_zjEfCVeuveFRjYWw" RelativeXPathQuery="total_balance" TagName="total_balance"/>
+      <schemaTargets xmi:id="_UX0wbPzjEfCVeuveFRjYWw" RelativeXPathQuery="lifetime_txn_count" TagName="lifetime_txn_count"/>
+      <schemaTargets xmi:id="_UX0wbfzjEfCVeuveFRjYWw" RelativeXPathQuery="total_deposits" TagName="total_deposits"/>
+      <schemaTargets xmi:id="_UX0wbvzjEfCVeuveFRjYWw" RelativeXPathQuery="total_withdrawals" TagName="total_withdrawals"/>
+      <schemaTargets xmi:id="_UX0wb_zjEfCVeuveFRjYWw" RelativeXPathQuery="last_txn_date" TagName="last_txn_date"/>
+      <schemaTargets xmi:id="_UX0wcPzjEfCVeuveFRjYWw" RelativeXPathQuery="customer_lifecycle_status" TagName="customer_lifecycle_status"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_UX0wcfzjEfCVeuveFRjYWw" name="default" dataManager="_UX0wYPzjEfCVeuveFRjYWw">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_UX0wcvzjEfCVeuveFRjYWw" id="_Lu_5YPzjEfCVeuveFRjYWw" label="customer_360">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0wc_zjEfCVeuveFRjYWw" label="customer_id" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0wdPzjEfCVeuveFRjYWw" label="full_name" length="21" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0wdfzjEfCVeuveFRjYWw" label="email" length="19" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0wdvzjEfCVeuveFRjYWw" label="kyc_status" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0wd_zjEfCVeuveFRjYWw" label="tenure_days" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0wePzjEfCVeuveFRjYWw" label="total_accounts" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0wefzjEfCVeuveFRjYWw" label="savings_balance" length="16" precision="15" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0wevzjEfCVeuveFRjYWw" label="checking_balance" length="16" precision="15" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0we_zjEfCVeuveFRjYWw" label="credit_card_exposure" length="15" precision="14" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0wfPzjEfCVeuveFRjYWw" label="total_balance" length="17" precision="16" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0wffzjEfCVeuveFRjYWw" label="lifetime_txn_count" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0wfvzjEfCVeuveFRjYWw" label="total_deposits" length="18" precision="17" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0wf_zjEfCVeuveFRjYWw" label="total_withdrawals" length="18" precision="17" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0wgPzjEfCVeuveFRjYWw" label="last_txn_date" length="24" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_UX0wgfzjEfCVeuveFRjYWw" label="customer_lifecycle_status" length="11" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

@@ -14,8 +14,8 @@
   <name>MBTC_POC Routines</name>
   <properties>
     <talend.codes.package>routines</talend.codes.package>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.failOnError>${codes.compile.failOnError}</maven.compiler.failOnError>
     <codes.compile.failOnError>true</codes.compile.failOnError>
   </properties>

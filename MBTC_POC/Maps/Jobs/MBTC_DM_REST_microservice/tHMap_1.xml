@@ -54,7 +54,7 @@
   <outputMapElem t='200' id='3' V200='8' structElemExists='true' usedCount='34' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='Customers360' description='A collection of raw customer records retrieved from the source. This object is intended for bulk data processes. As ‘as-is’ data...'>
     <mapNode t='190' idref='1'/>
     <loop>SimpleLoop([autoAdded="true"],in$/root,{Filter},{Sort Keys},{Contexts})</loop>
-    <child t='200' id='4' V200='8' structElemExists='true' usedCount='31' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='customer_360_view'>
+    <child t='200' id='4' V200='8' structElemExists='true' usedCount='31' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='customer_360'>
       <mapNode t='190' idref='1'/>
       <loop>SimpleLoop(in$/root/row,{Filter},{Sort Keys},{Contexts})</loop>
       <child t='200' id='5' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='20' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='customer_id'>
@@ -123,14 +123,14 @@
   </outputMapElem>
   <inputRepRuntime t='698' id='21' V698='1' V690='1' padOutput='true'>
   </inputRepRuntime>
-  <outputRepRuntime t='697' id='63' V697='1' V690='1' padOutput='true' encoding='UTF-8'>
+  <outputRepRuntime t='697' id='85' V697='1' V690='1' padOutput='true' encoding='UTF-8'>
   </outputRepRuntime>
   <valueSets></valueSets>
   <child t='165' id='22' V1='4' name='Document Bindings'>
     <child t='166' id='23' V166='5' docType='1' V1='4' name='in$/root'>
       <elemNode t='200' idref='2'/>
     </child>
-    <child t='166' id='24' V166='5' docType='2' V1='4' name='out$/Customers360'>
+    <child t='166' id='24' V166='5' docType='2' docReposPath='/MBTC_POC/Sample Data/MBTC_API_0.1/schemas/Customers360/customer_360.json' V1='4' name='out$/Customers360'>
       <elemNode t='200' idref='3'/>
     </child>
   </child>

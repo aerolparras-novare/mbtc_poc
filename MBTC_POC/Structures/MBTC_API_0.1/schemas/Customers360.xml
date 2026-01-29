@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='150' id='1' V150='13' creationTimestamp='0x19bfeb57208' V1='4' name='Customers360' incarnation='10'>
+<root t='150' id='1' V150='13' creationTimestamp='0x19bfeb57208' V1='4' name='Customers360' incarnation='19'>
   <rootElem t='167' id='2' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Customers360' description='A collection of raw customer records retrieved from the source. This object is intended for bulk data processes. As ‘as-is’ data...'>
     <structNode t='150' idref='1'/>
     <longDesc>A collection of raw customer records retrieved from the source. This object is intended for bulk data processes. As ‘as-is’ data, it may include unvalidated formats or duplicate entries.</longDesc>
-    <child t='167' id='3' V167='21' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='customer_360_view' checksumValid='true' checksum='SecNk063jCCrcQerWM59uHwF3co='>
+    <child t='167' id='3' V167='21' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='customer_360' checksumValid='true' checksum='9z49tbYdTqDcwepE7/UfCAGWDes='>
       <structNode t='150' idref='1'/>
       <child t='167' id='4' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='20' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='customer_id'>
         <structNode t='150' idref='1'/>
@@ -61,7 +61,7 @@
     <child t='177' idref='20'/>
   </child>
   <child t='165' id='22' V1='4' name='Document Bindings'>
-    <child t='166' id='23' V166='5' docType='1' V1='4' name='/Customers360'>
+    <child t='166' id='23' V166='5' docType='1' docReposPath='/MBTC_POC/Sample Data/MBTC_API_0.1/schemas/Customers360/customer_360.json' V1='4' name='/Customers360'>
       <elemNode t='167' idref='2'/>
     </child>
   </child>
