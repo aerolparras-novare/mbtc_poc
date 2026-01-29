@@ -16,6 +16,10 @@
     <contextParameter comment="" name="event_end_str" prompt="event_end_str?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_pyMgbO0CEfCr0fajoyFV-Q"/>
     <contextParameter comment="" name="event_duration" prompt="event_duration?" promptNeeded="false" repositoryContextId="built-in" type="id_Long" value="" internalId="_pyMgbe0CEfCr0fajoyFV-Q"/>
     <contextParameter comment="" name="user" prompt="user?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_pyMgbu0CEfCr0fajoyFV-Q"/>
+    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsvf6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="source_schema" prompt="source_schema?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVws_f6EfCVZsdSWz8YYw"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -60,7 +64,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:oP3xmmRyulruWIO4q6yJU5jTRUM5ipDgi/jm1fLv" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:ctBtxbI4g+WJWBJQ/hk8MkCPIfwV3zKdwhVyf0k8" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -75,7 +79,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Users/Angela Infortuno/Downloads/Talend-Studio-20250226_1030-V8.0.1/Talend-Studio-20250226_1030-V8.0.1/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/workspace/.metadata&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
@@ -95,7 +99,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:4POgoTzeXWqSa7pLOGpfrY/h2+mNi7hdWlGNIUF+" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Qh6kdA5rh7CjY5AjJZPUj/1DH8YP+h6TxWhJCep9" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -133,13 +137,13 @@
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="160" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaFlex_1" show="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#xA;// Initialize the loop tracker"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="// here is the main part of the component,&#xA;// a piece of code executed in the row&#xA;// loop&#xA;String content = row2.content.toString();&#xA;&#xA;// Regex to find each {object}&#xA;java.util.regex.Pattern objPattern = java.util.regex.Pattern.compile(&quot;\\{[^\\}]+\\}&quot;);&#xA;java.util.regex.Matcher objMatcher = objPattern.matcher(content);&#xA;&#xA;while (objMatcher.find()) {&#xA;    String jsonObject = objMatcher.group();&#xA;    java.util.Map&lt;String, String> currentData = new java.util.LinkedHashMap&lt;String, String>();&#xA;    &#xA;    // Extract KV pairs&#xA;    java.util.regex.Pattern kvPattern = java.util.regex.Pattern.compile(&quot;\&quot;([^\&quot;]+)\&quot;\\s*:\\s*(\&quot;?[^\&quot;,}]*\&quot;?)&quot;);&#xA;    java.util.regex.Matcher kvMatcher = kvPattern.matcher(jsonObject);&#xA;&#xA;    while (kvMatcher.find()) {&#xA;        currentData.put(kvMatcher.group(1), kvMatcher.group(2).replace(&quot;\&quot;&quot;, &quot;&quot;).trim());&#xA;    }&#xA;&#xA;    // Set Header on first row of first object&#xA;    if (globalMap.get(&quot;masterHeader&quot;) == null) {&#xA;        java.util.List&lt;String> master = new java.util.ArrayList&lt;String>(currentData.keySet());&#xA;        globalMap.put(&quot;masterHeader&quot;, master);&#xA;        globalMap.put(&quot;headerString&quot;, String.join(&quot;,&quot;, master));&#xA;    }&#xA;&#xA;    // Align values&#xA;    java.util.List&lt;String> master = (java.util.List&lt;String>) globalMap.get(&quot;masterHeader&quot;);&#xA;    StringBuilder csvRow = new StringBuilder();&#xA;    for (int i = 0; i &lt; master.size(); i++) {&#xA;        String val = currentData.get(master.get(i));&#xA;        csvRow.append(val == null ? &quot;&quot; : val);&#xA;        if (i &lt; master.size() - 1) csvRow.append(&quot;,&quot;);&#xA;    }&#xA;&#xA;    // THIS IS THE KEY: Set the output and emit the row&#xA;    row4.csv_line = csvRow.toString();&#xA;    &#xA;    // Manually trigger the data flow for this iteration&#xA;    // (This ensures tFileOutputDelimited gets called for EVERY object found)"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_END" value="} // This closes the while(objMatcher.find()) loop from the Main Code"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE_START" value="// start part of your Java code&#xA;// Initialize the loop tracker"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE_MAIN" value="// here is the main part of the component,&#xA;// a piece of code executed in the row&#xA;// loop&#xA;String content = row2.content.toString();&#xA;&#xA;// Regex to find each {object}&#xA;java.util.regex.Pattern objPattern = java.util.regex.Pattern.compile(&quot;\\{[^\\}]+\\}&quot;);&#xA;java.util.regex.Matcher objMatcher = objPattern.matcher(content);&#xA;&#xA;while (objMatcher.find()) {&#xA;    String jsonObject = objMatcher.group();&#xA;    java.util.Map&lt;String, String> currentData = new java.util.LinkedHashMap&lt;String, String>();&#xA;    &#xA;    // Extract KV pairs&#xA;    java.util.regex.Pattern kvPattern = java.util.regex.Pattern.compile(&quot;\&quot;([^\&quot;]+)\&quot;\\s*:\\s*(\&quot;?[^\&quot;,}]*\&quot;?)&quot;);&#xA;    java.util.regex.Matcher kvMatcher = kvPattern.matcher(jsonObject);&#xA;&#xA;    while (kvMatcher.find()) {&#xA;        currentData.put(kvMatcher.group(1), kvMatcher.group(2).replace(&quot;\&quot;&quot;, &quot;&quot;).trim());&#xA;    }&#xA;&#xA;    // Set Header on first row of first object&#xA;    if (globalMap.get(&quot;masterHeader&quot;) == null) {&#xA;        java.util.List&lt;String> master = new java.util.ArrayList&lt;String>(currentData.keySet());&#xA;        globalMap.put(&quot;masterHeader&quot;, master);&#xA;        globalMap.put(&quot;headerString&quot;, String.join(&quot;,&quot;, master));&#xA;    }&#xA;&#xA;    // Align values&#xA;    java.util.List&lt;String> master = (java.util.List&lt;String>) globalMap.get(&quot;masterHeader&quot;);&#xA;    StringBuilder csvRow = new StringBuilder();&#xA;    for (int i = 0; i &lt; master.size(); i++) {&#xA;        String val = currentData.get(master.get(i));&#xA;        csvRow.append(val == null ? &quot;&quot; : val);&#xA;        if (i &lt; master.size() - 1) csvRow.append(&quot;,&quot;);&#xA;    }&#xA;&#xA;    // THIS IS THE KEY: Set the output and emit the row&#xA;    row4.csv_line = csvRow.toString();&#xA;    &#xA;    // Manually trigger the data flow for this iteration&#xA;    // (This ensures tFileOutputDelimited gets called for EVERY object found)"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE_END" value="} // This closes the while(objMatcher.find()) loop from the Main Code"/>
     <elementParameter field="CHECK" name="Version_V2_0" value="false" show="false"/>
     <elementParameter field="CHECK" name="Version_V3_2" value="false" show="false"/>
     <elementParameter field="CHECK" name="Version_V4.0" value="true" show="false"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="arrayData"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaFlex_1">
