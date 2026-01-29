@@ -269,6 +269,17 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_tRI98PwgEfCMrfYhVRM8rA",
+    "version" : "0.2",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_v8MnQPwmEfCMrfYhVRM8rA",
+    "version" : "Latest",
+    "type" : "property"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_vzfg8PUEEfCHKuiiShkmqA",
     "version" : "0.1",
     "type" : "job"
