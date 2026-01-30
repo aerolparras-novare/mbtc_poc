@@ -1,7 +1,7 @@
 {
   "openapi" : "3.0.1",
   "info" : {
-    "title" : "MBTC API",
+    "title" : "MBTC_API",
     "description" : "No description",
     "version" : "1.0.0"
   },
@@ -259,6 +259,136 @@
         "style" : "simple",
         "explode" : false
       } ]
+    },
+    "/DM/customers360" : {
+      "get" : {
+        "summary" : "Get All Customers360",
+        "description" : "Request to get the list of customers (returns number of rows based on pagination parameters; returns all rows if pagination parameters are not supplied)",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "description" : "The number of records expected to be returned",
+          "schema" : {
+            "type" : "integer",
+            "format" : "int32",
+            "description" : "The number of records expected to be returned"
+          },
+          "example" : 1,
+          "style" : "form",
+          "explode" : true
+        }, {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "description" : "The number of rows to skip",
+          "schema" : {
+            "type" : "integer",
+            "format" : "int32",
+            "description" : "The number of rows to skip"
+          },
+          "example" : 1,
+          "style" : "form",
+          "explode" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Customers360"
+                },
+                "example" : "{\n\"customer_360\": [\n\t{\n\t\t\"customer_id\" : 1,\n\t\t\"full_name\" : \"Customer1 Dela Cruz\",\n\t\t\"email\" : \"user1@example.com\",\n\t\t\"kyc_status\" : \"Pending\",\n\t\t\"tenure_days\" : 876,\n\t\t\"total_accounts\" : 1,\n\t\t\"savings_balance\" : 0.0,\n\t\t\"checking_balance\" : 0.0,\n\t\t\"credit_card_exposure\" : 142222.765625,\n\t\t\"total_balance\" : 142222.765625,\n\t\t\"lifetime_txn_count\" : 0,\n\t\t\"total_deposits\" : 0.0,\n\t\t\"total_withdrawals\" : 0.0,\n\t\t\"last_txn_date\" : null,\n\t\t\"customer_lifecycle_status\" : \"No Activity\"\n\t},\n\t{\n\t\t\"customer_id\" : 2,\n\t\t\"full_name\" : \"Customer2 Dela Cruz\",\n\t\t\"email\" : \"user2@example.com\",\n\t\t\"kyc_status\" : \"Verified\",\n\t\t\"tenure_days\" : 128,\n\t\t\"total_accounts\" : 2,\n\t\t\"savings_balance\" : 352533.96875,\n\t\t\"checking_balance\" : 351389.625,\n\t\t\"credit_card_exposure\" : 0.0,\n\t\t\"total_balance\" : 703923.59375,\n\t\t\"lifetime_txn_count\" : 2,\n\t\t\"total_deposits\" : 10573.6904296875,\n\t\t\"total_withdrawals\" : 3920.860107421875,\n\t\t\"last_txn_date\" : \"2026-01-05T04:56:58.391Z\",\n\t\t\"customer_lifecycle_status\" : \"Active\"\n\t},\n\t{\n\t\t\"customer_id\" : 3,\n\t\t\"full_name\" : \"Customer3 Dela Cruz\",\n\t\t\"email\" : \"user3@example.com\",\n\t\t\"kyc_status\" : \"Verified\",\n\t\t\"tenure_days\" : 858,\n\t\t\"total_accounts\" : 0,\n\t\t\"savings_balance\" : 0.0,\n\t\t\"checking_balance\" : 0.0,\n\t\t\"credit_card_exposure\" : 0.0,\n\t\t\"total_balance\" : 0.0,\n\t\t\"lifetime_txn_count\" : 0,\n\t\t\"total_deposits\" : 0.0,\n\t\t\"total_withdrawals\" : 0.0,\n\t\t\"last_txn_date\" : null,\n\t\t\"customer_lifecycle_status\" : \"No Activity\"\n\t}\n]}"
+              }
+            }
+          },
+          "206" : {
+            "description" : "Status 206",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Customers"
+                },
+                "example" : "{\n\"CUSTOMERS\": [\n\t{\n\t\t\"CUSTOMER_ID\" : 1,\n\t\t\"FIRST_NAME\" : \"Customer1\",\n\t\t\"LAST_NAME\" : \"Dela Cruz\",\n\t\t\"EMAIL\" : \"user1@example.com\",\n\t\t\"JOIN_DATE\" : \"2023-09-06T05:01:36.000Z\",\n\t\t\"KYC_STATUS\" : \"Pending\"\n\t},\n\t{\n\t\t\"CUSTOMER_ID\" : 2,\n\t\t\"FIRST_NAME\" : \"Customer2\",\n\t\t\"LAST_NAME\" : \"Dela Cruz\",\n\t\t\"EMAIL\" : \"user2@example.com\",\n\t\t\"JOIN_DATE\" : \"2025-09-22T20:36:18.000Z\",\n\t\t\"KYC_STATUS\" : \"Verified\"\n\t},\n\t{\n\t\t\"CUSTOMER_ID\" : 3,\n\t\t\"FIRST_NAME\" : \"Customer3\",\n\t\t\"LAST_NAME\" : \"Dela Cruz\",\n\t\t\"EMAIL\" : \"user3@example.com\",\n\t\t\"JOIN_DATE\" : \"2023-09-24T15:31:54.000Z\",\n\t\t\"KYC_STATUS\" : \"Verified\"\n\t}\n]}\n"
+              }
+            }
+          },
+          "400" : {
+            "description" : "Status 400",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n    \"ID\": \"\",\n    \"errorCode\": \"400\",\n    \"errorMessage\": \"The parameter 'limit' must be a positive integer. Received: '-5'.\"\n}"
+              }
+            }
+          },
+          "500" : {
+            "description" : "Status 500",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"\",\n\t\"errorCode\": \"500\",\n\t\"errorMessage\": \"Internal Server Error\"\n}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/DM/customers360/{id}" : {
+      "get" : {
+        "summary" : "Get Specific Customer360",
+        "description" : "Request to get the record of a single customer entry.",
+        "responses" : {
+          "200" : {
+            "description" : "Status 200",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Customer360"
+                },
+                "example" : "{\n\"customer_360\": [\n\t{\n\t\t\"customer_id\" : 1,\n\t\t\"full_name\" : \"Customer1 Dela Cruz\",\n\t\t\"email\" : \"user1@example.com\",\n\t\t\"kyc_status\" : \"Pending\",\n\t\t\"tenure_days\" : 876,\n\t\t\"total_accounts\" : 1,\n\t\t\"savings_balance\" : 0.0,\n\t\t\"checking_balance\" : 0.0,\n\t\t\"credit_card_exposure\" : 142222.765625,\n\t\t\"total_balance\" : 142222.765625,\n\t\t\"lifetime_txn_count\" : 0,\n\t\t\"total_deposits\" : 0.0,\n\t\t\"total_withdrawals\" : 0.0,\n\t\t\"last_txn_date\" : null,\n\t\t\"customer_lifecycle_status\" : \"No Activity\"\n\t}\n]}"
+              }
+            }
+          },
+          "404" : {
+            "description" : "Status 404",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"461145\",\n\t\"errorCode\": \"404\",\n\t\"errorMessage\": \"Resource Not Found\"\n}"
+              }
+            }
+          },
+          "500" : {
+            "description" : "Status 500",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Error"
+                },
+                "example" : "{\n\t\"ID\": \"\",\n\t\"errorCode\": \"500\",\n\t\"errorMessage\": \"Internal Server Error\"\n}"
+              }
+            }
+          }
+        }
+      },
+      "parameters" : [ {
+        "name" : "id",
+        "in" : "path",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        },
+        "style" : "simple",
+        "explode" : false
+      } ]
     }
   },
   "components" : {
@@ -336,6 +466,128 @@
           }
         },
         "example" : "{\r\n\t\"ID\": \"461145\",\r\n\t\"errorCode\": \"23000\",\r\n\t\"errorMessage\": \"Duplicate entry '461145' for key 'PRIMARY' - Line: 0\"\r\n}"
+      },
+      "Customer360" : {
+        "type" : "object",
+        "description" : "A single instance of a raw customer record. Used for detailed inspection of a specific customer as it exists in the source system.",
+        "properties" : {
+          "customer_360" : {
+            "type" : "array",
+            "items" : {
+              "type" : "object",
+              "properties" : {
+                "customer_id" : {
+                  "type" : "integer",
+                  "format" : "int32"
+                },
+                "full_name" : {
+                  "type" : "string"
+                },
+                "email" : {
+                  "type" : "string"
+                },
+                "kyc_status" : {
+                  "type" : "string"
+                },
+                "tenure_days" : {
+                  "type" : "number"
+                },
+                "total_accounts" : {
+                  "type" : "number"
+                },
+                "savings_balance" : {
+                  "type" : "number"
+                },
+                "checking_balance" : {
+                  "type" : "number"
+                },
+                "credit_card_exposure" : {
+                  "type" : "number"
+                },
+                "total_balance" : {
+                  "type" : "number"
+                },
+                "lifetime_txn_count" : {
+                  "type" : "number"
+                },
+                "total_deposits" : {
+                  "type" : "number"
+                },
+                "total_withdrawals" : {
+                  "type" : "number"
+                },
+                "last_txn_date" : {
+                  "type" : "object"
+                },
+                "customer_lifecycle_status" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        },
+        "example" : "{\r\n\"customer_360\": [\r\n\t{\r\n\t\t\"customer_id\" : 1,\r\n\t\t\"full_name\" : \"Customer1 Dela Cruz\",\r\n\t\t\"email\" : \"user1@example.com\",\r\n\t\t\"kyc_status\" : \"Pending\",\r\n\t\t\"tenure_days\" : 876,\r\n\t\t\"total_accounts\" : 1,\r\n\t\t\"savings_balance\" : 0.0,\r\n\t\t\"checking_balance\" : 0.0,\r\n\t\t\"credit_card_exposure\" : 142222.765625,\r\n\t\t\"total_balance\" : 142222.765625,\r\n\t\t\"lifetime_txn_count\" : 0,\r\n\t\t\"total_deposits\" : 0.0,\r\n\t\t\"total_withdrawals\" : 0.0,\r\n\t\t\"last_txn_date\" : null,\r\n\t\t\"customer_lifecycle_status\" : \"No Activity\"\r\n\t},\r\n\t{\r\n\t\t\"customer_id\" : 2,\r\n\t\t\"full_name\" : \"Customer2 Dela Cruz\",\r\n\t\t\"email\" : \"user2@example.com\",\r\n\t\t\"kyc_status\" : \"Verified\",\r\n\t\t\"tenure_days\" : 128,\r\n\t\t\"total_accounts\" : 2,\r\n\t\t\"savings_balance\" : 352533.96875,\r\n\t\t\"checking_balance\" : 351389.625,\r\n\t\t\"credit_card_exposure\" : 0.0,\r\n\t\t\"total_balance\" : 703923.59375,\r\n\t\t\"lifetime_txn_count\" : 2,\r\n\t\t\"total_deposits\" : 10573.6904296875,\r\n\t\t\"total_withdrawals\" : 3920.860107421875,\r\n\t\t\"last_txn_date\" : \"2026-01-05T04:56:58.391Z\",\r\n\t\t\"customer_lifecycle_status\" : \"Active\"\r\n\t},\r\n\t{\r\n\t\t\"customer_id\" : 3,\r\n\t\t\"full_name\" : \"Customer3 Dela Cruz\",\r\n\t\t\"email\" : \"user3@example.com\",\r\n\t\t\"kyc_status\" : \"Verified\",\r\n\t\t\"tenure_days\" : 858,\r\n\t\t\"total_accounts\" : 0,\r\n\t\t\"savings_balance\" : 0.0,\r\n\t\t\"checking_balance\" : 0.0,\r\n\t\t\"credit_card_exposure\" : 0.0,\r\n\t\t\"total_balance\" : 0.0,\r\n\t\t\"lifetime_txn_count\" : 0,\r\n\t\t\"total_deposits\" : 0.0,\r\n\t\t\"total_withdrawals\" : 0.0,\r\n\t\t\"last_txn_date\" : null,\r\n\t\t\"customer_lifecycle_status\" : \"No Activity\"\r\n\t}\r\n]}"
+      },
+      "Customers360" : {
+        "type" : "object",
+        "description" : "A collection of raw customer records retrieved from the source. This object is intended for bulk data processes. As ‘as-is’ data, it may include unvalidated formats or duplicate entries.",
+        "properties" : {
+          "customer_360" : {
+            "type" : "array",
+            "items" : {
+              "type" : "object",
+              "properties" : {
+                "customer_id" : {
+                  "type" : "integer",
+                  "format" : "int32"
+                },
+                "full_name" : {
+                  "type" : "string"
+                },
+                "email" : {
+                  "type" : "string"
+                },
+                "kyc_status" : {
+                  "type" : "string"
+                },
+                "tenure_days" : {
+                  "type" : "number"
+                },
+                "total_accounts" : {
+                  "type" : "number"
+                },
+                "savings_balance" : {
+                  "type" : "number"
+                },
+                "checking_balance" : {
+                  "type" : "number"
+                },
+                "credit_card_exposure" : {
+                  "type" : "number"
+                },
+                "total_balance" : {
+                  "type" : "number"
+                },
+                "lifetime_txn_count" : {
+                  "type" : "number"
+                },
+                "total_deposits" : {
+                  "type" : "number"
+                },
+                "total_withdrawals" : {
+                  "type" : "number"
+                },
+                "last_txn_date" : {
+                  "type" : "object"
+                },
+                "customer_lifecycle_status" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        },
+        "example" : "{\r\n\"customer_360\": [\r\n\t{\r\n\t\t\"customer_id\" : 1,\r\n\t\t\"full_name\" : \"Customer1 Dela Cruz\",\r\n\t\t\"email\" : \"user1@example.com\",\r\n\t\t\"kyc_status\" : \"Pending\",\r\n\t\t\"tenure_days\" : 876,\r\n\t\t\"total_accounts\" : 1,\r\n\t\t\"savings_balance\" : 0.0,\r\n\t\t\"checking_balance\" : 0.0,\r\n\t\t\"credit_card_exposure\" : 142222.765625,\r\n\t\t\"total_balance\" : 142222.765625,\r\n\t\t\"lifetime_txn_count\" : 0,\r\n\t\t\"total_deposits\" : 0.0,\r\n\t\t\"total_withdrawals\" : 0.0,\r\n\t\t\"last_txn_date\" : null,\r\n\t\t\"customer_lifecycle_status\" : \"No Activity\"\r\n\t},\r\n\t{\r\n\t\t\"customer_id\" : 2,\r\n\t\t\"full_name\" : \"Customer2 Dela Cruz\",\r\n\t\t\"email\" : \"user2@example.com\",\r\n\t\t\"kyc_status\" : \"Verified\",\r\n\t\t\"tenure_days\" : 128,\r\n\t\t\"total_accounts\" : 2,\r\n\t\t\"savings_balance\" : 352533.96875,\r\n\t\t\"checking_balance\" : 351389.625,\r\n\t\t\"credit_card_exposure\" : 0.0,\r\n\t\t\"total_balance\" : 703923.59375,\r\n\t\t\"lifetime_txn_count\" : 2,\r\n\t\t\"total_deposits\" : 10573.6904296875,\r\n\t\t\"total_withdrawals\" : 3920.860107421875,\r\n\t\t\"last_txn_date\" : \"2026-01-05T04:56:58.391Z\",\r\n\t\t\"customer_lifecycle_status\" : \"Active\"\r\n\t},\r\n\t{\r\n\t\t\"customer_id\" : 3,\r\n\t\t\"full_name\" : \"Customer3 Dela Cruz\",\r\n\t\t\"email\" : \"user3@example.com\",\r\n\t\t\"kyc_status\" : \"Verified\",\r\n\t\t\"tenure_days\" : 858,\r\n\t\t\"total_accounts\" : 0,\r\n\t\t\"savings_balance\" : 0.0,\r\n\t\t\"checking_balance\" : 0.0,\r\n\t\t\"credit_card_exposure\" : 0.0,\r\n\t\t\"total_balance\" : 0.0,\r\n\t\t\"lifetime_txn_count\" : 0,\r\n\t\t\"total_deposits\" : 0.0,\r\n\t\t\"total_withdrawals\" : 0.0,\r\n\t\t\"last_txn_date\" : null,\r\n\t\t\"customer_lifecycle_status\" : \"No Activity\"\r\n\t}\r\n]}"
       }
     }
   }
