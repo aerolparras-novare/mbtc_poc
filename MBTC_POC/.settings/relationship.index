@@ -164,6 +164,10 @@
     "id" : "_HcbZkPdUEfC1_ttOpu7bSw - customers_api_test",
     "version" : "Latest",
     "type" : "schema"
+  }, {
+    "id" : "_Qa8vcPZyEfCepMq3Yo2NrA - metadata_mbtc_customer",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
