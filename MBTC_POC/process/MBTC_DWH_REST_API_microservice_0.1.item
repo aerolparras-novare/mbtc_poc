@@ -698,7 +698,9 @@
     <elementParameter field="RADIO" name="AS_INPUTSTREAM" value="false"/>
     <elementParameter field="RADIO" name="AS_OBJECT" value="false" show="false"/>
     <elementParameter field="RADIO" name="AS_DOCUMENT" value="false" show="false"/>
+    <elementParameter field="TEXT" name="SOURCE_TDM_STRUCT_INCARNATION" value="" show="false"/>
     <elementParameter field="TEXT" name="TARGET_TDM_STRUCT_INCARNATION" value="" show="false"/>
+    <elementParameter field="TEXT" name="SOURCE_GENERATED_TDM_STRUCT_PATH" value="" show="false"/>
     <elementParameter field="TEXT" name="TARGET_GENERATED_TDM_STRUCT_PATH" value="" show="false"/>
     <elementParameter field="TEXT" name="SINGLE_COLUMN_OBJECTTYPE" value="true" show="false"/>
     <elementParameter field="TEXT" name="SINGLE_COLUMN_STRING" value="false" show="false"/>
@@ -717,6 +719,7 @@
     <elementParameter field="RADIO" name="INCONNECTIONS_SYNCED" value="true" show="false"/>
     <elementParameter field="RADIO" name="OUTCONNECTIONS_SYNCED" value="true" show="false"/>
     <elementParameter field="TEXT" name="INCONNECTIONS_ORDER" value="row1" show="false"/>
+    <elementParameter field="TEXT" name="INCONNECTIONS_REMOVED" value="" show="false"/>
     <elementParameter field="TEXT" name="OUTCONNECTIONS_REMOVED" value="" show="false"/>
     <elementParameter field="TEXT" name="HMAP_VAR_PATH" value="&quot;&quot;"/>
     <elementParameter field="HMAP_VAR_USED_MAPS" name="HMAP_VAR_USED_MAPS" value="&quot;&quot;"/>
@@ -867,18 +870,30 @@
     <elementParameter field="TEXT" name="configuration.config.cursorSize" value="1000" show="false"/>
     <elementParameter field="CHECK" name="configuration.config.trimAllStringOrCharColumns" value="false"/>
     <elementParameter field="TABLE" name="configuration.config.columnTrims">
-      <elementValue elementRef="configuration.config.columnTrims[].column" value="CUSTOMER_ID" id="0"/>
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="CUSTOMER_ID1" id="0"/>
       <elementValue elementRef="configuration.config.columnTrims[].trim" value="false" id="1"/>
-      <elementValue elementRef="configuration.config.columnTrims[].column" value="FIRST_NAME" id="2"/>
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="FIRST_NAME1" id="2"/>
       <elementValue elementRef="configuration.config.columnTrims[].trim" value="false" id="3"/>
-      <elementValue elementRef="configuration.config.columnTrims[].column" value="LAST_NAME" id="4"/>
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="LAST_NAME1" id="4"/>
       <elementValue elementRef="configuration.config.columnTrims[].trim" value="false" id="5"/>
-      <elementValue elementRef="configuration.config.columnTrims[].column" value="EMAIL" id="6"/>
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="EMAIL1" id="6"/>
       <elementValue elementRef="configuration.config.columnTrims[].trim" value="false" id="7"/>
-      <elementValue elementRef="configuration.config.columnTrims[].column" value="JOIN_DATE" id="8"/>
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="JOIN_DATE1" id="8"/>
       <elementValue elementRef="configuration.config.columnTrims[].trim" value="false" id="9"/>
-      <elementValue elementRef="configuration.config.columnTrims[].column" value="KYC_STATUS" id="10"/>
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="KYC_STATUS1" id="10"/>
       <elementValue elementRef="configuration.config.columnTrims[].trim" value="false" id="11"/>
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="CUSTOMER_ID" id="12"/>
+      <elementValue elementRef="configuration.config.columnTrims[].trim" value="false" id="13"/>
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="FIRST_NAME" id="14"/>
+      <elementValue elementRef="configuration.config.columnTrims[].trim" value="false" id="15"/>
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="LAST_NAME" id="16"/>
+      <elementValue elementRef="configuration.config.columnTrims[].trim" value="false" id="17"/>
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="EMAIL" id="18"/>
+      <elementValue elementRef="configuration.config.columnTrims[].trim" value="false" id="19"/>
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="JOIN_DATE" id="20"/>
+      <elementValue elementRef="configuration.config.columnTrims[].trim" value="false" id="21"/>
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="KYC_STATUS" id="22"/>
+      <elementValue elementRef="configuration.config.columnTrims[].trim" value="false" id="23"/>
     </elementParameter>
     <elementParameter field="CHECK" name="configuration.config.enableMapping" value="false"/>
     <elementParameter field="CLOSED_LIST" name="configuration.config.mapping" value="MYSQL" show="false"/>
@@ -891,6 +906,12 @@
     <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1" show="false"/>
     <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1" show="false"/>
     <metadata connector="FLOW" label="metadata_mbtc_customer" name="tDBInput_1">
+      <column comment="" key="false" length="1" name="CUSTOMER_ID1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="FIRST_NAME1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="9" name="LAST_NAME1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="17" name="EMAIL1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="24" name="JOIN_DATE1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="KYC_STATUS1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="301" name="CUSTOMER_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1321" name="FIRST_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="1225" name="LAST_NAME" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -981,22 +1002,22 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Create_Customer" show="false"/>
   </connection>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFlowToIterate_1" target="tDBInput_1">
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFlowToIterate_1" target="tHiveInput_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate3" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
   </connection>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_1" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tFlowToIterate_1" target="tFixedFlowInput_1">
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFlowToIterate_1" target="tFixedFlowInput_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate2" show="false"/>
   </connection>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFlowToIterate_1" target="tHiveInput_1">
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_1" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tFlowToIterate_1" target="tDBInput_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate3" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tHiveInput_1" offsetLabelX="0" offsetLabelY="0" source="tHiveInput_1" target="tHMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>

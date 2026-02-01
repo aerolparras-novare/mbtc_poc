@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/Jobs/MBTC_DWH_REST_microservice/tHMap_1/row1.xml' outStruct='Structures/MBTC_API_0.1/schemas/Customers.xml' inputRep='178' outputRep='177' nextMap='' inputStructUserName='row1' outputStructUserName='Customers' V1='4' name='tHMap_1' incarnation='177'>
+<root t='190' id='1' V190='11' inStruct='Structures/Jobs/MBTC_DWH_REST_microservice/tHMap_2/row15.xml' outStruct='Structures/MBTC_API_0.1/schemas/Customers.xml' inputRep='178' outputRep='177' nextMap='' inputStructUserName='row15' outputStructUserName='Customers' V1='4' name='tHMap_2' incarnation='177'>
   <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='12' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='root'>
     <mapNode t='190' idref='1'/>
     <child t='200' id='18' V200='8' input='true' structElemExists='true' usedCount='7' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='row'>
