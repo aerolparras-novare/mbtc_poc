@@ -214,7 +214,7 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="context.conn_mbtc_load_table_ServiceName" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="context.conn_mbtc_load_table_Schema"/>
     <elementParameter field="TEXT" name="USER" value="context.conn_mbtc_load_table_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:/ccmDClPk/R2p8DUL9pbuH4zt5q7E5sdgI5BNHKXxfEostNL6APeaTd9RKqTCak41uiiKOATO0hC9NEvNp9q9Hg="/>
+    <elementParameter field="PASSWORD" name="PASS" value="context.conn_mbtc_load_table_Password"/>
     <elementParameter field="CHECK" name="USE_SSL" value="false" show="false"/>
     <elementParameter field="FILE" name="SSL_TRUSTSERVER_TRUSTSTORE" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" value="enc:system.encryption.key.v1:9FS4Co8PSzSpKtFWb/njhKYZ+pmSwnXRR+G+nquQ" show="false"/>
@@ -454,7 +454,7 @@
     <elementParameter field="TEXT" name="PORT" value="context.conn_hive_mbtc_target_Port"/>
     <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_mbtc_target_Database"/>
     <elementParameter field="TEXT" name="USER" value="context.conn_hive_mbtc_target_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:F4V8RiZYM7Dxunqfw8iO6Gj0rcDd55R58hnH710PYLEEuDJWf20O6JtlqePtT+ZCiplK51Qft79btxNc+rsX7kd3"/>
+    <elementParameter field="PASSWORD" name="PASS" value="context.conn_hive_mbtc_target_Password"/>
     <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_mbtc_target_hiveAdditionalJDBCParameters"/>
     <elementParameter field="CHECK" name="CONFIGURATIONS_FROM_CLASSPATH" value="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false"/>

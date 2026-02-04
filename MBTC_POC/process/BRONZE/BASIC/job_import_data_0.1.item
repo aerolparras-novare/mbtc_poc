@@ -150,7 +150,7 @@
     <elementParameter field="TEXT" name="USERNAME" value="context.conn_mbtc_load_table_Login"/>
     <elementParameter field="CHECK" name="PASSWORD_STORED_IN_FILE" value="false"/>
     <elementParameter field="TEXT" name="PASSWORD_FILE" value="&quot;file:///&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:rh1tpcS9uaVHjrVaxOXA4gYcYUMS6iYjXWNsaJgk9WZkJgwSzJX054IrCLMvlSJheybD4S3TAwe6aeUanaHJFZXp"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="context.conn_hive_mbtc_target_Password"/>
     <elementParameter field="TABLE" name="DRIVER_JAR">
       <elementValue elementRef="JAR_NAME" value="&quot;mvn:com.oracle.jdbc/ojdbc8/19.3.0.0/jar&quot;" id="0"/>
     </elementParameter>

@@ -171,7 +171,7 @@
       <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_mbtc_target_Database"/>
       <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
       <elementParameter field="TEXT" name="USER" value="context.conn_hive_mbtc_target_Login"/>
-      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:J/ClbqoEwgCVKwTwVPki7l55KHh5erLGotPUBB34ZhgJqO+kp4pE0q+34Xx9dzBLB+Ws+VwGzJWKsuEd3CRYgi3B"/>
+      <elementParameter field="PASSWORD" name="PASS" value="context.conn_hive_mbtc_target_Password"/>
       <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_mbtc_target_hiveAdditionalJDBCParameters"/>
       <elementParameter field="CHECK" name="USE_KRB" value="false"/>
       <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>
