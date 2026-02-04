@@ -145,7 +145,7 @@
       <elementParameter field="TEXT" name="GOOGLE_JARS_BUCKET" value="&quot;&quot;" show="false"/>
       <elementParameter field="CHECK" name="DEFINE_PATH_TO_GOOGLE_CREDENTIALS" value="false" show="false"/>
       <elementParameter field="FILE" name="PATH_TO_GOOGLE_CREDENTIALS" value="&quot;&quot;" show="false"/>
-      <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+      <elementParameter field="DBTABLE" name="TABLE" value="context.target_table"/>
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
@@ -250,7 +250,7 @@
       <elementParameter field="PASSWORD" name="SECRET_KEY" value="enc:system.encryption.key.v1:63AJEAGEDPCBHZN7cpB4Nk5OP0cqfYYaW2S0xf8J" show="false"/>
       <elementParameter field="CHECK" name="DEFINE_PATH_TO_GOOGLE_CREDENTIALS" value="false" show="false"/>
       <elementParameter field="FILE" name="PATH_TO_GOOGLE_CREDENTIALS" value="&quot;&quot;" show="false"/>
-      <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+      <elementParameter field="DBTABLE" name="TABLE" value="context.target_table"/>
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>

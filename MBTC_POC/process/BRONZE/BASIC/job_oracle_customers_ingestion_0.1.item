@@ -30,6 +30,7 @@
     <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/opt/talend/talend-runtime/data/tmp/development-files/" internalId="_7LpgAPf5EfCVZsdSWz8YYw"/>
     <contextParameter comment="" name="event_start" prompt="event_start?" promptNeeded="false" repositoryContextId="built-in" type="id_Date" value="" internalId="_84854Pf6EfCVZsdSWz8YYw"/>
     <contextParameter comment="" name="manifest_table" prompt="manifest_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="MBTC_MANIFEST_TABLE" internalId="_G1gCkPf7EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="audit_database" prompt="audit_database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="audit" internalId="_i1P70P2qEfC9VMMTzADNTg"/>
   </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>
@@ -289,6 +290,8 @@
       <elementValue elementRef="VALUE" value="context.table_location + &quot;ingest_date=&quot; + TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate())" id="3"/>
       <elementValue elementRef="KEY" value="&quot;source_system&quot;" id="4"/>
       <elementValue elementRef="VALUE" value="&quot;database&quot;" id="5"/>
+      <elementValue elementRef="KEY" value="&quot;processing_start_time&quot;" id="6"/>
+      <elementValue elementRef="VALUE" value="TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.getCurrentDate())" id="7"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="setGlobalVar"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -831,7 +834,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
   <connection connectorName="RUN_IF" label="withCount" lineStyle="6" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tRunJob_1">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="&#x9;&#x9;&#x9;  ((Integer)globalMap.get(&quot;tDBInput_1_NB_LINE&quot;)) > 0"/>
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((Integer)globalMap.get(&quot;tDBInput_1_NB_LINE&quot;)) > 0"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="withCount" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tWarn_1">
@@ -862,13 +865,13 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk7" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
