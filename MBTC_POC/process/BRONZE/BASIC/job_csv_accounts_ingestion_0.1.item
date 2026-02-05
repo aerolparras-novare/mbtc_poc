@@ -835,6 +835,7 @@
     <elementParameter field="TEXT" name="MAPR_HOME_DIR" value="&quot;/opt/mapr&quot;" show="false"/>
     <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" value="false" show="false"/>
     <elementParameter field="TEXT" name="HADOOP_LOGIN" value="&quot;kerberos&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="openConnHdfs"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tFTPFileExist" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-120" posY="720" sizeX="120" sizeY="40">
