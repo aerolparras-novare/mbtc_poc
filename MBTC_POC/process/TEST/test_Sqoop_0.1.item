@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="dev" jobType="Standard">
+  <context confirmationNeeded="false" hide="true" name="Default">
+    <contextParameter comment="" name="conn_hdfs_mbtc_namenode_uri" prompt="conn_hdfs_mbtc_namenode_uri?" promptNeeded="false" repositoryContextId="_LodxkPWmEfCzdeB6aeN2sw" type="id_String" value="&quot;hdfs://dao-cdp-poc-master1.novare.com.ph:8020&quot;" internalId="_KBjowPdUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="conn_jdbc_mbtc_jdbcClass" prompt="conn_jdbc_mbtc_jdbcClass?" promptNeeded="false" repositoryContextId="_EfLiIPdQEfCxsNZMbP7pnw" type="id_String" value="oracle.jdbc.OracleDriver" internalId="_KBjoyPdUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="conn_jdbc_mbtc_jdbcUrl" prompt="conn_jdbc_mbtc_jdbcUrl?" promptNeeded="false" repositoryContextId="_EfLiIPdQEfCxsNZMbP7pnw" type="id_String" value="jdbc:oracle:thin:@//18.136.114.179:1521/mbtcDb" internalId="_KBjoyfdUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="conn_jdbc_mbtc_password" prompt="conn_jdbc_mbtc_password?" promptNeeded="false" repositoryContextId="_EfLiIPdQEfCxsNZMbP7pnw" type="id_Password" value="enc:system.encryption.key.v1:9u96pLRmZ1g1+OdwT+t/MQzHwoSINK1I+pxe5s7nMImKknX20rFGNw==" internalId="_KBjoyvdUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="conn_jdbc_mbtc_userId" prompt="conn_jdbc_mbtc_userId?" promptNeeded="false" repositoryContextId="_EfLiIPdQEfCxsNZMbP7pnw" type="id_String" value="nvre_dev1" internalId="_KBjoy_dUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_hadoopConfSpecificJar" prompt="ctx_hadoop_mbtc_hadoopConfSpecificJar?" promptNeeded="false" repositoryContextId="_AV4bQPZwEfCMJs7iWvIt_w" type="id_String" value="" internalId="_KBjozPdUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_NameNodeUri" prompt="ctx_hadoop_mbtc_NameNodeUri?" promptNeeded="false" repositoryContextId="_AV4bQPZwEfCMJs7iWvIt_w" type="id_String" value="&quot;hdfs://dao-cdp-poc-master1.novare.com.ph:8020&quot;" internalId="_KBjozfdUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_ResourceManager" prompt="ctx_hadoop_mbtc_ResourceManager?" promptNeeded="false" repositoryContextId="_AV4bQPZwEfCMJs7iWvIt_w" type="id_String" value="&quot;dao-cdp-poc-master1.novare.com.ph:8032&quot;" internalId="_KBjozvdUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_User" prompt="ctx_hadoop_mbtc_User?" promptNeeded="false" repositoryContextId="_AV4bQPZwEfCMJs7iWvIt_w" type="id_String" value="&quot;admin&quot;" internalId="_KBjoz_dUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_yarn_app_mapreduce_am_resource_mb" prompt="ctx_hadoop_mbtc_HIVE_yarn_app_mapreduce_am_resource_mb?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="-Xmx1600m" internalId="_rCmgcPdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_dfs_replication" prompt="ctx_hadoop_mbtc_HIVE_dfs_replication?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="1" internalId="_rCmgcfdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_io_file_buffer_size" prompt="ctx_hadoop_mbtc_HIVE_io_file_buffer_size?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="131072" internalId="_rCmgcvdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_dfs_client_use_datanode_hostname" prompt="ctx_hadoop_mbtc_HIVE_dfs_client_use_datanode_hostname?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="true" internalId="_rCmgc_dXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_ipc_client_connect_timeout" prompt="ctx_hadoop_mbtc_HIVE_ipc_client_connect_timeout?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="20000" internalId="_rCmgdPdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_fs_trash_interval" prompt="ctx_hadoop_mbtc_HIVE_fs_trash_interval?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="0" internalId="_rCmgdfdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_Database" prompt="ctx_hadoop_mbtc_HIVE_Database?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="" internalId="_rCmgdvdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_Password" prompt="ctx_hadoop_mbtc_HIVE_Password?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_Password" value="enc:system.encryption.key.v1:qa+IHF9n/GAfZVPP528QmPMul0iwxa4GCb+G32tDtc7fwr3pMnqS3Q==" internalId="_rCnHgPdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_Login" prompt="ctx_hadoop_mbtc_HIVE_Login?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="nvre_dev1" internalId="_rCnHgfdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_Port" prompt="ctx_hadoop_mbtc_HIVE_Port?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="10000" internalId="_rCnHgvdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_Server" prompt="ctx_hadoop_mbtc_HIVE_Server?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="13.215.89.162" internalId="_rCnHg_dXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_ipc_client_connect_max_retries" prompt="ctx_hadoop_mbtc_HIVE_ipc_client_connect_max_retries?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="10" internalId="_rCnHhPdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_yarn_app_mapreduce_am_command_opts" prompt="ctx_hadoop_mbtc_HIVE_yarn_app_mapreduce_am_command_opts?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="-Xmx1600m" internalId="_rCnHhfdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_hiveAdditionalJDBCParameters" prompt="ctx_hadoop_mbtc_HIVE_hiveAdditionalJDBCParameters?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="" internalId="_rCnHhvdXEfCxsNZMbP7pnw"/>
+  </context>
+  <context confirmationNeeded="false" hide="false" name="dev">
+    <contextParameter comment="" name="conn_hdfs_mbtc_namenode_uri" prompt="conn_hdfs_mbtc_namenode_uri?" promptNeeded="false" repositoryContextId="_LodxkPWmEfCzdeB6aeN2sw" type="id_String" value="&quot;hdfs://dao-cdp-poc-master1.novare.com.ph:8020&quot;" internalId="_KBjo0PdUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="conn_jdbc_mbtc_jdbcClass" prompt="conn_jdbc_mbtc_jdbcClass?" promptNeeded="false" repositoryContextId="_EfLiIPdQEfCxsNZMbP7pnw" type="id_String" value="oracle.jdbc.OracleDriver" internalId="_KBjo2PdUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="conn_jdbc_mbtc_jdbcUrl" prompt="conn_jdbc_mbtc_jdbcUrl?" promptNeeded="false" repositoryContextId="_EfLiIPdQEfCxsNZMbP7pnw" type="id_String" value="jdbc:oracle:thin:@//18.136.114.179:1521/mbtcDb" internalId="_KBjo2fdUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="conn_jdbc_mbtc_password" prompt="conn_jdbc_mbtc_password?" promptNeeded="false" repositoryContextId="_EfLiIPdQEfCxsNZMbP7pnw" type="id_Password" value="enc:system.encryption.key.v1:9MvcAxQzevNXpf50NHuek8LNmXNmUIDDI5UFjX+b6Do/ZtlAyPHUbQ==" internalId="_KBjo2vdUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="conn_jdbc_mbtc_userId" prompt="conn_jdbc_mbtc_userId?" promptNeeded="false" repositoryContextId="_EfLiIPdQEfCxsNZMbP7pnw" type="id_String" value="nvre_dev1" internalId="_KBjo2_dUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_hadoopConfSpecificJar" prompt="ctx_hadoop_mbtc_hadoopConfSpecificJar?" promptNeeded="false" repositoryContextId="_AV4bQPZwEfCMJs7iWvIt_w" type="id_String" value="" internalId="_KBjo3PdUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_NameNodeUri" prompt="ctx_hadoop_mbtc_NameNodeUri?" promptNeeded="false" repositoryContextId="_AV4bQPZwEfCMJs7iWvIt_w" type="id_String" value="&quot;hdfs://dao-cdp-poc-master1.novare.com.ph:8020&quot;" internalId="_KBjo3fdUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_ResourceManager" prompt="ctx_hadoop_mbtc_ResourceManager?" promptNeeded="false" repositoryContextId="_AV4bQPZwEfCMJs7iWvIt_w" type="id_String" value="&quot;dao-cdp-poc-master1.novare.com.ph:8032&quot;" internalId="_KBjo3vdUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_User" prompt="ctx_hadoop_mbtc_User?" promptNeeded="false" repositoryContextId="_AV4bQPZwEfCMJs7iWvIt_w" type="id_String" value="&quot;admin&quot;" internalId="_KBjo3_dUEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_yarn_app_mapreduce_am_resource_mb" prompt="ctx_hadoop_mbtc_HIVE_yarn_app_mapreduce_am_resource_mb?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="-Xmx1600m" internalId="_rCnHh_dXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_dfs_replication" prompt="ctx_hadoop_mbtc_HIVE_dfs_replication?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="1" internalId="_rCnHiPdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_io_file_buffer_size" prompt="ctx_hadoop_mbtc_HIVE_io_file_buffer_size?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="131072" internalId="_rCnHifdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_dfs_client_use_datanode_hostname" prompt="ctx_hadoop_mbtc_HIVE_dfs_client_use_datanode_hostname?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="true" internalId="_rCnHivdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_ipc_client_connect_timeout" prompt="ctx_hadoop_mbtc_HIVE_ipc_client_connect_timeout?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="20000" internalId="_rCnHi_dXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_fs_trash_interval" prompt="ctx_hadoop_mbtc_HIVE_fs_trash_interval?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="0" internalId="_rCnHjPdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_Database" prompt="ctx_hadoop_mbtc_HIVE_Database?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="" internalId="_rCnHjfdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_Password" prompt="ctx_hadoop_mbtc_HIVE_Password?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_Password" value="enc:system.encryption.key.v1:hJhx+LvBtYzf8gtAVIve18L1lr8iOojmWGFh+I26l2KExctwpe8xMQ==" internalId="_rCnHjvdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_Login" prompt="ctx_hadoop_mbtc_HIVE_Login?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="nvre_dev1" internalId="_rCnHj_dXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_Port" prompt="ctx_hadoop_mbtc_HIVE_Port?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="10000" internalId="_rCnHkPdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_Server" prompt="ctx_hadoop_mbtc_HIVE_Server?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="13.215.89.162" internalId="_rCnHkfdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_ipc_client_connect_max_retries" prompt="ctx_hadoop_mbtc_HIVE_ipc_client_connect_max_retries?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="10" internalId="_rCnHkvdXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_yarn_app_mapreduce_am_command_opts" prompt="ctx_hadoop_mbtc_HIVE_yarn_app_mapreduce_am_command_opts?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="-Xmx1600m" internalId="_rCnHk_dXEfCxsNZMbP7pnw"/>
+    <contextParameter comment="" name="ctx_hadoop_mbtc_HIVE_hiveAdditionalJDBCParameters" prompt="ctx_hadoop_mbtc_HIVE_hiveAdditionalJDBCParameters?" promptNeeded="false" repositoryContextId="_TldgcPZuEfCMJs7iWvIt_w" type="id_String" value="" internalId="_rCnHlPdXEfCxsNZMbP7pnw"/>
+  </context>
+  <parameters>
+    <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Trace" show="false"/>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx1024M&quot;,&quot;-Dsqoop.verbose=true&quot;,&quot;-Dhadoop.root.logger=INFO,console&quot;]}" show="false"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:ctBtxbI4g+WJWBJQ/hk8MkCPIfwV3zKdwhVyf0k8" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Program Files (x86)/Talend-Studio/studio/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="JDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Qh6kdA5rh7CjY5AjJZPUj/1DH8YP+h6TxWhJCep9" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+  </parameters>
+  <node componentName="tSqoopImport" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="280" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSqoopImport_1" show="false"/>
+    <elementParameter field="LABEL" name="DEPRECATION NOTE" value="Warning : - The tSqoopImport component is deprecated.&#xA;&#x9;&#x9;&#x9;"/>
+    <elementParameter field="LABEL" name="NOTE_COMMANDINE" value="The available options are based on Sqoop 1.4.4. If you use&#xA;&#x9;&#x9;&#x9;&#x9;an earlier version, read the Sqoop documentation in order to find&#xA;&#x9;&#x9;&#x9;&#x9;those which are not available.&#xA;&#x9;&#x9;&#x9;" show="false"/>
+    <elementParameter field="RADIO" name="USE_COMMANDLINE" value="false"/>
+    <elementParameter field="RADIO" name="USE_JAVAAPI" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="DISTRIBUTION" value="CLOUDERA"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="Cloudera_CDP7_1_1_0_565"/>
+    <elementParameter field="HADOOP_DISTRIBUTION" name="SQOOP" value=""/>
+    <elementParameter field="HADOOP_JARS_DIALOG" name="HADOOP_CUSTOM_JARS" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_YARN" value="false" show="false"/>
+    <elementParameter field="CHECK" name="CROSS_PLATFORM_SUBMISSION" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FS_DEFAULT_NAME" value="context.conn_hdfs_mbtc_namenode_uri"/>
+    <elementParameter field="TEXT" name="MAPRED_JOB_TRACKER" value="&quot;localhost:8021&quot;" show="false"/>
+    <elementParameter field="TEXT" name="RESOURCE_MANAGER" value="&quot;localhost:8032&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_SCHEDULER_ADDRESS" value="true" show="false"/>
+    <elementParameter field="TEXT" name="RESOURCEMANAGER_SCHEDULER_ADDRESS" value="&quot;localhost:8030&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_JOBHISTORY_ADDRESS" value="true" show="false"/>
+    <elementParameter field="TEXT" name="JOBHISTORY_ADDRESS" value="&quot;localhost:10020&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_STAGING_DIRECTORY" value="true" show="false"/>
+    <elementParameter field="TEXT" name="STAGING_DIRECTORY" value="&quot;/user&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_DATANODE_HOSTNAME" value="true"/>
+    <elementParameter field="CHECK" name="USE_KRB" value="false"/>
+    <elementParameter field="TEXT" name="NAMENODE_PRINCIPAL" value="&quot;nn/_HOST@EXAMPLE.COM&quot;" show="false"/>
+    <elementParameter field="TEXT" name="JOBTRACKER_PRINCIPAL" value="&quot;jt/_HOST@EXAMPLE.COM&quot;" show="false"/>
+    <elementParameter field="TEXT" name="RESOURCEMANAGER_PRINCIPAL" value="&quot;yarn/_HOST@EXAMPLE.COM&quot;" show="false"/>
+    <elementParameter field="TEXT" name="JOBHISTORY_PRINCIPAL" value="&quot;mapred/_HOST@EXAMPLE.COM&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_KEYTAB" value="false" show="false"/>
+    <elementParameter field="TEXT" name="PRINCIPAL" value="&quot;hdfs&quot;" show="false"/>
+    <elementParameter field="FILE" name="KEYTAB_PATH" value="&quot;/tmp/hdfs.headless.keytab&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_MAPRTICKET" value="false" show="false"/>
+    <elementParameter field="TEXT" name="MAPRTICKET_USERNAME" value="context.conn_jdbc_mbtc_userId" show="false"/>
+    <elementParameter field="PASSWORD" name="MAPRTICKET_PASSWORD" value="enc:system.encryption.key.v1:VNopfPk4I4uCDhpx7FEVlPSiSmF4YI9o+5XXT1ge" show="false"/>
+    <elementParameter field="TEXT" name="MAPRTICKET_CLUSTER" value="&quot;demo.mapr.com&quot;" show="false"/>
+    <elementParameter field="TEXT" name="MAPRTICKET_DURATION" value="86400L" show="false"/>
+    <elementParameter field="TEXT" name="HADOOP_USER" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="JDBC_PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="JDBC_PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_FEw7cPdQEfCxsNZMbP7pnw" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION" value="context.conn_jdbc_mbtc_jdbcUrl"/>
+    <elementParameter field="TEXT" name="USERNAME" value="context.conn_jdbc_mbtc_userId"/>
+    <elementParameter field="CHECK" name="PASSWORD_STORED_IN_FILE" value="false"/>
+    <elementParameter field="TEXT" name="PASSWORD_FILE" value="&quot;file:///&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:VsXuZ5JE8d84Y59aQ/uV+Yyu0yjNXBTlvwS7LbFMm31CEBp54bPAE8HqL+A5z3XTsfqa3IwpWFZkEuU="/>
+    <elementParameter field="TABLE" name="DRIVER_JAR">
+      <elementValue elementRef="JAR_NAME" value="mvn:com.oracle.jdbc/ojdbc8/19.3.0.0/jar" id="0"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="context.conn_jdbc_mbtc_jdbcClass"/>
+    <elementParameter field="TEXT" name="TABLE" value="&quot;table_name&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="FILE_FORMAT" value="parquetfile"/>
+    <elementParameter field="CHECK" name="DELETE_TARGET_DIR" value="false"/>
+    <elementParameter field="CHECK" name="APPEND" value="true"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="DEFINE_HADOOP_CODEC" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HADOOP_CODEC" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIRECT" value="false"/>
+    <elementParameter field="CHECK" name="DEFINE_DIRECT_SPLIT_SIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DIRECT_SPLIT_SIZE" value="&quot;1024&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_COLUMNS" value="false" show="false"/>
+    <elementParameter field="TABLE" name="COLUMNS" show="false"/>
+    <elementParameter field="CHECK" name="USE_WHERE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="WHERE" value="&quot;id>0&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_QUERY" value="true"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from MBTC.CUSTOMER_360_VIEW where $CONDITIONS&quot;"/>
+    <elementParameter field="LABEL" name="QUERY_LABEL" value="When importing a free-form query, you must specify a&#xA;&#x9;&#x9;&#x9;&#x9;destination directory. If you want to import the results of a query&#xA;&#x9;&#x9;&#x9;&#x9;in parallel, you must select a splitting column with --split-by&#xA;&#x9;&#x9;&#x9;"/>
+    <elementParameter field="CHECK" name="USE_TARGET" value="false" show="false"/>
+    <elementParameter field="TEXT" name="TARGET" value="&quot;/dev/raw/customer360/ingest_date=19000101&quot;"/>
+    <elementParameter field="CHECK" name="USE_SPLIT" value="true"/>
+    <elementParameter field="TEXT" name="SPLIT" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_MAPPERS" value="true"/>
+    <elementParameter field="TEXT" name="MAPPERS" value="&quot;1&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_LOG" value="true"/>
+    <elementParameter field="CHECK" name="VERBOSE" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="MYSQL_DELIMITERS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DEFINE_JAVA_MAPPING" value="false"/>
+    <elementParameter field="TABLE" name="JAVA_TYPE_MAPPING" show="false"/>
+    <elementParameter field="CHECK" name="DEFINE_HIVE_MAPPING" value="false"/>
+    <elementParameter field="TABLE" name="HIVE_TYPE_MAPPING" show="false"/>
+    <elementParameter field="TABLE" name="ADDITIONAL_ARGUMENTS" show="false"/>
+    <elementParameter field="TABLE" name="ADDITIONAL_JAVA"/>
+    <elementParameter field="CHECK" name="USE_SPEED_PARALLEL" value="false" show="false"/>
+    <elementParameter field="LABEL" name="NOTE_CUSTOMER" value="This function only applies for HDP and Teradata" show="false"/>
+    <elementParameter field="TABLE" name="SPECIFIC_PARAMS" show="false"/>
+    <elementParameter field="CHECK" name="USE_ADDITION_PARAM" value="false" show="false"/>
+    <elementParameter field="TEXT" name="SPECIFIC_ADDITION_PARAM" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="HADOOP_ADVANCED_PROPERTIES"/>
+    <elementParameter field="CHECK" name="SET_MEMORY" value="false"/>
+    <elementParameter field="TEXT" name="MAPREDUCE_MAP_MEMORY_MB" value="&quot;1024&quot;" show="false"/>
+    <elementParameter field="TEXT" name="MAPREDUCE_REDUCE_MEMORY_MB" value="&quot;1024&quot;" show="false"/>
+    <elementParameter field="TEXT" name="YARN_APP_MAPREDUCE_AM_RESOURCE_MB" value="&quot;1024&quot;" show="false"/>
+    <elementParameter field="TEXT" name="CLASSPATH_SEPARATOR" value="&quot;:&quot;"/>
+    <elementParameter field="CHECK" name="SET_MAPR_HOME_DIR" value="false" show="false"/>
+    <elementParameter field="TEXT" name="MAPR_HOME_DIR" value="&quot;/opt/mapr&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HADOOP_LOGIN" value="&quot;kerberos&quot;" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSqoopImport_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
+  </subjob>
+</talendfile:ProcessType>

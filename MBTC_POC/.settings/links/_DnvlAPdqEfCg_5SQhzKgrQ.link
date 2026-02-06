@@ -1,0 +1,17 @@
+{
+  "itemId" : "_DnvlAPdqEfCg_5SQhzKgrQ",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_7b3c8OwqEfC3YPYsXBPNOA",
+    "parameterList" : [ {
+      "id" : "_LtVwsPf6EfCVZsdSWz8YYw",
+      "name" : "job_server_file_dir"
+    }, {
+      "id" : "_LtVwsff6EfCVZsdSWz8YYw",
+      "name" : "target_table"
+    }, {
+      "id" : "_LtVwsvf6EfCVZsdSWz8YYw",
+      "name" : "target_schema"
+    } ]
+  } ]
+}

@@ -1,0 +1,174 @@
+{
+  "itemId" : "_Reu-UPaLEfCMJs7iWvIt_w",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_LodxkPWmEfCzdeB6aeN2sw",
+    "parameterList" : [ {
+      "id" : "_Lo52cfWmEfCzdeB6aeN2sw",
+      "name" : "conn_hdfs_mbtc_namenode_uri"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_EfLiIPdQEfCxsNZMbP7pnw",
+    "parameterList" : [ {
+      "id" : "_EfsfgvdQEfCxsNZMbP7pnw",
+      "name" : "conn_jdbc_mbtc_jdbcClass"
+    }, {
+      "id" : "_EfsfgfdQEfCxsNZMbP7pnw",
+      "name" : "conn_jdbc_mbtc_jdbcUrl"
+    }, {
+      "id" : "_Efsfg_dQEfCxsNZMbP7pnw",
+      "name" : "conn_jdbc_mbtc_password"
+    }, {
+      "id" : "_EfsfhPdQEfCxsNZMbP7pnw",
+      "name" : "conn_jdbc_mbtc_userId"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_AV4bQPZwEfCMJs7iWvIt_w",
+    "parameterList" : [ {
+      "id" : "_AWSD5vZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_hadoopConfSpecificJar"
+    }, {
+      "id" : "_AWSD6PZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_NameNodeUri"
+    }, {
+      "id" : "_AWSD4_ZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_ResourceManager"
+    }, {
+      "id" : "_AWSD5PZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_User"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_TldgcPZuEfCMJs7iWvIt_w",
+    "parameterList" : [ {
+      "id" : "_Tl4XO_ZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_yarn_app_mapreduce_am_resource_mb"
+    }, {
+      "id" : "_Tl4XPfZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_dfs_replication"
+    }, {
+      "id" : "_Tl4XP_ZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_io_file_buffer_size"
+    }, {
+      "id" : "_Tl4XOPZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_dfs_client_use_datanode_hostname"
+    }, {
+      "id" : "_Tl4XOfZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_ipc_client_connect_timeout"
+    }, {
+      "id" : "_Tl4XPvZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_fs_trash_interval"
+    }, {
+      "id" : "_Tl4XNPZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_Database"
+    }, {
+      "id" : "_Tl4XNfZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_Password"
+    }, {
+      "id" : "_Tl4XMvZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_Login"
+    }, {
+      "id" : "_Tl4XNvZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_Port"
+    }, {
+      "id" : "_Tl4XN_ZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_Server"
+    }, {
+      "id" : "_Tl4XOvZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_ipc_client_connect_max_retries"
+    }, {
+      "id" : "_Tl4XPPZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_yarn_app_mapreduce_am_command_opts"
+    }, {
+      "id" : "_Tl4XM_ZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_hiveAdditionalJDBCParameters"
+    } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_LodxkPWmEfCzdeB6aeN2sw",
+    "parameterList" : [ {
+      "id" : "_Lo52cfWmEfCzdeB6aeN2sw",
+      "name" : "conn_hdfs_mbtc_namenode_uri"
+    } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_EfLiIPdQEfCxsNZMbP7pnw",
+    "parameterList" : [ {
+      "id" : "_EfsfgvdQEfCxsNZMbP7pnw",
+      "name" : "conn_jdbc_mbtc_jdbcClass"
+    }, {
+      "id" : "_EfsfgfdQEfCxsNZMbP7pnw",
+      "name" : "conn_jdbc_mbtc_jdbcUrl"
+    }, {
+      "id" : "_Efsfg_dQEfCxsNZMbP7pnw",
+      "name" : "conn_jdbc_mbtc_password"
+    }, {
+      "id" : "_EfsfhPdQEfCxsNZMbP7pnw",
+      "name" : "conn_jdbc_mbtc_userId"
+    } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_AV4bQPZwEfCMJs7iWvIt_w",
+    "parameterList" : [ {
+      "id" : "_AWSD5vZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_hadoopConfSpecificJar"
+    }, {
+      "id" : "_AWSD6PZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_NameNodeUri"
+    }, {
+      "id" : "_AWSD4_ZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_ResourceManager"
+    }, {
+      "id" : "_AWSD5PZwEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_User"
+    } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_TldgcPZuEfCMJs7iWvIt_w",
+    "parameterList" : [ {
+      "id" : "_Tl4XO_ZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_yarn_app_mapreduce_am_resource_mb"
+    }, {
+      "id" : "_Tl4XPfZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_dfs_replication"
+    }, {
+      "id" : "_Tl4XP_ZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_io_file_buffer_size"
+    }, {
+      "id" : "_Tl4XOPZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_dfs_client_use_datanode_hostname"
+    }, {
+      "id" : "_Tl4XOfZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_ipc_client_connect_timeout"
+    }, {
+      "id" : "_Tl4XPvZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_fs_trash_interval"
+    }, {
+      "id" : "_Tl4XNPZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_Database"
+    }, {
+      "id" : "_Tl4XNfZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_Password"
+    }, {
+      "id" : "_Tl4XMvZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_Login"
+    }, {
+      "id" : "_Tl4XNvZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_Port"
+    }, {
+      "id" : "_Tl4XN_ZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_Server"
+    }, {
+      "id" : "_Tl4XOvZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_ipc_client_connect_max_retries"
+    }, {
+      "id" : "_Tl4XPPZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_yarn_app_mapreduce_am_command_opts"
+    }, {
+      "id" : "_Tl4XM_ZuEfCMJs7iWvIt_w",
+      "name" : "ctx_hadoop_mbtc_HIVE_hiveAdditionalJDBCParameters"
+    } ]
+  } ]
+}

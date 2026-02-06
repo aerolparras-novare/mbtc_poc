@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_Lo52cPWmEfCzdeB6aeN2sw" confirmationNeeded="false" hide="false" name="dev">
+  <contextParameter xmi:id="_Lo52cfWmEfCzdeB6aeN2sw" comment="" name="conn_hdfs_mbtc_namenode_uri" prompt="conn_hdfs_mbtc_namenode_uri?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;hdfs://dao-cdp-poc-master1.novare.com.ph:8020&quot;"/>
+</talendfile:ContextType>
