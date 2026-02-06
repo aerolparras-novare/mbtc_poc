@@ -1,0 +1,61 @@
+{
+  "itemId" : "_YYgcwPfvEfCVZsdSWz8YYw",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_kyD8APdCEfCAt6AmyhhERg",
+    "parameterList" : [ {
+      "id" : "_kyZ6SvdCEfCAt6AmyhhERg",
+      "name" : "conn_hadoop_cluster_NameNodeUri"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_C6ROcPKdEfCNScNTrRRCvQ",
+    "parameterList" : [ {
+      "id" : "_C6ssR_KdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_mbtc_target_hiveAdditionalJDBCParameters"
+    }, {
+      "id" : "_C6ssRvKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_mbtc_target_Database"
+    }, {
+      "id" : "_C6ssQ_KdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_mbtc_target_Password"
+    }, {
+      "id" : "_C6ssQvKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_mbtc_target_Server"
+    }, {
+      "id" : "_C6ssRPKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_mbtc_target_HiveMetastorePort"
+    }, {
+      "id" : "_C6ssRfKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_mbtc_target_Port"
+    }, {
+      "id" : "_C6ssQfKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_mbtc_target_Login"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_vxyFQO9oEfCcepb0inUXkA",
+    "parameterList" : [ {
+      "id" : "_HyE1ge9pEfCcepb0inUXkA",
+      "name" : "conn_mbtc_load_table_Schema"
+    }, {
+      "id" : "_HyE1hu9pEfCcepb0inUXkA",
+      "name" : "conn_mbtc_load_table_AdditionalParams"
+    }, {
+      "id" : "_HyE1hO9pEfCcepb0inUXkA",
+      "name" : "conn_mbtc_load_table_ServiceName"
+    }, {
+      "id" : "_HyE1gO9pEfCcepb0inUXkA",
+      "name" : "conn_mbtc_load_table_Password"
+    }, {
+      "id" : "_HyE1gu9pEfCcepb0inUXkA",
+      "name" : "conn_mbtc_load_table_Server"
+    }, {
+      "id" : "_HyE1he9pEfCcepb0inUXkA",
+      "name" : "conn_mbtc_load_table_Login"
+    }, {
+      "id" : "_HyE1g-9pEfCcepb0inUXkA",
+      "name" : "conn_mbtc_load_table_Port"
+    } ]
+  } ]
+}
