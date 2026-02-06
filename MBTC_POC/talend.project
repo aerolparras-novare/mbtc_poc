@@ -4,4 +4,10 @@
     <migrationTask xmi:id="_AFbCIOqjEfC0ItbnNTsbtg" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
   </TalendProperties:Project>
   <TalendProperties:User xmi:id="_AFQDAeqjEfC0ItbnNTsbtg" login="aerol.parras@mdinfr" firstName="Tom" lastName="Parras" type="DQ"/>
+  <TalendProperties:User xmi:id="_rQ5bUwMDEfGLFovwj43Wtg" login="john.soriano@mdinfr" firstName="JP" lastName="Soriano" type="DQ"/>
+  <TalendProperties:User xmi:id="_rQ5bVAMDEfGLFovwj43Wtg" login="angela.infortuno@mdinfr" firstName="Ange" lastName="Infortuno" type="DQ"/>
+  <TalendProperties:User xmi:id="_rQ5bVQMDEfGLFovwj43Wtg" login="joshua.lopez@mdinfr" firstName="Albert" lastName="Lopez" type="DQ"/>
+  <TalendProperties:User xmi:id="_rQ6AcAMDEfGLFovwj43Wtg" login="samith.shetty@mdinfr" firstName="Samith" lastName="Shetty" type="DQ"/>
+  <TalendProperties:User xmi:id="_rQ6AcQMDEfGLFovwj43Wtg" login="josel.dona@mdinfr" firstName="Josel" lastName="Dona" type="DQ"/>
+  <TalendProperties:User xmi:id="_rQ6AcgMDEfGLFovwj43Wtg" login="clarrissa.gacela@mdinfr" firstName="Clarrissa" lastName="Gacela" type="DQ"/>
 </xmi:XMI>
