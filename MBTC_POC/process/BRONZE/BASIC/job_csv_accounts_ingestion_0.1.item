@@ -18,8 +18,8 @@
     <contextParameter comment="" name="filename" prompt="filename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="accounts" internalId="_hbySC_dpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="file_extension" prompt="file_extension?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=".csv" internalId="_baa08ff3EfCVZsdSWz8YYw"/>
     <contextParameter comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="bronze" internalId="_hbySDfdpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="accounts_sftp" internalId="_hbySDvdpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="table_location" prompt="table_location?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/bronze/accounts_sftp/" internalId="_1zQ2kPdrEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="accounts_ange" internalId="_hbySDvdpEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="table_location" prompt="table_location?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/bronze/accounts_ange/" internalId="_1zQ2kPdrEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="create_table_schema" prompt="create_table_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="account_id string, customer_id string, account_type string, currency string, current_balance string, created_at string" internalId="_1zQ2kfdrEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="select_columns" prompt="select_columns?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="account_id, customer_id , account_type , currency, current_balance, created_at" internalId="_hbySCfdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="source_count" prompt="source_count?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="" internalId="_KUaPUPeAEfCg_5SQhzKgrQ"/>
@@ -963,7 +963,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="880" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="context.source_count = ((Integer)globalMap.get(&quot;tFileInputDelimited_1_NB_LINE&quot;));"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="context.source_count = ((Integer)globalMap.get(&quot;tFileInputDelimited_1_NB_LINE&quot;));&#xD;&#xA;System.out.println(&quot;Source Count captured in Context: &quot; + context.source_count);"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="setSrcCount"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>

@@ -16,7 +16,7 @@
     <contextParameter comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="silver" internalId="_hbySDfdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="transactions_ange" internalId="_hbySDvdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="table_location" prompt="table_location?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/silver/transactions_ange/" internalId="_1zQ2kPdrEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="create_table_schema" prompt="create_table_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="transaction_id integer, account_id integer, txn_type string, amount float, txn_date date, merchant string, status string" internalId="_1zQ2kfdrEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="create_table_schema" prompt="create_table_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="transaction_id string, account_id integer, txn_type string, amount float, txn_date date, merchant string, status string" internalId="_1zQ2kfdrEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="source_count" prompt="source_count?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="" internalId="_rCbFkPfsEfCVZsdSWz8YYw"/>
     <contextParameter comment="" name="target_count" prompt="target_count?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_rCbFkffsEfCVZsdSWz8YYw"/>
     <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/opt/talend/talend-runtime/data/tmp/development-files/" internalId="_7LpgAPf5EfCVZsdSWz8YYw"/>
@@ -307,7 +307,7 @@
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
   </node>
-  <node componentName="joblet_util_logcatcher" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="1240" posY="40" sizeX="120" sizeY="40">
+  <node componentName="joblet_util_logcatcher" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="1080" posY="40" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="joblet_util_logcatcher_1"/>
     <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
@@ -321,7 +321,7 @@
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
   </node>
-  <node componentName="joblet_compute_statistics_tgt" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1160" sizeX="120" sizeY="40">
+  <node componentName="joblet_compute_statistics_tgt" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="80" posY="1200" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="joblet_compute_statistics_1"/>
     <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
@@ -340,7 +340,7 @@
       <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="560" posY="1160" sizeX="120" sizeY="40">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1200" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2" show="false"/>
     <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="if (input_row.target_count != null) {&#xD;&#xA;&#x9; context.target_count = input_row.target_count;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;//Optional: Print to console for debugging&#xD;&#xA;System.out.println(&quot;Target Count captured in Context: &quot; + context.target_count);&#xD;&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
@@ -350,7 +350,7 @@
       <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1040" posY="840">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="880">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Bronze Layer Activity for table, &quot; + context.target_schema + &quot;.&quot; + context.target_table"/>
     <elementParameter field="TEXT" name="CODE" value="3708"/>
@@ -359,7 +359,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_2"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="840" posY="1160">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="1200">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Checking Target Count for table, &quot; + context.target_schema + &quot;.&quot; + context.target_table"/>
     <elementParameter field="TEXT" name="CODE" value="3707"/>
@@ -389,7 +389,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="720" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//if (input_row.source_count != null) {&#xD;&#xA;&#x9;//int source_count = Integer.parseInt(input_row.source_count);&#xD;&#xA;&#x9; context.source_count = input_row.source_count;&#xD;&#xA;//&#x9;}&#xD;&#xA;&#x9;//Optional: Print to console for debugging&#xD;&#xA;System.out.println(&quot;Source Count captured in Context: &quot; + input_row.source_count);&#xD;&#xA;System.out.println(&quot;Source Count captured in Context: &quot; + context.source_count);"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//if (input_row.source_count != null) {&#xD;&#xA;&#x9;//int source_count = Integer.parseInt(input_row.source_count);&#xD;&#xA;&#x9; context.source_count = input_row.source_count;&#xD;&#xA;//&#x9;}&#xD;&#xA;&#x9;//Optional: Print to console for debugging&#xD;&#xA;System.out.println(&quot;Source Count captured in Context: &quot; + context.source_count);"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="getSourceCount"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -397,7 +397,7 @@
       <column comment="" key="false" length="-1" name="source_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="920" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="960" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_1" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -506,7 +506,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_1"/>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="840" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="880" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_2" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -570,7 +570,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;INSERT OVERWRITE TABLE `&quot;+context.target_schema+&quot;`.`&quot;+context.target_table+&quot;` PARTITION (ingest_date='&quot;+(String) globalMap.get(&quot;ingest_date&quot;)+&quot;')&#xD;&#xA;&#x9;SELECT&#xD;&#xA;&#x9;&#x9;CAST(transaction_id AS INT) AS transaction_id, &#xD;&#xA;&#x9;&#x9;CAST(account_id AS INT) AS account_id, &#xD;&#xA;&#x9;&#x9;txn_type, &#xD;&#xA;&#x9;&#x9;CAST(amount AS FLOAT) AS amount, &#xD;&#xA;&#x9;&#x9;TO_DATE(FROM_UNIXTIME(CAST(txn_date / 1000 AS  BIGINT))) AS txn_date, &#xD;&#xA;&#x9;&#x9;merchant, &#xD;&#xA;&#x9;&#x9;status,&#xD;&#xA;&#x9;&#x9;'&quot; +(String) globalMap.get(&quot;source_system&quot;) + &quot;' AS `_source_system`,&#xD;&#xA;        FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`,&#xD;&#xA;        FROM_UNIXTIME(UNIX_TIMESTAMP('9999-12-31 23:59:59'),'yyyy-MM-dd HH:mm:ss') AS `_date_end`,&#xD;&#xA;&#x9;&#x9;FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;&#x9;FROM `&quot;+context.source_schema+&quot;`.`&quot;+context.target_table+&quot;` &#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;INSERT OVERWRITE TABLE `&quot;+context.target_schema+&quot;`.`&quot;+context.target_table+&quot;` PARTITION (ingest_date='&quot;+(String) globalMap.get(&quot;ingest_date&quot;)+&quot;')&#xD;&#xA;&#x9;SELECT&#xD;&#xA;&#x9;&#x9;transaction_id, &#xD;&#xA;&#x9;&#x9;CAST(account_id AS INT) AS account_id, &#xD;&#xA;&#x9;&#x9;txn_type, &#xD;&#xA;&#x9;&#x9;CAST(amount AS FLOAT) AS amount, &#xD;&#xA;&#x9;&#x9;txn_date, &#xD;&#xA;&#x9;&#x9;merchant, &#xD;&#xA;&#x9;&#x9;status,&#xD;&#xA;&#x9;&#x9;'&quot; +(String) globalMap.get(&quot;source_system&quot;) + &quot;' AS `_source_system`,&#xD;&#xA;        FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`,&#xD;&#xA;        FROM_UNIXTIME(UNIX_TIMESTAMP('9999-12-31 23:59:59'),'yyyy-MM-dd HH:mm:ss') AS `_date_end`,&#xD;&#xA;&#x9;&#x9;FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;&#x9;FROM `&quot;+context.source_schema+&quot;`.`&quot;+context.target_table+&quot;` &#xD;&#xA;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -606,7 +606,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="840" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="880" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_3" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -706,7 +706,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="1000" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1040" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_4" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -770,7 +770,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;WITH source&#xD;&#xA;AS ( &#xD;&#xA;&#x9;SELECT &#xD;&#xA;        CAST(transaction_id AS INT) AS transaction_id,&#xD;&#xA; &#x9;&#x9;CAST(account_id AS INT) AS account_id,&#xD;&#xA;        txn_type, &#xD;&#xA;        CAST(amount AS FLOAT) AS amount, &#xD;&#xA;        TO_DATE(FROM_UNIXTIME(CAST(txn_date / 1000 AS  BIGINT))) AS txn_date, &#xD;&#xA;        merchant,&#xD;&#xA;&#x9;&#x9;status,&#xD;&#xA;        ingest_date &#xD;&#xA;    FROM  `&quot;+context.source_schema+&quot;`.`&quot;+context.target_table+&quot;` &#xD;&#xA;&#xD;&#xA;&#x9;UNION ALL&#xD;&#xA;&#xD;&#xA;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;transaction_id,&#xD;&#xA;        account_id, &#xD;&#xA;        txn_type, &#xD;&#xA;        amount, &#xD;&#xA;        txn_date, &#xD;&#xA;        merchant, &#xD;&#xA;&#x9;&#x9;status,&#xD;&#xA;        ingest_date &#xD;&#xA;    FROM `&quot;+context.target_schema+&quot;`.`&quot;+context.target_table+ &quot;`&#xD;&#xA;)&#xD;&#xA;INSERT OVERWRITE TABLE `&quot;+context.target_schema+&quot;`.`&quot;+context.target_table+&quot;`  PARTITION (ingest_date='&quot;+(String) globalMap.get(&quot;ingest_date&quot;)+&quot;')&#xD;&#xA;&#x9;SELECT&#xD;&#xA;        transaction_id,&#xD;&#xA;        account_id, &#xD;&#xA;        txn_type, &#xD;&#xA;        amount, &#xD;&#xA;        txn_date, &#xD;&#xA;        merchant, &#xD;&#xA;&#x9;&#x9;status,&#xD;&#xA;&#x9;&#x9;'&quot; +(String) globalMap.get(&quot;source_system&quot;) + &quot;' AS `_source_system`,&#xD;&#xA;        FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`,&#xD;&#xA;        FROM_UNIXTIME(UNIX_TIMESTAMP('9999-12-31 23:59:59'),'yyyy-MM-dd HH:mm:ss') AS `_date_end`,&#xD;&#xA;&#x9;&#x9;FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;&#x9;FROM&#xD;&#xA;        (SELECT&#xD;&#xA;&#x9;&#x9;&#x9;&quot; + context.select_columns + &quot;,&#xD;&#xA;&#x9;&#x9;&#x9;ROW_NUMBER() OVER (PARTITION BY &quot;+context.primary_key+&quot; ORDER BY &quot;+context.partition_column+&quot; DESC) rank&#xD;&#xA;         FROM source ) t1&#xD;&#xA;&#x9;WHERE t1.rank = 1&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;WITH source&#xD;&#xA;AS ( &#xD;&#xA;&#x9;SELECT &#xD;&#xA;        transaction_id,&#xD;&#xA; &#x9;&#x9;CAST(account_id AS INT) AS account_id,&#xD;&#xA;        txn_type, &#xD;&#xA;        CAST(amount AS FLOAT) AS amount, &#xD;&#xA;        TO_DATE(txn_date) AS txn_date, &#xD;&#xA;        merchant,&#xD;&#xA;&#x9;&#x9;status,&#xD;&#xA;        ingest_date &#xD;&#xA;    FROM  `&quot;+context.source_schema+&quot;`.`&quot;+context.target_table+&quot;` &#xD;&#xA;&#xD;&#xA;&#x9;UNION ALL&#xD;&#xA;&#xD;&#xA;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;transaction_id,&#xD;&#xA;        account_id, &#xD;&#xA;        txn_type, &#xD;&#xA;        amount, &#xD;&#xA;        txn_date, &#xD;&#xA;        merchant, &#xD;&#xA;&#x9;&#x9;status,&#xD;&#xA;        ingest_date &#xD;&#xA;    FROM `&quot;+context.target_schema+&quot;`.`&quot;+context.target_table+ &quot;`&#xD;&#xA;)&#xD;&#xA;INSERT OVERWRITE TABLE `&quot;+context.target_schema+&quot;`.`&quot;+context.target_table+&quot;`  PARTITION (ingest_date='&quot;+(String) globalMap.get(&quot;ingest_date&quot;)+&quot;')&#xD;&#xA;&#x9;SELECT&#xD;&#xA;        transaction_id,&#xD;&#xA;        account_id, &#xD;&#xA;        txn_type, &#xD;&#xA;        amount, &#xD;&#xA;        txn_date, &#xD;&#xA;        merchant, &#xD;&#xA;&#x9;&#x9;status,&#xD;&#xA;&#x9;&#x9;'&quot; +(String) globalMap.get(&quot;source_system&quot;) + &quot;' AS `_source_system`,&#xD;&#xA;        FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`,&#xD;&#xA;        FROM_UNIXTIME(UNIX_TIMESTAMP('9999-12-31 23:59:59'),'yyyy-MM-dd HH:mm:ss') AS `_date_end`,&#xD;&#xA;&#x9;&#x9;FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;&#x9;FROM&#xD;&#xA;        (SELECT&#xD;&#xA;&#x9;&#x9;&#x9;&quot; + context.select_columns + &quot;,&#xD;&#xA;&#x9;&#x9;&#x9;ROW_NUMBER() OVER (PARTITION BY &quot;+context.primary_key+&quot; ORDER BY &quot;+context.partition_column+&quot; DESC) rank&#xD;&#xA;         FROM source ) t1&#xD;&#xA;&#x9;WHERE t1.rank = 1&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -806,7 +806,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="1000" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="1040" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_6" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -906,7 +906,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1040" posY="1000">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="1040">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_4" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Bronze Layer Activity for table, &quot; + context.target_schema + &quot;.&quot; + context.target_table"/>
     <elementParameter field="TEXT" name="CODE" value="3708"/>
@@ -945,10 +945,10 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_1" offsetLabelX="10" offsetLabelY="-13" outputId="1" source="tJavaRow_1" target="tHiveRow_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5" show="false"/>
+  <connection connectorName="TRIGGER_OUTPUT_1" label="OnSubjobOk (TRIGGER_OUTPUT_1)" lineStyle="1" metaname="joblet_compute_statistics_src_1" offsetLabelX="0" offsetLabelY="0" source="joblet_compute_statistics_src_1" target="tHiveRow_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk7" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tJavaRow_1" target="tWarn_1">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tWarn_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk8" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tHiveRow_1" offsetLabelX="0" offsetLabelY="0" source="tHiveRow_1" target="joblet_compute_statistics_1">
