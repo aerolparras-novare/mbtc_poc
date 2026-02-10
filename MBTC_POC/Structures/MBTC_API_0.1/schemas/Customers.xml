@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='150' id='1' V150='13' creationTimestamp='0x19bdda8ac95' V1='4' name='Customers' incarnation='18'>
+<root t='150' id='1' V150='13' creationTimestamp='0x19bdda8ac95' V1='4' name='Customers' incarnation='19'>
   <rootElem t='167' id='2' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Customers'>
     <structNode t='150' idref='1'/>
     <child t='167' id='3' V167='21' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUSTOMERS'>
       <structNode t='150' idref='1'/>
-      <child t='167' id='4' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='20' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUSTOMER_ID'>
+      <child t='167' id='4' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CUSTOMER_ID'>
         <structNode t='150' idref='1'/>
       </child>
       <child t='167' id='5' V167='21' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='FIRST_NAME'>
