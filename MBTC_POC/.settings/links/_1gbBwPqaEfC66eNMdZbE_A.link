@@ -5,22 +5,22 @@
     "repoId" : "_C6ROcPKdEfCNScNTrRRCvQ",
     "parameterList" : [ {
       "id" : "_C6ssR_KdEfCNScNTrRRCvQ",
-      "name" : "conn_hive_mbtc_target_hiveAdditionalJDBCParameters"
+      "name" : "conn_hive_target_table_AdditionalJDBCParameters"
     }, {
       "id" : "_C6ssRvKdEfCNScNTrRRCvQ",
-      "name" : "conn_hive_mbtc_target_Database"
+      "name" : "conn_hive_target_table_Database"
     }, {
       "id" : "_C6ssQ_KdEfCNScNTrRRCvQ",
-      "name" : "conn_hive_mbtc_target_Password"
+      "name" : "conn_hive_target_table_Password"
     }, {
       "id" : "_C6ssQvKdEfCNScNTrRRCvQ",
-      "name" : "conn_hive_mbtc_target_Server"
+      "name" : "conn_hive_target_table_Server"
     }, {
       "id" : "_C6ssRfKdEfCNScNTrRRCvQ",
-      "name" : "conn_hive_mbtc_target_Port"
+      "name" : "conn_hive_target_table_Port"
     }, {
       "id" : "_C6ssQfKdEfCNScNTrRRCvQ",
-      "name" : "conn_hive_mbtc_target_Login"
+      "name" : "conn_hive_target_table_Login"
     } ]
   }, {
     "contextName" : "Default",
@@ -37,25 +37,25 @@
     "repoId" : "_vxyFQO9oEfCcepb0inUXkA",
     "parameterList" : [ {
       "id" : "_HyE1ge9pEfCcepb0inUXkA",
-      "name" : "conn_mbtc_load_table_Schema"
+      "name" : "conn_oracle_source_table_Schema"
     }, {
       "id" : "_HyE1hu9pEfCcepb0inUXkA",
-      "name" : "conn_mbtc_load_table_AdditionalParams"
+      "name" : "conn_oracle_source_table__AdditionalParams"
     }, {
       "id" : "_HyE1hO9pEfCcepb0inUXkA",
-      "name" : "conn_mbtc_load_table_ServiceName"
+      "name" : "conn_oracle_source_table_ServiceName"
     }, {
       "id" : "_HyE1gu9pEfCcepb0inUXkA",
-      "name" : "conn_mbtc_load_table_Server"
+      "name" : "conn_oracle_source_table_Server"
     }, {
       "id" : "_HyE1he9pEfCcepb0inUXkA",
-      "name" : "conn_mbtc_load_table_Login"
+      "name" : "conn_oracle_source_table_Login"
     }, {
       "id" : "_HyE1gO9pEfCcepb0inUXkA",
-      "name" : "conn_mbtc_load_table_Password"
+      "name" : "conn_oracle_source_table_Password"
     }, {
       "id" : "_HyE1g-9pEfCcepb0inUXkA",
-      "name" : "conn_mbtc_load_table_Port"
+      "name" : "conn_oracle_source_table_Port"
     } ]
   }, {
     "contextName" : "Default",

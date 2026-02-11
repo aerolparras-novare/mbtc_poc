@@ -2,13 +2,13 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard" framework="">
   <context confirmationNeeded="false" hide="false" name="Default">
     <contextParameter comment="" name="conn_hadoop_cluster_NameNodeUri" prompt="conn_hadoop_cluster_NameNodeUri?" promptNeeded="false" repositoryContextId="_kyD8APdCEfCAt6AmyhhERg" type="id_String" value="hdfs://dao-cdp-poc-master1.novare.com.ph:8020" internalId="_hbwc0PdpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="conn_hive_mbtc_target_hiveAdditionalJDBCParameters" prompt="conn_hive_mbtc_target_hiveAdditionalJDBCParameters?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="" internalId="_hbxD4PdpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="conn_hive_mbtc_target_Database" prompt="conn_hive_mbtc_target_Database?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="" internalId="_hbxD4fdpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="conn_hive_mbtc_target_Password" prompt="conn_hive_mbtc_target_Password?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_Password" value="enc:system.encryption.key.v1:7ArZ80KrTHrV2e5CeaWHoghG0MBQvKntAa9PJ75FwaW/jgIqyQtlTA==" internalId="_hbxq8PdpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="conn_hive_mbtc_target_Server" prompt="conn_hive_mbtc_target_Server?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="13.215.89.162" internalId="_hbxq8fdpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="conn_hive_mbtc_target_HiveMetastorePort" prompt="conn_hive_mbtc_target_HiveMetastorePort?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="9083" internalId="_hbxq8vdpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="conn_hive_mbtc_target_Port" prompt="conn_hive_mbtc_target_Port?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="10000" internalId="_hbxq8_dpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="conn_hive_mbtc_target_Login" prompt="conn_hive_mbtc_target_Login?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="nvre_dev1" internalId="_hbxq9PdpEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="conn_hive_target_table_AdditionalJDBCParameters" prompt="conn_hive_target_table_AdditionalJDBCParameters?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="" internalId="_hbxD4PdpEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="conn_hive_target_table_Database" prompt="conn_hive_target_table_Database?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="" internalId="_hbxD4fdpEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="conn_hive_target_table_Password" prompt="conn_hive_target_table_Password?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_Password" value="enc:system.encryption.key.v1:7ArZ80KrTHrV2e5CeaWHoghG0MBQvKntAa9PJ75FwaW/jgIqyQtlTA==" internalId="_hbxq8PdpEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="conn_hive_target_table_Server" prompt="conn_hive_target_table_Server?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="13.215.89.162" internalId="_hbxq8fdpEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="conn_hive_target_table_HiveMetastorePort" prompt="conn_hive_target_table_HiveMetastorePort?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="9083" internalId="_hbxq8vdpEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="conn_hive_target_table_Port" prompt="conn_hive_target_table_Port?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="10000" internalId="_hbxq8_dpEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="conn_hive_target_table_Login" prompt="conn_hive_target_table_Login?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="nvre_dev1" internalId="_hbxq9PdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="select_columns" prompt="select_columns?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customer_id, first_name, last_name, email, join_date, kyc_status" internalId="_hbySCfdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="source_schema" prompt="source_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="bronze" internalId="_hbySCvdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="tablename" prompt="tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="CUSTOMERS" internalId="_hbySC_dpEfCg_5SQhzKgrQ"/>
@@ -22,13 +22,13 @@
     <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/opt/talend/talend-runtime/data/tmp/development-files/" internalId="_7LpgAPf5EfCVZsdSWz8YYw"/>
     <contextParameter comment="" name="event_start" prompt="event_start?" promptNeeded="false" repositoryContextId="built-in" type="id_Date" value="" internalId="_84854Pf6EfCVZsdSWz8YYw"/>
     <contextParameter comment="" name="manifest_table" prompt="manifest_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="MBTC_MANIFEST_TABLE" internalId="_G1gCkPf7EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="conn_mbtc_load_table_Schema" prompt="conn_mbtc_load_table_Schema?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="MBTC" internalId="_NjLucPpfEfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="conn_mbtc_load_table_AdditionalParams" prompt="conn_mbtc_load_table_AdditionalParams?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="" internalId="_NjLucfpfEfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="conn_mbtc_load_table_ServiceName" prompt="conn_mbtc_load_table_ServiceName?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="mbtcDb" internalId="_NjLucvpfEfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="conn_mbtc_load_table_Password" prompt="conn_mbtc_load_table_Password?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_Password" value="enc:system.encryption.key.v1:dqrR8YtTVr+72kVBpZyO4k0zOdcL1GGzLoNOkdWjxUS2SE9S4YxcqA==" internalId="_NjMVgPpfEfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="conn_mbtc_load_table_Server" prompt="conn_mbtc_load_table_Server?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="18.136.114.179" internalId="_NjMVgfpfEfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="conn_mbtc_load_table_Login" prompt="conn_mbtc_load_table_Login?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="nvre_dev1" internalId="_NjMVgvpfEfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="conn_mbtc_load_table_Port" prompt="conn_mbtc_load_table_Port?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="1521" internalId="_NjMVg_pfEfC66eNMdZbE_A"/>
+    <contextParameter comment="" name="conn_oracle_source_table_Schema" prompt="conn_oracle_source_table_Schema?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="MBTC" internalId="_NjLucPpfEfC66eNMdZbE_A"/>
+    <contextParameter comment="" name="conn_oracle_source_table__AdditionalParams" prompt="conn_oracle_source_table__AdditionalParams?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="" internalId="_NjLucfpfEfC66eNMdZbE_A"/>
+    <contextParameter comment="" name="conn_oracle_source_table_ServiceName" prompt="conn_oracle_source_table_ServiceName?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="mbtcDb" internalId="_NjLucvpfEfC66eNMdZbE_A"/>
+    <contextParameter comment="" name="conn_oracle_source_table_Password" prompt="conn_oracle_source_table_Password?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_Password" value="enc:system.encryption.key.v1:dqrR8YtTVr+72kVBpZyO4k0zOdcL1GGzLoNOkdWjxUS2SE9S4YxcqA==" internalId="_NjMVgPpfEfC66eNMdZbE_A"/>
+    <contextParameter comment="" name="conn_oracle_source_table_Server" prompt="conn_oracle_source_table_Server?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="18.136.114.179" internalId="_NjMVgfpfEfC66eNMdZbE_A"/>
+    <contextParameter comment="" name="conn_oracle_source_table_Login" prompt="conn_oracle_source_table_Login?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="nvre_dev1" internalId="_NjMVgvpfEfC66eNMdZbE_A"/>
+    <contextParameter comment="" name="conn_oracle_source_table_Port" prompt="conn_oracle_source_table_Port?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="1521" internalId="_NjMVg_pfEfC66eNMdZbE_A"/>
     <contextParameter comment="" name="partition_column" prompt="partition_column?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ingest_date" internalId="__Gn14PpsEfC66eNMdZbE_A"/>
     <contextParameter comment="" name="primary_key" prompt="primary_key?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customer_id" internalId="__Gn14fpsEfC66eNMdZbE_A"/>
     <contextParameter comment="" name="contol_columns" prompt="contol_columns?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=", `_source_system` VARCHAR(150), `_date_start` TIMESTAMP, `_date_end` TIMESTAMP, `_load_timestamp` TIMESTAMP" internalId="_5Kxn4Pp_EfC66eNMdZbE_A"/>
@@ -152,13 +152,13 @@
     <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE"/>
     <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE3"/>
     <elementParameter field="CLOSED_LIST" name="HADOOP_VERSION" value="HADOOP3"/>
-    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_mbtc_target_Server"/>
+    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_target_table_Server"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_mbtc_target_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_mbtc_target_Database"/>
-    <elementParameter field="TEXT" name="USER" value="context.conn_hive_mbtc_target_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:zuCJe46Xc3k+qptNb2nShfNC6R1GseepCo3wQvlAraxbei1OCBmROBiETHHV/m5TR0A0OfdekLA+R5qO0wMJly26"/>
-    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_mbtc_target_hiveAdditionalJDBCParameters"/>
+    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_target_table_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:I7HjtqsJbBWmMu8w4Abx21/9CBEkRxbh3OA2s9oCCjBfE3eUiGmtAIKqefPiBy8FfspVeZqJTpRIEb3kAiY+qYhyzg=="/>
+    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters"/>
     <elementParameter field="CHECK" name="CONFIGURATIONS_FROM_CLASSPATH" value="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>
@@ -413,13 +413,13 @@
     <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE3" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HADOOP_VERSION" value="HADOOP3" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_mbtc_target_Server" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_mbtc_target_Port" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_mbtc_target_Database" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_target_table_Server" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_target_table_Port" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="context.conn_hive_mbtc_target_Login" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:4tKCQ2DZWXcB54J0FkSbkCzwvBb4s0hNGq395WzSGZVJNuhh72ZYKUb0GgeWptVLUnPHyax35nl5Lwkh3ra5PW3g" show="false"/>
-    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_mbtc_target_hiveAdditionalJDBCParameters" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:8Yef63AtdUdLJHCNUZVJFry3QJQLIBR+09gWm+ZAHGpWuB8Nl00YaVFHropPQIraeo39C6BROXsWIKEIrPL4U+PXlQ==" show="false"/>
+    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters" show="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="NAMENODE_PRINCIPAL" value="&quot;nn/_HOST@EXAMPLE.COM&quot;" show="false"/>
@@ -513,13 +513,13 @@
     <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE3" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HADOOP_VERSION" value="HADOOP3" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_mbtc_target_Server" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_mbtc_target_Port" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_mbtc_target_Database" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_target_table_Server" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_target_table_Port" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="context.conn_hive_mbtc_target_Login" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:ZRnA8wSjdtXcDoFEh8zf/D0hOBQ5PikqBNirFgkfhCSnNl2/EymEAsbdnbtQHCnI97pog0Yy94bPcKbTkF89gcJ8" show="false"/>
-    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_mbtc_target_hiveAdditionalJDBCParameters" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:DJcbsnU8FhH35WTwb1dTybs3clsdFbE8m4CfQuNtbpEk4qHRu4vVVu8u5Zjc19nd2dvtmhAu8gMQy+HDN8BOzgPsFg==" show="false"/>
+    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters" show="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="NAMENODE_PRINCIPAL" value="&quot;nn/_HOST@EXAMPLE.COM&quot;" show="false"/>
@@ -928,13 +928,13 @@
     <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE3" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HADOOP_VERSION" value="HADOOP3" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_mbtc_target_Server" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_mbtc_target_Port" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_mbtc_target_Database" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_target_table_Server" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_target_table_Port" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="context.conn_hive_mbtc_target_Login" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:IBOVLsByiUYa9voHQ6w32ip21xdZ4cP//xfuuMcwNTMVtIFuJFVxITND1liKcQNp04XO0ri+qP48OW/4V3tYzhTU" show="false"/>
-    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_mbtc_target_hiveAdditionalJDBCParameters" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:MPMp2Ta8bNe/wYBq23Igawcx8dt5opliq9pq6Y+uzvNCZZLV7fj375LAV1TiPlUcvrzxGZsJiV3vA9vw1AFtEMiLcw==" show="false"/>
+    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters" show="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="NAMENODE_PRINCIPAL" value="&quot;nn/_HOST@EXAMPLE.COM&quot;" show="false"/>
@@ -1028,13 +1028,13 @@
     <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE3" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HADOOP_VERSION" value="HADOOP3" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_mbtc_target_Server" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_mbtc_target_Port" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_mbtc_target_Database" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_target_table_Server" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_target_table_Port" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="context.conn_hive_mbtc_target_Login" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:sKScPUL89vzlC2qw2BXrKhua17R+QcXhS3GrgLtLbN5qN5OaRQib9pKdN5caR6S5T4zb44RAQqfEsKHMU8XwBvSf" show="false"/>
-    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_mbtc_target_hiveAdditionalJDBCParameters" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:qE/EjqU0h0dN83tvgkVEa9GCvfZ+Ai7dRXABf3LXS3+NueKaYNgtq9Ut5leJTuE7sRzjOQ+BBKp/9PjHz2cvVOYQ+g==" show="false"/>
+    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters" show="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="NAMENODE_PRINCIPAL" value="&quot;nn/_HOST@EXAMPLE.COM&quot;" show="false"/>
@@ -1346,13 +1346,13 @@
     <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE3" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HADOOP_VERSION" value="HADOOP3" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_mbtc_target_Server" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_mbtc_target_Port" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_mbtc_target_Database" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_target_table_Server" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_target_table_Port" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="context.conn_hive_mbtc_target_Login" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:uLlx/10g4rlbkoXgqMoFASBZOJPUH+ZXdsoIxxHZ/4nLAfvwczkslHlp4U7z5Ct3AECQAgndDAd/kcdYZWI+QXOs" show="false"/>
-    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_mbtc_target_hiveAdditionalJDBCParameters" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nvKOMQ5uy+judzMRDAhAD3PsQgQnlfkyx9H6th+U1MMTeWwe8sSkO5YgDVLVy74UujlbeXnFbcy7B7h8jX9D7JbZkQ==" show="false"/>
+    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters" show="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="NAMENODE_PRINCIPAL" value="&quot;nn/_HOST@EXAMPLE.COM&quot;" show="false"/>
@@ -1446,13 +1446,13 @@
     <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE3" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HADOOP_VERSION" value="HADOOP3" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_mbtc_target_Server" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_mbtc_target_Port" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_mbtc_target_Database" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_target_table_Server" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_target_table_Port" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="context.conn_hive_mbtc_target_Login" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Kiuq1n4w6Cv+t0nhbyIbNhAzGYmoBL4SMGZiAhRQnX1CCZA7v0tjjucLQqArGE2Z4Yd0K7xf9OF4hUDdnjnMxHwU" show="false"/>
-    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_mbtc_target_hiveAdditionalJDBCParameters" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:47WTtyLhazwuSkYDoCSHSkoBU3bNFggDGf8V8rdKBgV6Osl/jEci/RfKdU4t3ECJewy1924/AKS9Ye93CzygeCIK7g==" show="false"/>
+    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters" show="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="NAMENODE_PRINCIPAL" value="&quot;nn/_HOST@EXAMPLE.COM&quot;" show="false"/>
@@ -1898,13 +1898,13 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
