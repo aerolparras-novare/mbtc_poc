@@ -17,7 +17,7 @@
     <contextParameter comment="" name="conn_mbtc_load_table_Login" prompt="conn_mbtc_load_table_Login?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="nvre_dev1" internalId="_hbySBfdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="conn_mbtc_load_table_Port" prompt="conn_mbtc_load_table_Port?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="1521" internalId="_hbySBvdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="conn_sqoop_jdbc" prompt="conn_sqoop_jdbc?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="jdbc:oracle:thin:@//18.136.114.179:1521/mbtcDb" internalId="_hbySB_dpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="select_columns" prompt="select_columns?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="account_id, customer_id, account_type, currency, current_balance, created_at" internalId="_hbySCfdpEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="select_columns" prompt="select_columns?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="account_id, customer_id, account_type, currency, current_balance, to_char(created_at ,'yyyy-MM-dd') AS created_at" internalId="_hbySCfdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="source_schema" prompt="source_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="MBTC" internalId="_hbySCvdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="tablename" prompt="tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ACCOUNTS" internalId="_hbySC_dpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="oracleDriverClass" prompt="oracleDriverClass?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="oracle.jdbc.OracleDriver" internalId="_hbySDPdpEfCg_5SQhzKgrQ"/>
@@ -25,7 +25,7 @@
     <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="accounts" internalId="_hbySDvdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="ingest_date" prompt="ingest_date?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_hbySD_dpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="table_location" prompt="table_location?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/bronze/accounts/" internalId="_1zQ2kPdrEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="create_table_schema" prompt="create_table_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="account_id string, customer_id string, account_type string, currency string, current_balance string, created_at string" internalId="_1zQ2kfdrEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="create_table_schema" prompt="create_table_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="account_id string, customer_id string, account_type string, currency string, current_balance string, created_at string, source_system string, SCD_STATUS STRING, SCD_TIMESTAMP STRING" internalId="_1zQ2kfdrEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="source_count" prompt="source_count?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="" internalId="_KUaPUPeAEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="target_count" prompt="target_count?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_KUaPUfeAEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/opt/talend/talend-runtime/data/tmp/development-files/" internalId="_2jQ4QPf8EfCVZsdSWz8YYw"/>
@@ -747,37 +747,6 @@
       <column comment="" key="false" length="-1" name="source_system" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="560" sizeX="121" sizeY="40">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="ingest_date" id="0"/>
-      <elementValue elementRef="LENGTH" value="10" id="1"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="parquet_location" id="2"/>
-      <elementValue elementRef="LENGTH" value="10" id="3"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="source_system" id="4"/>
-      <elementValue elementRef="LENGTH" value="10" id="5"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="tLog_Variable"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_1">
-      <column comment="" key="false" length="-1" name="ingest_date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="parquet_location" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="source_system" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="840" posY="1040">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Bronze Layer Activity for table, &quot; + context.target_schema + &quot;.&quot; + context.target_table"/>
@@ -857,10 +826,6 @@
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_2" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_2" target="tWarn_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk6" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tLogRow_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tDBInput_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>

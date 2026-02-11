@@ -173,7 +173,7 @@
     <elementParameter field="CHECK" name="USE_WHERE" value="false" show="false"/>
     <elementParameter field="TEXT" name="WHERE" value="&quot;id>0&quot;" show="false"/>
     <elementParameter field="CHECK" name="USE_QUERY" value="true"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT  &quot; + context.select_columns  + &quot; FROM &quot; + context.source_schema + &quot;.&quot; + context.tablename + &quot; WHERE $CONDITIONS&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &quot; + context.select_columns + &quot;, '&quot; + (String) globalMap.get(&quot;source_system&quot;) + &quot;' AS source_system, 'I' AS SCD_STATUS, '&quot; + (String) globalMap.get(&quot;processing_start_time&quot;) + &quot;' AS SCD_TIMESTAMP FROM &quot; + context.source_schema + &quot;.&quot; + context.tablename + &quot; WHERE $CONDITIONS&quot;"/>
     <elementParameter field="LABEL" name="QUERY_LABEL" value="When importing a free-form query, you must specify a&#xA;&#x9;&#x9;&#x9;&#x9;destination directory. If you want to import the results of a query&#xA;&#x9;&#x9;&#x9;&#x9;in parallel, you must select a splitting column with --split-by&#xA;&#x9;&#x9;&#x9;"/>
     <elementParameter field="CHECK" name="USE_TARGET" value="false" show="false"/>
     <elementParameter field="TEXT" name="TARGET" value="(String) globalMap.get(&quot;parquet_location&quot;)"/>
@@ -218,6 +218,10 @@
       <elementValue elementRef="VALUE" value="TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate())" id="3"/>
       <elementValue elementRef="KEY" value="&quot;parquet_location&quot;" id="4"/>
       <elementValue elementRef="VALUE" value="context.table_location + &quot;ingest_date=&quot; + TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate())" id="5"/>
+      <elementValue elementRef="KEY" value="&quot;source_system&quot;" id="6"/>
+      <elementValue elementRef="VALUE" value="&quot;database&quot;" id="7"/>
+      <elementValue elementRef="KEY" value="&quot;processing_start_time&quot;" id="8"/>
+      <elementValue elementRef="VALUE" value="TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.getCurrentDate())" id="9"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSetGlobalVar_1">

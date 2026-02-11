@@ -1,0 +1,60 @@
+{
+  "itemId" : "_r-wN0ACmEfGUmMjhFOZbXg",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_kyD8APdCEfCAt6AmyhhERg",
+    "parameterList" : [ {
+      "id" : "_kyZ6QfdCEfCAt6AmyhhERg",
+      "name" : "conn_hadoop_cluster_JobHistory"
+    }, {
+      "id" : "_kyZ6QvdCEfCAt6AmyhhERg",
+      "name" : "conn_hadoop_cluster_customClasspath"
+    }, {
+      "id" : "_kyZ6Q_dCEfCAt6AmyhhERg",
+      "name" : "conn_hadoop_cluster_ResourceManagerScheduler"
+    }, {
+      "id" : "_kyZ6RPdCEfCAt6AmyhhERg",
+      "name" : "conn_hadoop_cluster_User"
+    }, {
+      "id" : "_kyZ6RfdCEfCAt6AmyhhERg",
+      "name" : "conn_hadoop_cluster_useCustomClasspath"
+    }, {
+      "id" : "_kyZ6RvdCEfCAt6AmyhhERg",
+      "name" : "conn_hadoop_cluster_StagingDirectory"
+    }, {
+      "id" : "_kyZ6R_dCEfCAt6AmyhhERg",
+      "name" : "conn_hadoop_cluster_hadoopConfSpecificJar"
+    }, {
+      "id" : "_kyZ6SPdCEfCAt6AmyhhERg",
+      "name" : "conn_hadoop_cluster_ResourceManager"
+    }, {
+      "id" : "_kyZ6SfdCEfCAt6AmyhhERg",
+      "name" : "conn_hadoop_cluster_setHadoopConf"
+    }, {
+      "id" : "_kyZ6SvdCEfCAt6AmyhhERg",
+      "name" : "conn_hadoop_cluster_NameNodeUri"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_C6ROcPKdEfCNScNTrRRCvQ",
+    "parameterList" : [ {
+      "id" : "_C6ssR_KdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_mbtc_target_hiveAdditionalJDBCParameters"
+    }, {
+      "id" : "_C6ssRvKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_mbtc_target_Database"
+    }, {
+      "id" : "_C6ssQ_KdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_mbtc_target_Password"
+    }, {
+      "id" : "_C6ssQvKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_mbtc_target_Server"
+    }, {
+      "id" : "_C6ssRfKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_mbtc_target_Port"
+    }, {
+      "id" : "_C6ssQfKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_mbtc_target_Login"
+    } ]
+  } ]
+}
