@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <TalendMetadata:DatabaseConnection xmi:id="_MGRasPwDEfCi68eJmHgcpA" name="mbtc_REST_API_hadoop_hive" id="_C_NIgPwDEfCi68eJmHgcpA" label="mbtc_REST_API_hadoop_hive" dataPackage="_MbGbMPwDEfCi68eJmHgcpA" DatabaseType="Hive" DriverClass="org.apache.hadoop.hive.jdbc.HiveDriver" URL="jdbc:hive2://13.215.89.162:10000/bronze" dbVersionString="STANDALONE" Port="10000" Username="admin" Password="enc:system.encryption.key.v1:1PYVwWrJr29tY5yZACDvmXKMgtzemu/pttnxL/ar1c39" ServerName="13.215.89.162" SID="bronze" SqlSynthax="" StringQuote="" NullChar="" DbmsId="hive_id" ProductId="HIVE" StandardSQL="true" SQLMode="false" UiSchema="bronze" supportNLS="false">
+  <TalendMetadata:DatabaseConnection xmi:id="_uS05MAb8EfGFQrQJaHzpdw" name="mbtc_REST_API_hadoop_hive" id="_C_NIgPwDEfCi68eJmHgcpA" label="mbtc_REST_API_hadoop_hive" dataPackage="_MbGbMPwDEfCi68eJmHgcpA" DatabaseType="Hive" DriverClass="org.apache.hadoop.hive.jdbc.HiveDriver" URL="jdbc:hive2://13.215.89.162:10000/bronze" dbVersionString="STANDALONE" Port="10000" Username="admin" Password="enc:system.encryption.key.v1:1PYVwWrJr29tY5yZACDvmXKMgtzemu/pttnxL/ar1c39" ServerName="13.215.89.162" SID="bronze" SqlSynthax="" StringQuote="" NullChar="" DbmsId="hive_id" ProductId="HIVE" StandardSQL="true" SQLMode="false" UiSchema="bronze" supportNLS="false">
     <taggedValue xmi:id="_MGRasfwDEfCi68eJmHgcpA" tag="Is Conn Need Reload" value="false"/>
     <taggedValue xmi:id="_MIg2YPwDEfCi68eJmHgcpA" tag="package filter" value=""/>
     <taggedValue xmi:id="_MIlH0PwDEfCi68eJmHgcpA" tag="Status" value=""/>
@@ -14,10 +14,10 @@
     <parameters xmi:id="_MGRasvwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_DB_PORT"/>
     <parameters xmi:id="_MGRas_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_USE_YARN" value="true"/>
     <parameters xmi:id="_MGRatPwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_RESOURCEMANAGER_SCHEDULER_ADDRESS" value="dao-cdp-poc-master1.novare.com.ph:8030"/>
-    <parameters xmi:id="_MGRatfwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_USE_CUSTOM_CONFS" value="true"/>
+    <parameters xmi:id="_MGRatfwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_USE_CUSTOM_CONFS" value="false"/>
     <parameters xmi:id="_MGRatvwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_NAME_NODE_URL" value="hdfs://dao-cdp-poc-master1.novare.com.ph:8020"/>
     <parameters xmi:id="_MGRat_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_USERNAME" value="admin"/>
-    <parameters xmi:id="_MGRauPwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HADOOP_CLUSTER_ID" value="_ec-XIPwBEfCi68eJmHgcpA"/>
+    <parameters xmi:id="_MGRauPwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HADOOP_CLUSTER_ID" value="_uPMWYAb8EfGFQrQJaHzpdw"/>
     <parameters xmi:id="_MGRaufwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_JOB_HISTORY_PRINCIPAL" value="mapred/_HOST@EXAMPLE.COM"/>
     <parameters xmi:id="_MGRauvwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HBASE_VERSION" value="Cloudera_CDP7_1_1_0_565"/>
     <parameters xmi:id="_MGRau_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_JOB_TRACKER_URL" value="dao-cdp-poc-master1.novare.com.ph:8032"/>
@@ -73,13 +73,13 @@
     <parameters xmi:id="_MGRa7fwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_USE_SSL" value="false"/>
     <parameters xmi:id="_MGRa7vwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_NEED_CLIENT_AUTH" value="false"/>
     <parameters xmi:id="_MGRa7_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_DISABLE_CBC_PROTECTION" value="false"/>
+    <parameters xmi:id="_MGRa8PwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_SSL_TRUST_STORE_PATH" value=""/>
+    <parameters xmi:id="_MGRa8fwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_SSL_TRUST_STORE_PASSWORD" value=""/>
+    <parameters xmi:id="_MGRa8vwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_SSL_KEY_STORE_PATH" value=""/>
+    <parameters xmi:id="_MGRa8_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_SSL_KEY_STORE_PASSWORD" value=""/>
     <parameters xmi:id="_MGRa9PwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_THRIFTPORT" value="9083"/>
-    <parameters xmi:id="_5fBE0Ab8EfGFQrQJaHzpdw" key="CONN_PARA_KEY_SSL_TRUST_STORE_PATH" value=""/>
-    <parameters xmi:id="_5fBE0Qb8EfGFQrQJaHzpdw" key="CONN_PARA_KEY_SSL_TRUST_STORE_PASSWORD" value=""/>
-    <parameters xmi:id="_5fBE0gb8EfGFQrQJaHzpdw" key="CONN_PARA_KEY_SSL_KEY_STORE_PATH" value=""/>
-    <parameters xmi:id="_5fBE0wb8EfGFQrQJaHzpdw" key="CONN_PARA_KEY_SSL_KEY_STORE_PASSWORD" value=""/>
   </TalendMetadata:DatabaseConnection>
-  <orgomg.cwm.resource.relational:Schema xmi:id="_MbGbMPwDEfCi68eJmHgcpA" name="bronze" dataManager="_MGRasPwDEfCi68eJmHgcpA">
+  <orgomg.cwm.resource.relational:Schema xmi:id="_MbGbMPwDEfCi68eJmHgcpA" name="bronze" dataManager="_uS05MAb8EfGFQrQJaHzpdw">
     <ownedElement xsi:type="relational:TdTable" xmi:id="_CMKaoPwGEfCo_Ipx5xwaoA" name="customers_api_test" id="_CMFiIPwGEfCo_Ipx5xwaoA" label="customers_api_test" tableType="TABLE">
       <feature xsi:type="relational:TdColumn" xmi:id="_CMKaofwGEfCo_Ipx5xwaoA" name="customer_id" label="customer_id" length="2147483647" sourceType="STRING" talendType="id_String">
         <taggedValue xmi:id="_CMKaovwGEfCo_Ipx5xwaoA" tag="Comment" value=""/>
