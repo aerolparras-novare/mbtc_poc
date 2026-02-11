@@ -9,6 +9,10 @@
     <contextParameter comment="" name="conn_hive_mbtc_target_Port" prompt="conn_hive_mbtc_target_Port?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="10000" internalId="_mq7Y9QYmEfGEtpEJa9_D9Q"/>
     <contextParameter comment="" name="conn_hive_mbtc_target_Server" prompt="conn_hive_mbtc_target_Server?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="13.215.89.162" internalId="_mq7Y9gYmEfGEtpEJa9_D9Q"/>
     <contextParameter comment="" name="execution_date" prompt="execution_date?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_oCMHwAbfEfGg7tr9sX3lqw"/>
+    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsvf6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="source_schema" prompt="source_schema?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVws_f6EfCVZsdSWz8YYw"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Trace" show="false"/>
@@ -402,6 +406,253 @@
       <column comment="" key="false" length="15" name="TOTAL_DEPOSITS_LIFETIME" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
       <column comment="" key="false" length="15" name="TOTAL_WITHDRAWALS_LIFETIME" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
       <column comment="" key="false" length="11" name="LAST_TXN_DATE" nullable="true" pattern="" precision="6" sourceType="STRING" type="id_String" originalLength="11" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tELTHiveMap" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="1440" sizeX="121" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveMap_3" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="CHECK" name="USE_YARN" value="false" show="false"/>
+    <elementParameter field="CHECK" name="CROSS_PLATFORM_SUBMISSION" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE2" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="HADOOP_VERSION" value="HADOOP3" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="10000" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="Hive" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nezs2yMbS6aX2N7ys476/4X49t3+UjWlNDZw5C7d" show="false"/>
+    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;hive/_HOST@EXAMPLE.COM&quot;" show="false"/>
+    <elementParameter field="TEXT" name="NAMENODE_PRINCIPAL" value="&quot;nn/_HOST@EXAMPLE.COM&quot;" show="false"/>
+    <elementParameter field="TEXT" name="RESOURCEMANAGER_PRINCIPAL" value="&quot;yarn/_HOST@EXAMPLE.COM&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_KEYTAB" value="false" show="false"/>
+    <elementParameter field="TEXT" name="PRINCIPAL" value="&quot;hive&quot;" show="false"/>
+    <elementParameter field="FILE" name="KEYTAB_PATH" value="&quot;/tmp/hive.keytab&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_MAPRTICKET" value="false" show="false"/>
+    <elementParameter field="TEXT" name="MAPRTICKET_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="MAPRTICKET_PASSWORD" value="enc:system.encryption.key.v1:jjSRWrxVJdn3jeyt8Olj2AsbMdCrHrFygQutTxnP" show="false"/>
+    <elementParameter field="TEXT" name="MAPRTICKET_CLUSTER" value="&quot;demo.mapr.com&quot;" show="false"/>
+    <elementParameter field="TEXT" name="MAPRTICKET_DURATION" value="86400L" show="false"/>
+    <elementParameter field="CHECK" name="USE_SSL" value="false" show="false"/>
+    <elementParameter field="FILE" name="SSL_TRUST_STORE" value="&quot;/home/usr1/ssl/trust_store.jks&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="SSL_TRUST_STORE_PASSWORD" value="enc:system.encryption.key.v1:lYc4G3ZGgU/RW2u374SzP9IJkt6GH/NrUMiADQuYINrNUPmENMU=" show="false"/>
+    <elementParameter field="CHECK" name="SET_RESOURCE_MANAGER" value="false" show="false"/>
+    <elementParameter field="TEXT" name="RESOURCE_MANAGER" value="&quot;localhost:8032&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_FS_DEFAULT_NAME" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FS_DEFAULT_NAME" value="&quot;hdfs://localhost:8020&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_SCHEDULER_ADDRESS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="RESOURCEMANAGER_SCHEDULER_ADDRESS" value="&quot;localhost:8030&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_JOBHISTORY_ADDRESS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="JOBHISTORY_ADDRESS" value="&quot;localhost:10020&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_HADOOP_USER" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HADOOP_USER" value="&quot;hadoop&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_DATANODE_HOSTNAME" value="true" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="EXECUTION_ENGINE" value="mr" show="false"/>
+    <elementParameter field="TEXT" name="WEBHCAT_HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="WEBHCAT_PORT" value="&quot;443&quot;" show="false"/>
+    <elementParameter field="TEXT" name="WEBHCAT_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="STATUSDIR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HDINSIGHT_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="HDINSIGHT_PASSWORD" value="enc:system.encryption.key.v1:akVMRDDNs9C9OnuUb0uTNLCFYeqwGt2av4AVzSX0" show="false"/>
+    <elementParameter field="TEXT" name="WASB_HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="WASB_CONTAINER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="WASB_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="WASB_PASSWORD" value="enc:system.encryption.key.v1:q78KYO2XB4nQ0654fx6LVUISp1s6BmU5QZFGLn6j" show="false"/>
+    <elementParameter field="TEXT" name="REMOTE_FOLDER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="GOOGLE_PROJECT_ID" value="&quot;my-google-project&quot;" show="false"/>
+    <elementParameter field="TEXT" name="GOOGLE_CLUSTER_ID" value="&quot;my-cluster-id&quot;" show="false"/>
+    <elementParameter field="TEXT" name="GOOGLE_REGION" value="&quot;global&quot;" show="false"/>
+    <elementParameter field="TEXT" name="GOOGLE_JARS_BUCKET" value="&quot;gs://my-bucket/talend/jars&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DEFINE_PATH_TO_GOOGLE_CREDENTIALS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="PATH_TO_GOOGLE_CREDENTIALS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="hive_id"/>
+    <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
+    <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
+    <elementParameter field="TEXT" name="GROUP" value="&quot;supergroup&quot;" show="false"/>
+    <elementParameter field="BOTH_HADOOP" name="TEZ_LIB_PATH" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="TEZ_LIB_NAME" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="If you are on Windows, add a '/' in front of the path you&#x9;type in." show="false"/>
+    <elementParameter field="CHECK" name="SET_TEMP_PATH" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="TEMP_PATH" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="HADOOP_ADVANCED_PROPERTIES" show="false"/>
+    <elementParameter field="TABLE" name="ADVANCED_PROPERTIES" show="false"/>
+    <elementParameter field="CHECK" name="SET_MEMORY" value="false" show="false"/>
+    <elementParameter field="TEXT" name="MAPREDUCE_MAP_MEMORY_MB" value="&quot;1024&quot;" show="false"/>
+    <elementParameter field="TEXT" name="MAPREDUCE_REDUCE_MEMORY_MB" value="&quot;1024&quot;" show="false"/>
+    <elementParameter field="TEXT" name="YARN_APP_MAPREDUCE_AM_RESOURCE_MB" value="&quot;1024&quot;" show="false"/>
+    <elementParameter field="TEXT" name="CLASSPATH_SEPARATOR" value="&quot;:&quot;"/>
+    <elementParameter field="CHECK" name="SET_MAPR_HOME_DIR" value="false" show="false"/>
+    <elementParameter field="TEXT" name="MAPR_HOME_DIR" value="&quot;/opt/mapr&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HADOOP_LOGIN" value="&quot;kerberos&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="mapCustomer360"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="ACTIVE_DATABASE_DELIMITED_IDENTIFIERS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVE_ADD_QUOTES_IN_TABLE_NAME" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_ALIAS_IN_OUTPUT_TABLE" value="false" show="false"/>
+    <metadata connector="TABLE" label="customer_360" name="table3">
+      <column comment="" key="false" length="10" name="CUSTOMER_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_String" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FULL_NAME" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EMAIL" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="KYC_STATUS" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="TENURE_DAYS" nullable="true" pattern="" precision="0" sourceType="INT" type="id_String" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="TOTAL_ACCOUNTS" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="SAVINGS_BALANCE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="CHECKING_BALANCE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="CREDIT_CARD_EXPOSURE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="TOTAL_BALANCE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="LIFETIME_TXN_COUNT" nullable="true" pattern="" precision="0" sourceType="INT" type="id_String" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="TOTAL_DEPOSITS" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="TOTAL_WITHDRAWALS" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LAST_TXN_DATE" nullable="true" pattern="" precision="-1" sourceType="DATE" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CUSTOMER_LIFECYCLE_STATUS" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendDBMap:DBMapData">
+      <InputTables name="silver.customers" tableName="silver.customers" joinType="JOIN">
+        <DBMapperTableEntries name="CUSTOMER_ID"/>
+        <DBMapperTableEntries name="FIRST_NAME"/>
+        <DBMapperTableEntries name="LAST_NAME"/>
+        <DBMapperTableEntries name="EMAIL"/>
+        <DBMapperTableEntries name="JOIN_DATE"/>
+        <DBMapperTableEntries name="KYC_STATUS"/>
+      </InputTables>
+      <InputTables name="silver.stage_account_summary" tableName="silver.stage_account_summary" joinType="LEFT_OUTER_JOIN">
+        <DBMapperTableEntries name="CUSTOMER_ID" expression="silver.customers.CUSTOMER_ID " join="true" operator="="/>
+        <DBMapperTableEntries name="TOTAL_ACCOUNTS"/>
+        <DBMapperTableEntries name="SAVINGS_BALANCE"/>
+        <DBMapperTableEntries name="CHECKING_BALANCE"/>
+        <DBMapperTableEntries name="CC_BALANCE"/>
+        <DBMapperTableEntries name="TOTAL_RELATIONSHIP_BALANCE"/>
+      </InputTables>
+      <InputTables name="silver.stage_txn_summary" tableName="silver.stage_txn_summary" joinType="LEFT_OUTER_JOIN">
+        <DBMapperTableEntries name="CUSTOMER_ID" expression="silver.customers.CUSTOMER_ID " join="true" operator="="/>
+        <DBMapperTableEntries name="TOTAL_TXN_COUNT"/>
+        <DBMapperTableEntries name="TOTAL_DEPOSITS_LIFETIME"/>
+        <DBMapperTableEntries name="TOTAL_WITHDRAWALS_LIFETIME"/>
+        <DBMapperTableEntries name="LAST_TXN_DATE"/>
+      </InputTables>
+      <OutputTables name="table3" tableName="customer_360">
+        <DBMapperTableEntries name="CUSTOMER_ID" expression="silver.customers.CUSTOMER_ID"/>
+        <DBMapperTableEntries name="FULL_NAME" expression="concat(silver.customers.FIRST_NAME, ' ', silver.customers.LAST_NAME) "/>
+        <DBMapperTableEntries name="EMAIL" expression="silver.customers.EMAIL"/>
+        <DBMapperTableEntries name="KYC_STATUS" expression="silver.customers.KYC_STATUS"/>
+        <DBMapperTableEntries name="TENURE_DAYS" expression="datediff(current_date(), to_date(silver.customers.JOIN_DATE)) "/>
+        <DBMapperTableEntries name="TOTAL_ACCOUNTS" expression="COALESCE(silver.stage_account_summary.TOTAL_ACCOUNTS, 0) "/>
+        <DBMapperTableEntries name="SAVINGS_BALANCE" expression="COALESCE(silver.stage_account_summary.SAVINGS_BALANCE,0) "/>
+        <DBMapperTableEntries name="CHECKING_BALANCE" expression="COALESCE(silver.stage_account_summary.CHECKING_BALANCE,0) "/>
+        <DBMapperTableEntries name="CREDIT_CARD_EXPOSURE" expression="COALESCE(silver.stage_account_summary.CC_BALANCE,0) "/>
+        <DBMapperTableEntries name="TOTAL_BALANCE" expression="COALESCE(silver.stage_account_summary.TOTAL_RELATIONSHIP_BALANCE, 0) "/>
+        <DBMapperTableEntries name="LIFETIME_TXN_COUNT" expression="COALESCE(silver.stage_txn_summary.TOTAL_TXN_COUNT,0) "/>
+        <DBMapperTableEntries name="TOTAL_DEPOSITS" expression="COALESCE(silver.stage_txn_summary.TOTAL_DEPOSITS_LIFETIME, 0) "/>
+        <DBMapperTableEntries name="TOTAL_WITHDRAWALS" expression="COALESCE(silver.stage_txn_summary.TOTAL_WITHDRAWALS_LIFETIME, 0) "/>
+        <DBMapperTableEntries name="LAST_TXN_DATE" expression="silver.stage_txn_summary.LAST_TXN_DATE"/>
+        <DBMapperTableEntries name="CUSTOMER_LIFECYCLE_STATUS" expression="CASE &#xD;&#xA;&#x9;WHEN silver.stage_txn_summary.LAST_TXN_DATE >= date_sub(current_date(), 30) THEN 'Active'&#xD;&#xA;&#x9;WHEN silver.stage_txn_summary.LAST_TXN_DATE IS NULL THEN 'No Activity'&#xD;&#xA;&#x9;ELSE 'Dormant'&#xD;&#xA;END "/>
+      </OutputTables>
+    </nodeData>
+  </node>
+  <node componentName="tELTHiveInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="200" posY="1560" sizeX="121" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveInput_5" show="false"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;stage_account_summary&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;silver&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="hive_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="__ELT_TABLE_NAME__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="silver.stage_account_summary" name="tELTHiveInput_5">
+      <column comment="" key="false" length="10" name="CUSTOMER_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Long" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="TOTAL_ACCOUNTS" nullable="true" pattern="" precision="0" sourceType="INT" type="id_String" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="SAVINGS_BALANCE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="CHECKING_BALANCE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="CC_BALANCE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="TOTAL_RELATIONSHIP_BALANCE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tELTHiveInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1680" sizeX="121" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveInput_6" show="false"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;stage_txn_summary&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;silver&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="hive_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="__ELT_TABLE_NAME__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="silver.stage_txn_summary" name="tELTHiveInput_6">
+      <column comment="" key="false" length="10" name="CUSTOMER_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Long" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="-1" name="TOTAL_TXN_COUNT" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TOTAL_DEPOSITS_LIFETIME" nullable="true" pattern="" precision="-1" sourceType="FLOAT" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TOTAL_WITHDRAWALS_LIFETIME" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LAST_TXN_DATE" nullable="true" pattern="" precision="-1" sourceType="DATE" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tELTHiveOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="760" posY="1440" sizeX="121" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveOutput_3" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;customer_360&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;gold&quot;"/>
+    <elementParameter field="CHECK" name="IS_TABLE_NAME_VARIABLE" value="false"/>
+    <elementParameter field="CHECK" name="USE_DIFFERENT_TABLE" value="false"/>
+    <elementParameter field="TEXT" name="DIFFERENT_TABLE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
+    <elementParameter field="CHECK" name="TARGET_TABLE_IS_A_PARQUET_TABLE" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PARQUET_COMPRESSION" value="UNCOMPRESSED" show="false"/>
+    <elementParameter field="TABLE" name="FIELD_PARTITION">
+      <elementValue elementRef="COLUMN_NAME" value="&quot;execution_date&quot;" id="0"/>
+      <elementValue elementRef="COLUMN_VALUE" value="context.execution_date" id="1"/>
+    </elementParameter>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="hive_id"/>
+    <elementParameter field="CHECK" name="SET_APPLICATION_NAME" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__ELT_TABLE_NAME__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="customer_360" name="tELTHiveOutput_3">
+      <column comment="" key="false" length="10" name="CUSTOMER_ID" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FULL_NAME" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EMAIL" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="KYC_STATUS" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="TENURE_DAYS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="TOTAL_ACCOUNTS" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="SAVINGS_BALANCE" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="CHECKING_BALANCE" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="CREDIT_CARD_EXPOSURE" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="TOTAL_BALANCE" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="LIFETIME_TXN_COUNT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" originalLength="10" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="TOTAL_DEPOSITS" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="TOTAL_WITHDRAWALS" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LAST_TXN_DATE" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CUSTOMER_LIFECYCLE_STATUS" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tELTHiveInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="1440" sizeX="121" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveInput_4" show="false"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;customers&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;silver&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="hive_id"/>
+    <elementParameter field="TEXT" name="LABEL" value="__ELT_TABLE_NAME__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="silver.customers" name="tELTHiveInput_4">
+      <column comment="" key="true" length="10" name="CUSTOMER_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Long" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="50" name="FIRST_NAME" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="50" name="LAST_NAME" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="50" name="EMAIL" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="7" name="JOIN_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="KYC_STATUS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
   </node>
   <node componentName="tELTHiveInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="1000" sizeX="121" sizeY="40">
@@ -1024,7 +1275,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;CREATE TABLE silver.stage_account_summary (&#xD;&#xA;    customer_id                 BIGINT COMMENT 'Linked to silver.customers',&#xD;&#xA;    total_accounts              BIGINT,&#xD;&#xA;    savings_balance             DECIMAL(18,2),&#xD;&#xA;    checking_balance            DECIMAL(18,2),&#xD;&#xA;    cc_balance                  DECIMAL(18,2),&#xD;&#xA;    total_relationship_balance  DECIMAL(18,2)&#xD;&#xA;)&#xD;&#xA;STORED AS ORC&#xD;&#xA;-- CRITICAL CHANGE 2: Enable ACID transactions&#xD;&#xA;TBLPROPERTIES ('transactional'='true')&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;CREATE TABLE IF NOT EXISTS silver.stage_account_summary (&#xD;&#xA;    customer_id                 BIGINT COMMENT 'Linked to silver.customers',&#xD;&#xA;    total_accounts              BIGINT,&#xD;&#xA;    savings_balance             DECIMAL(18,2),&#xD;&#xA;    checking_balance            DECIMAL(18,2),&#xD;&#xA;    cc_balance                  DECIMAL(18,2),&#xD;&#xA;    total_relationship_balance  DECIMAL(18,2)&#xD;&#xA;)&#xD;&#xA;STORED AS ORC&#xD;&#xA;-- CRITICAL CHANGE 2: Enable ACID transactions&#xD;&#xA;TBLPROPERTIES ('transactional'='true')&#xD;&#xA;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -1124,7 +1375,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;CREATE TABLE silver.stage_txn_summary (&#xD;&#xA;    customer_id                 BIGINT COMMENT 'Derived from Account linkage',&#xD;&#xA;    total_txn_count             BIGINT,&#xD;&#xA;    total_deposits_lifetime     DECIMAL(18,2),&#xD;&#xA;    total_withdrawals_lifetime  DECIMAL(18,2),&#xD;&#xA;    last_txn_date               TIMESTAMP&#xD;&#xA;)&#xD;&#xA;STORED AS ORC&#xD;&#xA;-- CRITICAL CHANGE 2: Enable ACID transactions&#xD;&#xA;TBLPROPERTIES ('transactional'='true')&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;CREATE TABLE IF NOT EXISTS silver.stage_txn_summary (&#xD;&#xA;    customer_id                 BIGINT COMMENT 'Derived from Account linkage',&#xD;&#xA;    total_txn_count             BIGINT,&#xD;&#xA;    total_deposits_lifetime     DECIMAL(18,2),&#xD;&#xA;    total_withdrawals_lifetime  DECIMAL(18,2),&#xD;&#xA;    last_txn_date               TIMESTAMP&#xD;&#xA;)&#xD;&#xA;STORED AS ORC&#xD;&#xA;-- CRITICAL CHANGE 2: Enable ACID transactions&#xD;&#xA;TBLPROPERTIES ('transactional'='true')&#xD;&#xA;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -1224,7 +1475,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;CREATE TABLE `gold`.`customer_360`(&#xD;&#xA;  `customer_id` int, &#xD;&#xA;  `full_name` string, &#xD;&#xA;  `email` string, &#xD;&#xA;  `kyc_status` string, &#xD;&#xA;  `tenure_days` int, &#xD;&#xA;  `total_accounts` int, &#xD;&#xA;  `savings_balance` string, &#xD;&#xA;  `checking_balance` string, &#xD;&#xA;  `credit_card_exposure` string, &#xD;&#xA;  `total_balance` string, &#xD;&#xA;  `lifetime_txn_count` int, &#xD;&#xA;  `total_deposits` string, &#xD;&#xA;  `total_withdrawals` string, &#xD;&#xA;  `last_txn_date` date, &#xD;&#xA;  `customer_lifecycle_status` string)&#xD;&#xA;PARTITIONED BY (execution_date STRING)  &#xD;&#xA;-- CRITICAL CHANGE 1: Must be ORC for Hive ACID&#xD;&#xA;STORED AS ORC&#xD;&#xA;-- CRITICAL CHANGE 2: Enable ACID transactions&#xD;&#xA;TBLPROPERTIES ('transactional'='true')&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;CREATE TABLE IF NOT EXISTS `gold`.`customer_360`(&#xD;&#xA;  `customer_id` int, &#xD;&#xA;  `full_name` string, &#xD;&#xA;  `email` string, &#xD;&#xA;  `kyc_status` string, &#xD;&#xA;  `tenure_days` int, &#xD;&#xA;  `total_accounts` int, &#xD;&#xA;  `savings_balance` string, &#xD;&#xA;  `checking_balance` string, &#xD;&#xA;  `credit_card_exposure` string, &#xD;&#xA;  `total_balance` string, &#xD;&#xA;  `lifetime_txn_count` int, &#xD;&#xA;  `total_deposits` string, &#xD;&#xA;  `total_withdrawals` string, &#xD;&#xA;  `last_txn_date` date, &#xD;&#xA;  `customer_lifecycle_status` string)&#xD;&#xA;PARTITIONED BY (execution_date STRING)  &#xD;&#xA;-- CRITICAL CHANGE 1: Must be ORC for Hive ACID&#xD;&#xA;STORED AS ORC&#xD;&#xA;-- CRITICAL CHANGE 2: Enable ACID transactions&#xD;&#xA;TBLPROPERTIES ('transactional'='true')&#xD;&#xA;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -1260,253 +1511,6 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tELTHiveInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="1440" sizeX="121" sizeY="40">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveInput_4" show="false"/>
-    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;customers&quot;"/>
-    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;silver&quot;"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="hive_id"/>
-    <elementParameter field="TEXT" name="LABEL" value="__ELT_TABLE_NAME__"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="TABLE" label="silver.customers" name="tELTHiveInput_4">
-      <column comment="" key="true" length="10" name="CUSTOMER_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Long" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="FIRST_NAME" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="LAST_NAME" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="50" name="EMAIL" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="7" name="JOIN_DATE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="KYC_STATUS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-    </metadata>
-  </node>
-  <node componentName="tELTHiveMap" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="1440" sizeX="121" sizeY="40">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveMap_3" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="CHECK" name="USE_YARN" value="false" show="false"/>
-    <elementParameter field="CHECK" name="CROSS_PLATFORM_SUBMISSION" value="false" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE2" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="HADOOP_VERSION" value="HADOOP3" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="10000" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TYPE" value="Hive" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nezs2yMbS6aX2N7ys476/4X49t3+UjWlNDZw5C7d" show="false"/>
-    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
-    <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;hive/_HOST@EXAMPLE.COM&quot;" show="false"/>
-    <elementParameter field="TEXT" name="NAMENODE_PRINCIPAL" value="&quot;nn/_HOST@EXAMPLE.COM&quot;" show="false"/>
-    <elementParameter field="TEXT" name="RESOURCEMANAGER_PRINCIPAL" value="&quot;yarn/_HOST@EXAMPLE.COM&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_KEYTAB" value="false" show="false"/>
-    <elementParameter field="TEXT" name="PRINCIPAL" value="&quot;hive&quot;" show="false"/>
-    <elementParameter field="FILE" name="KEYTAB_PATH" value="&quot;/tmp/hive.keytab&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_MAPRTICKET" value="false" show="false"/>
-    <elementParameter field="TEXT" name="MAPRTICKET_USERNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="MAPRTICKET_PASSWORD" value="enc:system.encryption.key.v1:jjSRWrxVJdn3jeyt8Olj2AsbMdCrHrFygQutTxnP" show="false"/>
-    <elementParameter field="TEXT" name="MAPRTICKET_CLUSTER" value="&quot;demo.mapr.com&quot;" show="false"/>
-    <elementParameter field="TEXT" name="MAPRTICKET_DURATION" value="86400L" show="false"/>
-    <elementParameter field="CHECK" name="USE_SSL" value="false" show="false"/>
-    <elementParameter field="FILE" name="SSL_TRUST_STORE" value="&quot;/home/usr1/ssl/trust_store.jks&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="SSL_TRUST_STORE_PASSWORD" value="enc:system.encryption.key.v1:lYc4G3ZGgU/RW2u374SzP9IJkt6GH/NrUMiADQuYINrNUPmENMU=" show="false"/>
-    <elementParameter field="CHECK" name="SET_RESOURCE_MANAGER" value="false" show="false"/>
-    <elementParameter field="TEXT" name="RESOURCE_MANAGER" value="&quot;localhost:8032&quot;" show="false"/>
-    <elementParameter field="CHECK" name="SET_FS_DEFAULT_NAME" value="false" show="false"/>
-    <elementParameter field="TEXT" name="FS_DEFAULT_NAME" value="&quot;hdfs://localhost:8020&quot;" show="false"/>
-    <elementParameter field="CHECK" name="SET_SCHEDULER_ADDRESS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="RESOURCEMANAGER_SCHEDULER_ADDRESS" value="&quot;localhost:8030&quot;" show="false"/>
-    <elementParameter field="CHECK" name="SET_JOBHISTORY_ADDRESS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="JOBHISTORY_ADDRESS" value="&quot;localhost:10020&quot;" show="false"/>
-    <elementParameter field="CHECK" name="SET_HADOOP_USER" value="false" show="false"/>
-    <elementParameter field="TEXT" name="HADOOP_USER" value="&quot;hadoop&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_DATANODE_HOSTNAME" value="true" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="EXECUTION_ENGINE" value="mr" show="false"/>
-    <elementParameter field="TEXT" name="WEBHCAT_HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="WEBHCAT_PORT" value="&quot;443&quot;" show="false"/>
-    <elementParameter field="TEXT" name="WEBHCAT_USERNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="STATUSDIR" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="HDINSIGHT_USERNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="HDINSIGHT_PASSWORD" value="enc:system.encryption.key.v1:akVMRDDNs9C9OnuUb0uTNLCFYeqwGt2av4AVzSX0" show="false"/>
-    <elementParameter field="TEXT" name="WASB_HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="WASB_CONTAINER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="WASB_USERNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="WASB_PASSWORD" value="enc:system.encryption.key.v1:q78KYO2XB4nQ0654fx6LVUISp1s6BmU5QZFGLn6j" show="false"/>
-    <elementParameter field="TEXT" name="REMOTE_FOLDER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="GOOGLE_PROJECT_ID" value="&quot;my-google-project&quot;" show="false"/>
-    <elementParameter field="TEXT" name="GOOGLE_CLUSTER_ID" value="&quot;my-cluster-id&quot;" show="false"/>
-    <elementParameter field="TEXT" name="GOOGLE_REGION" value="&quot;global&quot;" show="false"/>
-    <elementParameter field="TEXT" name="GOOGLE_JARS_BUCKET" value="&quot;gs://my-bucket/talend/jars&quot;" show="false"/>
-    <elementParameter field="CHECK" name="DEFINE_PATH_TO_GOOGLE_CREDENTIALS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="PATH_TO_GOOGLE_CREDENTIALS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="hive_id"/>
-    <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
-    <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
-    <elementParameter field="TEXT" name="GROUP" value="&quot;supergroup&quot;" show="false"/>
-    <elementParameter field="BOTH_HADOOP" name="TEZ_LIB_PATH" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TABLE" name="TEZ_LIB_NAME" show="false"/>
-    <elementParameter field="LABEL" name="NOTE" value="If you are on Windows, add a '/' in front of the path you&#x9;type in." show="false"/>
-    <elementParameter field="CHECK" name="SET_TEMP_PATH" value="false" show="false"/>
-    <elementParameter field="DIRECTORY" name="TEMP_PATH" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TABLE" name="HADOOP_ADVANCED_PROPERTIES" show="false"/>
-    <elementParameter field="TABLE" name="ADVANCED_PROPERTIES" show="false"/>
-    <elementParameter field="CHECK" name="SET_MEMORY" value="false" show="false"/>
-    <elementParameter field="TEXT" name="MAPREDUCE_MAP_MEMORY_MB" value="&quot;1024&quot;" show="false"/>
-    <elementParameter field="TEXT" name="MAPREDUCE_REDUCE_MEMORY_MB" value="&quot;1024&quot;" show="false"/>
-    <elementParameter field="TEXT" name="YARN_APP_MAPREDUCE_AM_RESOURCE_MB" value="&quot;1024&quot;" show="false"/>
-    <elementParameter field="TEXT" name="CLASSPATH_SEPARATOR" value="&quot;:&quot;"/>
-    <elementParameter field="CHECK" name="SET_MAPR_HOME_DIR" value="false" show="false"/>
-    <elementParameter field="TEXT" name="MAPR_HOME_DIR" value="&quot;/opt/mapr&quot;" show="false"/>
-    <elementParameter field="CHECK" name="SET_HADOOP_LOGIN" value="false" show="false"/>
-    <elementParameter field="TEXT" name="HADOOP_LOGIN" value="&quot;kerberos&quot;" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="mapCustomer360"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="ACTIVE_DATABASE_DELIMITED_IDENTIFIERS" value="false" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVE_ADD_QUOTES_IN_TABLE_NAME" value="false" show="false"/>
-    <elementParameter field="CHECK" name="USE_ALIAS_IN_OUTPUT_TABLE" value="false" show="false"/>
-    <metadata connector="TABLE" label="customer_360" name="table3">
-      <column comment="" key="false" length="10" name="CUSTOMER_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="FULL_NAME" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="EMAIL" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="KYC_STATUS" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="TENURE_DAYS" nullable="true" pattern="" precision="0" sourceType="INT" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="TOTAL_ACCOUNTS" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="SAVINGS_BALANCE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="CHECKING_BALANCE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="CREDIT_CARD_EXPOSURE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="TOTAL_BALANCE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="LIFETIME_TXN_COUNT" nullable="true" pattern="" precision="0" sourceType="INT" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="TOTAL_DEPOSITS" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="TOTAL_WITHDRAWALS" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="LAST_TXN_DATE" nullable="true" pattern="" precision="-1" sourceType="DATE" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CUSTOMER_LIFECYCLE_STATUS" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendDBMap:DBMapData">
-      <InputTables name="silver.customers" tableName="silver.customers" joinType="JOIN">
-        <DBMapperTableEntries name="CUSTOMER_ID"/>
-        <DBMapperTableEntries name="FIRST_NAME"/>
-        <DBMapperTableEntries name="LAST_NAME"/>
-        <DBMapperTableEntries name="EMAIL"/>
-        <DBMapperTableEntries name="JOIN_DATE"/>
-        <DBMapperTableEntries name="KYC_STATUS"/>
-      </InputTables>
-      <InputTables name="silver.stage_account_summary" tableName="silver.stage_account_summary" joinType="LEFT_OUTER_JOIN">
-        <DBMapperTableEntries name="CUSTOMER_ID" expression="silver.customers.CUSTOMER_ID " join="true" operator="="/>
-        <DBMapperTableEntries name="TOTAL_ACCOUNTS"/>
-        <DBMapperTableEntries name="SAVINGS_BALANCE"/>
-        <DBMapperTableEntries name="CHECKING_BALANCE"/>
-        <DBMapperTableEntries name="CC_BALANCE"/>
-        <DBMapperTableEntries name="TOTAL_RELATIONSHIP_BALANCE"/>
-      </InputTables>
-      <InputTables name="silver.stage_txn_summary" tableName="silver.stage_txn_summary" joinType="LEFT_OUTER_JOIN">
-        <DBMapperTableEntries name="CUSTOMER_ID" expression="silver.customers.CUSTOMER_ID " join="true" operator="="/>
-        <DBMapperTableEntries name="TOTAL_TXN_COUNT"/>
-        <DBMapperTableEntries name="TOTAL_DEPOSITS_LIFETIME"/>
-        <DBMapperTableEntries name="TOTAL_WITHDRAWALS_LIFETIME"/>
-        <DBMapperTableEntries name="LAST_TXN_DATE"/>
-      </InputTables>
-      <OutputTables name="table3" tableName="customer_360">
-        <DBMapperTableEntries name="CUSTOMER_ID" expression="silver.customers.CUSTOMER_ID"/>
-        <DBMapperTableEntries name="FULL_NAME" expression="concat(silver.customers.FIRST_NAME, ' ', silver.customers.LAST_NAME) "/>
-        <DBMapperTableEntries name="EMAIL" expression="silver.customers.EMAIL"/>
-        <DBMapperTableEntries name="KYC_STATUS" expression="silver.customers.KYC_STATUS"/>
-        <DBMapperTableEntries name="TENURE_DAYS" expression="datediff(current_date(), to_date(silver.customers.JOIN_DATE)) "/>
-        <DBMapperTableEntries name="TOTAL_ACCOUNTS" expression="COALESCE(silver.stage_account_summary.TOTAL_ACCOUNTS, 0) "/>
-        <DBMapperTableEntries name="SAVINGS_BALANCE" expression="COALESCE(silver.stage_account_summary.SAVINGS_BALANCE,0) "/>
-        <DBMapperTableEntries name="CHECKING_BALANCE" expression="COALESCE(silver.stage_account_summary.CHECKING_BALANCE,0) "/>
-        <DBMapperTableEntries name="CREDIT_CARD_EXPOSURE" expression="COALESCE(silver.stage_account_summary.CC_BALANCE,0) "/>
-        <DBMapperTableEntries name="TOTAL_BALANCE" expression="COALESCE(silver.stage_account_summary.TOTAL_RELATIONSHIP_BALANCE, 0) "/>
-        <DBMapperTableEntries name="LIFETIME_TXN_COUNT" expression="COALESCE(silver.stage_txn_summary.TOTAL_TXN_COUNT,0) "/>
-        <DBMapperTableEntries name="TOTAL_DEPOSITS" expression="COALESCE(silver.stage_txn_summary.TOTAL_DEPOSITS_LIFETIME, 0) "/>
-        <DBMapperTableEntries name="TOTAL_WITHDRAWALS" expression="COALESCE(silver.stage_txn_summary.TOTAL_WITHDRAWALS_LIFETIME, 0) "/>
-        <DBMapperTableEntries name="LAST_TXN_DATE" expression="silver.stage_txn_summary.LAST_TXN_DATE"/>
-        <DBMapperTableEntries name="CUSTOMER_LIFECYCLE_STATUS" expression="CASE &#xD;&#xA;&#x9;WHEN silver.stage_txn_summary.LAST_TXN_DATE >= date_sub(current_date(), 30) THEN 'Active'&#xD;&#xA;&#x9;WHEN silver.stage_txn_summary.LAST_TXN_DATE IS NULL THEN 'No Activity'&#xD;&#xA;&#x9;ELSE 'Dormant'&#xD;&#xA;END "/>
-      </OutputTables>
-    </nodeData>
-  </node>
-  <node componentName="tELTHiveInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="200" posY="1560" sizeX="121" sizeY="40">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveInput_5" show="false"/>
-    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;stage_account_summary&quot;"/>
-    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;silver&quot;"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="hive_id"/>
-    <elementParameter field="TEXT" name="LABEL" value="__ELT_TABLE_NAME__"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="TABLE" label="silver.stage_account_summary" name="tELTHiveInput_5">
-      <column comment="" key="false" length="10" name="CUSTOMER_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Long" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="TOTAL_ACCOUNTS" nullable="true" pattern="" precision="0" sourceType="INT" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="SAVINGS_BALANCE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="CHECKING_BALANCE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="CC_BALANCE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="TOTAL_RELATIONSHIP_BALANCE" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_String" originalLength="15" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tELTHiveInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1680" sizeX="121" sizeY="40">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveInput_6" show="false"/>
-    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;stage_txn_summary&quot;"/>
-    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;silver&quot;"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="hive_id"/>
-    <elementParameter field="TEXT" name="LABEL" value="__ELT_TABLE_NAME__"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="TABLE" label="silver.stage_txn_summary" name="tELTHiveInput_6">
-      <column comment="" key="false" length="10" name="CUSTOMER_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Long" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="-1" name="TOTAL_TXN_COUNT" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="TOTAL_DEPOSITS_LIFETIME" nullable="true" pattern="" precision="-1" sourceType="FLOAT" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="TOTAL_WITHDRAWALS_LIFETIME" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="LAST_TXN_DATE" nullable="true" pattern="" precision="-1" sourceType="DATE" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tELTHiveOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="760" posY="1440" sizeX="121" sizeY="40">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveOutput_3" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;customer_360&quot;"/>
-    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="&quot;gold&quot;"/>
-    <elementParameter field="CHECK" name="IS_TABLE_NAME_VARIABLE" value="false"/>
-    <elementParameter field="CHECK" name="USE_DIFFERENT_TABLE" value="false"/>
-    <elementParameter field="TEXT" name="DIFFERENT_TABLE_NAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
-    <elementParameter field="CHECK" name="TARGET_TABLE_IS_A_PARQUET_TABLE" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="PARQUET_COMPRESSION" value="UNCOMPRESSED" show="false"/>
-    <elementParameter field="TABLE" name="FIELD_PARTITION">
-      <elementValue elementRef="COLUMN_NAME" value="&quot;execution_date&quot;" id="0"/>
-      <elementValue elementRef="COLUMN_VALUE" value="context.execution_date" id="1"/>
-    </elementParameter>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="hive_id"/>
-    <elementParameter field="CHECK" name="SET_APPLICATION_NAME" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="__ELT_TABLE_NAME__"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="TABLE" label="customer_360" name="tELTHiveOutput_3">
-      <column comment="" key="false" length="10" name="CUSTOMER_ID" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="FULL_NAME" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="EMAIL" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="KYC_STATUS" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="TENURE_DAYS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="TOTAL_ACCOUNTS" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="SAVINGS_BALANCE" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="CHECKING_BALANCE" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="CREDIT_CARD_EXPOSURE" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="TOTAL_BALANCE" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="LIFETIME_TXN_COUNT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" originalLength="10" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="TOTAL_DEPOSITS" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="TOTAL_WITHDRAWALS" nullable="true" pattern="" precision="2" sourceType="STRING" type="id_String" originalLength="15" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="LAST_TXN_DATE" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CUSTOMER_LIFECYCLE_STATUS" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tHiveConnection_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
@@ -1524,6 +1528,18 @@
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tELTHiveOutput_2" offsetLabelX="0" offsetLabelY="0" source="tELTHiveOutput_2" target="tELTHiveMap_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
+  </connection>
+  <connection connectorName="TABLE" label="customer_360" lineStyle="9" metaname="table3" offsetLabelX="0" offsetLabelY="0" source="tELTHiveMap_3" target="tELTHiveOutput_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="table3" show="false"/>
+  </connection>
+  <connection connectorName="TABLE" label="silver.stage_account_summary" lineStyle="9" metaname="tELTHiveInput_5" offsetLabelX="0" offsetLabelY="0" source="tELTHiveInput_5" target="tELTHiveMap_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveInput_5" show="false"/>
+  </connection>
+  <connection connectorName="TABLE" label="silver.stage_txn_summary" lineStyle="9" metaname="tELTHiveInput_6" offsetLabelX="0" offsetLabelY="0" source="tELTHiveInput_6" target="tELTHiveMap_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveInput_6" show="false"/>
+  </connection>
+  <connection connectorName="TABLE" label="silver.customers" lineStyle="9" metaname="tELTHiveInput_4" offsetLabelX="0" offsetLabelY="0" source="tELTHiveInput_4" target="tELTHiveMap_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveInput_4" show="false"/>
   </connection>
   <connection connectorName="TABLE" label="silver.accounts" lineStyle="9" metaname="tELTHiveInput_1" offsetLabelX="0" offsetLabelY="0" source="tELTHiveInput_1" target="tELTHiveMap_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveInput_1" show="false"/>
@@ -1571,18 +1587,6 @@
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tHiveRow_5" offsetLabelX="0" offsetLabelY="0" source="tHiveRow_5" target="tHiveRow_6">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
-  </connection>
-  <connection connectorName="TABLE" label="silver.customers" lineStyle="9" metaname="tELTHiveInput_4" offsetLabelX="0" offsetLabelY="0" source="tELTHiveInput_4" target="tELTHiveMap_3">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveInput_4" show="false"/>
-  </connection>
-  <connection connectorName="TABLE" label="customer_360" lineStyle="9" metaname="table3" offsetLabelX="0" offsetLabelY="0" source="tELTHiveMap_3" target="tELTHiveOutput_3">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="table3" show="false"/>
-  </connection>
-  <connection connectorName="TABLE" label="silver.stage_account_summary" lineStyle="9" metaname="tELTHiveInput_5" offsetLabelX="0" offsetLabelY="0" source="tELTHiveInput_5" target="tELTHiveMap_3">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveInput_5" show="false"/>
-  </connection>
-  <connection connectorName="TABLE" label="silver.stage_txn_summary" lineStyle="9" metaname="tELTHiveInput_6" offsetLabelX="0" offsetLabelY="0" source="tELTHiveInput_6" target="tELTHiveMap_3">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveInput_6" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
@@ -1633,11 +1637,6 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_4" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tELTHiveInput_4" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;93;185" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="0;93;185"/>
   </subjob>
