@@ -48,8 +48,9 @@
     <contextParameter comment="" name="conn_hdfs_mbtc_namenode_uri" prompt="conn_hdfs_mbtc_namenode_uri?" promptNeeded="false" repositoryContextId="_LodxkPWmEfCzdeB6aeN2sw" type="id_String" value="&quot;hdfs://dao-cdp-poc-master1.novare.com.ph:8020&quot;" internalId="_YH5JEPXaEfCzdeB6aeN2sw"/>
     <contextParameter comment="" name="dir_hdfs_bronze" prompt="dir_hdfs_bronze?" promptNeeded="false" repositoryContextId="_i411QPEbEfCRlLC-EnFWmw" type="id_String" value="" internalId="_JcHZYfdUEfCAt6AmyhhERg"/>
     <contextParameter comment="" name="columns" prompt="columns?" promptNeeded="false" repositoryContextId="_i411QPEbEfCRlLC-EnFWmw" type="id_String" value="" internalId="_JcHZZfdUEfCAt6AmyhhERg"/>
-    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
   </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>
@@ -516,13 +517,13 @@
     <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE"/>
     <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE3"/>
     <elementParameter field="CLOSED_LIST" name="HADOOP_VERSION" value="HADOOP3"/>
-    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_mbtc_target_Server"/>
+    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_target_table_Server"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_mbtc_target_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_mbtc_target_Database"/>
-    <elementParameter field="TEXT" name="USER" value="context.conn_hive_mbtc_target_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:iDGPrxHewmi6YoLTBrKslGfA5MsqiEX1IODDVS8eKmDto6evj0Q0B+Bs7FtunnvJCQOHZ9YF16BKw+aT0GbFNKgi"/>
-    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_mbtc_target_hiveAdditionalJDBCParameters"/>
+    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_target_table_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:AkSg0l1qcPdv/NyteGguyioykLSj4XQgakiJ1mplrNFq1gq4btKH+TXBz7YEXfsJlbuT9egCFotnWjHJ6K1SisP24Q=="/>
+    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters"/>
     <elementParameter field="CHECK" name="CONFIGURATIONS_FROM_CLASSPATH" value="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>

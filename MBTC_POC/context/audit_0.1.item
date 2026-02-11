@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_uVguEQcuEfGqGfeJ7LYmLQ" name="Default">
+  <contextParameter xmi:id="_uX-zQAcuEfGqGfeJ7LYmLQ" comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" type="id_String" value="/opt/talend/talend-runtime/data/tmp/development-files/"/>
+  <contextParameter xmi:id="_uX-zQQcuEfGqGfeJ7LYmLQ" comment="" name="manifest_table" prompt="manifest_table?" promptNeeded="false" type="id_String" value="MBTC_MANIFEST_TABLE"/>
+  <contextParameter xmi:id="_uX-zQgcuEfGqGfeJ7LYmLQ" comment="" name="audit_database" prompt="audit_database?" promptNeeded="false" type="id_String" value="audit"/>
+  <contextParameter xmi:id="_D1e2oAcvEfGqGfeJ7LYmLQ" comment="" name="source_count" prompt="source_count?" promptNeeded="false" type="id_Integer" value=""/>
+  <contextParameter xmi:id="_D1e2oQcvEfGqGfeJ7LYmLQ" comment="" name="target_count" prompt="target_count?" promptNeeded="false" type="id_String" value=""/>
+</talendfile:ContextType>

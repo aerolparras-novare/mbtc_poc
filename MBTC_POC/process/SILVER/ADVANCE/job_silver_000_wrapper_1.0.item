@@ -46,8 +46,9 @@
     <contextParameter comment="" name="source_count" prompt="source_count?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_nKq5EPLXEfCCCuz9yrvv0A"/>
     <contextParameter comment="" name="target_count" prompt="target_count?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_nKq5EfLXEfCCCuz9yrvv0A"/>
     <contextParameter comment="" name="silver_count" prompt="silver_count?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="" internalId="_rrzToPTUEfCMT6eNbad5BA"/>
-    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
   </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>

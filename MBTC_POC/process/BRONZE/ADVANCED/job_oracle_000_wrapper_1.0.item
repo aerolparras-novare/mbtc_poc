@@ -49,8 +49,9 @@
     <contextParameter comment="" name="manifest_table" prompt="manifest_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="mbtc_manifest_table" internalId="_GTsPAfXXEfCzdeB6aeN2sw"/>
     <contextParameter comment="" name="job_status" prompt="job_status?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_GTsPAvXXEfCzdeB6aeN2sw"/>
     <contextParameter comment="" name="footer" prompt="footer?" promptNeeded="false" repositoryContextId="_m887IO9_EfCcepb0inUXkA" type="id_Integer" value="" internalId="__ZWdoPXXEfCzdeB6aeN2sw"/>
-    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
   </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>

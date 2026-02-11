@@ -50,8 +50,9 @@
     <contextParameter comment="" name="conn_sftp_mbtc_host" prompt="conn_sftp_mbtc_host?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_String" value="47.131.5.132" internalId="_aK_DYfX0EfCzdeB6aeN2sw"/>
     <contextParameter comment="" name="conn_sftp_mbtc_port" prompt="conn_sftp_mbtc_port?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_Integer" value="22" internalId="_aK_DYvX0EfCzdeB6aeN2sw"/>
     <contextParameter comment="" name="conn_sftp_mbtc_password" prompt="conn_sftp_mbtc_password?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_Password" value="enc:system.encryption.key.v1:05Aou1Vg4lVBzI+XX6vGnHb14o6QGd3N7ykfNQR51UAgt/L0Dbci4HjfL8Q=" internalId="_aK_DY_X0EfCzdeB6aeN2sw"/>
-    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
   </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>
@@ -572,13 +573,13 @@
     <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE"/>
     <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE3"/>
     <elementParameter field="CLOSED_LIST" name="HADOOP_VERSION" value="HADOOP3"/>
-    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_mbtc_target_Server"/>
+    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_target_table_Server"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_mbtc_target_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_mbtc_target_Database"/>
-    <elementParameter field="TEXT" name="USER" value="context.conn_hive_mbtc_target_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:gpFobobpGWYctJa/Ihuk3AaGfUtNf2ifltpq0KDVVlu6zqL8vTah/tGuM3rhLyzu2fGO6wB/zxo1zHInZ3q3UVqh"/>
-    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_mbtc_target_hiveAdditionalJDBCParameters"/>
+    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_target_table_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:4YNQzxSnLwwc0BGD5GlFEa49UOl6GpHwcMDz8cJjiz4TpSqU3Q8aaqe3HXfTbAgMTmXTwHY1xmEDiQc1/NmefA9sgg=="/>
+    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters"/>
     <elementParameter field="CHECK" name="CONFIGURATIONS_FROM_CLASSPATH" value="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>

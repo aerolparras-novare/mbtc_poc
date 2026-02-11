@@ -51,8 +51,9 @@
     <contextParameter comment="" name="conn_sftp_mbtc_host" prompt="conn_sftp_mbtc_host?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_String" value="47.131.5.132" internalId="_e6WVgfX0EfCzdeB6aeN2sw"/>
     <contextParameter comment="" name="conn_sftp_mbtc_port" prompt="conn_sftp_mbtc_port?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_Integer" value="22" internalId="_e6WVgvX0EfCzdeB6aeN2sw"/>
     <contextParameter comment="" name="conn_sftp_mbtc_password" prompt="conn_sftp_mbtc_password?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_Password" value="enc:system.encryption.key.v1:qhCSqVylDML/TmyZ4XkaGFItjFunAtx376swZhtxWkBfGRLYmHPcymJg/Cc=" internalId="_e6WVg_X0EfCzdeB6aeN2sw"/>
-    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
   </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>

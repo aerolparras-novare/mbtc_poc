@@ -53,8 +53,9 @@
     <contextParameter comment="" name="conn_sftp_mbtc_password" prompt="conn_sftp_mbtc_password?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_Password" value="enc:system.encryption.key.v1:b68Xey/eR0dpZgpFg35VcL6tQ/bv1iYV5fsneLFaUF+N7E7mpNVrHrccRF4=" internalId="_UVik4_XyEfCzdeB6aeN2sw"/>
     <contextParameter comment="" name="dir_hdfs_raw" prompt="dir_hdfs_raw?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/raw/" internalId="_0Mo5EPaREfCAt6AmyhhERg"/>
     <contextParameter comment="" name="dir_edge_file_path" prompt="dir_edge_file_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/opt/talend/talend-runtime/data/tmp/development-files/" internalId="_mImPMPaUEfCAt6AmyhhERg"/>
-    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
   </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>

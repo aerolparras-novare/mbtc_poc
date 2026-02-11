@@ -36,6 +36,7 @@
     <contextParameter comment="" name="event_start" prompt="event_start?" promptNeeded="false" repositoryContextId="built-in" type="id_Date" value="" internalId="_572n4PgAEfCVZsdSWz8YYw"/>
     <contextParameter comment="" name="manifest_table" prompt="manifest_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="MBTC_MANIFEST_TABLE" internalId="_572n4fgAEfCVZsdSWz8YYw"/>
     <contextParameter comment="" name="audit_database" prompt="audit_database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="audit" internalId="_pDgrkPz_EfCqConinyY4Xg"/>
+    <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -163,7 +164,7 @@
       <elementValue elementRef="KEY" value="&quot;source_system&quot;" id="4"/>
       <elementValue elementRef="VALUE" value="&quot;flat_file&quot;" id="5"/>
       <elementValue elementRef="KEY" value="&quot;raw_file_dir&quot;" id="6"/>
-      <elementValue elementRef="VALUE" value="&quot;/dev/raw/&quot; +context.target_table +&quot;/ingest_date=&quot; + TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate())" id="7"/>
+      <elementValue elementRef="VALUE" value="&quot;/dev/raw/&quot; +context.target_tablename +&quot;/ingest_date=&quot; + TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate())" id="7"/>
       <elementValue elementRef="KEY" value="&quot;processing_start_time&quot;" id="8"/>
       <elementValue elementRef="VALUE" value="TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.getCurrentDate())" id="9"/>
     </elementParameter>
@@ -331,13 +332,13 @@
     <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE3" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HADOOP_VERSION" value="HADOOP3" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_mbtc_target_Server" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_mbtc_target_Port" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_mbtc_target_Database" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_target_table_Server" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_target_table_Port" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="context.conn_hive_mbtc_target_Login" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:oONoy7CYSlIgU84HLr/WTcs9Pf8LA9Bh6sjgTid1/OsyzK2uASFq+WTbyrqHprh/abVZeQMa0jQj+yj3xNeSYFtj" show="false"/>
-    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_mbtc_target_hiveAdditionalJDBCParameters" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:TeHEY3Y/EYTCkzXQjRMoQD2mpfZ9dimJBKF2IJpQyXDlz3I7vKj7+twinZZie0Ju9a3PBxLCd9EKiCfaxaUkxkHkzA==" show="false"/>
+    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters" show="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="NAMENODE_PRINCIPAL" value="&quot;nn/_HOST@EXAMPLE.COM&quot;" show="false"/>
@@ -388,7 +389,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;CREATE EXTERNAL TABLE IF NOT EXISTS &quot; + context.target_schema + &quot;.&quot; + context.target_table + &quot;&#xD;&#xA;(&quot;+ context.create_table_schema + &quot;)&#xD;&#xA;&#xD;&#xA;PARTITIONED BY (INGEST_DATE varchar(8))&#xD;&#xA;STORED AS PARQUET &#xD;&#xA;LOCATION '&quot;+ context.table_location + &quot;'&#xD;&#xA;TBLPROPERTIES('serialization.null.format'='null')&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;CREATE EXTERNAL TABLE IF NOT EXISTS &quot; + context.target_schema + &quot;.&quot; + context.target_tablename + &quot;&#xD;&#xA;(&quot;+ context.create_table_schema + &quot;)&#xD;&#xA;&#xD;&#xA;PARTITIONED BY (INGEST_DATE varchar(8))&#xD;&#xA;STORED AS PARQUET &#xD;&#xA;LOCATION '&quot;+ context.table_location + &quot;'&#xD;&#xA;TBLPROPERTIES('serialization.null.format'='null')&#xD;&#xA;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -431,13 +432,13 @@
     <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE3" show="false"/>
     <elementParameter field="CLOSED_LIST" name="HADOOP_VERSION" value="HADOOP3" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_mbtc_target_Server" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_mbtc_target_Port" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_mbtc_target_Database" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_target_table_Server" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_target_table_Port" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="context.conn_hive_mbtc_target_Login" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:VoXleE3IyOwLniiHRPX1hE6lnqtFef88yhFP/zGK0V0E3BwzUGHkezctaCOXwQtZAtkJSr48Ld9rIn3ANEiJyUk9" show="false"/>
-    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_mbtc_target_hiveAdditionalJDBCParameters" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:767fZdubt99ay23aOVTZi+sdC51Bc0vTJfCNtfyDijAXhPcudikK35kvJ48XSZzpe7jCxPQ3Jh1ZPgWx8C2zTMrCzg==" show="false"/>
+    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters" show="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="NAMENODE_PRINCIPAL" value="&quot;nn/_HOST@EXAMPLE.COM&quot;" show="false"/>
@@ -488,7 +489,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;ALTER TABLE &quot; + context.target_schema + &quot;.&quot; + context.target_table +&#xD;&#xA;&quot; ADD IF NOT EXISTS PARTITION (ingest_date='&quot; + (String) globalMap.get(&quot;ingest_date&quot;) + &quot;')&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;ALTER TABLE &quot; + context.target_schema + &quot;.&quot; + context.target_tablename +&#xD;&#xA;&quot; ADD IF NOT EXISTS PARTITION (ingest_date='&quot; + (String) globalMap.get(&quot;ingest_date&quot;) + &quot;')&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -582,13 +583,13 @@
     <elementParameter field="TEXT" name="GOOGLE_JARS_BUCKET" value="&quot;gs://my-bucket/talend/jars&quot;" show="false"/>
     <elementParameter field="CHECK" name="DEFINE_PATH_TO_GOOGLE_CREDENTIALS" value="false" show="false"/>
     <elementParameter field="FILE" name="PATH_TO_GOOGLE_CREDENTIALS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="context.target_table"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="context.target_tablename"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;ALTER TABLE &quot; + context.target_schema + &quot;.&quot; + context.target_table +&#xD;&#xA;&quot; DROP IF EXISTS PARTITION (ingest_date &lt;'&quot; + (String) globalMap.get(&quot;ingest_date&quot;) + &quot;')&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;ALTER TABLE &quot; + context.target_schema + &quot;.&quot; + context.target_tablename +&#xD;&#xA;&quot; DROP IF EXISTS PARTITION (ingest_date &lt;'&quot; + (String) globalMap.get(&quot;ingest_date&quot;) + &quot;')&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -632,13 +633,13 @@
     <elementParameter field="CLOSED_LIST" name="CONNECTION_MODE" value="STANDALONE"/>
     <elementParameter field="CLOSED_LIST" name="HIVE_SERVER" value="HIVE3"/>
     <elementParameter field="CLOSED_LIST" name="HADOOP_VERSION" value="HADOOP3"/>
-    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_mbtc_target_Server"/>
+    <elementParameter field="TEXT" name="HOST" value="context.conn_hive_target_table_Server"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_mbtc_target_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_mbtc_target_Database"/>
-    <elementParameter field="TEXT" name="USER" value="context.conn_hive_mbtc_target_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:RuwiNndXEW3T3h4jHBvKUuEo3ajvrIo1tPy4tV2TB8N4uk/TyZzaeSbTDgtmgIEFDll8UNRdI2tVaWBDmfZqFiOS"/>
-    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_mbtc_target_hiveAdditionalJDBCParameters"/>
+    <elementParameter field="TEXT" name="PORT" value="context.conn_hive_target_table_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database"/>
+    <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:re8J14jD7NlIQGos5sAWumlkQ6Ba5wVTPk/58bkU4vijv9TMoJCzgkKwvfKEljwiygVORpOjrEIDAShQMP4GTiKDJA=="/>
+    <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters"/>
     <elementParameter field="CHECK" name="CONFIGURATIONS_FROM_CLASSPATH" value="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>
@@ -1062,7 +1063,7 @@
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="360" posY="1200">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_4" show="false"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Checking Target Count for table, &quot; + context.target_schema + &quot;.&quot; + context.target_table"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Checking Target Count for table, &quot; + context.target_schema + &quot;.&quot; + context.target_tablename"/>
     <elementParameter field="TEXT" name="CODE" value="3707"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
     <elementParameter field="TEXT" name="LABEL" value=""/>
@@ -1071,7 +1072,7 @@
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="1040">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_5" show="false"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Bronze Layer Activity for table, &quot; + context.target_schema + &quot;.&quot; + context.target_table"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Bronze Layer Activity for table, &quot; + context.target_schema + &quot;.&quot; + context.target_tablename"/>
     <elementParameter field="TEXT" name="CODE" value="3708"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
     <elementParameter field="TEXT" name="LABEL" value=""/>
@@ -1179,13 +1180,13 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk17" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>

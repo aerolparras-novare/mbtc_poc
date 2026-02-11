@@ -16,10 +16,11 @@
     <contextParameter comment="" name="event_end_str" prompt="event_end_str?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_g7UYoew5EfC3YPYsXBPNOA"/>
     <contextParameter comment="" name="event_duration" prompt="event_duration?" promptNeeded="false" repositoryContextId="built-in" type="id_Long" value="" internalId="_g7UYouw5EfC3YPYsXBPNOA"/>
     <contextParameter comment="" name="user" prompt="user?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_nyqD4Ow5EfC3YPYsXBPNOA"/>
-    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsvf6EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="source_schema" prompt="source_schema?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVws_f6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsvf6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="source_schema" prompt="source_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVws_f6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
   </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>

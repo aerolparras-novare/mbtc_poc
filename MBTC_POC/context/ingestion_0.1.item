@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_IkjN0AcvEfGqGfeJ7LYmLQ" name="Default">
+  <contextParameter xmi:id="_Il_YQAcvEfGqGfeJ7LYmLQ" comment="" name="source_schema" prompt="source_schema?" promptNeeded="false" type="id_String" value="MBTC"/>
+  <contextParameter xmi:id="_Il_YQQcvEfGqGfeJ7LYmLQ" comment="" name="source_tablename" prompt="source_tablename?" promptNeeded="false" type="id_String" value="CUSTOMERS"/>
+  <contextParameter xmi:id="_Il_YQgcvEfGqGfeJ7LYmLQ" comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" type="id_String" value="bronze"/>
+  <contextParameter xmi:id="_Il_YQwcvEfGqGfeJ7LYmLQ" comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" type="id_String" value="customers_test"/>
+  <contextParameter xmi:id="_Il_YRAcvEfGqGfeJ7LYmLQ" comment="" name="target_table_location" prompt="target_table_location?" promptNeeded="false" type="id_String" value="/dev/bronze/customers_test/"/>
+  <contextParameter xmi:id="_Il_YRQcvEfGqGfeJ7LYmLQ" comment="" name="create_table_schema" prompt="create_table_schema?" promptNeeded="false" type="id_String" value="customer_id string, first_name string, last_name string, email string, join_date string, kyc_status string, source_system string, SCD_STATUS STRING, SCD_TIMESTAMP STRING"/>
+  <contextParameter xmi:id="_Il_YRgcvEfGqGfeJ7LYmLQ" comment="" name="select_columns" prompt="select_columns?" promptNeeded="false" type="id_String" value="customer_id, first_name, last_name, email, to_char(join_date,'yyyy-MM-dd') AS join_date, kyc_status"/>
+</talendfile:ContextType>
