@@ -131,8 +131,8 @@
           <mapperTableEntries name="event_start" expression="TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, (String)globalMap.get(&quot;processing_start_time&quot;))" type="id_Date" nullable="true"/>
           <mapperTableEntries name="event_end" expression="TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.formatDateInTimeZone(&quot;yyyy-MM-dd HH:mm:ss&quot;, row1.moment, &quot;Asia/Manila&quot;)) " type="id_Date" nullable="true"/>
           <mapperTableEntries name="event_cd" expression="row1.code.toString();" type="id_String" nullable="true"/>
-          <mapperTableEntries name="event_src" expression="context.source_schema +&quot;.&quot;+ context.target_table" type="id_String" nullable="true"/>
-          <mapperTableEntries name="event_tgt" expression="context.target_schema +&quot;.&quot;+ context.target_table" type="id_String" nullable="true"/>
+          <mapperTableEntries name="event_src" expression="context.source_schema +&quot;.&quot;+ context.source_tablename" type="id_String" nullable="true"/>
+          <mapperTableEntries name="event_tgt" expression="context.target_schema +&quot;.&quot;+ context.target_tablename" type="id_String" nullable="true"/>
           <mapperTableEntries name="event_desc" expression="row1.message " type="id_String" nullable="true"/>
           <mapperTableEntries name="proc_date" expression="TalendDate.formatDate(&quot;yyyyMMddHHmmss&quot;,TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.formatDateInTimeZone(&quot;yyyy-MM-dd HH:mm:ss&quot;, row1.moment, &quot;Asia/Manila&quot;))).toString()" type="id_String" nullable="true"/>
         </outputTables>
