@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_5-g0cAfREfGwocgMw9vnuw" confirmationNeeded="false" hide="false" name="Default">
+  <contextParameter xmi:id="_5-g0cQfREfGwocgMw9vnuw" comment="" name="MBTC_DS_url" prompt="MBTC_DS_url?" promptNeeded="false" repositoryContextId="" type="id_String" value="https://tds.ap.cloud.talend.com/data-stewardship/"/>
+  <contextParameter xmi:id="_5-g0cgfREfGwocgMw9vnuw" comment="" name="MBTC_DS_username" prompt="MBTC_DS_username?" promptNeeded="false" repositoryContextId="" type="id_String" value="angela.infortuno@novare.com.ph"/>
+  <contextParameter xmi:id="_5-g0cwfREfGwocgMw9vnuw" comment="" name="MBTC_DS_password" prompt="MBTC_DS_password?" promptNeeded="false" repositoryContextId="" type="id_Password" value="enc:system.encryption.key.v1:AN1d1jziJUDZZUtc0Xm/K3k6O1TcUzCW8WYjirNJ0vYsUN0UnI3K9i3sbqE482UZsK6/C1wenIaGzWVEZy9PH2atO877CxwQ1wqnG6e7rMOW09bdX4wsxrBhgdI="/>
+</talendfile:ContextType>

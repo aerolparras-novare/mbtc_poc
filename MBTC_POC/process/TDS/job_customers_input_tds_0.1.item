@@ -21,6 +21,9 @@
     <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="/opt/talend/talend-runtime/data/tmp/development-files/" internalId="_NQ7oIgdVEfGwtqwsG9aj6Q"/>
     <contextParameter comment="" name="audit_database" prompt="audit_database?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="audit" internalId="_NQ7oIwdVEfGwtqwsG9aj6Q"/>
     <contextParameter comment="" name="manifest_table" prompt="manifest_table?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="MBTC_MANIFEST_TABLE" internalId="_NQ7oJAdVEfGwtqwsG9aj6Q"/>
+    <contextParameter comment="" name="MBTC_DS_username" prompt="MBTC_DS_username?" promptNeeded="false" repositoryContextId="_5-MrYAfREfGwocgMw9vnuw" type="id_String" value="angela.infortuno@novare.com.ph" internalId="_CO0dwAfSEfGwocgMw9vnuw"/>
+    <contextParameter comment="" name="MBTC_DS_password" prompt="MBTC_DS_password?" promptNeeded="false" repositoryContextId="_5-MrYAfREfGwocgMw9vnuw" type="id_Password" value="enc:system.encryption.key.v1:4o+a+wfTb21SQqXWyheBQrHVS/48nbi7xw9E6eY+LtPxySLwlwijmOl6IHclfB9sfxvJwCyJVlepYSIH4FdxIy6XGeXKW66fkTmMfsHc8+Kuqqmi9C9zih2ssv4=" internalId="_CO0dwQfSEfGwocgMw9vnuw"/>
+    <contextParameter comment="" name="MBTC_DS_url" prompt="MBTC_DS_url?" promptNeeded="false" repositoryContextId="_5-MrYAfREfGwocgMw9vnuw" type="id_String" value="https://tds.ap.cloud.talend.com/data-stewardship/" internalId="_CO0dwgfSEfGwocgMw9vnuw"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="dev">
     <contextParameter comment="" name="conn_hive_target_table_AdditionalJDBCParameters" prompt="conn_hive_target_table_AdditionalJDBCParameters?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="" internalId="_NQ7oJQdVEfGwtqwsG9aj6Q"/>
@@ -34,6 +37,9 @@
     <contextParameter comment="" name="source_count" prompt="source_count?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_Integer" value="" internalId="_NQ7oLQdVEfGwtqwsG9aj6Q"/>
     <contextParameter comment="" name="manifest_table" prompt="manifest_table?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="MBTC_MANIFEST_TABLE" internalId="_NQ7oLgdVEfGwtqwsG9aj6Q"/>
     <contextParameter comment="" name="conn_hive_target_table_Server" prompt="conn_hive_target_table_Server?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="13.215.89.162" internalId="_NQ7oLwdVEfGwtqwsG9aj6Q"/>
+    <contextParameter comment="" name="MBTC_DS_username" prompt="MBTC_DS_username?" promptNeeded="false" repositoryContextId="_5-MrYAfREfGwocgMw9vnuw" type="id_String" value="angela.infortuno@novare.com.ph" internalId="_CO0dwwfSEfGwocgMw9vnuw"/>
+    <contextParameter comment="" name="MBTC_DS_password" prompt="MBTC_DS_password?" promptNeeded="false" repositoryContextId="_5-MrYAfREfGwocgMw9vnuw" type="id_Password" value="enc:system.encryption.key.v1:7SZ5UwoujplqvVaox2kB7B2rD7DlKuXpYpGN8IPgjKkK+lrUig8jIfnqtnBlgV47TbdQ4qMqa/+veJbLh7i/mdrcBh7SxIGj6dhXO+ito00I4p4o26t0Nq9z7UQ=" internalId="_CO0dxAfSEfGwocgMw9vnuw"/>
+    <contextParameter comment="" name="MBTC_DS_url" prompt="MBTC_DS_url?" promptNeeded="false" repositoryContextId="_5-MrYAfREfGwocgMw9vnuw" type="id_String" value="https://tds.ap.cloud.talend.com/data-stewardship/" internalId="_CO0dxQfSEfGwocgMw9vnuw"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>

@@ -52,6 +52,19 @@
       "name" : "manifest_table"
     } ]
   }, {
+    "contextName" : "Default",
+    "repoId" : "_5-MrYAfREfGwocgMw9vnuw",
+    "parameterList" : [ {
+      "id" : "_5-g0cgfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_username"
+    }, {
+      "id" : "_5-g0cwfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_password"
+    }, {
+      "id" : "_5-g0cQfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_url"
+    } ]
+  }, {
     "contextName" : "dev",
     "repoId" : "_C6ROcPKdEfCNScNTrRRCvQ",
     "parameterList" : [ {
@@ -91,6 +104,19 @@
     }, {
       "id" : "_uX-zQQcuEfGqGfeJ7LYmLQ",
       "name" : "manifest_table"
+    } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_5-MrYAfREfGwocgMw9vnuw",
+    "parameterList" : [ {
+      "id" : "_5-g0cgfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_username"
+    }, {
+      "id" : "_5-g0cwfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_password"
+    }, {
+      "id" : "_5-g0cQfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_url"
     } ]
   } ]
 }

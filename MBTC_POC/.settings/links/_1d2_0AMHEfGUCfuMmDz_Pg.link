@@ -1,0 +1,17 @@
+{
+  "itemId" : "_1d2_0AMHEfGUCfuMmDz_Pg",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_5-MrYAfREfGwocgMw9vnuw",
+    "parameterList" : [ {
+      "id" : "_5-g0cQfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_url"
+    }, {
+      "id" : "_5-g0cgfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_username"
+    }, {
+      "id" : "_5-g0cwfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_password"
+    } ]
+  } ]
+}
