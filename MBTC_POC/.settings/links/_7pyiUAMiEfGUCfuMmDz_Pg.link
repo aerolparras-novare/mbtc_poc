@@ -2,59 +2,16 @@
   "itemId" : "_7pyiUAMiEfGUCfuMmDz_Pg",
   "contextList" : [ {
     "contextName" : "Default",
-    "repoId" : "_kyD8APdCEfCAt6AmyhhERg",
+    "repoId" : "_5-MrYAfREfGwocgMw9vnuw",
     "parameterList" : [ {
-      "id" : "_kyZ6QfdCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_JobHistory"
+      "id" : "_5-g0cgfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_username"
     }, {
-      "id" : "_kyZ6QvdCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_customClasspath"
+      "id" : "_5-g0cwfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_password"
     }, {
-      "id" : "_kyZ6Q_dCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_ResourceManagerScheduler"
-    }, {
-      "id" : "_kyZ6RPdCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_User"
-    }, {
-      "id" : "_kyZ6RfdCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_useCustomClasspath"
-    }, {
-      "id" : "_kyZ6RvdCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_StagingDirectory"
-    }, {
-      "id" : "_kyZ6R_dCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_hadoopConfSpecificJar"
-    }, {
-      "id" : "_kyZ6SPdCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_ResourceManager"
-    }, {
-      "id" : "_kyZ6SfdCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_setHadoopConf"
-    }, {
-      "id" : "_kyZ6SvdCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_NameNodeUri"
-    } ]
-  }, {
-    "contextName" : "Default",
-    "repoId" : "_C6ROcPKdEfCNScNTrRRCvQ",
-    "parameterList" : [ {
-      "id" : "_C6ssR_KdEfCNScNTrRRCvQ",
-      "name" : "conn_hive_target_table_AdditionalJDBCParameters"
-    }, {
-      "id" : "_C6ssRvKdEfCNScNTrRRCvQ",
-      "name" : "conn_hive_target_table_Database"
-    }, {
-      "id" : "_C6ssQ_KdEfCNScNTrRRCvQ",
-      "name" : "conn_hive_target_table_Password"
-    }, {
-      "id" : "_C6ssQvKdEfCNScNTrRRCvQ",
-      "name" : "conn_hive_target_table_Server"
-    }, {
-      "id" : "_C6ssRfKdEfCNScNTrRRCvQ",
-      "name" : "conn_hive_target_table_Port"
-    }, {
-      "id" : "_C6ssQfKdEfCNScNTrRRCvQ",
-      "name" : "conn_hive_target_table_Login"
+      "id" : "_5-g0cQfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_url"
     } ]
   } ]
 }

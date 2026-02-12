@@ -4,32 +4,8 @@
     "contextName" : "Default",
     "repoId" : "_kyD8APdCEfCAt6AmyhhERg",
     "parameterList" : [ {
-      "id" : "_kyZ6QfdCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_JobHistory"
-    }, {
-      "id" : "_kyZ6QvdCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_customClasspath"
-    }, {
-      "id" : "_kyZ6Q_dCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_ResourceManagerScheduler"
-    }, {
       "id" : "_kyZ6RPdCEfCAt6AmyhhERg",
       "name" : "conn_hadoop_cluster_User"
-    }, {
-      "id" : "_kyZ6RfdCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_useCustomClasspath"
-    }, {
-      "id" : "_kyZ6RvdCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_StagingDirectory"
-    }, {
-      "id" : "_kyZ6R_dCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_hadoopConfSpecificJar"
-    }, {
-      "id" : "_kyZ6SPdCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_ResourceManager"
-    }, {
-      "id" : "_kyZ6SfdCEfCAt6AmyhhERg",
-      "name" : "conn_hadoop_cluster_setHadoopConf"
     }, {
       "id" : "_kyZ6SvdCEfCAt6AmyhhERg",
       "name" : "conn_hadoop_cluster_NameNodeUri"
@@ -41,11 +17,8 @@
       "id" : "_C6ssR_KdEfCNScNTrRRCvQ",
       "name" : "conn_hive_target_table_AdditionalJDBCParameters"
     }, {
-      "id" : "_C6ssRvKdEfCNScNTrRRCvQ",
-      "name" : "conn_hive_target_table_Database"
-    }, {
-      "id" : "_C6ssQ_KdEfCNScNTrRRCvQ",
-      "name" : "conn_hive_target_table_Password"
+      "id" : "_C6ssQfKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Login"
     }, {
       "id" : "_C6ssQvKdEfCNScNTrRRCvQ",
       "name" : "conn_hive_target_table_Server"
@@ -53,8 +26,97 @@
       "id" : "_C6ssRfKdEfCNScNTrRRCvQ",
       "name" : "conn_hive_target_table_Port"
     }, {
+      "id" : "_C6ssQ_KdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Password"
+    }, {
+      "id" : "_C6ssRvKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Database"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_uVguEAcuEfGqGfeJ7LYmLQ",
+    "parameterList" : [ {
+      "id" : "_D1e2oQcvEfGqGfeJ7LYmLQ",
+      "name" : "target_count"
+    }, {
+      "id" : "_D1e2oAcvEfGqGfeJ7LYmLQ",
+      "name" : "source_count"
+    }, {
+      "id" : "_uX-zQAcuEfGqGfeJ7LYmLQ",
+      "name" : "job_server_file_dir"
+    }, {
+      "id" : "_uX-zQgcuEfGqGfeJ7LYmLQ",
+      "name" : "audit_database"
+    }, {
+      "id" : "_uX-zQQcuEfGqGfeJ7LYmLQ",
+      "name" : "manifest_table"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_5-MrYAfREfGwocgMw9vnuw",
+    "parameterList" : [ {
+      "id" : "_5-g0cgfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_username"
+    }, {
+      "id" : "_5-g0cwfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_password"
+    }, {
+      "id" : "_5-g0cQfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_url"
+    } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_C6ROcPKdEfCNScNTrRRCvQ",
+    "parameterList" : [ {
+      "id" : "_C6ssR_KdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_AdditionalJDBCParameters"
+    }, {
+      "id" : "_C6ssRfKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Port"
+    }, {
       "id" : "_C6ssQfKdEfCNScNTrRRCvQ",
       "name" : "conn_hive_target_table_Login"
+    }, {
+      "id" : "_C6ssQ_KdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Password"
+    }, {
+      "id" : "_C6ssRvKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Database"
+    }, {
+      "id" : "_C6ssQvKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Server"
+    } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_uVguEAcuEfGqGfeJ7LYmLQ",
+    "parameterList" : [ {
+      "id" : "_uX-zQgcuEfGqGfeJ7LYmLQ",
+      "name" : "audit_database"
+    }, {
+      "id" : "_D1e2oQcvEfGqGfeJ7LYmLQ",
+      "name" : "target_count"
+    }, {
+      "id" : "_uX-zQAcuEfGqGfeJ7LYmLQ",
+      "name" : "job_server_file_dir"
+    }, {
+      "id" : "_D1e2oAcvEfGqGfeJ7LYmLQ",
+      "name" : "source_count"
+    }, {
+      "id" : "_uX-zQQcuEfGqGfeJ7LYmLQ",
+      "name" : "manifest_table"
+    } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_5-MrYAfREfGwocgMw9vnuw",
+    "parameterList" : [ {
+      "id" : "_5-g0cgfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_username"
+    }, {
+      "id" : "_5-g0cwfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_password"
+    }, {
+      "id" : "_5-g0cQfREfGwocgMw9vnuw",
+      "name" : "MBTC_DS_url"
     } ]
   } ]
 }

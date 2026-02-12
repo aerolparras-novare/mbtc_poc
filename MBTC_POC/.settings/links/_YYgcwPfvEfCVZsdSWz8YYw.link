@@ -56,6 +56,31 @@
     }, {
       "id" : "_HyE1g-9pEfCcepb0inUXkA",
       "name" : "conn_oracle_source_table_Port"
+    }, {
+      "id" : "_FXnCoActEfGqGfeJ7LYmLQ",
+      "name" : "conn_oracle_source_table_OracleDriverClass"
+    }, {
+      "id" : "_qWkeMAcsEfGqGfeJ7LYmLQ",
+      "name" : "conn_oracle_source_table_SqoopJDBC"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_uVguEAcuEfGqGfeJ7LYmLQ",
+    "parameterList" : [ {
+      "id" : "_D1e2oQcvEfGqGfeJ7LYmLQ",
+      "name" : "target_count"
+    }, {
+      "id" : "_D1e2oAcvEfGqGfeJ7LYmLQ",
+      "name" : "source_count"
+    }, {
+      "id" : "_uX-zQAcuEfGqGfeJ7LYmLQ",
+      "name" : "job_server_file_dir"
+    }, {
+      "id" : "_uX-zQgcuEfGqGfeJ7LYmLQ",
+      "name" : "audit_database"
+    }, {
+      "id" : "_uX-zQQcuEfGqGfeJ7LYmLQ",
+      "name" : "manifest_table"
     } ]
   } ]
 }

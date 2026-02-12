@@ -34,28 +34,22 @@
     } ]
   }, {
     "contextName" : "Default",
-    "repoId" : "_vxyFQO9oEfCcepb0inUXkA",
+    "repoId" : "_uVguEAcuEfGqGfeJ7LYmLQ",
     "parameterList" : [ {
-      "id" : "_HyE1ge9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Schema"
+      "id" : "_D1e2oQcvEfGqGfeJ7LYmLQ",
+      "name" : "target_count"
     }, {
-      "id" : "_HyE1hu9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table__AdditionalParams"
+      "id" : "_D1e2oAcvEfGqGfeJ7LYmLQ",
+      "name" : "source_count"
     }, {
-      "id" : "_HyE1hO9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_ServiceName"
+      "id" : "_uX-zQAcuEfGqGfeJ7LYmLQ",
+      "name" : "job_server_file_dir"
     }, {
-      "id" : "_HyE1gO9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Password"
+      "id" : "_uX-zQgcuEfGqGfeJ7LYmLQ",
+      "name" : "audit_database"
     }, {
-      "id" : "_HyE1gu9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Server"
-    }, {
-      "id" : "_HyE1he9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Login"
-    }, {
-      "id" : "_HyE1g-9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Port"
+      "id" : "_uX-zQQcuEfGqGfeJ7LYmLQ",
+      "name" : "manifest_table"
     } ]
   } ]
 }

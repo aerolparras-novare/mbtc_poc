@@ -82,37 +82,5 @@
       "id" : "_uX-zQgcuEfGqGfeJ7LYmLQ",
       "name" : "audit_database"
     } ]
-  }, {
-    "contextName" : "Default",
-    "repoId" : "_IkimwAcvEfGqGfeJ7LYmLQ",
-    "parameterList" : [ {
-      "id" : "_Il_YQAcvEfGqGfeJ7LYmLQ",
-      "name" : "source_schema"
-    }, {
-      "id" : "_Il_YQQcvEfGqGfeJ7LYmLQ",
-      "name" : "source_tablename"
-    }, {
-      "id" : "_Il_YQgcvEfGqGfeJ7LYmLQ",
-      "name" : "target_schema"
-    }, {
-      "id" : "_Il_YQwcvEfGqGfeJ7LYmLQ",
-      "name" : "target_tablename"
-    }, {
-      "id" : "_Il_YRAcvEfGqGfeJ7LYmLQ",
-      "name" : "target_table_location"
-    }, {
-      "id" : "_Il_YRQcvEfGqGfeJ7LYmLQ",
-      "name" : "create_table_schema"
-    }, {
-      "id" : "_Il_YRgcvEfGqGfeJ7LYmLQ",
-      "name" : "select_columns"
-    } ]
-  }, {
-    "contextName" : "Default",
-    "repoId" : "_7b3c8OwqEfC3YPYsXBPNOA",
-    "parameterList" : [ {
-      "id" : "_LtVwsff6EfCVZsdSWz8YYw",
-      "name" : "target_table"
-    } ]
   } ]
 }

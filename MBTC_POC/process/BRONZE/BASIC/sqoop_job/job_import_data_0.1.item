@@ -10,11 +10,10 @@
     <contextParameter comment="" name="select_columns" prompt="select_columns?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_egH8tvdqEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="source_schema" prompt="source_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_egH8t_dqEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="source_tablename" prompt="source_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_egH8uPdqEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="table_location" prompt="table_location?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_VGOhMPeCEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="target_table_location" prompt="target_table_location?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_VGOhMPeCEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_6JNkoAc5EfG4RaMNqmRb9w"/>
-    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsff6EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="_7b3c8OwqEfC3YPYsXBPNOA" type="id_String" value="" internalId="_LtVwsvf6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsPf6EfCVZsdSWz8YYw"/>
+    <contextParameter comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_LtVwsvf6EfCVZsdSWz8YYw"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -218,7 +217,7 @@
       <elementValue elementRef="KEY" value="&quot;ingest_date&quot;" id="2"/>
       <elementValue elementRef="VALUE" value="TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate())" id="3"/>
       <elementValue elementRef="KEY" value="&quot;parquet_location&quot;" id="4"/>
-      <elementValue elementRef="VALUE" value="context.table_location + &quot;ingest_date=&quot; + TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate())" id="5"/>
+      <elementValue elementRef="VALUE" value="context.target_table_location + &quot;ingest_date=&quot; + TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate())" id="5"/>
       <elementValue elementRef="KEY" value="&quot;source_system&quot;" id="6"/>
       <elementValue elementRef="VALUE" value="&quot;database&quot;" id="7"/>
       <elementValue elementRef="KEY" value="&quot;processing_start_time&quot;" id="8"/>

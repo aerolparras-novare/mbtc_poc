@@ -9,31 +9,20 @@
     <contextParameter comment="" name="conn_hive_target_table_HiveMetastorePort" prompt="conn_hive_target_table_HiveMetastorePort?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="9083" internalId="_hbxq8vdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="conn_hive_target_table_Port" prompt="conn_hive_target_table_Port?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="10000" internalId="_hbxq8_dpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="conn_hive_target_table_Login" prompt="conn_hive_target_table_Login?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="nvre_dev1" internalId="_hbxq9PdpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="select_columns" prompt="select_columns?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customer_id, first_name, last_name, email, join_date, kyc_status" internalId="_hbySCfdpEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="target_count" prompt="target_count?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="" internalId="_btk8EAdOEfG4RaMNqmRb9w"/>
+    <contextParameter comment="" name="source_count" prompt="source_count?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_Integer" value="" internalId="_btk8EQdOEfG4RaMNqmRb9w"/>
     <contextParameter comment="" name="source_schema" prompt="source_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="bronze" internalId="_hbySCvdpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="tablename" prompt="tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="CUSTOMERS" internalId="_hbySC_dpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="oracleDriverClass" prompt="oracleDriverClass?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="oracle.jdbc.OracleDriver" internalId="_hbySDPdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="silver" internalId="_hbySDfdpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="target_table" prompt="target_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customers" internalId="_hbySDvdpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="table_location" prompt="table_location?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/silver/customers/" internalId="_1zQ2kPdrEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customers" internalId="_hbySDvdpEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="target_table_location" prompt="target_table_location?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/silver/customers/" internalId="_1zQ2kPdrEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="create_table_schema" prompt="create_table_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customer_id integer, first_name string, last_name string, email string, join_date date, kyc_status string" internalId="_1zQ2kfdrEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="source_count" prompt="source_count?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="" internalId="_rCbFkPfsEfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="target_count" prompt="target_count?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_rCbFkffsEfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/opt/talend/talend-runtime/data/tmp/development-files/" internalId="_7LpgAPf5EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="event_start" prompt="event_start?" promptNeeded="false" repositoryContextId="built-in" type="id_Date" value="" internalId="_84854Pf6EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="manifest_table" prompt="manifest_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="MBTC_MANIFEST_TABLE" internalId="_G1gCkPf7EfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Schema" prompt="conn_oracle_source_table_Schema?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="MBTC" internalId="_NjLucPpfEfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="conn_oracle_source_table__AdditionalParams" prompt="conn_oracle_source_table__AdditionalParams?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="" internalId="_NjLucfpfEfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="conn_oracle_source_table_ServiceName" prompt="conn_oracle_source_table_ServiceName?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="mbtcDb" internalId="_NjLucvpfEfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Password" prompt="conn_oracle_source_table_Password?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_Password" value="enc:system.encryption.key.v1:dqrR8YtTVr+72kVBpZyO4k0zOdcL1GGzLoNOkdWjxUS2SE9S4YxcqA==" internalId="_NjMVgPpfEfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Server" prompt="conn_oracle_source_table_Server?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="18.136.114.179" internalId="_NjMVgfpfEfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Login" prompt="conn_oracle_source_table_Login?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="nvre_dev1" internalId="_NjMVgvpfEfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Port" prompt="conn_oracle_source_table_Port?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="1521" internalId="_NjMVg_pfEfC66eNMdZbE_A"/>
+    <contextParameter comment="" name="control_columns" prompt="control_columns?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=", `_source_system` VARCHAR(150), scd_status STRING, scd_timestamp TIMESTAMP,`_date_start` TIMESTAMP, `_date_end` TIMESTAMP, `_load_timestamp` TIMESTAMP" internalId="_5Kxn4Pp_EfC66eNMdZbE_A"/>
     <contextParameter comment="" name="partition_column" prompt="partition_column?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ingest_date" internalId="__Gn14PpsEfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="primary_key" prompt="primary_key?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customer_id" internalId="__Gn14fpsEfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="contol_columns" prompt="contol_columns?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=", `_source_system` VARCHAR(150), scd_status STRING, scd_timestamp TIMESTAMP,`_date_start` TIMESTAMP, `_date_end` TIMESTAMP, `_load_timestamp` TIMESTAMP" internalId="_5Kxn4Pp_EfC66eNMdZbE_A"/>
-    <contextParameter comment="" name="audit_database" prompt="audit_database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="audit" internalId="_3WBVcPzfEfCfbIgCyI7b-w"/>
+    <contextParameter comment="" name="select_columns" prompt="select_columns?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customer_id, first_name, last_name, email, join_date, kyc_status" internalId="_hbySCfdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="load_type" prompt="load_type?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="F" internalId="_OfgtoPztEfCqConinyY4Xg"/>
+    <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="/opt/talend/talend-runtime/data/tmp/development-files/" internalId="_btk8EgdOEfG4RaMNqmRb9w"/>
+    <contextParameter comment="" name="audit_database" prompt="audit_database?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="audit" internalId="_btk8EwdOEfG4RaMNqmRb9w"/>
+    <contextParameter comment="" name="manifest_table" prompt="manifest_table?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="MBTC_MANIFEST_TABLE" internalId="_btk8FAdOEfG4RaMNqmRb9w"/>
   </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>
@@ -157,7 +146,7 @@
     <elementParameter field="TEXT" name="PORT" value="context.conn_hive_target_table_Port"/>
     <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database"/>
     <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:1z9esLXk1B1kwyXyDDlWRpzs7pADor5BIWHryRISBmO3kIYhVt7K+BzXuew/FmvILuQfQV0Vfd8sUGAR8RM2VU+2Aw=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:VuogDkTCbeimmMKcnvd0NFBpRZK5qJad5hnVhaM2dsl9/IrArBRPbO42bcj5Tr+uS2DSgCzkU66kvWt37BiMX0odEA=="/>
     <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters"/>
     <elementParameter field="CHECK" name="CONFIGURATIONS_FROM_CLASSPATH" value="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false"/>
@@ -232,36 +221,6 @@
     <elementParameter field="TEXT" name="LABEL" value="closeConnHive"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="80" posY="400" sizeX="120" sizeY="40">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="context.event_start = TalendDate.getCurrentDate();"/>
-    <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="LABEL" value="setParam"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJava_1"/>
-  </node>
-  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="80" posY="560" sizeX="120" sizeY="40">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
-    <elementParameter field="TABLE" name="VARIABLES">
-      <elementValue elementRef="KEY" value="&quot;ingest_date&quot;" id="0"/>
-      <elementValue elementRef="VALUE" value="TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate())" id="1"/>
-      <elementValue elementRef="KEY" value="&quot;parquet_location&quot;" id="2"/>
-      <elementValue elementRef="VALUE" value="context.table_location + &quot;ingest_date=&quot; + TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate())" id="3"/>
-      <elementValue elementRef="KEY" value="&quot;source_system&quot;" id="4"/>
-      <elementValue elementRef="VALUE" value="&quot;database&quot;" id="5"/>
-      <elementValue elementRef="KEY" value="&quot;processing_start_time&quot;" id="6"/>
-      <elementValue elementRef="VALUE" value="TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.getCurrentDate())" id="7"/>
-      <elementValue elementRef="KEY" value="&quot;dq_table_location&quot;" id="8"/>
-      <elementValue elementRef="VALUE" value="&quot;/dev/data_quality/&quot; + context.target_table + &quot;/&quot;" id="9"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LABEL" value="setGlobalVar"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tSetGlobalVar_1">
-      <column comment="" key="false" length="-1" name="ingest_date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="parquet_location" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="source_system" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="joblet_manifest_generator" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="560" posY="200" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="joblet_manifest_generator_1"/>
     <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
@@ -292,7 +251,7 @@
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
   </node>
-  <node componentName="joblet_compute_statistics_tgt" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="80" posY="1200" sizeX="120" sizeY="40">
+  <node componentName="joblet_compute_statistics_tgt" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="80" posY="1040" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="joblet_compute_statistics_1"/>
     <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
@@ -311,7 +270,7 @@
       <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1200" sizeX="120" sizeY="40">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1040" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2" show="false"/>
     <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="if (input_row.target_count != null) {&#xD;&#xA;&#x9; context.target_count = input_row.target_count;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;//Optional: Print to console for debugging&#xD;&#xA;System.out.println(&quot;Target Count captured in Context: &quot; + context.target_count);&#xD;&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
@@ -321,25 +280,25 @@
       <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="880">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="720">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2" show="false"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Bronze Layer Activity for table, &quot; + context.target_schema + &quot;.&quot; + context.target_table"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Bronze Layer Activity for table, &quot; + context.target_schema + &quot;.&quot; + context.target_tablename"/>
     <elementParameter field="TEXT" name="CODE" value="3708"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
     <elementParameter field="TEXT" name="LABEL" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_2"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="1200">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="1040">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3" show="false"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Checking Target Count for table, &quot; + context.target_schema + &quot;.&quot; + context.target_table"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Checking Target Count for table, &quot; + context.target_schema + &quot;.&quot; + context.target_tablename"/>
     <elementParameter field="TEXT" name="CODE" value="3707"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
     <elementParameter field="TEXT" name="LABEL" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_3"/>
   </node>
-  <node componentName="joblet_compute_statistics_src" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="120" posY="720">
+  <node componentName="joblet_compute_statistics_src" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="80" posY="560" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="joblet_compute_statistics_src_1"/>
     <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
@@ -348,7 +307,7 @@
     <elementParameter field="CHECK" name="START" value="false" show="false"/>
     <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
     <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="SUBJOB_OK"/>
-    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tSetGlobalVar_1"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tFixedFlowInput_1"/>
     <elementParameter field="TEXT" name="LABEL" value="joblet_compute_statistics_src"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -358,7 +317,7 @@
       <column comment="" key="false" length="-1" name="source_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="720" sizeX="120" sizeY="40">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="560" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
     <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//if (input_row.source_count != null) {&#xD;&#xA;&#x9;//int source_count = Integer.parseInt(input_row.source_count);&#xD;&#xA;&#x9; context.source_count = input_row.source_count;&#xD;&#xA;//&#x9;}&#xD;&#xA;&#x9;//Optional: Print to console for debugging&#xD;&#xA;System.out.println(&quot;Source Count captured in Context: &quot; + context.source_count);"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
@@ -368,7 +327,7 @@
       <column comment="" key="false" length="-1" name="source_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="960" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="800" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_1" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -380,7 +339,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
     <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:gQl7GZCg/ly7So6XXNlQTjdv/IX8dhUy106cP8Ket3lBZzn/j+qbrQho3RcN3fRBal8mVTv9MnwUNZoWZP1ZAEJO9Q==" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nWsn6vGFyXY+3FCcYBP3CLf97TUpQ8zIMuVcUAQF2ZS4cilYJvb6C4BIAEznewFuoLLKl1zP8FJ5mUSXTJnOyNJC6Q==" show="false"/>
     <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters" show="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>
@@ -426,13 +385,13 @@
     <elementParameter field="TEXT" name="GOOGLE_JARS_BUCKET" value="&quot;&quot;" show="false"/>
     <elementParameter field="CHECK" name="DEFINE_PATH_TO_GOOGLE_CREDENTIALS" value="false" show="false"/>
     <elementParameter field="FILE" name="PATH_TO_GOOGLE_CREDENTIALS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="context.target_table"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="context.target_tablename"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;CREATE  TABLE IF NOT EXISTS &quot; + context.target_schema + &quot;.&quot; + context.target_table + &quot;&#xD;&#xA;(&quot;+ context.create_table_schema  + context.contol_columns + &quot;)&#xD;&#xA;&#xD;&#xA;PARTITIONED BY (INGEST_DATE varchar(8))&#xD;&#xA;STORED AS ORC &#xD;&#xA;TBLPROPERTIES ('transactional'='true')&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;CREATE  TABLE IF NOT EXISTS &quot; + context.target_schema + &quot;.&quot; + context.target_tablename + &quot;&#xD;&#xA;(&quot;+ context.create_table_schema  + context.control_columns + &quot;)&#xD;&#xA;&#xD;&#xA;PARTITIONED BY (INGEST_DATE varchar(8))&#xD;&#xA;STORED AS ORC &#xD;&#xA;TBLPROPERTIES ('transactional'='true')&#xD;&#xA;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -468,16 +427,16 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="720">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="560">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Checking Source Count for table, &quot; + context.source_schema + &quot;.&quot; + context.tablename"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Checking Source Count for table, &quot; + context.source_schema + &quot;.&quot; + context.target_tablename"/>
     <elementParameter field="TEXT" name="CODE" value="3707"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
     <elementParameter field="TEXT" name="LABEL" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_1"/>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="880" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="720" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_2" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -489,7 +448,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
     <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:5Ro1aZFULfGSVKx4K5fYdpbuz+JjbOjQPDeVGXCEkjGlH/t/fboVIcr8SKu7rtvKmWMJ5Op7ELkfENQv4u4ULuSfGA==" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:qmsSqQm28WgId4lagkw7yuJehlZbrSDi/nuUn82ta17YKY/g6BDL8TlT7sOPVM6krNOrdcbWR2mWON0Hs//Q3tXePg==" show="false"/>
     <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters" show="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>
@@ -541,7 +500,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;WITH filtered_customers AS (&#xD;&#xA;    SELECT &#xD;&#xA;        CAST(customer_id AS INT) AS customer_id,&#xD;&#xA;        first_name, &#xD;&#xA;        last_name, &#xD;&#xA;        email, &#xD;&#xA;        join_date,&#xD;&#xA;        kyc_status,&#xD;&#xA;        source_system AS `_source_system`,&#xD;&#xA;        scd_status,&#xD;&#xA;        scd_timestamp,&#xD;&#xA;        -- Generate a ranking based on your SCD requirements&#xD;&#xA;        ROW_NUMBER() OVER (&#xD;&#xA;            PARTITION BY customer_id &#xD;&#xA;            ORDER BY scd_timestamp DESC, scd_status DESC&#xD;&#xA;        ) AS row_num&#xD;&#xA;    FROM `&quot;+context.source_schema+&quot;`.`&quot;+context.target_table+&quot;` &#xD;&#xA;    WHERE &#xD;&#xA;        (customer_id IS NOT NULL AND TRIM(customer_id) != '')&#xD;&#xA;        AND (CAST(customer_id AS STRING) RLIKE '^-?\\\\d+$')&#xD;&#xA;        AND (CAST(join_date AS STRING) RLIKE '^\\\\d{4}-\\\\d{2}-\\\\d{2}$')&#xD;&#xA;        AND (NOT first_name RLIKE '^[0-9]+$')&#xD;&#xA;        AND (NOT last_name  RLIKE '^[0-9]+$')&#xD;&#xA;        AND (LENGTH(customer_id) &lt;= 10)&#xD;&#xA;        AND (LENGTH(first_name)  &lt;= 50)&#xD;&#xA;        AND (LENGTH(last_name)   &lt;= 50)&#xD;&#xA;        AND (LENGTH(email)       &lt;= 50)&#xD;&#xA;        AND (LENGTH(kyc_status)  &lt;= 20)&#xD;&#xA;        AND (NOT(first_name RLIKE '([^ -~]|\\\\uFFFD)' OR last_name RLIKE '([^ -~]|\\\\uFFFD)'))&#xD;&#xA;        AND (NOT (first_name RLIKE '[,|\&quot;]' OR last_name RLIKE '[,|\&quot;]'))&#xD;&#xA;        AND (email IS NULL OR TRIM(email) = '' OR email RLIKE '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')&#xD;&#xA;        AND (kyc_status IS NULL OR TRIM(kyc_status) = '' OR UPPER(kyc_status) IN ('NEW', 'VERIFIED', 'REJECTED', 'PENDING'))&#xD;&#xA;        AND (join_date IS NULL &#xD;&#xA;             OR NOT CAST(join_date AS STRING) RLIKE '^\\\\d{4}-\\\\d{2}-\\\\d{2}$'&#xD;&#xA;             OR (join_date &lt;= current_timestamp()))&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;INSERT OVERWRITE TABLE `&quot;+context.target_schema+&quot;`.`&quot;+context.target_table+&quot;` PARTITION (ingest_date='&quot;+(String) globalMap.get(&quot;ingest_date&quot;)+&quot;')&#xD;&#xA;SELECT &#xD;&#xA;    customer_id,&#xD;&#xA;    first_name, &#xD;&#xA;    last_name, &#xD;&#xA;    email, &#xD;&#xA;    join_date,&#xD;&#xA;    kyc_status,&#xD;&#xA;    `_source_system`,&#xD;&#xA;    scd_status,&#xD;&#xA;    scd_timestamp,&#xD;&#xA;    FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`,&#xD;&#xA;    FROM_UNIXTIME(UNIX_TIMESTAMP('9999-12-31 23:59:59'),'yyyy-MM-dd HH:mm:ss') AS `_date_end`,&#xD;&#xA;    FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;FROM filtered_customers&#xD;&#xA;WHERE row_num = 1&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;WITH filtered_customers AS (&#xD;&#xA;    SELECT &#xD;&#xA;        CAST(customer_id AS INT) AS customer_id,&#xD;&#xA;        first_name, &#xD;&#xA;        last_name, &#xD;&#xA;        email, &#xD;&#xA;        join_date,&#xD;&#xA;        kyc_status,&#xD;&#xA;        source_system AS `_source_system`,&#xD;&#xA;        scd_status,&#xD;&#xA;        scd_timestamp,&#xD;&#xA;        -- Generate a ranking based on your SCD requirements&#xD;&#xA;        ROW_NUMBER() OVER (&#xD;&#xA;            PARTITION BY customer_id &#xD;&#xA;            ORDER BY scd_timestamp DESC, scd_status DESC&#xD;&#xA;        ) AS row_num&#xD;&#xA;    FROM `&quot;+context.source_schema+&quot;`.`&quot;+context.target_tablename+&quot;` &#xD;&#xA;    WHERE &#xD;&#xA;        (customer_id IS NOT NULL AND TRIM(customer_id) != '')&#xD;&#xA;        AND (CAST(customer_id AS STRING) RLIKE '^-?\\\\d+$')&#xD;&#xA;        AND (CAST(join_date AS STRING) RLIKE '^\\\\d{4}-\\\\d{2}-\\\\d{2}$')&#xD;&#xA;        AND (NOT first_name RLIKE '^[0-9]+$')&#xD;&#xA;        AND (NOT last_name  RLIKE '^[0-9]+$')&#xD;&#xA;        AND (LENGTH(customer_id) &lt;= 10)&#xD;&#xA;        AND (LENGTH(first_name)  &lt;= 50)&#xD;&#xA;        AND (LENGTH(last_name)   &lt;= 50)&#xD;&#xA;        AND (LENGTH(email)       &lt;= 50)&#xD;&#xA;        AND (LENGTH(kyc_status)  &lt;= 20)&#xD;&#xA;        AND (NOT(first_name RLIKE '([^ -~]|\\\\uFFFD)' OR last_name RLIKE '([^ -~]|\\\\uFFFD)'))&#xD;&#xA;        AND (NOT (first_name RLIKE '[,|\&quot;]' OR last_name RLIKE '[,|\&quot;]'))&#xD;&#xA;        AND (email IS NULL OR TRIM(email) = '' OR email RLIKE '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')&#xD;&#xA;        AND (kyc_status IS NULL OR TRIM(kyc_status) = '' OR UPPER(kyc_status) IN ('NEW', 'VERIFIED', 'REJECTED', 'PENDING'))&#xD;&#xA;        AND (join_date IS NULL &#xD;&#xA;             OR NOT CAST(join_date AS STRING) RLIKE '^\\\\d{4}-\\\\d{2}-\\\\d{2}$'&#xD;&#xA;             OR (join_date &lt;= current_timestamp()))&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;INSERT OVERWRITE TABLE `&quot;+context.target_schema+&quot;`.`&quot;+context.target_tablename+&quot;` PARTITION (ingest_date='&quot;+(String) globalMap.get(&quot;ingest_date&quot;)+&quot;')&#xD;&#xA;SELECT &#xD;&#xA;    customer_id,&#xD;&#xA;    first_name, &#xD;&#xA;    last_name, &#xD;&#xA;    email, &#xD;&#xA;    join_date,&#xD;&#xA;    kyc_status,&#xD;&#xA;    `_source_system`,&#xD;&#xA;    scd_status,&#xD;&#xA;    scd_timestamp,&#xD;&#xA;    FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`,&#xD;&#xA;    FROM_UNIXTIME(UNIX_TIMESTAMP('9999-12-31 23:59:59'),'yyyy-MM-dd HH:mm:ss') AS `_date_end`,&#xD;&#xA;    FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;FROM filtered_customers&#xD;&#xA;WHERE row_num = 1&#xD;&#xA;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -577,7 +536,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="880" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="720" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_3" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -635,13 +594,13 @@
     <elementParameter field="TEXT" name="GOOGLE_JARS_BUCKET" value="&quot;gs://my-bucket/talend/jars&quot;" show="false"/>
     <elementParameter field="CHECK" name="DEFINE_PATH_TO_GOOGLE_CREDENTIALS" value="false" show="false"/>
     <elementParameter field="FILE" name="PATH_TO_GOOGLE_CREDENTIALS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="context.target_table"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="context.target_tablename"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;ALTER TABLE &quot; + context.target_schema + &quot;.&quot; + context.target_table +&#xD;&#xA;&quot; DROP IF EXISTS PARTITION (ingest_date &lt; '&quot; + (String) globalMap.get(&quot;ingest_date&quot;) + &quot;')&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;ALTER TABLE &quot; + context.target_schema + &quot;.&quot; + context.target_tablename +&#xD;&#xA;&quot; DROP IF EXISTS PARTITION (ingest_date &lt;   '&quot; + (String) globalMap.get(&quot;ingest_date&quot;) + &quot;')&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -677,7 +636,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1040" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="880" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_4" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -689,7 +648,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.conn_hive_target_table_Database" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="HIVE" show="false"/>
     <elementParameter field="TEXT" name="USER" value="context.conn_hive_target_table_Login" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:dQhFtpWqbLMe93IZqNywfruGXrGgfDD2dxZMLyipdDSYM3HcBiiJaGqnh4aAxT+x5ZzDo+iJgRvGcB9K8rK2HGbybg==" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:2cbDVO0J4C9snLn5tTDlEHrLXWk4rneAITx4i+7CqIjueifinB70xpJzrujmhBHaSx1vBbxmVmUILUiz/4kpGkAlSw==" show="false"/>
     <elementParameter field="TEXT" name="HIVE_ADDITIONAL_JDBC" value="context.conn_hive_target_table_AdditionalJDBCParameters" show="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
     <elementParameter field="TEXT" name="HIVE_PRINCIPAL" value="&quot;&quot;" show="false"/>
@@ -741,7 +700,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;MERGE INTO `&quot;+context.target_schema+&quot;`.`&quot;+context.target_table+&quot;` AS target&#xD;&#xA;USING (&#xD;&#xA;    -- Deduplicate and Validate Source Data&#xD;&#xA;    SELECT * FROM (&#xD;&#xA;        SELECT &#xD;&#xA;            CAST(customer_id AS INT) AS customer_id,&#xD;&#xA;            first_name, &#xD;&#xA;            last_name, &#xD;&#xA;            email, &#xD;&#xA;            TO_DATE(join_date) AS join_date,&#xD;&#xA;            kyc_status,&#xD;&#xA;            scd_status,&#xD;&#xA;            scd_timestamp,&#xD;&#xA;            ROW_NUMBER() OVER (&#xD;&#xA;                PARTITION BY customer_id &#xD;&#xA;                ORDER BY scd_timestamp DESC, scd_status DESC&#xD;&#xA;            ) as latest_rank&#xD;&#xA;        FROM `&quot;+context.source_schema+&quot;`.`&quot;+context.target_table+&quot;`&#xD;&#xA;        WHERE &#xD;&#xA;        &#x9;(customer_id IS NOT NULL AND TRIM(customer_id) != '')&#xD;&#xA;        &#x9;AND (CAST(customer_id AS STRING) RLIKE '^-?\\\\d+$')&#xD;&#xA;        &#x9;AND (CAST(join_date AS STRING) RLIKE '^\\\\d{4}-\\\\d{2}-\\\\d{2}$')&#xD;&#xA;        &#x9;AND (NOT first_name RLIKE '^[0-9]+$')&#xD;&#xA;        &#x9;AND (NOT last_name  RLIKE '^[0-9]+$')&#xD;&#xA;        &#x9;AND (LENGTH(customer_id) &lt;= 10)&#xD;&#xA;        &#x9;AND (LENGTH(first_name)  &lt;= 50)&#xD;&#xA;        &#x9;AND (LENGTH(last_name)   &lt;= 50)&#xD;&#xA;        &#x9;AND (LENGTH(email)       &lt;= 50)&#xD;&#xA;        &#x9;AND (LENGTH(kyc_status)  &lt;= 20)&#xD;&#xA;        &#x9;AND (NOT(first_name RLIKE '([^ -~]|\\\\uFFFD)' OR last_name RLIKE '([^ -~]|\\\\uFFFD)'))&#xD;&#xA;        &#x9;AND (NOT (first_name RLIKE '[,|\&quot;]' OR last_name RLIKE '[,|\&quot;]'))&#xD;&#xA;        &#x9;AND (email IS NULL OR TRIM(email) = '' OR email RLIKE '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')&#xD;&#xA;        &#x9;AND (kyc_status IS NULL OR TRIM(kyc_status) = '' OR UPPER(kyc_status) IN ('NEW', 'VERIFIED', 'REJECTED', 'PENDING'))&#xD;&#xA;        &#x9;AND (join_date IS NULL &#xD;&#xA;        &#x9;     OR NOT CAST(join_date AS STRING) RLIKE '^\\\\d{4}-\\\\d{2}-\\\\d{2}$'&#xD;&#xA;        &#x9;     OR (join_date &lt;= current_timestamp()))&#xD;&#xA;    ) t1 &#xD;&#xA;    WHERE latest_rank = 1&#xD;&#xA;) AS source&#xD;&#xA;ON target.customer_id = source.customer_id&#xD;&#xA;&#xD;&#xA;--SCD TYPE 1: Update existing records with new values&#xD;&#xA;WHEN MATCHED THEN&#xD;&#xA;  UPDATE SET &#xD;&#xA;    first_name      = source.first_name,&#xD;&#xA;    last_name       = source.last_name,&#xD;&#xA;    email           = source.email,&#xD;&#xA;    kyc_status      = source.kyc_status,&#xD;&#xA;    scd_status      = source.scd_status,&#xD;&#xA;    scd_timestamp   = source.scd_timestamp,&#xD;&#xA;    `_load_timestamp` = FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss')&#xD;&#xA;&#xD;&#xA;--Insert completely new records&#xD;&#xA;WHEN NOT MATCHED THEN&#xD;&#xA;  INSERT (&#xD;&#xA;    customer_id, &#xD;&#xA;    first_name, &#xD;&#xA;    last_name, &#xD;&#xA;    email, &#xD;&#xA;    join_date, &#xD;&#xA;    kyc_status,&#xD;&#xA;    `_source_system`,&#xD;&#xA;    scd_status,&#xD;&#xA;    scd_timestamp,&#xD;&#xA;    `_date_start`, &#xD;&#xA;    `_date_end`, &#xD;&#xA;    `_load_timestamp`&#xD;&#xA;  )&#xD;&#xA;  VALUES (&#xD;&#xA;    source.customer_id, &#xD;&#xA;    source.first_name, &#xD;&#xA;    source.last_name, &#xD;&#xA;    source.email, &#xD;&#xA;    source.join_date, &#xD;&#xA;    source.kyc_status,&#xD;&#xA;    '&quot;+(String) globalMap.get(&quot;source_system&quot;)+&quot;',&#xD;&#xA;    source.scd_status,&#xD;&#xA;    source.scd_timestamp,&#xD;&#xA;    FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss'),&#xD;&#xA;    '9999-12-31 23:59:59',&#xD;&#xA;    FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss')&#xD;&#xA;  )&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;MERGE INTO `&quot;+context.target_schema+&quot;`.`&quot;+context.target_tablename+&quot;` AS target&#xD;&#xA;USING (&#xD;&#xA;    -- Deduplicate and Validate Source Data&#xD;&#xA;    SELECT * FROM (&#xD;&#xA;        SELECT &#xD;&#xA;            CAST(customer_id AS INT) AS customer_id,&#xD;&#xA;            first_name, &#xD;&#xA;            last_name, &#xD;&#xA;            email, &#xD;&#xA;            TO_DATE(join_date) AS join_date,&#xD;&#xA;            kyc_status,&#xD;&#xA;            scd_status,&#xD;&#xA;            scd_timestamp,&#xD;&#xA;            ROW_NUMBER() OVER (&#xD;&#xA;                PARTITION BY customer_id &#xD;&#xA;                ORDER BY scd_timestamp DESC, scd_status DESC&#xD;&#xA;            ) as latest_rank&#xD;&#xA;        FROM `&quot;+context.source_schema+&quot;`.`&quot;+context.target_tablename+&quot;`&#xD;&#xA;        WHERE &#xD;&#xA;        &#x9;(customer_id IS NOT NULL AND TRIM(customer_id) != '')&#xD;&#xA;        &#x9;AND (CAST(customer_id AS STRING) RLIKE '^-?\\\\d+$')&#xD;&#xA;        &#x9;AND (CAST(join_date AS STRING) RLIKE '^\\\\d{4}-\\\\d{2}-\\\\d{2}$')&#xD;&#xA;        &#x9;AND (NOT first_name RLIKE '^[0-9]+$')&#xD;&#xA;        &#x9;AND (NOT last_name  RLIKE '^[0-9]+$')&#xD;&#xA;        &#x9;AND (LENGTH(customer_id) &lt;= 10)&#xD;&#xA;        &#x9;AND (LENGTH(first_name)  &lt;= 50)&#xD;&#xA;        &#x9;AND (LENGTH(last_name)   &lt;= 50)&#xD;&#xA;        &#x9;AND (LENGTH(email)       &lt;= 50)&#xD;&#xA;        &#x9;AND (LENGTH(kyc_status)  &lt;= 20)&#xD;&#xA;        &#x9;AND (NOT(first_name RLIKE '([^ -~]|\\\\uFFFD)' OR last_name RLIKE '([^ -~]|\\\\uFFFD)'))&#xD;&#xA;        &#x9;AND (NOT (first_name RLIKE '[,|\&quot;]' OR last_name RLIKE '[,|\&quot;]'))&#xD;&#xA;        &#x9;AND (email IS NULL OR TRIM(email) = '' OR email RLIKE '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')&#xD;&#xA;        &#x9;AND (kyc_status IS NULL OR TRIM(kyc_status) = '' OR UPPER(kyc_status) IN ('NEW', 'VERIFIED', 'REJECTED', 'PENDING'))&#xD;&#xA;        &#x9;AND (join_date IS NULL &#xD;&#xA;        &#x9;     OR NOT CAST(join_date AS STRING) RLIKE '^\\\\d{4}-\\\\d{2}-\\\\d{2}$'&#xD;&#xA;        &#x9;     OR (join_date &lt;= current_timestamp()))&#xD;&#xA;    ) t1 &#xD;&#xA;    WHERE latest_rank = 1&#xD;&#xA;) AS source&#xD;&#xA;ON target.customer_id = source.customer_id&#xD;&#xA;&#xD;&#xA;--SCD TYPE 1: Update existing records with new values&#xD;&#xA;WHEN MATCHED THEN&#xD;&#xA;  UPDATE SET &#xD;&#xA;    first_name      = source.first_name,&#xD;&#xA;    last_name       = source.last_name,&#xD;&#xA;    email           = source.email,&#xD;&#xA;    kyc_status      = source.kyc_status,&#xD;&#xA;    scd_status      = source.scd_status,&#xD;&#xA;    scd_timestamp   = source.scd_timestamp,&#xD;&#xA;    `_load_timestamp` = FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss')&#xD;&#xA;&#xD;&#xA;--Insert completely new records&#xD;&#xA;WHEN NOT MATCHED THEN&#xD;&#xA;  INSERT (&#xD;&#xA;    customer_id, &#xD;&#xA;    first_name, &#xD;&#xA;    last_name, &#xD;&#xA;    email, &#xD;&#xA;    join_date, &#xD;&#xA;    kyc_status,&#xD;&#xA;    `_source_system`,&#xD;&#xA;    scd_status,&#xD;&#xA;    scd_timestamp,&#xD;&#xA;    `_date_start`, &#xD;&#xA;    `_date_end`, &#xD;&#xA;    `_load_timestamp`&#xD;&#xA;  )&#xD;&#xA;  VALUES (&#xD;&#xA;    source.customer_id, &#xD;&#xA;    source.first_name, &#xD;&#xA;    source.last_name, &#xD;&#xA;    source.email, &#xD;&#xA;    source.join_date, &#xD;&#xA;    source.kyc_status,&#xD;&#xA;    '&quot;+(String) globalMap.get(&quot;source_system&quot;)+&quot;',&#xD;&#xA;    source.scd_status,&#xD;&#xA;    source.scd_timestamp,&#xD;&#xA;    FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss'),&#xD;&#xA;    '9999-12-31 23:59:59',&#xD;&#xA;    FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss')&#xD;&#xA;  )&#xD;&#xA;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -777,7 +736,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="1040" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="880" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_6" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -835,13 +794,13 @@
     <elementParameter field="TEXT" name="GOOGLE_JARS_BUCKET" value="&quot;gs://my-bucket/talend/jars&quot;" show="false"/>
     <elementParameter field="CHECK" name="DEFINE_PATH_TO_GOOGLE_CREDENTIALS" value="false" show="false"/>
     <elementParameter field="FILE" name="PATH_TO_GOOGLE_CREDENTIALS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="context.target_table"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="context.target_tablename"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;ALTER TABLE &quot; + context.target_schema + &quot;.&quot; + context.target_table +&#xD;&#xA;&quot; DROP IF EXISTS PARTITION (ingest_date &lt; '&quot; + (String) globalMap.get(&quot;ingest_date&quot;) + &quot;')&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;ALTER TABLE &quot; + context.target_schema + &quot;.&quot; + context.target_tablename +&#xD;&#xA;&quot; DROP IF EXISTS PARTITION (ingest_date &lt;   '&quot; + (String) globalMap.get(&quot;ingest_date&quot;) + &quot;')&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -877,14 +836,94 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="1040">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="880">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_4" show="false"/>
-    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Bronze Layer Activity for table, &quot; + context.target_schema + &quot;.&quot; + context.target_table"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Bronze Layer Activity for table, &quot; + context.target_schema + &quot;.&quot; + context.target_tablename"/>
     <elementParameter field="TEXT" name="CODE" value="3708"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="3"/>
     <elementParameter field="TEXT" name="LABEL" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_4"/>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="400" sizeX="120" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ingest_date" id="0"/>
+      <elementValue elementRef="VALUE" value="TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate())" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="parquet_location" id="2"/>
+      <elementValue elementRef="VALUE" value="context.target_table_location + &quot;ingest_date=&quot; + TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate())" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="source_system" id="4"/>
+      <elementValue elementRef="VALUE" value="&quot;database&quot;" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="processing_start_time" id="6"/>
+      <elementValue elementRef="VALUE" value="TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.getCurrentDate())" id="7"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;" show="false"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="setGlobalVar"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="ingest_date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="parquet_location" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_system" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="processing_start_time" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="400" sizeX="120" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ingest_date" id="0"/>
+      <elementValue elementRef="LENGTH" value="10" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="parquet_location" id="2"/>
+      <elementValue elementRef="LENGTH" value="10" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="source_system" id="4"/>
+      <elementValue elementRef="LENGTH" value="10" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="processing_start_time" id="6"/>
+      <elementValue elementRef="LENGTH" value="10" id="7"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="printVariables"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="ingest_date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="parquet_location" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="source_system" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="processing_start_time" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="560" posY="400" sizeX="120" sizeY="40">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_1" show="false"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="false"/>
+    <elementParameter field="TABLE" name="MAP">
+      <elementValue elementRef="KEY" value="&quot;ingest_date&quot;" id="0"/>
+      <elementValue elementRef="VALUE" value="ingest_date" id="1"/>
+      <elementValue elementRef="KEY" value="&quot;parquet_location&quot;" id="2"/>
+      <elementValue elementRef="VALUE" value="parquet_location" id="3"/>
+      <elementValue elementRef="KEY" value="&quot;source_system&quot;" id="4"/>
+      <elementValue elementRef="VALUE" value="source_system" id="5"/>
+      <elementValue elementRef="KEY" value="&quot;processing_start_time&quot;" id="6"/>
+      <elementValue elementRef="VALUE" value="processing_start_time" id="7"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="storeGlobalVar"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_1"/>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tHiveConnection_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
@@ -894,12 +933,6 @@
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tHiveClose_1" offsetLabelX="0" offsetLabelY="0" source="tHiveClose_1" target="joblet_manifest_generator_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tSetGlobalVar_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="joblet_compute_statistics_src_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
   </connection>
   <connection connectorName="OUTPUT_1" label="row5" lineStyle="0" metaname="joblet_compute_statistics_1" offsetLabelX="0" offsetLabelY="0" source="joblet_compute_statistics_1" target="tJavaRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -943,14 +976,39 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tHiveRow_6" offsetLabelX="0" offsetLabelY="0" source="tHiveRow_6" target="tWarn_4">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk10" show="false"/>
   </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tLogRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="parquet_location" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+      <elementValue elementRef="TRACE_COLUMN" value="source_system" id="3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="4"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="5"/>
+      <elementValue elementRef="TRACE_COLUMN" value="ingest_date" id="6"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="7"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="8"/>
+      <elementValue elementRef="TRACE_COLUMN" value="processing_start_time" id="9"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="10"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="11"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="joblet_compute_statistics_src_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tFlowToIterate_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
+  </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
@@ -963,20 +1021,6 @@
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveClose_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Set Param"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Set Global Variable"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
@@ -1046,5 +1090,10 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
     <elementParameter field="CHECK" name="SUBJOB_DISPLAYED" value="false" show="false"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
 </talendfile:ProcessType>
