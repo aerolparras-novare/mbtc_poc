@@ -16,14 +16,14 @@
     <contextParameter comment="" name="conn_oracle_source_table_Login" prompt="conn_oracle_source_table_Login?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="nvre_dev1" internalId="_-lu0dPseEfCKSsApJkp1Tw"/>
     <contextParameter comment="" name="conn_oracle_source_table_Password" prompt="conn_oracle_source_table_Password?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_Password" value="enc:system.encryption.key.v1:4E/JqwFo8spxhlWY8srnWYvVD+YXytEKEXp8ByrRmFvON0w+3Vws1Q==" internalId="_-lu0dfseEfCKSsApJkp1Tw"/>
     <contextParameter comment="" name="conn_oracle_source_table_Port" prompt="conn_oracle_source_table_Port?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="1521" internalId="_-lu0dvseEfCKSsApJkp1Tw"/>
-    <contextParameter comment="" name="target_count" prompt="target_count?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="" internalId="_BuCFUAdYEfGwtqwsG9aj6Q"/>
+    <contextParameter comment="" name="target_count" prompt="target_count?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_Integer" value="0" internalId="_BuCFUAdYEfGwtqwsG9aj6Q"/>
     <contextParameter comment="" name="source_schema" prompt="source_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="MBTC" internalId="_SBvqwPsrEfCKSsApJkp1Tw"/>
     <contextParameter comment="" name="source_tablename" prompt="source_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customers" internalId="_YkuKYvs9EfCKSsApJkp1Tw"/>
     <contextParameter comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="bronze" internalId="_IWJ7wPsWEfCKSsApJkp1Tw"/>
     <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customers_ange" internalId="_IWJ7wfsWEfCKSsApJkp1Tw"/>
     <contextParameter comment="" name="target_table_location" prompt="target_table_location?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/bronze/customers_ange/" internalId="_hQHwUfqlEfC66eNMdZbE_A"/>
     <contextParameter comment="" name="create_table_schema" prompt="create_table_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="CUSTOMER_ID STRING, FIRST_NAME STRING, LAST_NAME STRING, EMAIL STRING, JOIN_DATE STRING, KYC_STATUS STRING, SOURCE_SYSTEM STRING, SCD_STATUS STRING, SCD_TIMESTAMP STRING" internalId="_IWJ7wvsWEfCKSsApJkp1Tw"/>
-    <contextParameter comment="" name="source_count" prompt="source_count?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_Integer" value="" internalId="_BuCFUQdYEfGwtqwsG9aj6Q"/>
+    <contextParameter comment="" name="source_count" prompt="source_count?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_Integer" value="0" internalId="_BuCFUQdYEfGwtqwsG9aj6Q"/>
     <contextParameter comment="" name="audit_database" prompt="audit_database?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="audit" internalId="_BuCFUgdYEfGwtqwsG9aj6Q"/>
     <contextParameter comment="" name="manifest_table" prompt="manifest_table?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="MBTC_MANIFEST_TABLE" internalId="_BuCFUwdYEfGwtqwsG9aj6Q"/>
     <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="/opt/talend/talend-runtime/data/tmp/development-files/" internalId="_BuCFVAdYEfGwtqwsG9aj6Q"/>
@@ -662,7 +662,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_1gbBwPqaEfC66eNMdZbE_A-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_qneB4AflEfGwocgMw9vnuw-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
@@ -985,13 +985,13 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_2" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
