@@ -40,7 +40,7 @@
     <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customers_test" internalId="_rkzh0wiGEfGNBJw6FD7_Xw"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="dev">
-    <contextParameter comment="" name="dq_layer" prompt="dq_layer?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="'Bronze','Silver'" internalId="_6Hwh0AbmEfGg7tr9sX3lqw"/>
+    <contextParameter comment="" name="dq_layer" prompt="dq_layer?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="'Bronze','Silver','Gold'" internalId="_6Hwh0AbmEfGg7tr9sX3lqw"/>
     <contextParameter comment="" name="audit_database" prompt="audit_database?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="audit" internalId="_rk2lAAiGEfGNBJw6FD7_Xw"/>
     <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="/opt/talend/talend-runtime/data/tmp/development-files/" internalId="_rk2lAQiGEfGNBJw6FD7_Xw"/>
     <contextParameter comment="" name="manifest_table" prompt="manifest_table?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="MBTC_MANIFEST_TABLE" internalId="_rk2lAgiGEfGNBJw6FD7_Xw"/>
@@ -176,17 +176,17 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
   </parameters>
-  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="40" sizeX="120" sizeY="40">
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="80" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="preJob"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="200" sizeX="120" sizeY="40">
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="240" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="postJob"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tHiveConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="40" sizeX="120" sizeY="40">
+  <node componentName="tHiveConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="80" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveConnection_1" show="false"/>
     <elementParameter field="HADOOP_LIBRARIES" name="HIVE" value="" show="false"/>
     <elementParameter field="CHECK" name="USE_YARN" value="false" show="false"/>
@@ -271,13 +271,13 @@
     <elementParameter field="TEXT" name="LABEL" value="openConnHive"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tHiveClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="200" sizeX="120" sizeY="40">
+  <node componentName="tHiveClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="240" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveClose_1" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
     <elementParameter field="TEXT" name="LABEL" value="closeConnHive"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="joblet_manifest_generator" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="560" posY="200" sizeX="120" sizeY="40">
+  <node componentName="joblet_manifest_generator" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="560" posY="240" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="joblet_manifest_generator_1"/>
     <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
@@ -287,13 +287,13 @@
     <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
     <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="SUBJOB_OK"/>
     <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tHiveClose_1"/>
-    <elementParameter field="TEXT" name="LABEL" value="joblet_manifest_generator"/>
+    <elementParameter field="TEXT" name="LABEL" value="joblet_manifest"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
   </node>
-  <node componentName="joblet_util_logcatcher" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="40" sizeX="120" sizeY="40">
+  <node componentName="joblet_util_logcatcher" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="80" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="joblet_util_logcatcher_1"/>
     <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
@@ -307,7 +307,7 @@
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="1520">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="1480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Checking Target Count for table, &quot; + context.target_schema + &quot;.&quot; + context.target_tablename"/>
     <elementParameter field="TEXT" name="CODE" value="3707"/>
@@ -316,7 +316,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_3"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="720">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="680">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Checking Source Count for table, &quot; + context.source_schema + &quot;.&quot; + context.source_tablename"/>
     <elementParameter field="TEXT" name="CODE" value="3707"/>
@@ -325,7 +325,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_1"/>
   </node>
-  <node componentName="tHiveInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="720" sizeX="121" sizeY="40">
+  <node componentName="tHiveInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="680" sizeX="121" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveInput_1" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -430,7 +430,7 @@
       <column comment="" key="false" length="-1" name="source_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="720" sizeX="120" sizeY="40">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="680" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
     <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="//if (input_row.source_count != null) {&#xD;&#xA;&#x9;//int source_count = Integer.parseInt(input_row.source_count);&#xD;&#xA;&#x9; context.source_count = input_row.source_count;&#xD;&#xA;//&#x9;}&#xD;&#xA;&#x9;//Optional: Print to console for debugging&#xD;&#xA;System.out.println(&quot;Source Count captured in Context: &quot; + input_row.source_count);&#xD;&#xA;//System.out.println(&quot;Source Count captured in Context: &quot; + context.source_count);"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
@@ -440,7 +440,7 @@
       <column comment="" key="false" length="-1" name="source_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="880" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="840" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_1" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -540,7 +540,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="880" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="840" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_8" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -640,7 +640,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="880" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="840" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -740,7 +740,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="880" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="840" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_7" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -840,7 +840,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="1520" sizeX="121" sizeY="40">
+  <node componentName="tHiveInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="1480" sizeX="121" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveInput_2" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -945,7 +945,7 @@
       <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1520" sizeX="120" sizeY="40">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1480" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2" show="false"/>
     <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="if (input_row.target_count != null) {&#xD;&#xA;&#x9; context.target_count = input_row.target_count;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;//Optional: Print to console for debugging&#xD;&#xA;System.out.println(&quot;Target Count captured in Context: &quot; + context.target_count);&#xD;&#xA;"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
@@ -955,7 +955,7 @@
       <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1200" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1160" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_3" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -1019,7 +1019,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;INSERT INTO dq.dq_exception_log PARTITION (execution_date='&quot; + (String)globalMap.get(&quot;ingest_date&quot;) + &quot;')&#xD;&#xA;SELECT &#xD;&#xA;    'Silver' as layer&#xD;&#xA;    , 'customers' as table_name&#xD;&#xA;    , exploded_category as dq_category&#xD;&#xA;    , exploded_error_code as error_code&#xD;&#xA;    , 'Row failed validation rules' as error_message&#xD;&#xA;    , COALESCE(CAST(customer_id AS STRING), 'UNKNOWN') as record_key&#xD;&#xA;    , raw_record&#xD;&#xA;    , 'CDP' AS `_source_system`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`&#xD;&#xA;    , '9999-12-31 23:59:59' AS `_date_end`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;FROM (&#xD;&#xA;    SELECT &#xD;&#xA;        customer_id&#xD;&#xA;        , CONCAT_WS('|', &#xD;&#xA;            COALESCE(CAST(customer_id AS STRING),'NULL'), COALESCE(first_name,''), COALESCE(last_name,''), &#xD;&#xA;            COALESCE(email,''), COALESCE(CAST(join_date AS STRING),''), COALESCE(kyc_status,''), &#xD;&#xA;            ingest_date&#xD;&#xA;        ) as raw_record&#xD;&#xA;        , CASE WHEN customer_id IS NULL OR TRIM(CAST(customer_id AS STRING)) = '' THEN 1 ELSE 0 END as err_pk_missing&#xD;&#xA;        , CASE WHEN NOT CAST(customer_id AS STRING) RLIKE '^-?\\\\d+$' THEN 1 ELSE 0 END as err_pk_type&#xD;&#xA;        , CASE WHEN NOT CAST(join_date AS STRING)   RLIKE '^-?\\\\d+$' THEN 1 ELSE 0 END as err_date_type&#xD;&#xA;        , CASE WHEN first_name RLIKE '^[0-9]+$'      THEN 1 ELSE 0 END as err_fname_numeric&#xD;&#xA;        , CASE WHEN last_name  RLIKE '^[0-9]+$'      THEN 1 ELSE 0 END as err_lname_numeric&#xD;&#xA;        , CASE WHEN LENGTH(CAST(customer_id AS STRING)) > 10 THEN 1 ELSE 0 END as err_pk_len&#xD;&#xA;        , CASE WHEN LENGTH(first_name)  > 50 THEN 1 ELSE 0 END as err_fname_len&#xD;&#xA;        , CASE WHEN LENGTH(last_name)   > 50 THEN 1 ELSE 0 END as err_lname_len&#xD;&#xA;        , CASE WHEN LENGTH(email)       > 50 THEN 1 ELSE 0 END as err_email_len&#xD;&#xA;        , CASE WHEN LENGTH(kyc_status)  > 20 THEN 1 ELSE 0 END as err_kyc_len&#xD;&#xA;        , CASE WHEN first_name RLIKE '([^ -~]|\\\\uFFFD)' OR last_name RLIKE '([^ -~]|\\\\uFFFD)' &#xD;&#xA;               THEN 1 ELSE 0 END as err_garbage_chars&#xD;&#xA;        , CASE WHEN first_name RLIKE '[,|\&quot;]' OR last_name RLIKE '[,|\&quot;]' &#xD;&#xA;               THEN 1 ELSE 0 END as err_rogue_delim&#xD;&#xA;        , CASE WHEN email IS NOT NULL AND TRIM(email) != '' &#xD;&#xA;               AND NOT email RLIKE '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\\\.[a-zA-Z]{2,}$' &#xD;&#xA;               THEN 1 ELSE 0 END as err_email_fmt&#xD;&#xA;        , CASE WHEN kyc_status IS NOT NULL AND TRIM(kyc_status) != '' &#xD;&#xA;               AND UPPER(kyc_status) NOT IN ('NEW', 'VERIFIED', 'REJECTED', 'PENDING') &#xD;&#xA;               THEN 1 ELSE 0 END as err_kyc_domain&#xD;&#xA;        , CASE WHEN join_date IS NOT NULL AND CAST(join_date AS STRING) RLIKE '^-?\\\\d+$' &#xD;&#xA;               AND from_unixtime(CAST(join_date AS BIGINT) DIV 1000) > current_timestamp() &#xD;&#xA;               THEN 1 ELSE 0 END as err_future_date&#xD;&#xA;    FROM bronze.customers&#xD;&#xA;) Flags&#xD;&#xA;LATERAL VIEW STACK(15&#xD;&#xA;    , 'Completeness', 'MISSING_PK',                 err_pk_missing&#xD;&#xA;    , 'Integrity',    'NON_NUMERIC_PK',             err_pk_type&#xD;&#xA;    , 'Integrity',    'INVALID_DATE_TYPE',          err_date_type&#xD;&#xA;    , 'Integrity',    'INVALID_TYPE_FNAME_NUMERIC', err_fname_numeric&#xD;&#xA;    , 'Integrity',    'INVALID_TYPE_LNAME_NUMERIC', err_lname_numeric&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_PK',            err_pk_len&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_FNAME',         err_fname_len&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_LNAME',         err_lname_len&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_EMAIL',         err_email_len&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_KYC',           err_kyc_len&#xD;&#xA;    , 'Integrity',    'GARBAGE_CHARS_IN_NAME',      err_garbage_chars&#xD;&#xA;    , 'Integrity',    'ROGUE_DELIMITER_IN_NAME',    err_rogue_delim&#xD;&#xA;    , 'Validity',     'INVALID_EMAIL_FORMAT',       err_email_fmt&#xD;&#xA;    , 'Validity',     'INVALID_KYC_STATUS',         err_kyc_domain&#xD;&#xA;    , 'Accuracy',     'FUTURE_JOIN_DATE',           err_future_date&#xD;&#xA;) exploded_table AS exploded_category, exploded_error_code, is_failed&#xD;&#xA;WHERE is_failed = 1&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT &#xD;&#xA;    'Silver' as layer&#xD;&#xA;    , 'customers' as table_name&#xD;&#xA;    , 'Uniqueness' as dq_category&#xD;&#xA;    , 'DUPLICATE_PK' as error_code&#xD;&#xA;    , 'Duplicate Customer ID detected' as error_message&#xD;&#xA;    , CAST(customer_id AS STRING) as record_key&#xD;&#xA;    -- Reconstruct Raw Record so we see the exact duplicates&#xD;&#xA;    , CONCAT_WS('|', &#xD;&#xA;            COALESCE(CAST(customer_id AS STRING),'NULL'), COALESCE(first_name,''), COALESCE(last_name,''), &#xD;&#xA;            COALESCE(email,''), COALESCE(CAST(join_date AS STRING),''), COALESCE(kyc_status,''), &#xD;&#xA;            ingest_date&#xD;&#xA;      ) as raw_record&#xD;&#xA;    , 'CDP' AS `_source_system`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`&#xD;&#xA;    , '9999-12-31 23:59:59' AS `_date_end`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;FROM (&#xD;&#xA;    SELECT &#xD;&#xA;        *, &#xD;&#xA;        COUNT(*) OVER (PARTITION BY customer_id) as id_count &#xD;&#xA;    FROM bronze.customers&#xD;&#xA;    WHERE customer_id IS NOT NULL&#xD;&#xA;) dup_check&#xD;&#xA;WHERE id_count > 1&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT &#xD;&#xA;    'Silver' as layer&#xD;&#xA;    , 'accounts' as table_name&#xD;&#xA;    , 'Consistency' as dq_category&#xD;&#xA;    , 'ORPHAN_ACCOUNT' as error_code&#xD;&#xA;    , 'Account has no valid Customer Owner' as error_message&#xD;&#xA;    , CAST(account_id AS STRING) as record_key&#xD;&#xA;    , CONCAT('Missing Parent Key for CustID: ', CAST(a.customer_id AS STRING)) as raw_record&#xD;&#xA;    , 'CDP' AS `_source_system`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`&#xD;&#xA;    , '9999-12-31 23:59:59' AS `_date_end`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;FROM bronze.accounts a&#xD;&#xA;LEFT JOIN bronze.customers c ON a.customer_id = c.customer_id&#xD;&#xA;WHERE c.customer_id IS NULL&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;INSERT INTO dq.dq_exception_log PARTITION (execution_date='&quot; + (String)globalMap.get(&quot;ingest_date&quot;) + &quot;')&#xD;&#xA;SELECT &#xD;&#xA;    'Silver' as layer&#xD;&#xA;    , 'customers' as table_name&#xD;&#xA;    , exploded_category as dq_category&#xD;&#xA;    , exploded_error_code as error_code&#xD;&#xA;    , 'Row failed validation rules' as error_message&#xD;&#xA;    , COALESCE(CAST(customer_id AS STRING), 'UNKNOWN') as record_key&#xD;&#xA;    , raw_record&#xD;&#xA;    , 'CDP' AS `_source_system`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`&#xD;&#xA;    , '9999-12-31 23:59:59' AS `_date_end`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;FROM (&#xD;&#xA;    SELECT &#xD;&#xA;        customer_id&#xD;&#xA;        , CONCAT_WS('|', &#xD;&#xA;            COALESCE(CAST(customer_id AS STRING),'NULL'), COALESCE(first_name,''), COALESCE(last_name,''), &#xD;&#xA;            COALESCE(email,''), COALESCE(CAST(join_date AS STRING),''), COALESCE(kyc_status,''), &#xD;&#xA;            ingest_date&#xD;&#xA;        ) as raw_record&#xD;&#xA;        , CASE WHEN customer_id IS NULL OR TRIM(CAST(customer_id AS STRING)) = '' THEN 1 ELSE 0 END as err_pk_missing&#xD;&#xA;        , CASE WHEN NOT CAST(customer_id AS STRING) RLIKE '^-?\\\\d+$' THEN 1 ELSE 0 END as err_pk_type&#xD;&#xA;        &#xD;&#xA;        -- UPDATED: Enforce strict YYYY-MM-DD format (Regex length check)&#xD;&#xA;        , CASE WHEN NOT CAST(join_date AS STRING) RLIKE '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' THEN 1 ELSE 0 END as err_date_type&#xD;&#xA;        &#xD;&#xA;        , CASE WHEN first_name RLIKE '^[0-9]+$'      THEN 1 ELSE 0 END as err_fname_numeric&#xD;&#xA;        , CASE WHEN last_name  RLIKE '^[0-9]+$'      THEN 1 ELSE 0 END as err_lname_numeric&#xD;&#xA;        , CASE WHEN LENGTH(CAST(customer_id AS STRING)) > 10 THEN 1 ELSE 0 END as err_pk_len&#xD;&#xA;        , CASE WHEN LENGTH(first_name)  > 50 THEN 1 ELSE 0 END as err_fname_len&#xD;&#xA;        , CASE WHEN LENGTH(last_name)   > 50 THEN 1 ELSE 0 END as err_lname_len&#xD;&#xA;        , CASE WHEN LENGTH(email)       > 50 THEN 1 ELSE 0 END as err_email_len&#xD;&#xA;        , CASE WHEN LENGTH(kyc_status)  > 20 THEN 1 ELSE 0 END as err_kyc_len&#xD;&#xA;        , CASE WHEN first_name RLIKE '([^ -~]|\\\\uFFFD)' OR last_name RLIKE '([^ -~]|\\\\uFFFD)' &#xD;&#xA;               THEN 1 ELSE 0 END as err_garbage_chars&#xD;&#xA;        , CASE WHEN first_name RLIKE '[,|\&quot;]' OR last_name RLIKE '[,|\&quot;]' &#xD;&#xA;               THEN 1 ELSE 0 END as err_rogue_delim&#xD;&#xA;        , CASE WHEN email IS NOT NULL AND TRIM(email) != '' &#xD;&#xA;               AND NOT email RLIKE '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\\\.[a-zA-Z]{2,}$' &#xD;&#xA;               THEN 1 ELSE 0 END as err_email_fmt&#xD;&#xA;        , CASE WHEN kyc_status IS NOT NULL AND TRIM(kyc_status) != '' &#xD;&#xA;               AND UPPER(kyc_status) NOT IN ('NEW', 'VERIFIED', 'REJECTED', 'PENDING') &#xD;&#xA;               THEN 1 ELSE 0 END as err_kyc_domain&#xD;&#xA;               &#xD;&#xA;        -- UPDATED: Cast the verified YYYY-MM-DD string to TIMESTAMP and compare against current_timestamp&#xD;&#xA;        , CASE WHEN join_date IS NOT NULL &#xD;&#xA;               AND CAST(join_date AS STRING) RLIKE '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' &#xD;&#xA;               AND CAST(join_date AS TIMESTAMP) > current_timestamp() &#xD;&#xA;               THEN 1 ELSE 0 END as err_future_date&#xD;&#xA;               &#xD;&#xA;    FROM bronze.customers&#xD;&#xA;) Flags&#xD;&#xA;LATERAL VIEW STACK(15&#xD;&#xA;    , 'Completeness', 'MISSING_PK',                 err_pk_missing&#xD;&#xA;    , 'Integrity',    'NON_NUMERIC_PK',             err_pk_type&#xD;&#xA;    , 'Integrity',    'INVALID_DATE_TYPE',          err_date_type&#xD;&#xA;    , 'Integrity',    'INVALID_TYPE_FNAME_NUMERIC', err_fname_numeric&#xD;&#xA;    , 'Integrity',    'INVALID_TYPE_LNAME_NUMERIC', err_lname_numeric&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_PK',            err_pk_len&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_FNAME',         err_fname_len&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_LNAME',         err_lname_len&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_EMAIL',         err_email_len&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_KYC',           err_kyc_len&#xD;&#xA;    , 'Integrity',    'GARBAGE_CHARS_IN_NAME',      err_garbage_chars&#xD;&#xA;    , 'Integrity',    'ROGUE_DELIMITER_IN_NAME',    err_rogue_delim&#xD;&#xA;    , 'Validity',     'INVALID_EMAIL_FORMAT',       err_email_fmt&#xD;&#xA;    , 'Validity',     'INVALID_KYC_STATUS',         err_kyc_domain&#xD;&#xA;    , 'Accuracy',     'FUTURE_JOIN_DATE',           err_future_date&#xD;&#xA;) exploded_table AS exploded_category, exploded_error_code, is_failed&#xD;&#xA;WHERE is_failed = 1&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT &#xD;&#xA;    'Silver' as layer&#xD;&#xA;    , 'customers' as table_name&#xD;&#xA;    , 'Uniqueness' as dq_category&#xD;&#xA;    , 'DUPLICATE_PK' as error_code&#xD;&#xA;    , 'Duplicate Customer ID detected' as error_message&#xD;&#xA;    , CAST(customer_id AS STRING) as record_key&#xD;&#xA;    -- Reconstruct Raw Record so we see the exact duplicates&#xD;&#xA;    , CONCAT_WS('|', &#xD;&#xA;            COALESCE(CAST(customer_id AS STRING),'NULL'), COALESCE(first_name,''), COALESCE(last_name,''), &#xD;&#xA;            COALESCE(email,''), COALESCE(CAST(join_date AS STRING),''), COALESCE(kyc_status,''), &#xD;&#xA;            ingest_date&#xD;&#xA;      ) as raw_record&#xD;&#xA;    , 'CDP' AS `_source_system`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`&#xD;&#xA;    , '9999-12-31 23:59:59' AS `_date_end`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;FROM (&#xD;&#xA;    SELECT &#xD;&#xA;        *, &#xD;&#xA;        COUNT(*) OVER (PARTITION BY customer_id) as id_count &#xD;&#xA;    FROM bronze.customers&#xD;&#xA;    WHERE customer_id IS NOT NULL&#xD;&#xA;) dup_check&#xD;&#xA;WHERE id_count > 1&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT &#xD;&#xA;    'Silver' as layer&#xD;&#xA;    , 'accounts' as table_name&#xD;&#xA;    , 'Consistency' as dq_category&#xD;&#xA;    , 'ORPHAN_ACCOUNT' as error_code&#xD;&#xA;    , 'Account has no valid Customer Owner' as error_message&#xD;&#xA;    , CAST(account_id AS STRING) as record_key&#xD;&#xA;    , CONCAT('Missing Parent Key for CustID: ', CAST(a.customer_id AS STRING)) as raw_record&#xD;&#xA;    , 'CDP' AS `_source_system`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`&#xD;&#xA;    , '9999-12-31 23:59:59' AS `_date_end`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;FROM bronze.accounts a&#xD;&#xA;LEFT JOIN bronze.customers c ON a.customer_id = c.customer_id&#xD;&#xA;WHERE c.customer_id IS NULL&#xD;&#xA;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -1055,7 +1055,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="1200" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="1160" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_4" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -1119,7 +1119,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="LABEL" name="PARQUET_NOTE" value="Parquet is only supported if the distribution uses embedded Hive version 0.10 or later."/>
     <elementParameter field="CHECK" name="USE_PARQUET" value="false"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;WITH &#xD;&#xA;failed_counts AS (&#xD;&#xA;    SELECT &#xD;&#xA;        dq_category&#xD;&#xA;        , error_code&#xD;&#xA;        , COUNT(*) as failed_rows&#xD;&#xA;    FROM dq.dq_exception_log&#xD;&#xA;    WHERE table_name = 'customers'&#xD;&#xA;    GROUP BY dq_category, error_code&#xD;&#xA;),&#xD;&#xA;total_count AS (&#xD;&#xA;    SELECT COUNT(*) as total &#xD;&#xA;    FROM bronze.customers&#xD;&#xA;)&#xD;&#xA;INSERT INTO dq.dq_dashboard_fact PARTITION (execution_date='&quot;+(String) globalMap.get(&quot;ingest_date&quot;)+&quot;')&#xD;&#xA;SELECT &#xD;&#xA;&#x9; 'Silver' as layer&#xD;&#xA;    , 'customers' as table_name&#xD;&#xA;    , f.dq_category&#xD;&#xA;    , f.error_code&#xD;&#xA;    , t.total as total_records&#xD;&#xA;    , f.failed_rows&#xD;&#xA;    , CAST((1 - (f.failed_rows / NULLIF(t.total, 0))) * 100 AS DECIMAL(5,2)) as actual_score&#xD;&#xA;    , 99.00 as target_score&#xD;&#xA;    , 95.00 as threshold_score&#xD;&#xA;    , 'CDP' AS `_source_system`&#xD;&#xA;&#x9;, FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`&#xD;&#xA;&#x9;, FROM_UNIXTIME(UNIX_TIMESTAMP('9999-12-31 23:59:59'),'yyyy-MM-dd HH:mm:ss') AS `_date_end`&#xD;&#xA;&#x9;, FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;FROM failed_counts f&#xD;&#xA;CROSS JOIN total_count t&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;INSERT INTO dq.dq_exception_log PARTITION (execution_date='&quot; + (String)globalMap.get(&quot;ingest_date&quot;) + &quot;')&#xD;&#xA;SELECT &#xD;&#xA;    'Silver' as layer&#xD;&#xA;    , 'customers' as table_name&#xD;&#xA;    , exploded_category as dq_category&#xD;&#xA;    , exploded_error_code as error_code&#xD;&#xA;    , 'Row failed validation rules' as error_message&#xD;&#xA;    , COALESCE(CAST(customer_id AS STRING), 'UNKNOWN') as record_key&#xD;&#xA;    , raw_record&#xD;&#xA;    , 'CDP' AS `_source_system`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`&#xD;&#xA;    , '9999-12-31 23:59:59' AS `_date_end`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;FROM (&#xD;&#xA;    SELECT &#xD;&#xA;        customer_id&#xD;&#xA;        , CONCAT_WS('|', &#xD;&#xA;            COALESCE(CAST(customer_id AS STRING),'NULL'), COALESCE(first_name,''), COALESCE(last_name,''), &#xD;&#xA;            COALESCE(email,''), COALESCE(CAST(join_date AS STRING),''), COALESCE(kyc_status,''), &#xD;&#xA;            ingest_date&#xD;&#xA;        ) as raw_record&#xD;&#xA;        , CASE WHEN customer_id IS NULL OR TRIM(CAST(customer_id AS STRING)) = '' THEN 1 ELSE 0 END as err_pk_missing&#xD;&#xA;        , CASE WHEN NOT CAST(customer_id AS STRING) RLIKE '^-?\\\\d+$' THEN 1 ELSE 0 END as err_pk_type&#xD;&#xA;        &#xD;&#xA;        -- UPDATED: Check if join_date strictly matches YYYY-MM-DD format&#xD;&#xA;        , CASE WHEN NOT CAST(join_date AS STRING) RLIKE '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' THEN 1 ELSE 0 END as err_date_type&#xD;&#xA;        &#xD;&#xA;        , CASE WHEN first_name RLIKE '^[0-9]+$'      THEN 1 ELSE 0 END as err_fname_numeric&#xD;&#xA;        , CASE WHEN last_name  RLIKE '^[0-9]+$'      THEN 1 ELSE 0 END as err_lname_numeric&#xD;&#xA;        , CASE WHEN LENGTH(CAST(customer_id AS STRING)) > 10 THEN 1 ELSE 0 END as err_pk_len&#xD;&#xA;        , CASE WHEN LENGTH(first_name)  > 50 THEN 1 ELSE 0 END as err_fname_len&#xD;&#xA;        , CASE WHEN LENGTH(last_name)   > 50 THEN 1 ELSE 0 END as err_lname_len&#xD;&#xA;        , CASE WHEN LENGTH(email)       > 50 THEN 1 ELSE 0 END as err_email_len&#xD;&#xA;        , CASE WHEN LENGTH(kyc_status)  > 20 THEN 1 ELSE 0 END as err_kyc_len&#xD;&#xA;        , CASE WHEN first_name RLIKE '([^ -~]|\\\\uFFFD)' OR last_name RLIKE '([^ -~]|\\\\uFFFD)' &#xD;&#xA;               THEN 1 ELSE 0 END as err_garbage_chars&#xD;&#xA;        , CASE WHEN first_name RLIKE '[,|\&quot;]' OR last_name RLIKE '[,|\&quot;]' &#xD;&#xA;               THEN 1 ELSE 0 END as err_rogue_delim&#xD;&#xA;        , CASE WHEN email IS NOT NULL AND TRIM(email) != '' &#xD;&#xA;               AND NOT email RLIKE '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\\\.[a-zA-Z]{2,}$' &#xD;&#xA;               THEN 1 ELSE 0 END as err_email_fmt&#xD;&#xA;        , CASE WHEN kyc_status IS NOT NULL AND TRIM(kyc_status) != '' &#xD;&#xA;               AND UPPER(kyc_status) NOT IN ('NEW', 'VERIFIED', 'REJECTED', 'PENDING') &#xD;&#xA;               THEN 1 ELSE 0 END as err_kyc_domain&#xD;&#xA;               &#xD;&#xA;        -- UPDATED: Cast the YYYY-MM-DD string to TIMESTAMP and check if it's in the future&#xD;&#xA;        , CASE WHEN join_date IS NOT NULL &#xD;&#xA;               AND CAST(join_date AS STRING) RLIKE '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' &#xD;&#xA;               AND CAST(join_date AS TIMESTAMP) > current_timestamp() &#xD;&#xA;               THEN 1 ELSE 0 END as err_future_date&#xD;&#xA;               &#xD;&#xA;    FROM bronze.customers&#xD;&#xA;) Flags&#xD;&#xA;LATERAL VIEW STACK(15&#xD;&#xA;    , 'Completeness', 'MISSING_PK',                 err_pk_missing&#xD;&#xA;    , 'Integrity',    'NON_NUMERIC_PK',             err_pk_type&#xD;&#xA;    , 'Integrity',    'INVALID_DATE_TYPE',          err_date_type&#xD;&#xA;    , 'Integrity',    'INVALID_TYPE_FNAME_NUMERIC', err_fname_numeric&#xD;&#xA;    , 'Integrity',    'INVALID_TYPE_LNAME_NUMERIC', err_lname_numeric&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_PK',            err_pk_len&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_FNAME',         err_fname_len&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_LNAME',         err_lname_len&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_EMAIL',         err_email_len&#xD;&#xA;    , 'Integrity',    'LEN_EXCEEDED_KYC',           err_kyc_len&#xD;&#xA;    , 'Integrity',    'GARBAGE_CHARS_IN_NAME',      err_garbage_chars&#xD;&#xA;    , 'Integrity',    'ROGUE_DELIMITER_IN_NAME',    err_rogue_delim&#xD;&#xA;    , 'Validity',     'INVALID_EMAIL_FORMAT',       err_email_fmt&#xD;&#xA;    , 'Validity',     'INVALID_KYC_STATUS',         err_kyc_domain&#xD;&#xA;    , 'Accuracy',     'FUTURE_JOIN_DATE',           err_future_date&#xD;&#xA;) exploded_table AS exploded_category, exploded_error_code, is_failed&#xD;&#xA;WHERE is_failed = 1&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT &#xD;&#xA;    'Silver' as layer&#xD;&#xA;    , 'customers' as table_name&#xD;&#xA;    , 'Uniqueness' as dq_category&#xD;&#xA;    , 'DUPLICATE_PK' as error_code&#xD;&#xA;    , 'Duplicate Customer ID detected' as error_message&#xD;&#xA;    , CAST(customer_id AS STRING) as record_key&#xD;&#xA;    -- Reconstruct Raw Record so we see the exact duplicates&#xD;&#xA;    , CONCAT_WS('|', &#xD;&#xA;            COALESCE(CAST(customer_id AS STRING),'NULL'), COALESCE(first_name,''), COALESCE(last_name,''), &#xD;&#xA;            COALESCE(email,''), COALESCE(CAST(join_date AS STRING),''), COALESCE(kyc_status,''), &#xD;&#xA;            ingest_date&#xD;&#xA;      ) as raw_record&#xD;&#xA;    , 'CDP' AS `_source_system`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`&#xD;&#xA;    , '9999-12-31 23:59:59' AS `_date_end`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;FROM (&#xD;&#xA;    SELECT &#xD;&#xA;        *, &#xD;&#xA;        COUNT(*) OVER (PARTITION BY customer_id) as id_count &#xD;&#xA;    FROM bronze.customers&#xD;&#xA;    WHERE customer_id IS NOT NULL&#xD;&#xA;) dup_check&#xD;&#xA;WHERE id_count > 1&#xD;&#xA;UNION ALL&#xD;&#xA;SELECT &#xD;&#xA;    'Silver' as layer&#xD;&#xA;    , 'accounts' as table_name&#xD;&#xA;    , 'Consistency' as dq_category&#xD;&#xA;    , 'ORPHAN_ACCOUNT' as error_code&#xD;&#xA;    , 'Account has no valid Customer Owner' as error_message&#xD;&#xA;    , CAST(account_id AS STRING) as record_key&#xD;&#xA;    , CONCAT('Missing Parent Key for CustID: ', CAST(a.customer_id AS STRING)) as raw_record&#xD;&#xA;    , 'CDP' AS `_source_system`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_date_start`&#xD;&#xA;    , '9999-12-31 23:59:59' AS `_date_end`&#xD;&#xA;    , FROM_UNIXTIME(UNIX_TIMESTAMP(),'yyyy-MM-dd HH:mm:ss') AS `_load_timestamp`&#xD;&#xA;FROM bronze.accounts a&#xD;&#xA;LEFT JOIN bronze.customers c ON a.customer_id = c.customer_id&#xD;&#xA;WHERE c.customer_id IS NULL&#xD;&#xA;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEZ_LIB" value="INSTALL" show="false"/>
     <elementParameter field="DIRECTORY_HADOOP" name="TEZ_LIB_FOLDER" value="&quot;/tmp/{USERNAME}/talend_tez_libs/{custom|HIVE_VERSION}&quot;" show="false"/>
@@ -1155,7 +1155,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="1680" sizeX="121" sizeY="40">
+  <node componentName="tHiveInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="1640" sizeX="121" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveInput_3" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -1299,7 +1299,7 @@
       <column comment="" key="false" length="-1" name="newColumn13" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1680" sizeX="121" sizeY="40">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1640" sizeX="121" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -1363,7 +1363,7 @@
       <column comment="" key="false" length="-1" name="newColumn13" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="600" posY="1680">
+  <node componentName="tDie" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="600" posY="1640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_1" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;DQ_THRESHOLD_EXCEEDED&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="-1"/>
@@ -1373,7 +1373,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDie_1"/>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1040" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1000" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_2" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -1473,7 +1473,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1360" sizeX="120" sizeY="40">
+  <node componentName="tHiveRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1320" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHiveRow_6" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tHiveConnection_1"/>
@@ -1573,7 +1573,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="120" posY="1040">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="120" posY="1000">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_5" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Processing DQ Bronze&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="0"/>
@@ -1582,7 +1582,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_5"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="120" posY="1200">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="120" posY="1160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_6" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Processing DQ Silver&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="0"/>
@@ -1591,7 +1591,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_6"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="120" posY="1360">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="120" posY="1320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_7" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Processing DQ Gold&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="0"/>
@@ -1600,7 +1600,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_7"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="1360">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="1320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_9" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Processing DQ Gold&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="3708"/>
@@ -1609,7 +1609,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_9"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="840" posY="1200">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="840" posY="1160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Processing DQ Silver&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="3708"/>
@@ -1618,7 +1618,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_2"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="1040">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="600" posY="1000">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_8" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: Processing DQ Bronze&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="3708"/>
@@ -1627,7 +1627,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_8"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1080" posY="880">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1080" posY="840">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_4" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Success: PRE-DQ Layer Activity for table customer&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="3708"/>
@@ -1636,7 +1636,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_4"/>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="560" sizeX="121" sizeY="40">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="80" posY="520" sizeX="121" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
@@ -1662,7 +1662,7 @@
       <column comment="" key="false" length="-1" name="source_system" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="560" sizeX="121" sizeY="40">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="520" sizeX="121" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_3" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -1693,7 +1693,7 @@
       <column comment="" key="false" length="-1" name="source_system" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="560" posY="560" sizeX="121" sizeY="40">
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="560" posY="520" sizeX="121" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_1" show="false"/>
     <elementParameter field="CHECK" name="DEFAULT_MAP" value="false"/>
     <elementParameter field="TABLE" name="MAP">
