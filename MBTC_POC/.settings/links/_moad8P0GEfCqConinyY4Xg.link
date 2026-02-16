@@ -57,5 +57,12 @@
       "id" : "_HyE1g-9pEfCcepb0inUXkA",
       "name" : "conn_oracle_source_table_Port"
     } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_ozTnMPgvEfCVZsdSWz8YYw",
+    "parameterList" : [ {
+      "id" : "_6QnKMPphEfC66eNMdZbE_A",
+      "name" : "target_tablename"
+    } ]
   } ]
 }

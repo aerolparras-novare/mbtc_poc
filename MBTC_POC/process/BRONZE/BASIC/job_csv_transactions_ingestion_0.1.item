@@ -14,7 +14,7 @@
     <contextParameter comment="" name="conn_sftp_mbtc_password" prompt="conn_sftp_mbtc_password?" promptNeeded="false" repositoryContextId="_6_AJgPXoEfCzdeB6aeN2sw" type="id_Password" value="enc:system.encryption.key.v1:wVO69f2s6yM7YAuu9Lc4wHF508uTgHUrHaptpXXInAapSbz43c08UzU3NnM=" internalId="_kjpnI_fzEfCVZsdSWz8YYw"/>
     <contextParameter comment="" name="conn_hadoop_cluster_User" prompt="conn_hadoop_cluster_User?" promptNeeded="false" repositoryContextId="_kyD8APdCEfCAt6AmyhhERg" type="id_String" value="admin" internalId="_kjpnJPfzEfCVZsdSWz8YYw"/>
     <contextParameter comment="" name="conn_hadoop_cluster_NameNodeUri" prompt="conn_hadoop_cluster_NameNodeUri?" promptNeeded="false" repositoryContextId="_kyD8APdCEfCAt6AmyhhERg" type="id_String" value="hdfs://dao-cdp-poc-master1.novare.com.ph:8020" internalId="_kjpnJffzEfCVZsdSWz8YYw"/>
-    <contextParameter comment="" name="target_count" prompt="target_count?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="" internalId="_bvZL4AdMEfG4RaMNqmRb9w"/>
+    <contextParameter comment="" name="target_count" prompt="target_count?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_Integer" value="0" internalId="_bvZL4AdMEfG4RaMNqmRb9w"/>
     <contextParameter comment="" name="src_file_dir" prompt="src_file_dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/development/CSV/" internalId="_baa08Pf3EfCVZsdSWz8YYw"/>
     <contextParameter comment="" name="filename" prompt="filename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="transactions" internalId="_hbySC_dpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="file_extension" prompt="file_extension?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=".csv" internalId="_baa08ff3EfCVZsdSWz8YYw"/>
@@ -24,7 +24,7 @@
     <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="transactions_csv" internalId="_hbySDvdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="target_table_location" prompt="target_table_location?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/bronze/transactions_csv/" internalId="_1zQ2kPdrEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="create_table_schema" prompt="create_table_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="transaction_id string, account_id string, txn_type string, amount string, txn_date string, merchant string, status string, source_system STRING, scd_status STRING, scd_timestamp STRING" internalId="_1zQ2kfdrEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="source_count" prompt="source_count?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_Integer" value="" internalId="_bvZL4gdMEfG4RaMNqmRb9w"/>
+    <contextParameter comment="" name="source_count" prompt="source_count?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_Integer" value="0" internalId="_bvZL4gdMEfG4RaMNqmRb9w"/>
     <contextParameter comment="" name="select_columns" prompt="select_columns?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="transaction_id, account_id, txn_type, amount, txn_date, merchant, status" internalId="_hbySCfdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="job_server_file_dir" prompt="job_server_file_dir?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="/opt/talend/talend-runtime/data/tmp/development-files/" internalId="_bvZL4wdMEfG4RaMNqmRb9w"/>
     <contextParameter comment="" name="audit_database" prompt="audit_database?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_String" value="audit" internalId="_bvZL5AdMEfG4RaMNqmRb9w"/>
@@ -1251,13 +1251,13 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>

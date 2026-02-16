@@ -34,6 +34,7 @@
     <contextParameter comment="" name="contol_columns" prompt="contol_columns?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=", `_source_system` VARCHAR(150), `_date_start` TIMESTAMP, `_date_end` TIMESTAMP, `_load_timestamp` TIMESTAMP" internalId="_5Kxn4Pp_EfC66eNMdZbE_A"/>
     <contextParameter comment="" name="audit_database" prompt="audit_database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="audit" internalId="_3WBVcPzfEfCfbIgCyI7b-w"/>
     <contextParameter comment="" name="load_type" prompt="load_type?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="F" internalId="_OfgtoPztEfCqConinyY4Xg"/>
+    <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="_ozTnMPgvEfCVZsdSWz8YYw" type="id_String" value="" internalId="_6QnKMPphEfC66eNMdZbE_A"/>
   </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>
