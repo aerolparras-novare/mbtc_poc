@@ -26,7 +26,7 @@
     <contextParameter comment="" name="primary_key" prompt="primary_key?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customer_id" internalId="_YkuKYPs9EfCKSsApJkp1Tw"/>
     <contextParameter comment="" name="cdc_col" prompt="cdc_col?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="talend_cdc_creation_date" internalId="_YkuKYfs9EfCKSsApJkp1Tw"/>
     <contextParameter comment="" name="source_table_cdc" prompt="source_table_cdc?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customers" internalId="_YkuKYvs9EfCKSsApJkp1Tw"/>
-    <contextParameter comment="" name="target_count" prompt="target_count?" promptNeeded="false" repositoryContextId="_7LkhYPThEfCnI8GHxx3_pw" type="id_String" value="" internalId="_QzHYsPpgEfC66eNMdZbE_A"/>
+    <contextParameter comment="" name="target_count" prompt="target_count?" promptNeeded="false" repositoryContextId="_7LkhYPThEfCnI8GHxx3_pw" type="id_Integer" value="" internalId="_QzHYsPpgEfC66eNMdZbE_A"/>
     <contextParameter comment="" name="manifest_table" prompt="manifest_table?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="mbtc_manifest_table" internalId="_9RPW4P0EEfCqConinyY4Xg"/>
     <contextParameter comment="" name="audit_database" prompt="audit_database?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="audit" internalId="_9RPW4f0EEfCqConinyY4Xg"/>
     <contextParameter comment="" name="source_count" prompt="source_count?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="" internalId="_tzxt4P0FEfCqConinyY4Xg"/>
@@ -933,7 +933,7 @@
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
     <metadata connector="OUTPUT_1" name="OUTPUT_1">
-      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="400" posY="1040" sizeX="120" sizeY="40">

@@ -13,8 +13,8 @@
     <contextParameter comment="" name="source_count" prompt="source_count?" promptNeeded="false" repositoryContextId="_uVguEAcuEfGqGfeJ7LYmLQ" type="id_Integer" value="0" internalId="_xyokIQdNEfG4RaMNqmRb9w"/>
     <contextParameter comment="" name="source_schema" prompt="source_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="bronze" internalId="_hbySCvdpEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="silver" internalId="_hbySDfdpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="accounts_ange" internalId="_hbySDvdpEfCg_5SQhzKgrQ"/>
-    <contextParameter comment="" name="target_table_location" prompt="target_table_location?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/silver/accounts_ange/" internalId="_1zQ2kPdrEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="accounts_test" internalId="_hbySDvdpEfCg_5SQhzKgrQ"/>
+    <contextParameter comment="" name="target_table_location" prompt="target_table_location?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/dev/silver/accounts_test/" internalId="_1zQ2kPdrEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="create_table_schema" prompt="create_table_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="account_id integer, customer_id integer, account_type string, currency string, current_balance string, created_at date" internalId="_1zQ2kfdrEfCg_5SQhzKgrQ"/>
     <contextParameter comment="" name="control_columns" prompt="control_columns?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=", `_source_system` VARCHAR(150), scd_status STRING, scd_timestamp TIMESTAMP,`_date_start` TIMESTAMP, `_date_end` TIMESTAMP, `_load_timestamp` TIMESTAMP" internalId="_5Kxn4Pp_EfC66eNMdZbE_A"/>
     <contextParameter comment="" name="partition_column" prompt="partition_column?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ingest_date" internalId="__Gn14PpsEfC66eNMdZbE_A"/>
@@ -274,7 +274,7 @@
     <elementParameter field="CHECK" name="INFORMATION" value="false"/>
     <elementParameter field="MEMO" name="COMMENT" value=""/>
     <metadata connector="OUTPUT_1" name="OUTPUT_1">
-      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1040" sizeX="120" sizeY="40">
@@ -284,7 +284,7 @@
     <elementParameter field="TEXT" name="LABEL" value="getTargetCount"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_2">
-      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="target_count" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="720">
@@ -1009,13 +1009,13 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
