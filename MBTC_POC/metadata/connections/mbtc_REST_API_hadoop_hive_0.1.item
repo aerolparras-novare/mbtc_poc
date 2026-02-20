@@ -49,7 +49,7 @@
     <parameters xmi:id="_MGRa1fwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
     <parameters xmi:id="_MGRa1vwDEfCi68eJmHgcpA" key="HIVE_HADOOP_VERSION" value="HADOOP3"/>
     <parameters xmi:id="_MGRa1_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_MODE" value="STANDALONE"/>
-    <parameters xmi:id="_MGRa2PwDEfCi68eJmHgcpA" key="HIVE_SERVER_VERSION" value="HIVE2"/>
+    <parameters xmi:id="_MGRa2PwDEfCi68eJmHgcpA" key="HIVE_SERVER_VERSION" value="HIVE3"/>
     <parameters xmi:id="_MGRa2fwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_ADDITIONAL_JDBC_SETTINGS" value=""/>
     <parameters xmi:id="_MGRa2vwDEfCi68eJmHgcpA" key="HIVE_AUTHENTICATION_HIVEPRINCIPLA" value=""/>
     <parameters xmi:id="_MGRa2_wDEfCi68eJmHgcpA" key="HIVE_AUTHENTICATION_METASTOREURL" value=""/>
@@ -74,10 +74,10 @@
     <parameters xmi:id="_MGRa7vwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_NEED_CLIENT_AUTH" value="false"/>
     <parameters xmi:id="_MGRa7_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_DISABLE_CBC_PROTECTION" value="false"/>
     <parameters xmi:id="_MGRa9PwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_THRIFTPORT" value="9083"/>
-    <parameters xmi:id="_5fBE0Ab8EfGFQrQJaHzpdw" key="CONN_PARA_KEY_SSL_TRUST_STORE_PATH" value=""/>
-    <parameters xmi:id="_5fBE0Qb8EfGFQrQJaHzpdw" key="CONN_PARA_KEY_SSL_TRUST_STORE_PASSWORD" value=""/>
-    <parameters xmi:id="_5fBE0gb8EfGFQrQJaHzpdw" key="CONN_PARA_KEY_SSL_KEY_STORE_PATH" value=""/>
-    <parameters xmi:id="_5fBE0wb8EfGFQrQJaHzpdw" key="CONN_PARA_KEY_SSL_KEY_STORE_PASSWORD" value=""/>
+    <parameters xmi:id="_u2lPsA4REfG4nYyw7oadgA" key="CONN_PARA_KEY_SSL_TRUST_STORE_PATH" value=""/>
+    <parameters xmi:id="_u2lPsQ4REfG4nYyw7oadgA" key="CONN_PARA_KEY_SSL_TRUST_STORE_PASSWORD" value=""/>
+    <parameters xmi:id="_u2lPsg4REfG4nYyw7oadgA" key="CONN_PARA_KEY_SSL_KEY_STORE_PATH" value=""/>
+    <parameters xmi:id="_u2lPsw4REfG4nYyw7oadgA" key="CONN_PARA_KEY_SSL_KEY_STORE_PASSWORD" value=""/>
   </TalendMetadata:DatabaseConnection>
   <orgomg.cwm.resource.relational:Schema xmi:id="_MbGbMPwDEfCi68eJmHgcpA" name="bronze" dataManager="_MGRasPwDEfCi68eJmHgcpA">
     <ownedElement xsi:type="relational:TdTable" xmi:id="_CMKaoPwGEfCo_Ipx5xwaoA" name="customers_api_test" id="_CMFiIPwGEfCo_Ipx5xwaoA" label="customers_api_test" tableType="TABLE">
