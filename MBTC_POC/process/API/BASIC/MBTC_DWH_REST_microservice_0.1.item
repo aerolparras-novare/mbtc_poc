@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
-  <context confirmationNeeded="false" hide="false" name="Default">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="default" jobType="Standard">
+  <context confirmationNeeded="false" hide="false" name="default">
+    <contextParameter comment="" name="limit" prompt="limit?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="100" internalId="_zO3sAPvxEfCi68eJmHgcpA"/>
+    <contextParameter comment="" name="offset" prompt="offset?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="0" internalId="_zO3sAfvxEfCi68eJmHgcpA"/>
+    <contextParameter comment="" name="tablename" prompt="tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customers" internalId="_R7ZBEA10EfG4nYyw7oadgA"/>
+    <contextParameter comment="" name="hive_dbname" prompt="hive_dbname?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="silver" internalId="_R7ZBEQ10EfG4nYyw7oadgA"/>
+    <contextParameter comment="" name="conn_hive_target_table_AdditionalJDBCParameters" prompt="conn_hive_target_table_AdditionalJDBCParameters?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="" internalId="_R7aPMA10EfG4nYyw7oadgA"/>
+    <contextParameter comment="" name="conn_hive_target_table_Login" prompt="conn_hive_target_table_Login?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="nvre_dev1" internalId="_R7aPMQ10EfG4nYyw7oadgA"/>
+    <contextParameter comment="" name="conn_hive_target_table_Server" prompt="conn_hive_target_table_Server?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="13.215.89.162" internalId="_R7aPMg10EfG4nYyw7oadgA"/>
+    <contextParameter comment="" name="conn_hive_target_table_Port" prompt="conn_hive_target_table_Port?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="10000" internalId="_R7aPMw10EfG4nYyw7oadgA"/>
+    <contextParameter comment="" name="conn_hive_target_table_Password" prompt="conn_hive_target_table_Password?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_Password" value="enc:system.encryption.key.v1:8crs3PfsVG9xWkWHutuyEaKxwRTLhIT4rLU8A4dvKQliCPSPoV8vDw==" internalId="_R7aPNA10EfG4nYyw7oadgA"/>
+    <contextParameter comment="" name="conn_hive_target_table_Database" prompt="conn_hive_target_table_Database?" promptNeeded="false" repositoryContextId="_C6ROcPKdEfCNScNTrRRCvQ" type="id_String" value="" internalId="_R7aPNQ10EfG4nYyw7oadgA"/>
+  </context>
+  <context confirmationNeeded="false" hide="false" name="dev">
     <contextParameter comment="" name="limit" prompt="limit?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="100" internalId="_zO3sAPvxEfCi68eJmHgcpA"/>
     <contextParameter comment="" name="offset" prompt="offset?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="0" internalId="_zO3sAfvxEfCi68eJmHgcpA"/>
     <contextParameter comment="" name="tablename" prompt="tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customers" internalId="_R7ZBEA10EfG4nYyw7oadgA"/>
