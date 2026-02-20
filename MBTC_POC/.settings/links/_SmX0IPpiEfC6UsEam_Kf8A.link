@@ -1,0 +1,26 @@
+{
+  "itemId" : "_SmX0IPpiEfC6UsEam_Kf8A",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_C6ROcPKdEfCNScNTrRRCvQ",
+    "parameterList" : [ {
+      "id" : "_C6ssR_KdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_AdditionalJDBCParameters"
+    }, {
+      "id" : "_C6ssQfKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Login"
+    }, {
+      "id" : "_C6ssQvKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Server"
+    }, {
+      "id" : "_C6ssRfKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Port"
+    }, {
+      "id" : "_C6ssQ_KdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Password"
+    }, {
+      "id" : "_C6ssRvKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Database"
+    } ]
+  } ]
+}
