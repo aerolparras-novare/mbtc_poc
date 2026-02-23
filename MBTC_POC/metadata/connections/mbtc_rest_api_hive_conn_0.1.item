@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <TalendMetadata:DatabaseConnection xmi:id="_IP4jAA5OEfGgh48FsAjlOw" name="mbtc_rest_api_hive_conn" id="_IPe6YA5OEfGgh48FsAjlOw" label="mbtc_rest_api_hive_conn" dataPackage="_LXM5QA5OEfGgh48FsAjlOw _LXM5Qg5OEfGgh48FsAjlOw _LXM5Qw5OEfGgh48FsAjlOw _LXM5RA5OEfGgh48FsAjlOw _LXM5RQ5OEfGgh48FsAjlOw _LXM5Rg5OEfGgh48FsAjlOw _LXM5Rw5OEfGgh48FsAjlOw _LXM5SA5OEfGgh48FsAjlOw _LXM5SQ5OEfGgh48FsAjlOw _MbGbMPwDEfCi68eJmHgcpA" DatabaseType="Hive" DriverClass="org.apache.hadoop.hive.jdbc.HiveDriver" URL="jdbc:hive2://13.215.89.162:10000/" dbVersionString="STANDALONE" Port="10000" Username="admin" Password="enc:system.encryption.key.v1:1PYVwWrJr29tY5yZACDvmXKMgtzemu/pttnxL/ar1c39" ServerName="13.215.89.162" SID="" SqlSynthax="" StringQuote="" NullChar="" DbmsId="hive_id" ProductId="HIVE" StandardSQL="true" SQLMode="false" UiSchema="" supportNLS="false">
+    <taggedValue xmi:id="_MGRasfwDEfCi68eJmHgcpA" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_MIg2YPwDEfCi68eJmHgcpA" tag="package filter" value=""/>
+    <taggedValue xmi:id="_MIlH0PwDEfCi68eJmHgcpA" tag="Status" value=""/>
+    <taggedValue xmi:id="_MIlH0fwDEfCi68eJmHgcpA" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_MIlH0vwDEfCi68eJmHgcpA" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_MIlH0_wDEfCi68eJmHgcpA" tag="Description" value=""/>
+    <taggedValue xmi:id="_MIlH1PwDEfCi68eJmHgcpA" tag="Author" value=""/>
+    <taggedValue xmi:id="_MIlH1fwDEfCi68eJmHgcpA" tag="otherParameter"/>
+    <taggedValue xmi:id="_MMfXcPwDEfCi68eJmHgcpA" tag="DB ProductName" value="Apache Hive"/>
+    <taggedValue xmi:id="_MMfXcfwDEfCi68eJmHgcpA" tag="DB ProductVersion" value="3.1.3000.7.1.9.1000-103"/>
+    <parameters xmi:id="_MGRasvwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_DB_PORT"/>
+    <parameters xmi:id="_MGRas_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_USE_YARN" value="true"/>
+    <parameters xmi:id="_MGRatPwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_RESOURCEMANAGER_SCHEDULER_ADDRESS" value="dao-cdp-poc-master1.novare.com.ph:8030"/>
+    <parameters xmi:id="_MGRatfwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_USE_CUSTOM_CONFS" value="true"/>
+    <parameters xmi:id="_MGRatvwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_NAME_NODE_URL" value="hdfs://dao-cdp-poc-master1.novare.com.ph:8020"/>
+    <parameters xmi:id="_MGRat_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_USERNAME" value="admin"/>
+    <parameters xmi:id="_MGRauPwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HADOOP_CLUSTER_ID" value="_ec-XIPwBEfCi68eJmHgcpA"/>
+    <parameters xmi:id="_MGRaufwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_JOB_HISTORY_PRINCIPAL" value="mapred/_HOST@EXAMPLE.COM"/>
+    <parameters xmi:id="_MGRauvwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HBASE_VERSION" value="Cloudera_CDP7_1_1_0_565"/>
+    <parameters xmi:id="_MGRau_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_JOB_TRACKER_URL" value="dao-cdp-poc-master1.novare.com.ph:8032"/>
+    <parameters xmi:id="_MGRavPwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_JOBHISTORY_ADDRESS" value="dao-cdp-poc-edge1.novare.com.ph:10020"/>
+    <parameters xmi:id="_MGRavfwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_VERSION" value="Cloudera_CDP7_1_1_0_565"/>
+    <parameters xmi:id="_MGRavvwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_USE_DATANODE_HOSTNAME" value="true"/>
+    <parameters xmi:id="_MGRav_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_DB_SERVER" value="dao-cdp-poc-master1.novare.com.ph"/>
+    <parameters xmi:id="_MGRawPwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_GOOGLE_PROJECT_ID" value=""/>
+    <parameters xmi:id="_MGRawfwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_GOOGLE_CLUSTER_ID" value=""/>
+    <parameters xmi:id="_MGRawvwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_DB_TYPE" value="Hive"/>
+    <parameters xmi:id="_MGRaw_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_MAPRDB_AUTHENTICATION_USE_MAPRTICKET" value="false"/>
+    <parameters xmi:id="_MGRaxPwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_AUTHENTICATION_PATH_TO_GOOGLE_CREDENTIALS"/>
+    <parameters xmi:id="_MGRaxfwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_JOB_TRACKER_PRINCIPAL" value="yarn/_HOST@EXAMPLE.COM"/>
+    <parameters xmi:id="_MGRaxvwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_AUTHENTICATION_DEFINE_PATH_TO_GOOGLE_CREDENTIALS"/>
+    <parameters xmi:id="_MGRax_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_DISTRIBUTION" value="CLOUDERA"/>
+    <parameters xmi:id="_MGRayPwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_MAPRDB_VERSION" value="Cloudera_CDP7_1_1_0_565"/>
+    <parameters xmi:id="_MGRayfwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_MAPRDB_DISTRIBUTION" value="CLOUDERA"/>
+    <parameters xmi:id="_MGRayvwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_GOOGLE_REGION" value=""/>
+    <parameters xmi:id="_MGRay_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_USE_KRB" value="false"/>
+    <parameters xmi:id="_MGRazPwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HBASE_DISTRIBUTION" value="CLOUDERA"/>
+    <parameters xmi:id="_MGRazfwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_STAGING_DIRECTORY" value="/user"/>
+    <parameters xmi:id="_MGRazvwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HADOOP_CUSTOM_JARS"/>
+    <parameters xmi:id="_MGRaz_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_NAME_NODE_PRINCIPAL" value="hdfs/_HOST@EXAMPLE.COM"/>
+    <parameters xmi:id="_MGRa0PwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_DB_PRODUCT" value="HIVE"/>
+    <parameters xmi:id="_MGRa0fwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_AUTHENTICATION_USE_MAPRTICKET" value="false"/>
+    <parameters xmi:id="_MGRa0vwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_SPARK_MODE" value="STANDALONE"/>
+    <parameters xmi:id="_MGRa0_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_GOOGLE_JARS_BUCKET" value=""/>
+    <parameters xmi:id="_MGRa1PwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HBASE_AUTHENTICATION_USE_MAPRTICKET" value="false"/>
+    <parameters xmi:id="_MGRa1fwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+    <parameters xmi:id="_MGRa1vwDEfCi68eJmHgcpA" key="HIVE_HADOOP_VERSION" value="HADOOP3"/>
+    <parameters xmi:id="_MGRa1_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_MODE" value="STANDALONE"/>
+    <parameters xmi:id="_MGRa2PwDEfCi68eJmHgcpA" key="HIVE_SERVER_VERSION" value="HIVE3"/>
+    <parameters xmi:id="_MGRa2fwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_ADDITIONAL_JDBC_SETTINGS" value=""/>
+    <parameters xmi:id="_MGRa2vwDEfCi68eJmHgcpA" key="HIVE_AUTHENTICATION_HIVEPRINCIPLA" value=""/>
+    <parameters xmi:id="_MGRa2_wDEfCi68eJmHgcpA" key="HIVE_AUTHENTICATION_METASTOREURL" value=""/>
+    <parameters xmi:id="_MGRa3PwDEfCi68eJmHgcpA" key="HIVE_AUTHENTICATION_DRIVERCLASS" value=""/>
+    <parameters xmi:id="_MGRa3fwDEfCi68eJmHgcpA" key="HIVE_AUTHENTICATION_USERNAME" value=""/>
+    <parameters xmi:id="_MGRa3vwDEfCi68eJmHgcpA" key="HIVE_AUTHENTICATION_PASSWORD" value=""/>
+    <parameters xmi:id="_MGRa3_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_KEYTAB_PRINCIPLA" value=""/>
+    <parameters xmi:id="_MGRa4PwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_KEYTAB" value=""/>
+    <parameters xmi:id="_MGRa4fwDEfCi68eJmHgcpA" key="HIVE_EXECUTION_ENGINE"/>
+    <parameters xmi:id="_MGRa4vwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_WEB_HCAT_HOSTNAME" value=""/>
+    <parameters xmi:id="_MGRa4_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_WEB_HCAT_PORT" value=""/>
+    <parameters xmi:id="_MGRa5PwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_WEB_HCAT_USERNAME" value=""/>
+    <parameters xmi:id="_MGRa5fwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_WEB_HCAT_JOB_RESULT_FOLDER" value=""/>
+    <parameters xmi:id="_MGRa5vwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HDI_USERNAME" value=""/>
+    <parameters xmi:id="_MGRa5_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HDI_PASSWORD" value=""/>
+    <parameters xmi:id="_MGRa6PwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_AZURE_HOSTNAME" value=""/>
+    <parameters xmi:id="_MGRa6fwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_AZURE_CONTAINER" value=""/>
+    <parameters xmi:id="_MGRa6vwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_AZURE_USERNAME" value=""/>
+    <parameters xmi:id="_MGRa6_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_AZURE_PASSWORD" value=""/>
+    <parameters xmi:id="_MGRa7PwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_AZURE_DEPLOY_BLOB" value=""/>
+    <parameters xmi:id="_MGRa7fwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_USE_SSL" value="false"/>
+    <parameters xmi:id="_MGRa7vwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_NEED_CLIENT_AUTH" value="false"/>
+    <parameters xmi:id="_MGRa7_wDEfCi68eJmHgcpA" key="CONN_PARA_KEY_DISABLE_CBC_PROTECTION" value="false"/>
+    <parameters xmi:id="_MGRa9PwDEfCi68eJmHgcpA" key="CONN_PARA_KEY_HIVE_THRIFTPORT" value="9083"/>
+    <parameters xmi:id="_I3zeoA5OEfGgh48FsAjlOw" key="CONN_PARA_KEY_SSL_TRUST_STORE_PATH" value=""/>
+    <parameters xmi:id="_I3zeoQ5OEfGgh48FsAjlOw" key="CONN_PARA_KEY_SSL_TRUST_STORE_PASSWORD" value=""/>
+    <parameters xmi:id="_I3zeog5OEfGgh48FsAjlOw" key="CONN_PARA_KEY_SSL_KEY_STORE_PATH" value=""/>
+    <parameters xmi:id="_I3zeow5OEfGgh48FsAjlOw" key="CONN_PARA_KEY_SSL_KEY_STORE_PASSWORD" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_LXM5QA5OEfGgh48FsAjlOw" name="audit" dataManager="_IP4jAA5OEfGgh48FsAjlOw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_LXM5Qg5OEfGgh48FsAjlOw" name="db_encrypt" dataManager="_IP4jAA5OEfGgh48FsAjlOw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_LXM5Qw5OEfGgh48FsAjlOw" name="default" dataManager="_IP4jAA5OEfGgh48FsAjlOw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_LXM5RA5OEfGgh48FsAjlOw" name="dq" dataManager="_IP4jAA5OEfGgh48FsAjlOw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_LXM5RQ5OEfGgh48FsAjlOw" name="gold" dataManager="_IP4jAA5OEfGgh48FsAjlOw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_LXM5Rg5OEfGgh48FsAjlOw" name="information_schema" dataManager="_IP4jAA5OEfGgh48FsAjlOw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_LXM5Rw5OEfGgh48FsAjlOw" name="silver" dataManager="_IP4jAA5OEfGgh48FsAjlOw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_LXM5SA5OEfGgh48FsAjlOw" name="sys" dataManager="_IP4jAA5OEfGgh48FsAjlOw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_LXM5SQ5OEfGgh48FsAjlOw" name="test" dataManager="_IP4jAA5OEfGgh48FsAjlOw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_MbGbMPwDEfCi68eJmHgcpA" name="bronze" dataManager="_IP4jAA5OEfGgh48FsAjlOw">
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_CMKaoPwGEfCo_Ipx5xwaoA" name="customers_api_test" id="_CMFiIPwGEfCo_Ipx5xwaoA" label="customers_api_test" tableType="TABLE">
+      <feature xsi:type="relational:TdColumn" xmi:id="_CMKaofwGEfCo_Ipx5xwaoA" name="customer_id" label="customer_id" length="2147483647" sourceType="STRING" talendType="id_String">
+        <taggedValue xmi:id="_CMKaovwGEfCo_Ipx5xwaoA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_CMKao_wGEfCo_Ipx5xwaoA" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_CMKapPwGEfCo_Ipx5xwaoA" name="STRING" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_CMKapfwGEfCo_Ipx5xwaoA" name="first_name" label="first_name" length="2147483647" sourceType="STRING" talendType="id_String">
+        <taggedValue xmi:id="_CMKapvwGEfCo_Ipx5xwaoA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_CMKap_wGEfCo_Ipx5xwaoA" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_CMKaqPwGEfCo_Ipx5xwaoA" name="STRING" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_CMKaqfwGEfCo_Ipx5xwaoA" name="last_name" label="last_name" length="2147483647" sourceType="STRING" talendType="id_String">
+        <taggedValue xmi:id="_CMKaqvwGEfCo_Ipx5xwaoA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_CMKaq_wGEfCo_Ipx5xwaoA" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_CMKarPwGEfCo_Ipx5xwaoA" name="STRING" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_CMKarfwGEfCo_Ipx5xwaoA" name="email" label="email" length="2147483647" sourceType="STRING" talendType="id_String">
+        <taggedValue xmi:id="_CMKarvwGEfCo_Ipx5xwaoA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_CMKar_wGEfCo_Ipx5xwaoA" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_CMKasPwGEfCo_Ipx5xwaoA" name="STRING" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_CMKasfwGEfCo_Ipx5xwaoA" name="join_date" label="join_date" length="2147483647" sourceType="STRING" talendType="id_String">
+        <taggedValue xmi:id="_CMLBsPwGEfCo_Ipx5xwaoA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_CMLBsfwGEfCo_Ipx5xwaoA" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_CMLBsvwGEfCo_Ipx5xwaoA" name="STRING" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_CMLBs_wGEfCo_Ipx5xwaoA" name="kyc_status" label="kyc_status" length="2147483647" sourceType="STRING" talendType="id_String">
+        <taggedValue xmi:id="_CMLBtPwGEfCo_Ipx5xwaoA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_CMLBtfwGEfCo_Ipx5xwaoA" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_CMLBtvwGEfCo_Ipx5xwaoA" name="STRING" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_CMLBt_wGEfCo_Ipx5xwaoA" name="ingest_date" label="ingest_date" length="8" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_CMLBuPwGEfCo_Ipx5xwaoA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_CMLBufwGEfCo_Ipx5xwaoA" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_CMLBuvwGEfCo_Ipx5xwaoA" name="VARCHAR" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.relational:Schema>
+</xmi:XMI>
