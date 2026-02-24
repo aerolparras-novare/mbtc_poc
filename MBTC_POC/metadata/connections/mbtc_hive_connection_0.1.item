@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <TalendMetadata:DatabaseConnection xmi:id="_O2QG0PdUEfC1_ttOpu7bSw" name="mbtc_hive_connection" id="_HcbZkPdUEfC1_ttOpu7bSw" label="mbtc_hive_connection" dataPackage="_PL2jYPdUEfC1_ttOpu7bSw _PL2jYfdUEfC1_ttOpu7bSw _PL2jYvdUEfC1_ttOpu7bSw _PL2jY_dUEfC1_ttOpu7bSw _PL2jZPdUEfC1_ttOpu7bSw _PL2jZfdUEfC1_ttOpu7bSw _PL2jZvdUEfC1_ttOpu7bSw" DatabaseType="Hive" DriverClass="org.apache.hadoop.hive.jdbc.HiveDriver" URL="jdbc:hive2://13.215.89.162:10000/" dbVersionString="STANDALONE" Port="10000" Username="nvre_dev1" Password="enc:system.encryption.key.v1:W3s9GkLCbNamTYKANusu5OvjTizihR68qKomVFX9HWgoCVWn/FULTg==" ServerName="13.215.89.162" DatasourceName="" FileFieldName="" SID="" SqlSynthax="" StringQuote="" NullChar="" DbmsId="hive_id" ProductId="HIVE" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="" supportNLS="false">
+  <TalendMetadata:DatabaseConnection xmi:id="_O2QG0PdUEfC1_ttOpu7bSw" name="mbtc_hive_connection" id="_HcbZkPdUEfC1_ttOpu7bSw" label="mbtc_hive_connection" dataPackage="_Rsny8BCuEfGJG-g34bxXYg _Rsny8hCuEfGJG-g34bxXYg _Rsny8xCuEfGJG-g34bxXYg _Rsny9BCuEfGJG-g34bxXYg _Rsny9hCuEfGJG-g34bxXYg _Rsny9xCuEfGJG-g34bxXYg _Rsny-BCuEfGJG-g34bxXYg _Rsny-RCuEfGJG-g34bxXYg _PL2jYPdUEfC1_ttOpu7bSw _PL2jY_dUEfC1_ttOpu7bSw" DatabaseType="Hive" DriverClass="org.apache.hadoop.hive.jdbc.HiveDriver" URL="jdbc:hive2://13.215.89.162:10000/" dbVersionString="STANDALONE" Port="10000" Username="nvre_dev1" Password="enc:system.encryption.key.v1:W3s9GkLCbNamTYKANusu5OvjTizihR68qKomVFX9HWgoCVWn/FULTg==" ServerName="13.215.89.162" DatasourceName="" FileFieldName="" SID="" SqlSynthax="" StringQuote="" NullChar="" DbmsId="hive_id" ProductId="HIVE" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="" supportNLS="false">
     <taggedValue xmi:id="_O2QG0fdUEfC1_ttOpu7bSw" tag="Is Conn Need Reload" value="false"/>
     <taggedValue xmi:id="_O3HpgPdUEfC1_ttOpu7bSw" tag="package filter" value=""/>
     <taggedValue xmi:id="_O3IQkPdUEfC1_ttOpu7bSw" tag="Status" value=""/>
@@ -15,7 +15,7 @@
     <parameters xmi:id="_O2QG0_dUEfC1_ttOpu7bSw" key="HIVE_HADOOP_VERSION" value="HADOOP3"/>
     <parameters xmi:id="_O2QG1PdUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_DB_TYPE" value="Hive"/>
     <parameters xmi:id="_O2QG1fdUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_HIVE_MODE" value="STANDALONE"/>
-    <parameters xmi:id="_O2QG1vdUEfC1_ttOpu7bSw" key="HIVE_SERVER_VERSION" value="HIVE2"/>
+    <parameters xmi:id="_O2QG1vdUEfC1_ttOpu7bSw" key="HIVE_SERVER_VERSION" value="HIVE3"/>
     <parameters xmi:id="_O2QG1_dUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_HIVE_ADDITIONAL_JDBC_SETTINGS" value=""/>
     <parameters xmi:id="_O2QG2PdUEfC1_ttOpu7bSw" key="HIVE_AUTHENTICATION_HIVEPRINCIPLA" value=""/>
     <parameters xmi:id="_O2QG2fdUEfC1_ttOpu7bSw" key="HIVE_AUTHENTICATION_METASTOREURL" value=""/>
@@ -45,11 +45,20 @@
     <parameters xmi:id="_O2QG8fdUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_USE_SSL" value="false"/>
     <parameters xmi:id="_O2QG8vdUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_NEED_CLIENT_AUTH" value="false"/>
     <parameters xmi:id="_O2QG8_dUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_DISABLE_CBC_PROTECTION" value="false"/>
-    <parameters xmi:id="_O2QG9PdUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_SSL_TRUST_STORE_PATH" value=""/>
-    <parameters xmi:id="_O2QG9fdUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_SSL_TRUST_STORE_PASSWORD" value=""/>
-    <parameters xmi:id="_O2QG9vdUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_SSL_KEY_STORE_PATH" value=""/>
-    <parameters xmi:id="_O2QG9_dUEfC1_ttOpu7bSw" key="CONN_PARA_KEY_SSL_KEY_STORE_PASSWORD" value=""/>
+    <parameters xmi:id="_PT3L0BCuEfGJG-g34bxXYg" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+    <parameters xmi:id="_PYGyoBCuEfGJG-g34bxXYg" key="CONN_PARA_KEY_SSL_TRUST_STORE_PATH" value=""/>
+    <parameters xmi:id="_PYGyoRCuEfGJG-g34bxXYg" key="CONN_PARA_KEY_SSL_TRUST_STORE_PASSWORD" value=""/>
+    <parameters xmi:id="_PYGyohCuEfGJG-g34bxXYg" key="CONN_PARA_KEY_SSL_KEY_STORE_PATH" value=""/>
+    <parameters xmi:id="_PYHZsBCuEfGJG-g34bxXYg" key="CONN_PARA_KEY_SSL_KEY_STORE_PASSWORD" value=""/>
   </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_Rsny8BCuEfGJG-g34bxXYg" name="audit" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_Rsny8hCuEfGJG-g34bxXYg" name="db_encrypt" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_Rsny8xCuEfGJG-g34bxXYg" name="default" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_Rsny9BCuEfGJG-g34bxXYg" name="dq" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_Rsny9hCuEfGJG-g34bxXYg" name="information_schema" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_Rsny9xCuEfGJG-g34bxXYg" name="silver" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_Rsny-BCuEfGJG-g34bxXYg" name="sys" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_Rsny-RCuEfGJG-g34bxXYg" name="test" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
   <orgomg.cwm.resource.relational:Schema xmi:id="_PL2jYPdUEfC1_ttOpu7bSw" name="bronze" dataManager="_O2QG0PdUEfC1_ttOpu7bSw">
     <ownedElement xsi:type="relational:TdTable" xmi:id="_m_KowPduEfCTO4E-xlLFig" name="customers_api_test" id="_m_HlcPduEfCTO4E-xlLFig" label="customers_api_test" tableType="TABLE">
       <feature xsi:type="relational:TdColumn" xmi:id="_m_KowfduEfCTO4E-xlLFig" name="customer_id" label="customer_id" length="2147483647" sourceType="STRING" talendType="id_String">
@@ -89,8 +98,6 @@
       </feature>
     </ownedElement>
   </orgomg.cwm.resource.relational:Schema>
-  <orgomg.cwm.resource.relational:Schema xmi:id="_PL2jYfdUEfC1_ttOpu7bSw" name="bronze_sftp" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
-  <orgomg.cwm.resource.relational:Schema xmi:id="_PL2jYvdUEfC1_ttOpu7bSw" name="default" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
   <orgomg.cwm.resource.relational:Schema xmi:id="_PL2jY_dUEfC1_ttOpu7bSw" name="gold" dataManager="_O2QG0PdUEfC1_ttOpu7bSw">
     <ownedElement xsi:type="relational:TdTable" xmi:id="_RMC5gPdUEfC1_ttOpu7bSw" name="customers" id="_RL6WoPdUEfC1_ttOpu7bSw" label="customers" tableType="TABLE">
       <feature xsi:type="relational:TdColumn" xmi:id="_RMC5gfdUEfC1_ttOpu7bSw" name="customer_id" label="customer_id" length="10" sourceType="INT" talendType="id_Integer">
@@ -271,7 +278,4 @@
       </feature>
     </ownedElement>
   </orgomg.cwm.resource.relational:Schema>
-  <orgomg.cwm.resource.relational:Schema xmi:id="_PL2jZPdUEfC1_ttOpu7bSw" name="information_schema" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
-  <orgomg.cwm.resource.relational:Schema xmi:id="_PL2jZfdUEfC1_ttOpu7bSw" name="sys" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
-  <orgomg.cwm.resource.relational:Schema xmi:id="_PL2jZvdUEfC1_ttOpu7bSw" name="test" dataManager="_O2QG0PdUEfC1_ttOpu7bSw"/>
 </xmi:XMI>
