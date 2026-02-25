@@ -1,5 +1,24 @@
 [ {
   "baseItem" : {
+    "id" : "_1c4ssBEvEfGJG-g34bxXYg",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "built-in",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_HcbZkPdUEfC1_ttOpu7bSw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_IMCTgPgCEfCTO4E-xlLFig",
+    "version" : "Latest",
+    "type" : "property"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_6DC74O0GEfCabqfpFxxKMQ",
     "version" : "0.1",
     "type" : "job"
@@ -26,6 +45,49 @@
     "type" : "schema"
   }, {
     "id" : "_xdABoP1OEeiai7rk0Np2CQ - customers",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_6WNv8BErEfGJG-g34bxXYg",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "built-in",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_57rE4PzmEfCVeuveFRjYWw",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_MF_mgPwGEfCo_Ipx5xwaoA",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_NA7k4PzvEfCVeuveFRjYWw",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_C_NIgPwDEfCi68eJmHgcpA",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_HcbZkPdUEfC1_ttOpu7bSw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_IMCTgPgCEfCTO4E-xlLFig",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_gR-4wP31EfCl46hknL7q8g",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_C_NIgPwDEfCi68eJmHgcpA - customers_api_test",
     "version" : "Latest",
     "type" : "schema"
   } ]
@@ -363,6 +425,49 @@
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "_C_NIgPwDEfCi68eJmHgcpA - customers_api_test",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_gvB9gBHzEfGJG-g34bxXYg",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "built-in",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_57rE4PzmEfCVeuveFRjYWw",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_MF_mgPwGEfCo_Ipx5xwaoA",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_NA7k4PzvEfCVeuveFRjYWw",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_C_NIgPwDEfCi68eJmHgcpA",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_HcbZkPdUEfC1_ttOpu7bSw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_IMCTgPgCEfCTO4E-xlLFig",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_gR-4wP31EfCl46hknL7q8g",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_C_NIgPwDEfCi68eJmHgcpA - customers_api_test",
     "version" : "Latest",
     "type" : "schema"
