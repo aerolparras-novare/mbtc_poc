@@ -18,13 +18,6 @@
     <contextParameter comment="" name="source_tablename" prompt="source_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customers" internalId="_t3zPXQiXEfGeM-V08Eijzw"/>
     <contextParameter comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="gold" internalId="_t3zPXgiXEfGeM-V08Eijzw"/>
     <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customer_360" internalId="_t3zPXwiXEfGeM-V08Eijzw"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Password" prompt="conn_oracle_source_table_Password?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_Password" value="enc:system.encryption.key.v1:JtNiRK1CXrEGz3bvXWK/7SltG7m1GAJD74Y1/9xI9NywGVl9PQ0jeQ==" internalId="_qtJggPfpEfC7vqSG4DzDXA"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Schema" prompt="conn_oracle_source_table_Schema?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="MBTC" internalId="_qtJggffpEfC7vqSG4DzDXA"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Server" prompt="conn_oracle_source_table_Server?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="18.136.114.179" internalId="_qtJggvfpEfC7vqSG4DzDXA"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Port" prompt="conn_oracle_source_table_Port?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="1521" internalId="_qtJgg_fpEfC7vqSG4DzDXA"/>
-    <contextParameter comment="" name="conn_oracle_source_table_ServiceName" prompt="conn_oracle_source_table_ServiceName?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="mbtcDb" internalId="_qtJghPfpEfC7vqSG4DzDXA"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Login" prompt="conn_oracle_source_table_Login?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="nvre_dev1" internalId="_qtJghffpEfC7vqSG4DzDXA"/>
-    <contextParameter comment="" name="conn_oracle_source_table__AdditionalParams" prompt="conn_oracle_source_table__AdditionalParams?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="" internalId="_qtJghvfpEfC7vqSG4DzDXA"/>
   </context>
   <context confirmationNeeded="false" hide="true" name="Default">
     <contextParameter comment="" name="execution_date" prompt="execution_date?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_oCMHwAbfEfGg7tr9sX3lqw"/>
@@ -44,13 +37,6 @@
     <contextParameter comment="" name="source_tablename" prompt="source_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="CUSTOMERS" internalId="_t3zPbQiXEfGeM-V08Eijzw"/>
     <contextParameter comment="" name="target_schema" prompt="target_schema?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="bronze" internalId="_t3zPbgiXEfGeM-V08Eijzw"/>
     <contextParameter comment="" name="target_tablename" prompt="target_tablename?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="customers_test" internalId="_t3zPbwiXEfGeM-V08Eijzw"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Password" prompt="conn_oracle_source_table_Password?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_Password" value="enc:system.encryption.key.v1:aY++bO0fdM3RyTzkM9gKTn6plHkV+MDHDmeOPMtIpJHaZsC4yq6spA==" internalId="_qtJggPfpEfC7vqSG4DzDXA"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Schema" prompt="conn_oracle_source_table_Schema?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="MBTC" internalId="_qtJggffpEfC7vqSG4DzDXA"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Server" prompt="conn_oracle_source_table_Server?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="18.136.114.179" internalId="_qtJggvfpEfC7vqSG4DzDXA"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Port" prompt="conn_oracle_source_table_Port?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="1521" internalId="_qtJgg_fpEfC7vqSG4DzDXA"/>
-    <contextParameter comment="" name="conn_oracle_source_table_ServiceName" prompt="conn_oracle_source_table_ServiceName?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="mbtcDb" internalId="_qtJghPfpEfC7vqSG4DzDXA"/>
-    <contextParameter comment="" name="conn_oracle_source_table_Login" prompt="conn_oracle_source_table_Login?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="nvre_dev1" internalId="_qtJghffpEfC7vqSG4DzDXA"/>
-    <contextParameter comment="" name="conn_oracle_source_table__AdditionalParams" prompt="conn_oracle_source_table__AdditionalParams?" promptNeeded="false" repositoryContextId="_vxyFQO9oEfCcepb0inUXkA" type="id_String" value="" internalId="_qtJghvfpEfC7vqSG4DzDXA"/>
   </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" value="true" show="false"/>
