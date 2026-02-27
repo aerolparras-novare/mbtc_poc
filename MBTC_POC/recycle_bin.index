@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin">
   <deletedFolders>process/API/BASIC</deletedFolders>
-  <deletedFolders>process/API/TEST</deletedFolders>
-  <deletedItems id="_Jr3fAPg4EfCTO4E-xlLFigdoc" path="" type="JOB_DOC"/>
-  <deletedItems id="_Jr3fAPg4EfCTO4E-xlLFig" path="API/BASIC" type="PROCESS"/>
-  <deletedItems id="_LWczUBBnEfGJG-g34bxXYg" path="API/BASIC" type="PROCESS"/>
-  <deletedItems id="_QgGEkA1wEfG4nYyw7oadgA" path="API/BASIC" type="PROCESS"/>
-  <deletedItems id="_SmX0IPpiEfC6UsEam_Kf8A" path="API/BASIC" type="PROCESS"/>
-  <deletedItems id="_rpqeYBCbEfGJG-g34bxXYg" path="API/BASIC" type="PROCESS"/>
-  <deletedItems id="_SWTRcPzLEfCeVZFO8RnkLw" path="API/TEST" type="PROCESS"/>
   <deletedItems id="_1gbBwPqaEfC66eNMdZbE_A" path="BRONZE/BASIC" type="PROCESS"/>
   <deletedItems id="_hp6UsPgFEfCVZsdSWz8YYw" path="BRONZE/BASIC" type="PROCESS"/>
 </recyclebin:RecycleBin>
