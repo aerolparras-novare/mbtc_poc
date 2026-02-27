@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard" framework="">
   <context confirmationNeeded="false" hide="false" name="Default">
     <contextParameter comment="" name="token" prompt="token?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_Kcro8BFHEfGJG-g34bxXYg"/>
     <contextParameter comment="" name="limit" prompt="limit?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="100" internalId="_nfSPoBK_EfGbOo6P_nV-GQ"/>
@@ -317,7 +317,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-520" posY="200" sizeX="120" sizeY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_3" show="false"/>
-    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="System.out.println(&quot;user&quot; + (String)globalMap.get(&quot;Get_credentials.username&quot;));&#xD;&#xA;&#xD;&#xA;if (input_row.count_creds > 0) {&#xD;&#xA;    globalMap.put(&quot;valid_creds&quot;, true);&#xD;&#xA;} else {&#xD;&#xA;    globalMap.put(&quot;valid_creds&quot;, false);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;ID Check Result: &quot; + input_row.count_creds);"/>
+    <elementParameter field="MEMO_EDITOR_JAVA" name="CODE" value="System.out.println(&quot;user&quot; + (String)globalMap.get(&quot;Get_credentials.username&quot;));&#xD;&#xA;&#xD;&#xA;if (input_row.count_creds > 0) {&#xD;&#xA;    globalMap.put(&quot;valid_creds&quot;, true);&#xD;&#xA;    context.token = java.util.UUID.randomUUID().toString();&#xD;&#xA;} else {&#xD;&#xA;    globalMap.put(&quot;valid_creds&quot;, false);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;System.out.println(&quot;ID Check Result: &quot; + input_row.count_creds);"/>
     <elementParameter field="MEMO_EDITOR_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="checkUserifValid"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -717,7 +717,7 @@
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
     <elementParameter field="TABLE" name="VALUES">
       <elementValue elementRef="SCHEMA_COLUMN" value="token" id="0"/>
-      <elementValue elementRef="VALUE" value="java.util.UUID.randomUUID().toString();" id="1"/>
+      <elementValue elementRef="VALUE" value="context.token" id="1"/>
     </elementParameter>
     <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
     <elementParameter field="TABLE" name="INTABLE" show="false"/>
