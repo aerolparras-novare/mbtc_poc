@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_4FV6wBCBEfGxG6jJEifLug" name="Default">
+    <contextParameter xmi:id="_4GSV8BCBEfGxG6jJEifLug" comment="" name="dq_schema" prompt="dq_schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_4GSV8RCBEfGxG6jJEifLug" comment="" name="dq_log_table" prompt="dq_log_table?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_4GSV8hCBEfGxG6jJEifLug" comment="" name="dq_fact_table" prompt="dq_fact_table?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_4FV6wRCBEfGxG6jJEifLug" name="dev">
+    <contextParameter xmi:id="_4GSV8xCBEfGxG6jJEifLug" comment="" name="dq_schema" prompt="dq_schema?" promptNeeded="false" type="id_String" value="dq"/>
+    <contextParameter xmi:id="_4GSV9BCBEfGxG6jJEifLug" comment="" name="dq_log_table" prompt="dq_log_table?" promptNeeded="false" type="id_String" value="dq_exception_log"/>
+    <contextParameter xmi:id="_4GSV9RCBEfGxG6jJEifLug" comment="" name="dq_fact_table" prompt="dq_fact_table?" promptNeeded="false" type="id_String" value="dq_dashboard_fact"/>
+  </talendfile:ContextType>
+</xmi:XMI>

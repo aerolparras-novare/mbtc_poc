@@ -45,31 +45,6 @@
       "name" : "conn_hive_target_table_Server"
     } ]
   }, {
-    "contextName" : "dev",
-    "repoId" : "_vxyFQO9oEfCcepb0inUXkA",
-    "parameterList" : [ {
-      "id" : "_HyE1gO9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Password"
-    }, {
-      "id" : "_HyE1ge9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Schema"
-    }, {
-      "id" : "_HyE1gu9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Server"
-    }, {
-      "id" : "_HyE1g-9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Port"
-    }, {
-      "id" : "_HyE1hO9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_ServiceName"
-    }, {
-      "id" : "_HyE1he9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Login"
-    }, {
-      "id" : "_HyE1hu9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table__AdditionalParams"
-    } ]
-  }, {
     "contextName" : "Default",
     "repoId" : "_uVguEAcuEfGqGfeJ7LYmLQ",
     "parameterList" : [ {
@@ -112,31 +87,6 @@
     }, {
       "id" : "_C6ssQvKdEfCNScNTrRRCvQ",
       "name" : "conn_hive_target_table_Server"
-    } ]
-  }, {
-    "contextName" : "Default",
-    "repoId" : "_vxyFQO9oEfCcepb0inUXkA",
-    "parameterList" : [ {
-      "id" : "_HyE1gO9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Password"
-    }, {
-      "id" : "_HyE1ge9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Schema"
-    }, {
-      "id" : "_HyE1gu9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Server"
-    }, {
-      "id" : "_HyE1g-9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Port"
-    }, {
-      "id" : "_HyE1hO9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_ServiceName"
-    }, {
-      "id" : "_HyE1he9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table_Login"
-    }, {
-      "id" : "_HyE1hu9pEfCcepb0inUXkA",
-      "name" : "conn_oracle_source_table__AdditionalParams"
     } ]
   } ]
 }
