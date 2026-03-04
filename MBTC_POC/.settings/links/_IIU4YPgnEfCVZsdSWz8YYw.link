@@ -1,0 +1,99 @@
+{
+  "itemId" : "_IIU4YPgnEfCVZsdSWz8YYw",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_C6ROcPKdEfCNScNTrRRCvQ",
+    "parameterList" : [ {
+      "id" : "_C6ssR_KdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_AdditionalJDBCParameters"
+    }, {
+      "id" : "_C6ssRvKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Database"
+    }, {
+      "id" : "_C6ssQ_KdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Password"
+    }, {
+      "id" : "_C6ssQvKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Server"
+    }, {
+      "id" : "_C6ssRPKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_HiveMetastorePort"
+    }, {
+      "id" : "_C6ssRfKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Port"
+    }, {
+      "id" : "_C6ssQfKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Login"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_6_AJgPXoEfCzdeB6aeN2sw",
+    "parameterList" : [ {
+      "id" : "_6_ZLEfXoEfCzdeB6aeN2sw",
+      "name" : "conn_sftp_mbtc_username"
+    }, {
+      "id" : "_6_ZLFPXoEfCzdeB6aeN2sw",
+      "name" : "conn_sftp_mbtc_host"
+    }, {
+      "id" : "_6_ZLE_XoEfCzdeB6aeN2sw",
+      "name" : "conn_sftp_mbtc_port"
+    }, {
+      "id" : "_6_ZLEvXoEfCzdeB6aeN2sw",
+      "name" : "conn_sftp_mbtc_password"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_kyD8APdCEfCAt6AmyhhERg",
+    "parameterList" : [ {
+      "id" : "_kyZ6RPdCEfCAt6AmyhhERg",
+      "name" : "conn_hadoop_cluster_User"
+    }, {
+      "id" : "_kyZ6SvdCEfCAt6AmyhhERg",
+      "name" : "conn_hadoop_cluster_NameNodeUri"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_uVguEAcuEfGqGfeJ7LYmLQ",
+    "parameterList" : [ {
+      "id" : "_D1e2oQcvEfGqGfeJ7LYmLQ",
+      "name" : "target_count"
+    }, {
+      "id" : "_D1e2oAcvEfGqGfeJ7LYmLQ",
+      "name" : "source_count"
+    }, {
+      "id" : "_uX-zQAcuEfGqGfeJ7LYmLQ",
+      "name" : "job_server_file_dir"
+    }, {
+      "id" : "_uX-zQgcuEfGqGfeJ7LYmLQ",
+      "name" : "audit_database"
+    }, {
+      "id" : "_uX-zQQcuEfGqGfeJ7LYmLQ",
+      "name" : "manifest_table"
+    } ]
+  }, {
+    "contextName" : "Default",
+    "repoId" : "_vxyFQO9oEfCcepb0inUXkA",
+    "parameterList" : [ {
+      "id" : "_HyE1gO9pEfCcepb0inUXkA",
+      "name" : "conn_oracle_source_table_Password"
+    }, {
+      "id" : "_HyE1ge9pEfCcepb0inUXkA",
+      "name" : "conn_oracle_source_table_Schema"
+    }, {
+      "id" : "_HyE1gu9pEfCcepb0inUXkA",
+      "name" : "conn_oracle_source_table_Server"
+    }, {
+      "id" : "_HyE1g-9pEfCcepb0inUXkA",
+      "name" : "conn_oracle_source_table_Port"
+    }, {
+      "id" : "_HyE1hO9pEfCcepb0inUXkA",
+      "name" : "conn_oracle_source_table_ServiceName"
+    }, {
+      "id" : "_HyE1he9pEfCcepb0inUXkA",
+      "name" : "conn_oracle_source_table_Login"
+    }, {
+      "id" : "_HyE1hu9pEfCcepb0inUXkA",
+      "name" : "conn_oracle_source_table__AdditionalParams"
+    } ]
+  } ]
+}

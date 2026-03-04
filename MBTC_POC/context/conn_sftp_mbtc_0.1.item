@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_6_ZLEPXoEfCzdeB6aeN2sw" confirmationNeeded="false" hide="false" name="dev">
+  <contextParameter xmi:id="_6_ZLEfXoEfCzdeB6aeN2sw" comment="" name="conn_sftp_mbtc_username" prompt="conn_sftp_mbtc_username?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="sftpuser"/>
+  <contextParameter xmi:id="_6_ZLEvXoEfCzdeB6aeN2sw" comment="" name="conn_sftp_mbtc_password" prompt="conn_sftp_mbtc_password?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:/J2ZfnlwGZf0yGLXfEWMXAS0pot+j9bUiGjjKXfwXOtS7YOPox3Az0xccEQ="/>
+  <contextParameter xmi:id="_6_ZLE_XoEfCzdeB6aeN2sw" comment="" name="conn_sftp_mbtc_port" prompt="conn_sftp_mbtc_port?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="22"/>
+  <contextParameter xmi:id="_6_ZLFPXoEfCzdeB6aeN2sw" comment="" name="conn_sftp_mbtc_host" prompt="conn_sftp_mbtc_host?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="47.131.5.132"/>
+</talendfile:ContextType>
