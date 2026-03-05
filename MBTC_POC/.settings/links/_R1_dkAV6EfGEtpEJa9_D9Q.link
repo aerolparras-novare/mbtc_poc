@@ -104,6 +104,19 @@
       "name" : "conn_oracle_source_table_ServiceName"
     } ]
   }, {
+    "contextName" : "Default",
+    "repoId" : "_4FUsoBCBEfGxG6jJEifLug",
+    "parameterList" : [ {
+      "id" : "_4GSV8BCBEfGxG6jJEifLug",
+      "name" : "dq_schema"
+    }, {
+      "id" : "_4GSV8RCBEfGxG6jJEifLug",
+      "name" : "dq_log_table"
+    }, {
+      "id" : "_4GSV8hCBEfGxG6jJEifLug",
+      "name" : "dq_fact_table"
+    } ]
+  }, {
     "contextName" : "dev",
     "repoId" : "_uVguEAcuEfGqGfeJ7LYmLQ",
     "parameterList" : [ {
@@ -205,6 +218,19 @@
     }, {
       "id" : "_HyE1hO9pEfCcepb0inUXkA",
       "name" : "conn_oracle_source_table_ServiceName"
+    } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_4FUsoBCBEfGxG6jJEifLug",
+    "parameterList" : [ {
+      "id" : "_4GSV8xCBEfGxG6jJEifLug",
+      "name" : "dq_schema"
+    }, {
+      "id" : "_4GSV9BCBEfGxG6jJEifLug",
+      "name" : "dq_log_table"
+    }, {
+      "id" : "_4GSV9RCBEfGxG6jJEifLug",
+      "name" : "dq_fact_table"
     } ]
   } ]
 }
