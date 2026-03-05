@@ -135,41 +135,6 @@
   } ]
 }, {
   "baseItem" : {
-    "id" : "_Jr3fAPg4EfCTO4E-xlLFig",
-    "version" : "0.1",
-    "type" : "job"
-  },
-  "relatedItems" : [ {
-    "id" : "built-in",
-    "version" : "Latest",
-    "type" : "context"
-  }, {
-    "id" : "_TjAMEP3yEfCl46hknL7q8g",
-    "version" : "0.1",
-    "type" : "mapper"
-  }, {
-    "id" : "_yZjNAP3zEfCl46hknL7q8g",
-    "version" : "0.1",
-    "type" : "mapper"
-  }, {
-    "id" : "_C_NIgPwDEfCi68eJmHgcpA",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_IMCTgPgCEfCTO4E-xlLFig",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_gR-4wP31EfCl46hknL7q8g",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_C_NIgPwDEfCi68eJmHgcpA - customers_api_test",
-    "version" : "Latest",
-    "type" : "schema"
-  } ]
-}, {
-  "baseItem" : {
     "id" : "_OHIsEPz8EfCqConinyY4Xg",
     "version" : "0.1",
     "type" : "job"
@@ -354,53 +319,6 @@
     "id" : "_E2q3oPLHEfCCCuz9yrvv0A",
     "version" : "Latest",
     "type" : "joblet"
-  } ]
-}, {
-  "baseItem" : {
-    "id" : "_SWTRcPzLEfCeVZFO8RnkLw",
-    "version" : "0.1",
-    "type" : "job"
-  },
-  "relatedItems" : [ {
-    "id" : "_E6aqcPwjEfCtDLH82a8IYQ",
-    "version" : "0.1",
-    "type" : "mapper"
-  }, {
-    "id" : "_MF_mgPwGEfCo_Ipx5xwaoA",
-    "version" : "0.1",
-    "type" : "mapper"
-  }, {
-    "id" : "_mzQCgPzmEfCeVZFO8RnkLw",
-    "version" : "0.1",
-    "type" : "mapper"
-  }, {
-    "id" : "_C_NIgPwDEfCi68eJmHgcpA",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_CkNdQOuqEfCfTcL_YuhooQ",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_KHoK4PasEfCepMq3Yo2NrA",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_Qa8vcPZyEfCepMq3Yo2NrA",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_C_NIgPwDEfCi68eJmHgcpA - customers_api_test",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_CkNdQOuqEfCfTcL_YuhooQ - CUSTOMERS",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_Qa8vcPZyEfCepMq3Yo2NrA - metadata_mbtc_customer",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
