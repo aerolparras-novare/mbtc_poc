@@ -135,7 +135,7 @@
   } ]
 }, {
   "baseItem" : {
-    "id" : "_Jr3fAPg4EfCTO4E-xlLFig",
+    "id" : "_LWczUBBnEfGJG-g34bxXYg",
     "version" : "0.1",
     "type" : "job"
   },
@@ -144,15 +144,23 @@
     "version" : "Latest",
     "type" : "context"
   }, {
-    "id" : "_TjAMEP3yEfCl46hknL7q8g",
+    "id" : "_57rE4PzmEfCVeuveFRjYWw",
     "version" : "0.1",
     "type" : "mapper"
   }, {
-    "id" : "_yZjNAP3zEfCl46hknL7q8g",
+    "id" : "_MF_mgPwGEfCo_Ipx5xwaoA",
+    "version" : "0.1",
+    "type" : "mapper"
+  }, {
+    "id" : "_NA7k4PzvEfCVeuveFRjYWw",
     "version" : "0.1",
     "type" : "mapper"
   }, {
     "id" : "_C_NIgPwDEfCi68eJmHgcpA",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_HcbZkPdUEfC1_ttOpu7bSw",
     "version" : "Latest",
     "type" : "property"
   }, {
@@ -357,50 +365,26 @@
   } ]
 }, {
   "baseItem" : {
-    "id" : "_SWTRcPzLEfCeVZFO8RnkLw",
+    "id" : "_TRX-UBLfEfGzofFGS_ozvQ",
     "version" : "0.1",
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "_E6aqcPwjEfCtDLH82a8IYQ",
+    "id" : "built-in",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_57rE4PzmEfCVeuveFRjYWw",
     "version" : "0.1",
     "type" : "mapper"
   }, {
-    "id" : "_MF_mgPwGEfCo_Ipx5xwaoA",
-    "version" : "0.1",
-    "type" : "mapper"
-  }, {
-    "id" : "_mzQCgPzmEfCeVZFO8RnkLw",
-    "version" : "0.1",
-    "type" : "mapper"
-  }, {
-    "id" : "_C_NIgPwDEfCi68eJmHgcpA",
+    "id" : "_HcbZkPdUEfC1_ttOpu7bSw",
     "version" : "Latest",
     "type" : "property"
   }, {
-    "id" : "_CkNdQOuqEfCfTcL_YuhooQ",
+    "id" : "_IMCTgPgCEfCTO4E-xlLFig",
     "version" : "Latest",
     "type" : "property"
-  }, {
-    "id" : "_KHoK4PasEfCepMq3Yo2NrA",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_Qa8vcPZyEfCepMq3Yo2NrA",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_C_NIgPwDEfCi68eJmHgcpA - customers_api_test",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_CkNdQOuqEfCfTcL_YuhooQ - CUSTOMERS",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_Qa8vcPZyEfCepMq3Yo2NrA - metadata_mbtc_customer",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
