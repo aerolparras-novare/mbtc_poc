@@ -1,0 +1,18 @@
+{
+  "itemId" : "_6y5_cB3CEfGbhJ7lUNbe8w",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_C6ROcPKdEfCNScNTrRRCvQ",
+    "parameterList" : [ {
+      "id" : "_C6ssRvKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Database"
+    } ]
+  }, {
+    "contextName" : "dev",
+    "repoId" : "_C6ROcPKdEfCNScNTrRRCvQ",
+    "parameterList" : [ {
+      "id" : "_C6ssRvKdEfCNScNTrRRCvQ",
+      "name" : "conn_hive_target_table_Database"
+    } ]
+  } ]
+}

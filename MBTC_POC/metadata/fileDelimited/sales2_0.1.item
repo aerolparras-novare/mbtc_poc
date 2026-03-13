@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_86suUB6yEfGbn-Il6C_a4Q" name="sales2" dataPackage="_86suUR6yEfGbn-Il6C_a4Q" Server="Localhost 127.0.0.1" FilePath="C:/Users/aerol.parras/Documents/mbtc/Demo/sales.csv" Format="WINDOWS" Encoding="US-ASCII" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true" FieldSeparatorType="Comma"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_86suUR6yEfGbn-Il6C_a4Q" name="default" dataManager="_86suUB6yEfGbn-Il6C_a4Q">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_86suUh6yEfGbn-Il6C_a4Q" id="_v2BXEB6yEfGbn-Il6C_a4Q" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_86suUx6yEfGbn-Il6C_a4Q" label="TRANSACTION_ID" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_86suVB6yEfGbn-Il6C_a4Q" label="CUSTOMER_NAME" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_86suVR6yEfGbn-Il6C_a4Q" label="PRODUCT_ID" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_86suVh6yEfGbn-Il6C_a4Q" label="AMOUNT" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_86suVx6yEfGbn-Il6C_a4Q" label="TRANSACTION_DATE" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
